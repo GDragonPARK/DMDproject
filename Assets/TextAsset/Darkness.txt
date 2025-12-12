@@ -1,0 +1,16 @@
+n/a;code;#Mtotal;#Ptotal;maxlvl;Pperlvl;darkreq;#darkening;#description;Ability1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;icon;eol
+;hp%_medb;100%;10;5;2;0;The Chosen Ones;;enstatm_dark;target_only;Minion,Elite,Midboss,Boss;stat;hp;;;0;per;0.2;;;;;;;0;;;;;;;;0;;;;;;;;;0;;;;;;;;0;;;;;;;;;0;;;;;;;;0;;;;;;;;;0;Interface/StarCrux/CruxIcon_ShieldCircle_Spr;0
+;mvm_medb;40;6;2;3;0;Make Way;;enstatm_bonus;target_only;Minion,Elite,Midboss,Boss;stat;mvm;;;0;val;0.2;;;;;;;0;;;;;;;;0;;;;;;;;;0;;;;;;;;0;;;;;;;;;0;;;;;;;;0;;;;;;;;;0;Interface/StarCrux/CruxIcon_Boots_Spr;0
+;spd%_medb;30%;12;3;4;0;Frenzy;;enstatm_dark;target_only;Minion,Elite,Midboss,Boss;stat;spd;;;0;per;0.1;;;;;;;0;;;;;;;;0;;;;;;;;;0;;;;;;;;0;;;;;;;;;0;;;;;;;;0;;;;;;;;;0;Interface/StarCrux/CruxIcon_Knife_Spr;0
+;aicd%_medb;-100%;4;4;1;0;Relentless;;enstatm_dark;target_only;Minion,Elite,Midboss,Boss;stat;aicd;;;0;per;-0.25;;;;;;;0;;;;;;;;0;;;;;;;;;0;;;;;;;;0;;;;;;;;;0;;;;;;;;0;;;;;;;;;0;Interface/StarCrux/CruxIcon_PickUp_Spr;0
+;vlc%_medb;30%;6;3;2;0;Arrowstorm;;enstatm_dark;target_only;Minion,Elite,Midboss,Boss;stat;vlc;;;0;per;0.1;;;;;;;0;;;;;;;;0;;;;;;;;;0;;;;;;;;0;;;;;;;;;0;;;;;;;;0;;;;;;;;;0;Interface/StarCrux/CruxIcon_FlyingArrow_Spr;0
+;aim%_medb;200%;6;2;3;0;Artificial Intelligence;;enstatm_dark;target_only;Minion,Elite,Midboss,Boss;stat;aim;;;0;per;1;;;;;;;0;;;;;;;;0;;;;;;;;;0;;;;;;;;0;;;;;;;;;0;;;;;;;;0;;;;;;;;;0;Interface/StarCrux/CruxIcon_Snake_Spr;0
+;are%_medb;30%;6;2;3;0;Bigger Is Better;;enstatm_dark;target_only;Minion,Elite,Midboss,Boss;stat;are;;;0;per;0.15;;;;;;;0;;;;;;;;0;;;;;;;;;0;;;;;;;;0;;;;;;;;;0;;;;;;;;0;;;;;;;;;0;Interface/StarCrux/CruxIcon_Yatagan_Spr;0
+;dur%_medb;60%;6;2;3;0;Hex;;enstatm_dark;target_only;Minion,Elite,Midboss,Boss;stat;dur;;;0;per;0.3;;;;;;;0;;;;;;;;0;;;;;;;;;0;;;;;;;;0;;;;;;;;;0;;;;;;;;0;;;;;;;;;0;Interface/StarCrux/CruxIcon_Angle_Spr;0
+;aipr_medb;60%;4;2;2;0;Llama Blessed;;enstatm_bonus;target_only;Minion,Elite,Midboss,Boss;stat;aipr;;;0;val;0.3;;;;;;;0;;;;;;;;0;;;;;;;;;0;;;;;;;;0;;;;;;;;;0;;;;;;;;0;;;;;;;;;0;Interface/StarCrux/CruxIcon_Marked_Spr;0
+;hit_me;60%;6;3;2;0;Turtle Formation;;enstatm_bonus;target_only;Minion,Elite;stat;hit;;;0;val;0.2;;;;;;;0;;;;;;;;0;;;;;;;;;0;;;;;;;;0;;;;;;;;;0;;;;;;;;0;;;;;;;;;0;Interface/StarCrux/CruxIcon_Barrier_Spr;0
+;hp%_db;100%;12;4;3;0;Borrowed Time;;enstatm_dark;target_only;Midboss,Boss;stat;hp;;;0;per;0.25;;;;;;;0;;;;;;;;0;;;;;;;;;0;;;;;;;;0;;;;;;;;;0;;;;;;;;0;;;;;;;;;0;Interface/StarCrux/CruxIcon_Heart_Spr;0
+;pow%_db;30%;8;2;4;0;Instant Kill;;enstatm_dark;target_only;Midboss,Boss;stat;pow;;;0;per;0.15;;;;;;;0;;;;;;;;0;;;;;;;;;0;;;;;;;;0;;;;;;;;;0;;;;;;;;0;;;;;;;;;0;Interface/StarCrux/CruxIcon_CrossedSwords_Spr;0
+;aicd%_db;-200%;4;2;2;0;Underlords;;enstatm_dark;target_only;Midboss,Boss;stat;aicd;;;0;per;-1;;;;;;;0;;;;;;;;0;;;;;;;;;0;;;;;;;;0;;;;;;;;;0;;;;;;;;0;;;;;;;;;0;Interface/StarCrux/CruxIcon_Scythe_Spr;0
+;rej_p;-400%;6;2;3;0;Snake Bite;0% Heals from Locations & Pickups;statm_dark;stat;rej;group;P;;;0;per;-2;;;;;;;0;;;;;;;;0;;;;;;;;;0;;;;;;;;0;;;;;;;;;0;;;;;;;;0;;;;;;;;;0;Interface/StarCrux/CruxIcon_Medicine_Spr;0
+;pdr_p;-400%;4;2;2;0;;;statm_dark;stat;pdr;group;P;;;0;per;-2;;;;;;;0;;;;;;;;0;;;;;;;;;0;;;;;;;;0;;;;;;;;;0;;;;;;;;0;;;;;;;;;0;Interface/StarCrux/CruxIcon_Angle_Spr;0

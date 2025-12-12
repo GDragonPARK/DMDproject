@@ -1,0 +1,15 @@
+n/a;code;#Description;value;#%;#%for3;eol;#;#;#;#;#;#;#;#
+;prr;Rare probability;0.1;10%;;0;;;;;;;;
+;pre;Epic probability;0.025;2.5%;;0;;;;;;;;
+;prm;Mythic probability;0.01;1%;;0;;;;;;;;
+;prl;Legendary probability;0.08;0.08%;;0;;;;;;;;
+;prar;Rarity-up offer probability;0.03;3%;;0;;;;;;;;
+;plvl;Level-up offer probability;0.57;57%;;0;;;;;;;;
+;pnew;New boon offer probability;0.4;40%;;0;;;;;;;;
+;pbrok;Broken item drop prob. modifier;0;0%;;0;;;;;;;;
+;pcomm;Common item drop prob. modifier;0;0%;;0;;;;;;;;
+;prare;Rare item drop prob. modifier;0;0%;;0;;;;;;;;
+;pepic;Epic item drop prob. modifier;0;0%;;0;;;;;;;;
+;pmyth;Mythic item drop prob. modifier;0;0%;;0;;;;;;;;
+;pimmo;Immortal item drop prob. modifier;0;0%;;0;;;;;;;;
+;puniq;Unique item drop chance.;0.15;15%;;0;;;;;;;;

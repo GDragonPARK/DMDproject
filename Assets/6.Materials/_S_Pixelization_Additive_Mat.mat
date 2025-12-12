@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: _S_Pixelization_Additive_Mat
+  m_Shader: {fileID: 4800000, guid: 541dc57faf6d867448f3006592f5c24c, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 1
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+      _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+      unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+      unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+      unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: {}
+    m_Floats:
+      _Float_Dissolve: -10
+      _Float_ShapesMacro: 0.5
+      _Float_ShapesMicro: 0
+      _Float_UVSize: 1
+      _Float_UVSpeed: 0.4
+      _GroupAlpha: 1
+      _Intensity: 1
+      _PixelationAmount: 216
+      _QueueControl: 0
+      _QueueOffset: 0
+      _Rotation: 0
+      _Scale: 0.4
+      _UseAlphaClip: 1
+    m_Colors:
+      _Color_Center: {r: 0.97219276, g: 0.9481132, b: 1, a: 1}
+      _Color_Edge: {r: 1, g: 0.46891353, b: 0.13679248, a: 1}
+      _Color_InBetween: {r: 1, g: 0.84323615, b: 0.4292453, a: 1}
+      _RotationPivot: {r: 0.5, g: 0.5, b: 0, a: 0}
+  m_BuildTextureStacks: []

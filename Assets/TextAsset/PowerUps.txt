@@ -1,0 +1,9 @@
+n/a;code;prefab;expiration;instant;eol;#description
+;pi_heal;Entities/PowerUps/Heal_Fab;120;pi_heal;0;
+;pi_heal1;Entities/PowerUps/Heal_Fab;120;pi_heal1;0;
+;pi_heal2;Entities/PowerUps/Heal_Fab;120;pi_heal2;0;
+;pi_healfull;Entities/PowerUps/HealFull_Fab;30;pi_healfull;0;
+;pi_healhalf;Entities/PowerUps/HealFull_Fab;30;pi_healhalf;0;
+;pi_stamina;Entities/PowerUps/Stamina_Fab;120;sh_stamina;0;
+;pi_collector;Entities/PowerUps/Collector_Fab;120;sh_collector;0;
+;pi_invulnerability;Entities/PowerUps/Invulnerability_Fab;120;sh_invulnerable;0;

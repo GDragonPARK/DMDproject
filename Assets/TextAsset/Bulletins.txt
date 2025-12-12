@@ -1,0 +1,8 @@
+;code;title;path;link;eol
+;9999;Mailbox;Bulletins/00_Mail_Mailbox;;0
+;1;QoL: Part II;Bulletins/01_Mail_QOL2;;0
+#;2;3. Builds Index;Bulletins/04 - Builds Discussion;https://realmarchive.com;0
+#;3;2. Various Topics;Bulletins/02 - Various Topics;https://realmarchive.com;0
+#;4;1. Objectives;Bulletins/01 - Objectives;https://realmarchive.com;0
+#;5;Builds Index;Bulletins/04 - Builds Discussion;https://realmarchive.com;0
+#;5;Roguelike;Bulletins/00_Mail_0;https://realmarchive.com;0

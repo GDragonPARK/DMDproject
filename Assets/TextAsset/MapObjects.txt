@@ -1,0 +1,234 @@
+n/a;#;code;p;act;tags;size;value;weight;#%;#min;#avg;#max;max;prefab;map icon;type;#loss;#reward;p1;v1;p2;v2;eol
+;;shrine_penance;1;t1;;L;20;8;1.84%;;;;1;Entities/MapObjects/Act 1/Shrine_Penance/Shrine_Penance_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;xp%;code;shrine_penance;;;0
+;;fountain_crying;1;t1;;M;20;8;1.84%;;;;1;Entities/MapObjects/Act 1/Fountain_Crying/Fountain_Crying_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;revival;code;fountain_crying;;;0
+;;tree_fruit;1;t1;;M;20;8;1.84%;;;;1;Entities/MapObjects/Act 1/Tree_Fruit/Tree_Fruit_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;hp;lvl;code;tree_fruit;;;0
+;;shrine_autumn;1;t1;;L;20;8;1.84%;;;;1;Entities/MapObjects/Act 1/Shrine_Autumn/Shrine_Autumn_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;hp;u%;code;shrine_autumn;;;0
+;;shrine_spring;1;t1;;L;20;8;1.84%;;;;1;Entities/MapObjects/Act 1/Shrine_Spring/Shrine_Spring_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;sdur;hpr;code;shrine_spring;;;0
+;;npc_faerie;2;t1;;M;16;8;7.91%;;;;1;Entities/MapObjects/Act 1/NPC_Faerie/NPC_Faerie_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;lck;code;npc_faerie;;;0
+;;npc_ghost;2;t1;;M;16;8;7.91%;;;;1;Entities/MapObjects/Act 1/NPC_Ghost/NPC_Ghost_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;msa%;code;npc_ghost;;;0
+;;npc_impess;2;t1;;M;16;4;3.95%;;;;1;Entities/MapObjects/Act 1/NPC_Impess/NPC_Impess_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;i;code;npc_impess;;;0
+;;statue_jadellama;2;t1;;M;16;8;7.91%;;;;1;Entities/MapObjects/Act 1/Statue_JadeLlama/Statue_JadeLlama_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;g;code;statue_jadellama;;;0
+;;npc_kobold;2;t1;;M;16;8;7.91%;;;;1;Entities/MapObjects/Act 1/NPC_Kobold/NPC_Kobold_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;g%;code;npc_kobold;;;0
+;;npc_leprechaun;2;t1;;M;16;8;7.91%;;;;1;Entities/MapObjects/Act 1/NPC_Leprechaun/NPC_Leprechaun_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;miremi%;code;npc_leprechaun;;;0
+;;npc_rogue;2;t1;;M;16;8;7.91%;;;;1;Entities/MapObjects/Act 1/NPC_Rogue/NPC_Rogue_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;dclde;code;npc_rogue;;;0
+;;npc_warrior;2;t1;;M;16;8;7.91%;;;;1;Entities/MapObjects/Act 1/NPC_Warrior/NPC_Warrior_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;ad%a;code;npc_warrior;;;0
+;;npc_wizard;2;t1;;M;16;8;7.91%;;;;1;Entities/MapObjects/Act 1/NPC_Wizard/NPC_Wizard_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;sspddsum%;code;npc_wizard;;;0
+;;npc_troll;2;t1;;M;16;8;7.91%;;;;1;Entities/MapObjects/Act 1/NPC_Troll/NPC_Troll_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;a;code;npc_troll;;;0
+;;npc_witch;2;t1;;M;16;8;7.91%;;;;1;Entities/MapObjects/Act 1/NPC_Witch/NPC_Witch_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;curse;boon;code;npc_witch;;;0
+;;chest_reliquary;2;t1;;S;16;4;3.95%;;;;x;Entities/MapObjects/Act 1/Chest_Reliquary/Chest_Reliquary_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;igpi;code;chest_reliquary;;;0
+;;clovergarden;2;t1;;M;16;7;6.92%;;;;x;Entities/MapObjects/Act 1/CloverGarden/CloverGarden_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;g;i;code;clovergarden;;;0
+;;forge;2;t1;;M;16;35;34.59%;;;;x;Entities/MapObjects/Act 1/Forge/Forge_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;aad%;code;forge;;;0
+;;fountain_sacred;2;t1;;M;16;40;39.53%;;;;x;Entities/MapObjects/Act 1/Fountain_Sacred/Fountain_Sacred_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;heal;code;fountain_sacred;;;0
+;;tome_necronomicon;2;t1;;S;16;35;34.59%;;;;x;Entities/MapObjects/Act 1/Tome_Necronomicon/Tome_Necronomicon_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;stundmgmon;u%d%dsum%;code;tome_necronomicon;;;0
+;;shrine_dragon;2;t1;;L;16;13;12.85%;;;;x;Entities/MapObjects/Act 1/Shrine_Dragon/Shrine_Dragon_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;mse;code;shrine_dragon;;;0
+;;shrine_fates;2;t1;;L;16;25;24.71%;;;;x;Entities/MapObjects/Act 1/Shrine_Fates/Shrine_Fates_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;b;code;shrine_fates;;;0
+;;shrine_hunting;2;t1;;L;16;35;34.59%;;;;x;Entities/MapObjects/Act 1/Shrine_Hunting/Shrine_Hunting_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;dchg;code;shrine_hunting;;;0
+;;shrine_krom;2;t1;;L;16;35;34.59%;;;;x;Entities/MapObjects/Act 1/Shrine_Krom/Shrine_Krom_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;aare%are%;code;shrine_krom;;;0
+;;shrine_music;2;t1;;L;16;35;34.59%;;;;x;Entities/MapObjects/Act 1/Shrine_Music/Shrine_Music_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;pul-thr%_e;code;shrine_music;;;0
+;;shrine_onidemon;2;t1;;L;16;35;34.59%;;;;x;Entities/MapObjects/Act 1/Shrine_OniDemon/Shrine_OniDemon_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;msae%;msm%;code;shrine_onidemon;;;0
+;;shrine_shiva;2;t1;;L;16;35;34.59%;;;;3;Entities/MapObjects/Act 1/Shrine_Shiva/Shrine_Shiva_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;as%cnt;code;shrine_shiva;;;0
+;;shrine_thor;2;t1;;L;16;35;34.59%;;;;x;Entities/MapObjects/Act 1/Shrine_Thor/Shrine_Thor_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;acc%cc%;code;shrine_thor;;;0
+;;shrine_writing;2;t1;;L;16;35;34.59%;;;;x;Entities/MapObjects/Act 1/Shrine_Writing/Shrine_Writing_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;s%;code;shrine_writing;;;0
+;;statue_swan;2;t1;;M;16;35;34.59%;;;;x;Entities/MapObjects/Act 1/Statue_Swan/Statue_Swan_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;lck;lck;code;statue_swan;;;0
+;;tree_wisdom;2;t1;;M;16;11;10.87%;;;;x;Entities/MapObjects/Act 1/Tree_Wisdom/Tree_Wisdom_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;xp%;code;tree_wisdom;;;0
+;;tree_wither;2;t1;;M;16;11;10.87%;;;;x;Entities/MapObjects/Act 1/Tree_Wither/Tree_Wither_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;tree_wither;;;0
+;;shardfallen;2;t1;;M;16;15;14.82%;;;;x;Entities/MapObjects/Act 1/ShardFallen/ShardFallen_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;shardfallen;;;0
+;;tome_sacred;2;t1;;S;16;35;34.59%;;;;x;Entities/MapObjects/Act 1/Tome_Sacred/Tome_Sacred_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;tome_sacred;;;0
+;;mechkata;2;t1;;S;16;1;0.99%;;;;x;Entities/MapObjects/Act 1/Mechkata/Mechkata_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;mechkata;;;0
+;;gremlinroothouse;2;t1;;M;16;35;34.59%;;;;x;Entities/MapObjects/Act 1/GremlinRoothouse/GremlinRoothouse_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;gremlinroothouse;;;0
+;;shrine_tracking;2;t1;;L;16;35;34.59%;;;;x;Entities/MapObjects/Act 1/Shrine_Tracking/Shrine_Tracking_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;;code;shrine_tracking;;;0
+;;bookshelf_act1;2;t1;;M;16;35;34.59%;;;;x;Entities/MapObjects/Act 1/Bookshelf_WoodenSimple/Bookshelf_WoodenSimple_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;;code;bookshelf_act1;;;0
+;;bonfire;3;t1;;S;12;150;115.01%;;;;x;Entities/MapObjects/Act 1/Bonfire/Bonfire_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;hp;code;bonfire;;;0
+;;alms;3;t1;;S;12;100;76.67%;;;;x;Entities/MapObjects/Act 1/Alms/Alms_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;lck;code;alms;;;0
+;;chest;3;t1;;S;12;100;76.67%;;;;x;Entities/MapObjects/Act 1/Chest/Chest_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;igpi;code;chest;;;0
+;;cloverfield;3;t1;;S;12;100;76.67%;;;;x;Entities/MapObjects/Act 1/CloverField/CloverField_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;lck;code;cloverfield;;;0
+;;fallenhero;3;t1;;S;12;100;76.67%;;;;x;Entities/MapObjects/Act 1/FallenHero/FallenHero_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;lck;igpi;code;fallenhero;;;0
+;;grave;3;t1;;S;12;100;76.67%;;;;x;Entities/MapObjects/Act 1/Grave/Grave_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;lck;igpi;code;grave;;;0
+;;mineralspring;3;t1;;M;12;100;76.67%;;;;x;Entities/MapObjects/Act 1/MineralSpring/MineralSpring_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;heal;code;mineralspring;;;0
+;;obelisk_greed;3;t1;;M;12;100;76.67%;;;;x;Entities/MapObjects/Act 1/Obelisk_Greed/Obelisk_Greed_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;g;code;obelisk_greed;;;0
+;;obelisk_sanctuary;3;t1;;M;12;100;76.67%;;;;x;Entities/MapObjects/Act 1/Obelisk_Sanctuary/Obelisk_Sanctuary_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;;code;obelisk_sanctuary;;;0
+;;orb_seeking;3;t1;;S;12;100;76.67%;;;;x;Entities/MapObjects/Act 1/Orb_Seeking/Orb_Seeking_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;pi;code;orb_seeking;;;0
+;;stone_collecting;3;t1;;M;12;100;76.67%;;;;x;Entities/MapObjects/Act 1/Stone_Collecting/Stone_Collecting_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;pul;code;stone_collecting;;;0
+;;stone_experience;3;t1;;M;12;100;76.67%;;;;x;Entities/MapObjects/Act 1/Stone_Experience/Stone_Experience_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;xp%;code;stone_experience;;;0
+;;stone_power;3;t1;;S;12;100;76.67%;;;;x;Entities/MapObjects/Act 1/Stone_Power/Stone_Power_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;pow;code;stone_power;;;0
+;;stone_stamina;3;t1;;M;12;100;76.67%;;;;x;Entities/MapObjects/Act 1/Stone_Stamina/Stone_Stamina_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;mvp;code;stone_stamina;;;0
+;;totem_hare;3;t1;;S;12;25;19.17%;;;;x;Entities/MapObjects/Act 1/Totem_Hare/Totem_Hare_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;dchg;code;totem_hare;;;0
+;;well;3;t1;;S;12;150;115.01%;;;;x;Entities/MapObjects/Act 1/Well/Well_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;heal;code;well;;;0
+;;altar_devotion;3;t1;;S;12;70;53.67%;;;;x;Entities/MapObjects/Act 1/Altar_Devotion/Altar_Devotion_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;heal%;code;altar_devotion;;;0
+;;braziermedievaldark;3;t1;;S;12;70;53.67%;;;;x;Entities/MapObjects/Act 1/BrazierMedievalDark/BrazierMedievalDark_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;;code;braziermedievaldark;;;0
+;;brazierelegantstone;3;t1;;S;12;70;53.67%;;;;x;Entities/MapObjects/Act 1/BrazierElegantStone/BrazierElegantStone_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;;code;brazierelegantstone;;;0
+;;brazierelegantsand;3;t1;;S;12;70;53.67%;;;;x;Entities/MapObjects/Act 1/BrazierElegantSand/BrazierElegantSand_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;;code;brazierelegantsand;;;0
+;;wartotem;3;t1;;M;12;70;53.67%;;;;x;Entities/MapObjects/Act 1/WarTotem/WarTotem_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;;code;wartotem;;;0
+;;chest_ancientmarble;3;t1;;S;12;50;38.34%;;;;x;Entities/MapObjects/Act 1/Chest_AncientMarble/Chest_AncientMarble_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;;code;chest_ancientmarble;;;0
+;;coffin_stonescripted1;3;t1;;S;12;100;76.67%;;;;x;Entities/MapObjects/Act 1/Coffin_StoneScripted1/Coffin_StoneScripted1_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;igpi;code;coffin_stonescripted1;;;0
+;;egyptian_ankh;1;t2;;L;20;8;1.84%;;;;1;Entities/MapObjects/Act 2/Power 1/Egyptian_Ankh/Egyptian_Ankh_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;egyptian_ankh;;;0
+;;lamp_magic;1;t2;;L;20;8;1.84%;;;;1;Entities/MapObjects/Act 2/Power 1/Lamp_Magic/Lamp_Magic_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;lamp_magic;;;0
+;;shrine_cobraking;1;t2;;L;20;8;1.84%;;;;1;Entities/MapObjects/Act 2/Power 1/Shrine_CobraKing/Shrine_CobraKing_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;shrine_cobraking;;;0
+;;shrine_horus;1;t2;;L;20;8;1.84%;;;;1;Entities/MapObjects/Act 2/Power 1/Shrine_Horus/Shrine_Horus_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;shrine_horus;;;0
+;;shrine_scorpion;1;t2;;L;20;8;1.84%;;;;1;Entities/MapObjects/Act 2/Power 1/Shrine_Scorpion/Shrine_Scorpion_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;shrine_scorpion;;;0
+;;shrine_statuestrial;1;t2;;L;20;8;1.84%;;;;1;Entities/MapObjects/Act 2/Power 1/Shrine_StatuesTrial/Shrine_StatuesTrial_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;shrine_statuestrial;;;0
+;;staff_sedentary;1;t2;;L;20;8;1.84%;;;;1;Entities/MapObjects/Act 2/Power 1/Staff_Sedentary/Staff_Sedentary_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;staff_sedentary;;;0
+;;altar_ancient_sandsunken;2;t2;;M;16;35;34.59%;;;;x;Entities/MapObjects/Act 2/Power 2/Altar_Ancient_Sandsunken/Altar_Ancient_Sandsunken_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;altar_ancient_sandsunken;;;0
+;;altar_beautyeyes;2;t2;;M;16;35;34.59%;;;;x;Entities/MapObjects/Act 2/Power 2/Altar_BeautyEyes/Altar_BeautyEyes_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;altar_beautyeyes;;;0
+;;altar_sabres;2;t2;;M;16;35;34.59%;;;;x;Entities/MapObjects/Act 2/Power 2/Altar_Sabres/Altar_Sabres_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;altar_sabres;;;0
+;;altar_scarabwings;2;t2;;M;16;35;34.59%;;;;x;Entities/MapObjects/Act 2/Power 2/Altar_ScarabWings/Altar_ScarabWings_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;altar_scarabwings;;;0
+;;altar_skullsunoreol;2;t2;;M;16;35;34.59%;;;;x;Entities/MapObjects/Act 2/Power 2/Altar_SkullSunOreol/Altar_SkullSunOreol_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;altar_skullsunoreol;;;0
+;;altar_snakescoiled;2;t2;;M;16;35;34.59%;;;;x;Entities/MapObjects/Act 2/Power 2/Altar_SnakesCoiled/Altar_SnakesCoiled_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;altar_snakescoiled;;;0
+;;altar_sunandmoon;2;t2;;M;16;35;34.59%;;;;x;Entities/MapObjects/Act 2/Power 2/Altar_SunAndMoon/Altar_SunAndMoon_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;altar_sunandmoon;;;0
+;;boat_sandsunken;2;t2;;M;16;35;34.59%;;;;x;Entities/MapObjects/Act 2/Power 2/Boat_SandSunken/Boat_SandSunken_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;boat_sandsunken;;;0
+;;canopiccoffin_eaglerich1;2;t2;;M;16;3;2.96%;;;;x;Entities/MapObjects/Act 2/Power 2/CanopicCoffin_EagleRich1/CanopicCoffin_EagleRich1_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;canopiccoffin_eaglerich1;;;0
+;;cauldron_darkmatter;2;t2;;M;16;18;17.79%;;;;x;Entities/MapObjects/Act 2/Power 2/Cauldron_DarkMatter/Cauldron_DarkMatter_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;cauldron_darkmatter;;;0
+;;crocodile_carcass;2;t2;;M;16;35;34.59%;;;;x;Entities/MapObjects/Act 2/Power 2/Crocodile_Carcass/Crocodile_Carcass_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;crocodile_carcass;;;0
+;;darksphere_moon;2;t2;;M;16;35;34.59%;;;;x;Entities/MapObjects/Act 2/Power 2/Darksphere_Moon/Darksphere_Moon_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;darksphere_moon;;;0
+;;enchantmentground1;2;t2;;M;16;35;34.59%;;;;x;Entities/MapObjects/Act 2/Power 2/EnchantmentGround1/EnchantmentGround1_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;enchantmentground1;;;0
+;;harp_ibisofserenity;2;t2;;M;16;35;34.59%;;;;x;Entities/MapObjects/Act 2/Power 2/Harp_IbisOfSerenity/Harp_IbisOfSerenity_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;harp_ibisofserenity;;;0
+;;lightsphere_sun;2;t2;;M;16;35;34.59%;;;;x;Entities/MapObjects/Act 2/Power 2/Lightsphere_Sun/Lightsphere_Sun_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;lightsphere_sun;;;0
+;;mystgate;2;t2;;M;16;35;34.59%;;;;x;Entities/MapObjects/Act 2/Power 2/NPC_Hermit/NPC_Hermit_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;mystgate;;;0
+;;oasis1;2;t2;;M;16;35;34.59%;;;;x;Entities/MapObjects/Act 2/Power 2/Oasis1/Oasis1_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;oasis1;;;0
+;;potionsstand;2;t2;;M;16;35;34.59%;;;;x;Entities/MapObjects/Act 2/Power 2/PotionsStand/PotionsStand_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;potionsstand;;;0
+;;sarcophagus_rich_mummy;1;t2;;M;20;8;1.84%;;;;1;Entities/MapObjects/Act 2/Power 2/Sarcophagus_Rich_Mummy/Sarcophagus_Rich_Mummy_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;sarcophagus_rich_mummy;;;0
+;;sarcophagus_simple_mummy;2;t2;;M;20;16;15.81%;;;;1;Entities/MapObjects/Act 2/Power 2/Sarcophagus_Simple_Mummy/Sarcophagus_Simple_Mummy_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;sarcophagus_simple_mummy;;;0
+;;scroll_of_wisdom;2;t2;;M;16;24;23.72%;;;;x;Entities/MapObjects/Act 2/Power 2/Scroll_of_Wisdom/Scroll_of_Wisdom_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;scroll_of_wisdom;;;0
+;;shrine_cat;2;t2;;M;16;35;34.59%;;;;x;Entities/MapObjects/Act 2/Power 2/Shrine_Cat/Shrine_Cat_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;shrine_cat;;;0
+;;shrine_crocodile;2;t2;;M;16;35;34.59%;;;;x;Entities/MapObjects/Act 2/Power 2/Shrine_Crocodile/Shrine_Crocodile_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;shrine_crocodile;;;0
+;;shrine_dragonfly;2;t2;;M;16;35;34.59%;;;;x;Entities/MapObjects/Act 2/Power 2/Shrine_Dragonfly/Shrine_Dragonfly_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;shrine_dragonfly;;;0
+;;shrine_egyptianeagle;2;t2;;M;16;35;34.59%;;;;x;Entities/MapObjects/Act 2/Power 2/Shrine_EgyptianEagle/Shrine_EgyptianEagle_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;shrine_egyptianeagle;;;0
+;;shrine_fish;2;t2;;M;16;35;34.59%;;;;x;Entities/MapObjects/Act 2/Power 2/Shrine_Fish/Shrine_Fish_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;shrine_fish;;;0
+;;shrine_halfface;2;t2;;M;16;35;34.59%;;;;x;Entities/MapObjects/Act 2/Power 2/Shrine_Halfface/Shrine_Halfface_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;shrine_halfface;;;0
+;;shrine_hippopotamus;2;t2;;L;16;35;34.59%;;;;x;Entities/MapObjects/Act 2/Power 2/Shrine_Hippopotamus/Shrine_Hippopotamus_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;shrine_hippopotamus;;;0
+;;shrine_jackal;2;t2;;M;16;35;34.59%;;;;x;Entities/MapObjects/Act 2/Power 2/Shrine_Jackal/Shrine_Jackal_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;shrine_jackal;;;0
+;;shrine_river;1;t2;;L;20;8;1.84%;;;;1;Entities/MapObjects/Act 2/Power 2/Shrine_River/Shrine_River_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;shrine_river;;;0
+;;shrine_scarab;2;t2;;M;16;35;34.59%;;;;x;Entities/MapObjects/Act 2/Power 2/Shrine_Scarab/Shrine_Scarab_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;shrine_scarab;;;0
+;;shrine_snake;2;t2;;M;16;35;34.59%;;;;x;Entities/MapObjects/Act 2/Power 2/Shrine_Snake/Shrine_Snake_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;shrine_snake;;;0
+;;silk_monument;2;t2;;M;16;35;34.59%;;;;x;Entities/MapObjects/Act 2/Power 2/Silk_Monument/Silk_Monument_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;silk_monument;;;0
+;;stone_scriptures;2;t2;;M;16;35;34.59%;;;;x;Entities/MapObjects/Act 2/Power 2/Stone_Scriptures/Stone_Scriptures_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;stone_scriptures;;;0
+;;tent_nomadic;2;t2;;M;16;35;34.59%;;;;x;Entities/MapObjects/Act 2/Power 2/Tent_Nomadic/Tent_Nomadic_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;tent_nomadic;;;0
+;;tree_desertspirits;2;t2;;M;20;10;9.88%;;;;x;Entities/MapObjects/Act 2/Power 2/Tree_DesertSpirits/Tree_DesertSpirits_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;tree_desertspirits;;;0
+;;well_turquoise;2;t2;;M;16;35;34.59%;;;;x;Entities/MapObjects/Act 2/Power 2/Well_Turquoise/Well_Turquoise_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;well_turquoise;;;0
+;;wondrous_parchment;2;t2;;M;16;35;34.59%;;;;x;Entities/MapObjects/Act 2/Power 2/Wondrous_Parchment/Wondrous_Parchment_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;wondrous_parchment;;;0
+;;bookshelf_act2;2;t2;;M;16;60;59.29%;;;;x;Entities/MapObjects/Act 2/Power 2/Bookshelf_WoodenSimple_Sand/Bookshelf_WoodenSimple_Sand_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;;code;bookshelf_act2;;;0
+;;basket_fruit1;3;t2;;S;12;100;76.67%;;;;x;Entities/MapObjects/Act 2/Power 3/Basket_Fruit1/Basket_Fruit1_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;;code;basket_fruit1;;;0
+;;bowl_turquoiseliquid;3;t2;;S;12;100;76.67%;;;;x;Entities/MapObjects/Act 2/Power 3/Bowl_TurquoiseLiquid/Bowl_TurquoiseLiquid_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;;code;bowl_turquoiseliquid;;;0
+;;brazierhanging1;3;t2;;S;12;100;76.67%;;;;x;Entities/MapObjects/Act 2/Power 3/BrazierHanging1/BrazierHanging1_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;;code;brazierhanging1;;;0
+;;bustwithnecklaces;3;t2;;S;12;7;5.37%;;;;x;Entities/MapObjects/Act 2/Power 3/BustWithNecklaces/BustWithNecklaces_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;;code;bustwithnecklaces;;;0
+;;cacti1;3;t2;;S;12;100;76.67%;;;;x;Entities/MapObjects/Act 2/Power 3/Cacti1/Cacti1_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;;code;cacti1;;;0
+;;coffin_stonescripted2;3;t2;;S;12;20;15.33%;;;;x;Entities/MapObjects/Act 2/Power 3/Coffin_StoneScripted2/Coffin_StoneScripted2_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;;code;coffin_stonescripted2;;;0
+;;coffin_stonescripted3;3;t2;;S;12;20;15.33%;;;;x;Entities/MapObjects/Act 2/Power 3/Coffin_StoneScripted3/Coffin_StoneScripted3_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;;code;coffin_stonescripted3;;;0
+;;handswithorb;3;t2;;S;12;7;5.37%;;;;x;Entities/MapObjects/Act 2/Power 3/HandsWithOrb/HandsWithOrb_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;;code;handswithorb;;;0
+;;handwithrings;3;t2;;S;12;7;5.37%;;;;x;Entities/MapObjects/Act 2/Power 3/HandWithRings/HandWithRings_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;;code;handwithrings;;;0
+;;magicseal1;3;t2;;S;12;100;76.67%;;;;x;Entities/MapObjects/Act 2/Power 3/MagicSeal1/MagicSeal1_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;;code;magicseal1;;;0
+;;magicseal2;3;t2;;S;12;100;76.67%;;;;x;Entities/MapObjects/Act 2/Power 3/MagicSeal2/MagicSeal2_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;;code;magicseal2;;;0
+;;magicseal3;3;t2;;S;12;100;76.67%;;;;x;Entities/MapObjects/Act 2/Power 3/MagicSeal3/MagicSeal3_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;;code;magicseal3;;;0
+;;magicseal4;3;t2;;S;12;100;76.67%;;;;x;Entities/MapObjects/Act 2/Power 3/MagicSeal4/MagicSeal4_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;;code;magicseal4;;;0
+;;magicseal5;3;t2;;S;12;100;76.67%;;;;x;Entities/MapObjects/Act 2/Power 3/MagicSeal5/MagicSeal5_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;;code;magicseal5;;;0
+;;magicseal6;3;t2;;S;12;100;76.67%;;;;x;Entities/MapObjects/Act 2/Power 3/MagicSeal6/MagicSeal6_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;;code;magicseal6;;;0
+;;magicseal7;3;t2;;S;12;100;76.67%;;;;x;Entities/MapObjects/Act 2/Power 3/MagicSeal7/MagicSeal7_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;;code;magicseal7;;;0
+;;weaponsstand_sand1;3;t2;;S;12;100;76.67%;;;;x;Entities/MapObjects/Act 2/Power 3/WeaponsStand_Sand1/WeaponsStand_Sand1_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;;code;weaponsstand_sand1;;;0
+;;well_sand_abandoned1;3;t2;;S;12;100;76.67%;;;;x;Entities/MapObjects/Act 2/Power 3/Well_Sand_Abandoned1/Well_Sand_Abandoned1_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;;code;well_sand_abandoned1;;;0
+;;well_sand_lively;3;t2;;S;12;100;76.67%;;;;x;Entities/MapObjects/Act 2/Power 3/Well_Sand_Lively/Well_Sand_Lively_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;;code;well_sand_lively;;;0
+;;fountain_sacred_sand;2;t2;;M;16;40;39.53%;;;;x;Entities/MapObjects/Act 2/Power 2/Fountain_Sacred_Sand/Fountain_Sacred_Sand_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;heal;code;fountain_sacred;;;0
+;;npc_ghost_sand;2;t2;;M;16;8;7.91%;;;;1;Entities/MapObjects/Act 1/NPC_Ghost/NPC_Ghost_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;msa%;code;npc_ghost;;;0
+;;npc_kobold_sand;2;t2;;M;16;8;7.91%;;;;1;Entities/MapObjects/Act 1/NPC_Kobold/NPC_Kobold_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;g%;code;npc_kobold_sand;;;0
+;;npc_rogue_sand;2;t2;;M;16;8;7.91%;;;;1;Entities/MapObjects/Act 1/NPC_Rogue/NPC_Rogue_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;dclde;code;npc_rogue_sand;;;0
+;;npc_warrior_sand;2;t2;;M;16;8;7.91%;;;;1;Entities/MapObjects/Act 1/NPC_Warrior/NPC_Warrior_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;ad%a;code;npc_warrior_sand;;;0
+;;npc_wizard_sand;2;t2;;M;16;8;7.91%;;;;1;Entities/MapObjects/Act 1/NPC_Wizard/NPC_Wizard_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;sspddsum%;code;npc_wizard_sand;;;0
+;;npc_troll_sand;2;t2;;M;16;8;7.91%;;;;1;Entities/MapObjects/Act 2/Power 2/NPC_Troll_Sand/NPC_Troll_Sand_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;a;code;npc_troll_sand;;;0
+;;stone_collecting_sand;3;t2;;M;12;100;76.67%;;;;x;Entities/MapObjects/Act 2/Power 2/Stone_Collecting_Sand/Stone_Collecting_Sand_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;pul;code;stone_collecting;;;0
+;;stone_experience_sand;3;t2;;M;12;100;76.67%;;;;x;Entities/MapObjects/Act 2/Power 2/Stone_Experience_Sand/Stone_Experience_Sand_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;xp%;code;stone_experience;;;0
+;;stone_power_sand;3;t2;;S;12;100;76.67%;;;;x;Entities/MapObjects/Act 2/Power 2/Stone_Power_Sand/Stone_Power_Sand_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;pow;code;stone_power;;;0
+;;stone_stamina_sand;3;t2;;M;12;100;76.67%;;;;x;Entities/MapObjects/Act 2/Power 2/Stone_Stamina_Sand/Stone_Stamina_Sand_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;mvp;code;stone_stamina;;;0
+;;stone_jumper_sand;3;t2;;S;12;25;19.17%;;;;x;Entities/MapObjects/Act 2/Power 2/Totem_Hare_Sand/Totem_Hare_Sand_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;dchg;code;stone_jumper_sand;;;0
+;X;altar_eldergods;1;t3;;L;16;8;1.84%;;;;x;Entities/MapObjects/Act 3/Altar_ElderGods/Altar_ElderGods_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;altar_eldergods;;;0
+;X;ancientjudgementalstones;1;t3;;L;16;8;1.84%;;;;1;Entities/MapObjects/Act 3/AncientJudgementalStones/AncientJudgementalStones_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;ancientjudgementalstones;;;0
+;X;aphoticbeaststotem;1;t3;;L;16;8;1.84%;;;;x;Entities/MapObjects/Act 3/AphoticBeastsTotem/AphoticBeastsTotem_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;aphoticbeaststotem;;;0
+;X;containedeldermonument;1;t3;;L;16;8;1.84%;;;;x;Entities/MapObjects/Act 3/ContainedElderMonument/ContainedElderMonument_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;containedeldermonument;;;0
+;O;flora_blackleaf;1;t3;;S;16;8;1.84%;;;;1;Entities/MapObjects/Act 3/Flora_Moor/Flora_Blackleaf_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;;code;flora_blackleaf;;;0
+;X;giantgrandpasglove;1;t3;;M;16;8;1.84%;;;;1;Entities/MapObjects/Act 3/GiantGrandpasGlove/GiantGrandpasGlove_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;giantgrandpasglove;;;0
+;X;grape_eldertree;1;t3;;L;16;8;1.84%;;;;x;Entities/MapObjects/Act 3/Grape_ElderTree/Grape_ElderTree_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;grape_eldertree;;;0
+;O;mushroom_kingspore;1;t3;;S;16;8;1.84%;;;;1;Entities/MapObjects/Act 3/StrangeTinyCottage/StrangeTinyCottage_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;;code;mushroom_kingspore;;;0
+;X;mouseenclave_encampment;1;t3;;L;16;8;1.84%;;;;1;Entities/MapObjects/Act 3/MouseEnclave/MouseEnclave_Encampment_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;mouseenclave_encampment;;;0
+;X;mysteriouslyabandonedlab;1;t3;;L;16;8;1.84%;;;;1;Entities/MapObjects/Act 3/MysteriouslyAbandonedLab/MysteriouslyAbandonedLab_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;mysteriouslyabandonedlab;;;0
+;X;shrine_hunting_moor;1;t3;;L;16;8;1.84%;;;;1;Entities/MapObjects/Act 3/Shrine_Hunting_Moor/Shrine_Hunting_Moor_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;dchg;code;shrine_hunting_moor;;;0
+;X;shrine_writing_moor;1;t3;;L;16;8;1.84%;;;;1;Entities/MapObjects/Act 3/Shrine_Writing_Moor/Shrine_Writing_Moor_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;s%;code;shrine_writing_moor;;;0
+;X;statue_crypticswordsman;1;t3;;L;16;8;1.84%;;;;1;Entities/MapObjects/Act 3/Statue_CrypticSwordsman/Statue_CrypticSwordsman_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;statue_crypticswordsman;;;0
+;X;abandonedcage;2;t3;;L;16;35;34.59%;;;;1;Entities/MapObjects/Act 3/AbandonedCage/AbandonedCage_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;abandonedcage;;;0
+;X;acorn_totem;2;t3;;M;16;35;34.59%;;;;x;Entities/MapObjects/Act 3/Acorn_Totem/Acorn_Totem_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;acorn_totem;;;0
+;X;aegisofthelost;2;t3;;M;16;35;34.59%;;;;x;Entities/MapObjects/Act 3/AegisOfTheLost/AegisOfTheLost_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;aegisofthelost;;;0
+;X;alienbubbles;2;t3;;M;16;35;34.59%;;;;x;Entities/MapObjects/Act 3/AlienBubbles/AlienBubbles_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;alienbubbles;;;0
+;X;ancestralmask;2;t3;;M;16;35;34.59%;;;;x;Entities/MapObjects/Act 3/AncestralMask/AncestralMask_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;ancestralmask;;;0
+;X;arcanumstone;2;t3;;M;16;35;34.59%;;;;x;Entities/MapObjects/Act 3/ArcanumStone/ArcanumStone_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;arcanumstone;;;0
+;X;bionirunestone;2;t3;;M;16;35;34.59%;;;;x;Entities/MapObjects/Act 3/BioniRunestone/BioniRunestone_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;bionirunestone;;;0
+;X;blackhole_tree;2;t3;;M;16;35;34.59%;;;;x;Entities/MapObjects/Act 3/Blackhole_Tree/Blackhole_Tree_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;blackhole_tree;;;0
+;O;bookshelf_woodensimple_moor;2;t3;;M;16;35;34.59%;;;;x;Entities/MapObjects/Act 3/Bookshelf_WoodenSimple_Moor/Bookshelf_WoodenSimple_Moor_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;;code;bookshelf_woodensimple_moor;;;0
+;X;chainedritualrelic;2;t3;;M;16;35;34.59%;;;;x;Entities/MapObjects/Act 3/ChainedRitualRelic/ChainedRitualRelic_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;chainedritualrelic;;;0
+;X;crypticmirror;2;t3;;M;16;35;34.59%;;;;x;Entities/MapObjects/Act 3/CrypticMirror/CrypticMirror_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;crypticmirror;;;0
+;X;crypticmooraltar;2;t3;;L;16;35;34.59%;;;;x;Entities/MapObjects/Act 3/CrypticMoorAltar/CrypticMoorAltar_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;crypticmooraltar;;;0
+;X;eerienest;2;t3;;M;16;35;34.59%;;;;x;Entities/MapObjects/Act 3/EerieNest/EerieNest_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;eerienest;;;0
+;O;fountain_sacred_moor;2;t3;;M;16;160;158.12%;;;;x;Entities/MapObjects/Act 3/Fountain_Sacred_Moor/Fountain_Sacred_Moor_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;heal;code;fountain_sacred_moor;;;0
+;X;ghastlydarktree;2;t3;;M;16;35;34.59%;;;;x;Entities/MapObjects/Act 3/GhastlyDarkTree/GhastlyDarkTree_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;ghastlydarktree;;;0
+;X;gloomysacredfountain;2;t3;;L;16;35;34.59%;;;;x;Entities/MapObjects/Act 3/GloomySacredFountain/GloomySacredFountain_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;gloomysacredfountain;;;0
+;X;grape_winebottle;2;t3;;S;16;35;34.59%;;;;x;Entities/MapObjects/Act 3/Grape_WineBottle/Grape_WineBottle_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;grape_winebottle;;;0
+;O;insigniaincrustation_01;3;t3;;L;16;35;26.84%;;;;x;Entities/MapObjects/Act 3/InsigniaIncrustations/InsigniaIncrustation_01_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;;code;insigniaincrustation_01;;;0
+;O;insigniaincrustation_02;3;t3;;L;16;35;26.84%;;;;x;Entities/MapObjects/Act 3/InsigniaIncrustations/InsigniaIncrustation_02_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;;code;insigniaincrustation_02;;;0
+;O;insigniaincrustation_03;3;t3;;L;16;35;26.84%;;;;x;Entities/MapObjects/Act 3/InsigniaIncrustations/InsigniaIncrustation_03_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;;code;insigniaincrustation_03;;;0
+;O;insigniaincrustation_04;3;t3;;L;16;35;26.84%;;;;x;Entities/MapObjects/Act 3/InsigniaIncrustations/InsigniaIncrustation_04_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;;code;insigniaincrustation_04;;;0
+;O;insigniaincrustation_05;3;t3;;L;16;35;26.84%;;;;x;Entities/MapObjects/Act 3/InsigniaIncrustations/InsigniaIncrustation_05_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;;code;insigniaincrustation_05;;;0
+;O;insigniaincrustation_06;3;t3;;L;16;35;26.84%;;;;x;Entities/MapObjects/Act 3/InsigniaIncrustations/InsigniaIncrustation_06_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;;code;insigniaincrustation_06;;;0
+;X;keldstone;2;t3;;M;16;35;34.59%;;;;x;Entities/MapObjects/Act 3/KeldStone/KeldStone_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;keldstone;;;0
+;X;mechkata_moor;2;t3;;S;16;1;0.99%;;;;x;Entities/MapObjects/Act 3/Mechkata_Moor/Mechkata_Moor_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;mechkata_moor;;;0
+;X;moonsign;2;t3;;M;16;35;34.59%;;;;x;Entities/MapObjects/Act 3/MoonSign/MoonSign_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;moonsign;;;0
+;X;mouseenclave_shelter;2;t3;;M;16;35;34.59%;;;;x;Entities/MapObjects/Act 3/MouseEnclave/MouseEnclave_Shelter_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;mouseenclave_shelter;;;0
+;X;mysteriouscauldron;3;t3;;M;16;35;26.84%;;;;x;Entities/MapObjects/Act 3/MysteriousCauldron/MysteriousCauldron_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;mysteriouscauldron;;;0
+;X;mysteriouslyabandonedprobe;2;t3;;M;16;35;34.59%;;;;x;Entities/MapObjects/Act 3/MysteriouslyAbandonedProbe/MysteriouslyAbandonedProbe_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;mysteriouslyabandonedprobe;;;0
+;X;mysticgate_moor;2;t3;;M;16;35;34.59%;;;;x;Entities/MapObjects/Act 3/MysticGate_Moor/MysticGate_Moor_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;mysticgate_moor;;;0
+;X;npc_snail_moor;2;t3;;M;16;35;34.59%;;;;1;Entities/MapObjects/Act 3/NPC_Snail_Moor/NPC_Snail_Moor_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;npc_snail_moor;;;0
+;X;npc_wanderingeldertreefolk;2;t3;;M;16;35;34.59%;;;;1;Entities/MapObjects/Act 3/NPC_WanderingElderTreefolk/NPC_WanderingElderTreefolk_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;npc_wanderingeldertreefolk;;;0
+;X;old_lanterntree;2;t3;;M;16;35;34.59%;;;;x;Entities/MapObjects/Act 3/Old_LanternTree/Old_LanternTree_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;old_lanterntree;;;0
+;X;overgrownaphoticbasin;2;t3;;L;16;35;34.59%;;;;x;Entities/MapObjects/Act 3/OvergrownAphoticBasin/OvergrownAphoticBasin_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;overgrownaphoticbasin;;;0
+;X;overgrowndarkgate;2;t3;;M;16;35;34.59%;;;;x;Entities/MapObjects/Act 3/OvergrownDarkGate/OvergrownDarkGate_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;overgrowndarkgate;;;0
+;X;overgrownknightgrave;2;t3;;M;16;35;34.59%;;;;x;Entities/MapObjects/Act 3/OvergrownKnightGrave/OvergrownKnightGrave_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;overgrownknightgrave;;;0
+;X;ritualstones;2;t3;;M;16;35;34.59%;;;;x;Entities/MapObjects/Act 3/RitualStones/RitualStones_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;ritualstones;;;0
+;X;shard_fallen_moor;2;t3;;S;16;35;34.59%;;;;x;Entities/MapObjects/Act 3/Shard_Fallen_Moor/Shard_Fallen_Moor_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;shard_fallen_moor;;;0
+;X;shrine_penantknight;2;t3;;M;16;35;34.59%;;;;x;Entities/MapObjects/Act 3/Shrine_PenantKnight/Shrine_PenantKnight_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;shrine_penantknight;;;0
+;X;skullcarvedtree;2;t3;;M;16;35;34.59%;;;;1;Entities/MapObjects/Act 3/SkullcarvedTree/SkullcarvedTree_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;skullcarvedtree;;;0
+;X;strangetinycottage;2;t3;;M;16;35;34.59%;;;;x;Entities/MapObjects/Act 3/StrangeTinyCottage/StrangeTinyCottage_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;strangetinycottage;;;0
+;X;tome_necronomicon_moor;2;t3;;S;16;35;34.59%;;;;x;Entities/MapObjects/Act 3/Tome_Necronomicon_Moor/Tome_Necronomicon_Moor_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;stundmgmon;u%d%dsum%;code;tome_necronomicon_moor;;;0
+;X;shrine_fish_moor;2;t3;;S;16;35;34.59%;;;;x;Entities/MapObjects/Act 3/Shrine_Fish_Moor/Shrine_Fish_Moor_Fab;GUI/Minimap/Minimap_Marker02_Spr;encounter;;;code;shrine_fish_moor;;;0
+;O;altar_devotion_moor;3;t3;;S;12;70;53.67%;;;;x;Entities/MapObjects/Act 3/Altar_Devotion_Moor/Altar_Devotion_Moor_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;heal%;code;altar_devotion_moor;;;0
+;O;argentbasin;3;t3;;M;16;50;38.34%;;;;x;Entities/MapObjects/Act 3/ArgentBasin/ArgentBasin_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;;code;argentbasin;;;0
+;O;chest_woodsimple_moor_01;3;t3;;S;12;50;38.34%;;;;x;Entities/MapObjects/Act 3/Chest_WoodSimple_Moor_01/Chest_WoodSimple_Moor_01_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;;code;chest_woodsimple_moor_01;;;0
+;O;chest_woodsimple_moor_02;2;t3;;S;16;15;14.82%;;;;x;Entities/MapObjects/Act 3/Chest_WoodSimple_Moor_02/Chest_WoodSimple_Moor_02_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;igpi;code;chest_woodsimple_moor_02;;;0
+;O;chest_woodsimple_moor_03;3;t3;;S;12;100;76.67%;;;;x;Entities/MapObjects/Act 3/Chest_WoodSimple_Moor_03/Chest_WoodSimple_Moor_03_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;igpi;code;chest_woodsimple_moor_03;;;0
+;O;coffin_stonescripted_moor;3;t3;;S;12;100;76.67%;;;;x;Entities/MapObjects/Act 3/Coffin_StoneScripted_Moor/Coffin_StoneScripted_Moor_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;igpi;code;coffin_stonescripted_moor;;;0
+;O;darkwoodbonfire;3;t3;;S;16;100;76.67%;;;;x;Entities/MapObjects/Act 3/DarkWoodBonfire/DarkWoodBonfire_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;;code;darkwoodbonfire;;;0
+;O;darkwoodlantern_01;2;t3;;S;16;100;98.82%;;;;x;Entities/MapObjects/Act 3/DarkWoodLantern/DarkWoodLantern_01_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;;code;darkwoodlantern_01;;;0
+;O;darkwoodlog;3;t3;;S;16;100;76.67%;;;;x;Entities/MapObjects/Act 3/DarkWoodLog/DarkWoodLog_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;;code;darkwoodlog;;;0
+;O;flora_bloodthistle;3;t3;;S;16;100;76.67%;;;;x;Entities/MapObjects/Act 3/Flora_Moor/Flora_Bloodthistle_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;;code;flora_bloodthistle;;;0
+;O;flora_faerieblossom;3;t3;;S;16;100;76.67%;;;;x;Entities/MapObjects/Act 3/Flora_Moor/Flora_FaerieBlossom_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;;code;flora_faerieblossom;;;0
+;O;flora_honeysack;3;t3;;S;16;100;76.67%;;;;x;Entities/MapObjects/Act 3/Flora_Moor/Flora_HoneySack_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;;code;flora_honeysack;;;0
+;O;flora_knightswildbloom;3;t3;;S;16;100;76.67%;;;;x;Entities/MapObjects/Act 3/Flora_Moor/Flora_KnightsWildbloom_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;;code;flora_knightswildbloom;;;0
+;O;flora_mornincup;3;t3;;S;16;100;76.67%;;;;x;Entities/MapObjects/Act 3/Flora_Moor/Flora_Mornincup_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;;code;flora_mornincup;;;0
+;O;flora_peacefluff;3;t3;;S;16;100;76.67%;;;;x;Entities/MapObjects/Act 3/Flora_Moor/Flora_Peacefluff_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;;code;flora_peacefluff;;;0
+;O;flora_sparkleweed;3;t3;;S;16;100;76.67%;;;;x;Entities/MapObjects/Act 3/Flora_Moor/Flora_Sparkleweed_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;;code;flora_sparkleweed;;;0
+;O;flora_sunpetal;3;t3;;S;16;100;76.67%;;;;x;Entities/MapObjects/Act 3/Flora_Moor/Flora_Sunpetal_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;;code;flora_sunpetal;;;0
+;O;lamp_spiritual;3;t3;;S;16;100;76.67%;;;;x;Entities/MapObjects/Act 3/Lamp_Spiritual/Lamp_Spiritual_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;;code;lamp_spiritual;;;0
+;O;magicalpumpkins;3;t3;;S;16;100;76.67%;;;;x;Entities/MapObjects/Act 3/MagicalPumpkins/MagicalPumpkins_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;;code;magicalpumpkins;;;0
+;O;magicalfoodcarpet;3;t3;;S;16;100;76.67%;;;;x;Entities/MapObjects/Act 3/MagicalFoodCarpet/MagicalFoodCarpet_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;;code;magicalfoodcarpet;;;0
+;O;magicseal_moor;3;t3;;S;12;100;76.67%;;;;x;Entities/MapObjects/Act 3/MagicSeal_Moor/MagicSeal_Moor_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;;code;magicseal_moor;;;0
+;O;mossygrave;3;t3;;M;16;100;76.67%;;;;x;Entities/MapObjects/Act 3/MossyGrave/MossyGrave_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;;code;mossygrave;;;0
+;O;mouseenclave_watchpost;3;t3;;S;16;100;76.67%;;;;x;Entities/MapObjects/Act 3/MouseEnclave/MouseEnclave_Watchpost_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;;code;mouseenclave_watchpost;;;0
+;O;mushroom_astravella;3;t3;;S;16;100;76.67%;;;;x;Entities/MapObjects/Act 3/Mushrooms_Moor/Mushroom_Astravella_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;;code;mushroom_astravella;;;0
+;O;mushroom_ghostcap;3;t3;;S;16;100;76.67%;;;;x;Entities/MapObjects/Act 3/Mushrooms_Moor/Mushroom_Ghostcap_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;;code;mushroom_ghostcap;;;0
+;O;mushroom_honeychanterelles;3;t3;;S;16;100;76.67%;;;;x;Entities/MapObjects/Act 3/Mushrooms_Moor/Mushroom_HoneyChanterelles_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;;code;mushroom_honeychanterelles;;;0
+;O;mushroom_ordinarypeachshroom;3;t3;;S;16;100;76.67%;;;;x;Entities/MapObjects/Act 3/Mushrooms_Moor/Mushroom_OrdinaryPeachshroom_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;;code;mushroom_ordinarypeachshroom;;;0
+;O;mushroom_pinklyam;3;t3;;S;16;100;76.67%;;;;x;Entities/MapObjects/Act 3/Mushrooms_Moor/Mushroom_Pinklyam_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;;code;mushroom_pinklyam;;;0
+;O;mushroom_snakeshroom;3;t3;;S;16;100;76.67%;;;;x;Entities/MapObjects/Act 3/Mushrooms_Moor/Mushroom_Snakeshroom_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;;code;mushroom_snakeshroom;;;0
+;O;mushroom_webthreadmorel;3;t3;;S;16;100;76.67%;;;;x;Entities/MapObjects/Act 3/Mushrooms_Moor/Mushroom_WebthreadMorel_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;;code;mushroom_webthreadmorel;;;0
+;O;orb_seeking_moor;3;t3;;S;12;100;76.67%;;;;x;Entities/MapObjects/Act 3/Orb_Seeking_Moor/Orb_Seeking_Moor_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;pi;code;orb_seeking_moor;;;0
+;O;overgrownstump;3;t3;;S;16;100;76.67%;;;;x;Entities/MapObjects/Act 3/OvergrownStump/OvergrownStump_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;;code;overgrownstump;;;0
+;O;shadywell;3;t3;;S;16;500;383.37%;;;;x;Entities/MapObjects/Act 3/ShadyWell/ShadyWell_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;;code;shadywell;;;0
+;O;stone_collecting_moor;3;t3;;M;12;100;76.67%;;;;x;Entities/MapObjects/Act 3/Stone_Collecting_Moor/Stone_Collecting_Moor_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;pul;code;stone_collecting_moor;;;0
+;O;stone_experience_moor;3;t3;;M;12;100;76.67%;;;;x;Entities/MapObjects/Act 3/Stone_Experience_Moor/Stone_Experience_Moor_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;xp%;code;stone_experience_moor;;;0
+;O;stone_power_moor;3;t3;;S;12;100;76.67%;;;;x;Entities/MapObjects/Act 3/Stone_Power_Moor/Stone_Power_Moor_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;pow;code;stone_power_moor;;;0
+;O;stone_stamina_moor;3;t3;;M;12;100;76.67%;;;;x;Entities/MapObjects/Act 3/Stone_Stamina_Moor/Stone_Stamina_Moor_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;mvp;code;stone_stamina_moor;;;0
+;O;totem_hare_moor;3;t3;;S;12;25;19.17%;;;;x;Entities/MapObjects/Act 3/Totem_Hare_Moor/Totem_Hare_Moor_Fab;GUI/Minimap/Minimap_Marker02_Spr;instant;;dchg;code;totem_hare_moor;;;0

@@ -1,0 +1,2715 @@
+                    #  ACT I  #
+
+
+
+                                        ### Power 1 ###
+
+
+
+#[shrine_rabbitdemon]
+# wizard | rogue and warrior together
+
+#[shrine_jormungandr]
+# wizard | rogue and warrior together
+
+#[camp_party]
+# wizard | rogue and warrior together
+
+[shrine_mythbeasts]
+# Phoenix: if have 6 appliers of Burning (giftsitemsetc) > gain +1 revival
+# Hydra: if have 5 gifts with more than 1 projectile > gain +2 projectiles
+# Raiju: if have 3 dash charges > -20% dash cld
+type = "multi_choice"
+descr = "loc_shrine_mythbeasts"
+choices = [
+    #>>>>>>>>>>>>>>>>>>>>>>>>>> condition1
+    {label = "loc_shrine_mythbeasts_ch_1", gift = "shrine_mythbeasts_ch_1"},
+    #>>>>>>>>>>>>>>>>>>>>>>>>>> condition2
+    {label = "loc_shrine_mythbeasts_ch_2", gift = "shrine_mythbeasts_ch_2"},
+    #>>>>>>>>>>>>>>>>>>>>>>>>>> condition3
+    {label = "loc_shrine_mythbeasts_ch_3", gift = "shrine_mythbeasts_ch_3"},
+]
+
+[shrine_penance]
+# [Repent] No XP for X sec > +% XP
+# [Atone] No Dash for X sec > +X Levels
+# [Revoke] +10% Attack Damage
+type = "multi_choice"
+descr = "loc_shrine_penance"
+choices = [
+    {label = "loc_shrine_penance_ch_1", instant = "shrine_penance_ch_1"},
+    {label = "loc_shrine_penance_ch_2", instant = "shrine_penance_ch_2"},
+    {label = "loc_shrine_penance_ch_3"},
+]
+
+[fountain_crying]
+# [Drink From Fountain] revive here on death
+    #>>>>>>>>>>>>>>>>>>>>>>>>>> revival
+# [Bottle Water] +0.1 hp regen
+type = "multi_choice"
+descr = "loc_fountain_crying"
+choices = [
+    {label = "loc_fountain_crying_ch_1", gift = "fountain_crying_ch_1", sfx = "Inst_Well"},
+    {label = "loc_fountain_crying_ch_2", gift = "fountain_crying_ch_2", sfx = "Inst_Well"},
+]
+
+[fountain_revival]
+# [Drink From Fountain] revive here on death
+    #>>>>>>>>>>>>>>>>>>>>>>>>>> revival
+# [Bottle Water] +0.1 hp regen
+type = "multi_choice"
+descr = "loc_fountain_revival"
+choices = [
+    {label = "loc_fountain_revival_ch_1", gift = "fountain_revival_ch_1"},
+    {label = "loc_fountain_revival_ch_2", gift = "fountain_revival_ch_2"},
+]
+
+[tree_fruit]
+# Gain 1 lvls | lose 20 life
+# Gain 10 max life
+type = "multi_choice"
+descr = "loc_tree_fruit"
+choices = [
+    {label = "loc_tree_fruit_ch_1", instant = "tree_fruit_ch_1"},
+    {label = "loc_tree_fruit_ch_2", gift = "tree_fruit_ch_2"},
+]
+
+[shrine_goldengoose]
+# [Touch the Golden Goose] +X gold per X seconds
+# [] Whenever get gold, gain +0.5% Attack Damage
+# [] +X pull range
+type = "multi_choice"
+descr = "loc_shrine_goldengoose"
+choices = [
+    {label = "loc_shrine_goldengoose_ch_1", gift = "shrine_goldengoose_ch_1"},
+    {label = "loc_shrine_goldengoose_ch_2", gift = "shrine_goldengoose_ch_2"},
+    {label = "loc_shrine_goldengoose_ch_3", gift = "shrine_goldengoose_ch_3"},
+]
+
+[shrine_monster]
+# [Pay Respects] +2% Attack Damage
+type = "multi_choice"
+descr = "loc_shrine_monster"
+choices = [
+    {label = "loc_shrine_monster_ch_1", instant = "shrine_monster_ch_1"},
+    {label = "loc_shrine_monster_ch_2", gift = "shrine_monster_ch_2"},
+]
+
+[shrine_suffering]
+# -33% max life | cant heal | no armor | +333% dmg
+# [Quickly Leave] Lose 10 life.
+type = "multi_choice"
+descr = "loc_shrine_suffering"
+choices = [
+    {label = "loc_shrine_suffering_ch_1", gift = "shrine_suffering_ch_1"},
+    {label = "loc_shrine_suffering_ch_2", instant = "shrine_suffering_ch_2"},
+]
+
+[shrine_autumn]
+# [Anguish] -0.1 HP regen | Heal +1 life per attack hit.
+# [Heartache] lose 6 life on lvl up | +100% spell dur
+# [Sorrow] -5 Passive Experience Gain | +50% Spell Area
+# [Passion] Heal 20 life
+type = "multi_choice"
+descr = "loc_shrine_autumn"
+choices = [
+    {label = "loc_shrine_autumn_ch_1", gift = "shrine_autumn_ch_1"},
+    {label = "loc_shrine_autumn_ch_2", gift = "shrine_autumn_ch_2"},
+    {label = "loc_shrine_autumn_ch_3", gift = "shrine_autumn_ch_3"},
+    {label = "loc_shrine_autumn_ch_4", instant = "shrine_autumn_ch_4"},
+]
+
+[shrine_spring]
+# [Excitement] +1.5 life reg | -40% spell dur
+# [Desire] +80% Damage Taken | -1000% Enemy Stun Thresholds
+# [Lust] Whenever Dash Lose 2 Life | +40% Dash Range, -30% Dash Cooldown
+# [Sadness] +8% Spell Duration
+type = "multi_choice"
+descr = "loc_shrine_spring"
+choices = [
+    {label = "loc_shrine_spring_ch_1", gift = "shrine_spring_ch_1"},
+    {label = "loc_shrine_spring_ch_2", gift = "shrine_spring_ch_2"},
+    {label = "loc_shrine_spring_ch_3", gift = "shrine_spring_ch_3"},
+    {label = "loc_shrine_spring_ch_4", gift = "shrine_spring_ch_4"},
+]
+
+[shrine_duplication]
+# +3 spell projectile count
+# Your attacks have a chance to duplicate 5% / ?duplicate a gift
+# Your dashes have a 5% chance to recharge a dash / duplicate an item (legendary included)
+type = "multi_choice"
+descr = "loc_shrine_duplication"
+choices = [
+    {label = "loc_shrine_duplication_ch_1", gift = "shrine_duplication_ch_1"},
+    #>>>>>>>>>>>>>>>>>>>>>>>>>> open next textbox prompt to place boon
+    {label = "loc_shrine_duplication_ch_2", gift = "shrine_duplication_ch_2"},
+    #>>>>>>>>>>>>>>>>>>>>>>>>>> open next textbox prompt to place item
+    {label = "loc_shrine_duplication_ch_3", gift = "shrine_duplication_ch_3"},
+]
+
+
+
+
+
+
+                                        ### Power 2 ###
+
+
+
+#[npc_blackmarket]
+# special in run shop with 15% lower prices
+#>>>>>>>>>>>>>>>>>>>>>>>>>> open shop with 15% lower prices
+
+#[npc_cartographer]
+# gives map | reveals 3 objects on the map thereafter
+#>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+#[dimensiondoor]
+# change character (keep boons and level)
+
+#[npc_dwarfminer]
+# invest 100 gold > if see in next 4 runs get 800 gold
+#>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+[npc_faerie]
+# free > +5% luck | faeries roam
+type = "multi_choice"
+descr = "loc_npc_faerie"
+choices = [
+    {label = "loc_npc_faerie_ch_1", gift = "npc_faerie", use_msg = "msg_npc_faerie_ch_1", sfx="Inst_BubblePop"},
+    {label = "loc_npc_faerie_ch_2", use_msg = "msg_npc_faerie_ch_2"},
+]
+
+[npc_ghost]
+# +3% adept offers
+type = "multi_choice"
+descr = "loc_npc_ghost"
+choices = [
+    {label = "loc_npc_ghost_ch_1", gift = "npc_ghost"},
+    {label = "loc_npc_ghost_ch_2"},
+]
+
+[npc_impess]
+# gives heart-looking random relic item
+# [Ignore Her] Gain +10% More Knockback
+type = "item_offer"
+descr = "loc_npc_impess"
+item_gen.type = "random"
+#>>>>>>>>>>>>>>>>>>>>>>>>>> item type reli of specific subtype of 3
+# item subtype? i want to make all the relics be between 3 diff looks or something
+item_gen.count_weights = { 1 = 1 }
+item_gen.class_weights = { Tr_Any = 10 }
+item_gen.rarity_weights = [
+    { min = 0, rar = { brok = 0, comm = 0, rare = 100, epic = 0, myth = 0 }},
+    { min = 3, rar = { brok = 0, comm = 0, rare = 100, epic = 0, myth = 0 }},
+    { min = 6, rar = { brok = 0, comm = 0, rare = 98, epic = 2, myth = 0 }},
+    { min = 9, rar = { brok = 0, comm = 0, rare = 89, epic = 10, myth = 1 }},
+    { min = 12, rar = { brok = 0, comm = 0, rare = 55, epic = 40, myth = 5 }},
+    { min = 15, rar = { brok = 0, comm = 0, rare = 35, epic = 65, myth = 10 }},
+    { min = 18, rar = { brok = 0, comm = 0, rare = 0, epic = 85, myth = 15 }}
+]
+# how to make this rarity weights not per item but for the whole batch
+choices.accept = { label = "loc_npc_impess_ch_1", use_msg = "msg_npc_impess_ch_1", exhausts = true, sfx = "Inst_Kiss" }
+choices.refuse = { label = "loc_npc_impess_ch_2", use_msg = "msg_npc_impess_ch_2", gift = "npc_impess_ch_2", exhausts = true }
+
+[statue_jadellama]
+# take jade llama relic (sells for 500 gold) | spawns monsters and black fires event
+# [Pay Respects] Gain +250 Pull Range
+type = "item_offer"
+descr = "loc_statue_jadellama"
+item_gen.type = "random"
+item_gen.count_weights = { 1 = 1 }
+item_gen.class_weights = { Tr_Any = 10 }
+item_gen.rarity_weights = [
+    { min = 0, rar = { brok = 0, comm = 10, rare = 5, epic = 0, myth = 0 }},
+    { min = 3, rar = { brok = 0, comm = 40, rare = 10, epic = 0, myth = 0 }},
+    { min = 6, rar = { brok = 0, comm = 70, rare = 20, epic = 1, myth = 0 }},
+    { min = 9, rar = { brok = 0, comm = 84, rare = 30, epic = 2, myth = 0 }},
+    { min = 12, rar = { brok = 0, comm = 47, rare = 35, epic = 7, myth = 1 }},
+    { min = 15, rar = { brok = 0, comm = 0, rare = 60, epic = 35, myth = 5 }},
+    { min = 18, rar = { brok = 0, comm = 0, rare = 30, epic = 55, myth = 15 }}
+]
+#item_gen.uniques = ["jadellama"]
+choices.accept = { label = "loc_statue_jadellama_ch_1", instant = "statue_jadellama_ch_1" }
+choices.refuse = { label = "loc_statue_jadellama_ch_2", gift = "statue_jadellama_ch_2"  }
+
+[npc_kobold]
+# +% more gold drops (this run) (prospector)
+type = "multi_choice"
+descr = "loc_npc_kobold"
+choices = [
+    {label = "loc_npc_kobold_ch_1", use_msg = "msg_npc_kobold_ch_1", gift = "npc_kobold"},
+    {label = "loc_npc_kobold_ch_2", use_msg = "msg_npc_kobold_ch_2"},
+]
+
+[npc_leprechaun]
+# +% better items drop
+type = "multi_choice"
+descr = "loc_npc_leprechaun"
+choices = [
+    {label = "loc_npc_leprechaun_ch_1", use_msg = "msg_npc_leprechaun_ch_1", gift = "npc_leprechaun"},
+    {label = "loc_npc_leprechaun_ch_2", use_msg = "msg_npc_leprechaun_ch_2"},
+]
+
+[npc_rogue]
+# -% dash cld
+# +evasion
+type = "multi_choice"
+descr = "loc_npc_rogue"
+choices = [
+    {label = "loc_npc_rogue_ch_1", use_msg = "msg_npc_rogue_ch_1", gift = "npc_rogue_ch_1", sfx = "Inst_RogueLaugh"},
+    {label = "loc_npc_rogue_ch_2", use_msg = "msg_npc_rogue_ch_2", gift = "npc_rogue_ch_2", sfx = "Inst_RogueLaugh"},
+    {label = "loc_npc_rogue_ch_3", use_msg = "msg_npc_rogue_ch_3"},
+]
+
+[npc_warrior]
+# +2.4% attack damage
+# +2 armor
+type = "multi_choice"
+descr = "loc_npc_warrior"
+choices = [
+    {label = "loc_npc_warrior_ch_1", use_msg = "msg_npc_warrior_ch_1", gift = "npc_warrior_ch_1", sfx = "Inst_WarriorLaugh"},
+    {label = "loc_npc_warrior_ch_2", use_msg = "msg_npc_warrior_ch_2", gift = "npc_warrior_ch_2", sfx = "Inst_WarriorLaugh"},
+    {label = "loc_npc_warrior_ch_3", use_msg = "msg_npc_warrior_ch_3"},
+]
+
+[npc_wizard]
+# +2% spell cooldowns
+# +% summon dmg
+type = "multi_choice"
+descr = "loc_npc_wizard"
+choices = [
+    {label = "loc_npc_wizard_ch_1", use_msg = "msg_npc_wizard_ch_1", gift = "npc_wizard_ch_1", sfx = "Inst_WizardLaugh"},
+    {label = "loc_npc_wizard_ch_2", use_msg = "msg_npc_wizard_ch_2", gift = "npc_wizard_ch_2", sfx = "Inst_WizardLaugh"},
+    {label = "loc_npc_wizard_ch_3", use_msg = "msg_npc_wizard_ch_3"},
+]
+
+#[npc_riddleman]
+# if answer correctly gain item | if wrong next item spawn is destroyed
+#>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+[npc_troll]
+# +10 armor
+# -10 evasion (I teach how to block or how to dodge | what u learn)
+type = "multi_choice"
+descr = "loc_npc_troll"
+choices = [
+    {label = "loc_npc_troll_ch_1", use_msg = "msg_npc_troll_ch_1", gift = "npc_troll_ch_1", sfx = "Inst_TrollLaugh"},
+    {label = "loc_npc_troll_ch_2", use_msg = "msg_npc_troll_ch_2", gift = "npc_troll_ch_2", sfx = "Inst_TrollLaugh"},
+    {label = "loc_npc_troll_ch_3", use_msg = "msg_npc_troll_ch_3"},
+]
+
+[npc_witch]
+# % chance to get boon | % chance to get cursed
+type = "multi_choice"
+descr = "loc_npc_witch"
+choices = [
+    {label = "loc_npc_witch_ch_1", use_msg = "msg_npc_witch_ch_1", instant = "npc_witch"},
+    {label = "loc_npc_witch_ch_2", use_msg = "msg_npc_witch_ch_2"},
+]
+
+#[altar_contribution]
+# place item > get boon for it
+#>>>>>>>>>>>>>>>>>>>>>>>>>> placing item as sacrifice and getting from it
+
+#[altar_offering]
+# place boon > get item for it
+#>>>>>>>>>>>>>>>>>>>>>>>>>> placing boon as sacrifice and getting from it
+
+[altar_sacrifice]
+# sacrifice 40% of cur hp > +25% dmg against enem below 10% life
+# -7% max life > heal to full life
+# +5 max life
+type = "multi_choice"
+descr = "loc_altar_sacrifice"
+choices = [
+    {label = "loc_altar_sacrifice_ch_1", instant = "altar_sacrifice_ch_1"},
+    {label = "loc_altar_sacrifice_ch_2", instant = "altar_sacrifice_ch_2"},
+    {label = "loc_altar_sacrifice_ch_3", gift = "altar_sacrifice_ch_3"},
+]
+
+[chest_reliquary]
+# [Take the Item] % chance for item/gold/pickup | % chance to be trapped (firebolt)
+# [Refuse]
+type = "item_offer"
+descr = "loc_chest_reliquary"
+item_gen.type = "random"
+# item subtype? i want to make all the relics be between 3 diff looks or something
+item_gen.count_weights = { 1 = 1 }
+item_gen.class_weights = { Tr_Any = 10 }
+item_gen.rarity_weights = [
+    { min = 0, rar = { brok = 0, comm = 0, rare = 100, epic = 0, myth = 0 }},
+    { min = 3, rar = { brok = 0, comm = 0, rare = 100, epic = 0, myth = 0 }},
+    { min = 6, rar = { brok = 0, comm = 0, rare = 98, epic = 2, myth = 0 }},
+    { min = 9, rar = { brok = 0, comm = 0, rare = 89, epic = 10, myth = 1 }},
+    { min = 12, rar = { brok = 0, comm = 0, rare = 55, epic = 40, myth = 5 }},
+    { min = 15, rar = { brok = 0, comm = 0, rare = 35, epic = 65, myth = 10 }},
+    { min = 18, rar = { brok = 0, comm = 0, rare = 0, epic = 85, myth = 15 }}
+]
+# how to make this rarity weights not per item but for the whole batch
+choices.accept = { label = "loc_chest_reliquary_ch_1", status = "pburning_8",  exhausts = true, sfx = "Inst_ChestOpen" }
+choices.refuse = { label = "loc_chest_reliquary_ch_2", exhausts = false }
+#>>>>>>>>>>>>>>>>>>>>>>>>>> shoot out firebolt
+
+[clovergarden]
+# % chance to gain boots | % chance to get tricked (lose gold)
+# Gain 20 gold
+type = "multi_choice"
+descr = "loc_clovergarden"
+choices = [
+    {label = "loc_clovergarden_ch_1", instant = "clovergarden_ch_1"},
+    {label = "loc_clovergarden_ch_2", instant = "clovergarden_ch_2"},
+]
+
+#[dimensiongate]
+# % chance to summon an allied minion to help u or an enemy
+
+[forge]
+# (Forge Armor) +armor
+# (Forge Weapon) +% attack dmg / attack range if ranged
+type = "multi_choice"
+descr = "loc_forge"
+choices = [
+    {label = "loc_forge_ch_1", gift = "forge_ch_1", sfx="Inst_ForgeDef"},
+    {label = "loc_forge_ch_2", gift = "forge_ch_2", sfx="Inst_ForgeAtt"},
+]
+
+[npc_gamblegoblin]
+# 10% to gain 100 gold | 90% chance to lose 10 gold
+type = "multi_choice"
+descr = "loc_npc_gamblegoblin"
+choices = [
+    {label = "loc_npc_gamblegoblin_ch_1", instant = "npc_gamblegoblin"},
+    {label = "loc_npc_gamblegoblin_ch_2", use_msg = "msg_npc_gamblegoblin_ch_2"},
+]
+
+#[lighthouse]
+# opens map
+#>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+[tome_necronomicon]
+# Get stunned for 4 sec | +% spell dur
+# Take 12 pure dmg | +% spell dmg
+# Summon 3 xpless ghosts | +10% summon dmg
+# [Willpower] Gain +10 max health
+type = "multi_choice"
+descr = "loc_tome_necronomicon"
+choices = [
+    {label = "loc_tome_necronomicon_ch_1", instant = "tome_necronomicon_ch_1", sfx = "Inst_EvilWhispers"},
+    {label = "loc_tome_necronomicon_ch_2", instant = "tome_necronomicon_ch_2", sfx = "Inst_EvilWhispers"},
+    {label = "loc_tome_necronomicon_ch_3", instant = "tome_necronomicon_ch_3", sfx = "Inst_EvilWhispers"},
+    {label = "loc_tome_necronomicon_ch_4", gift = "tome_necronomicon_ch_4"},
+]
+
+#[npc_oracle]
+# shows future 10 gods and allows u to reorder them
+#>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+#[pyramid_chaos]
+# swaps boon with another boon
+#>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+#[shrine_chaos]
+# desc > procs a random 2 shrine
+#>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+[shrine_dragon]
+#(God of the Skies)  + movement speed
+#(Dance of The Dragon)  +evasion (dancing dragon)
+type = "multi_choice"
+descr = "loc_shrine_dragon"
+choices = [
+    {label = "loc_shrine_dragon_ch_1", gift = "shrine_dragon_ch_1", sfx = "Inst_Gong"},
+    {label = "loc_shrine_dragon_ch_2", gift = "shrine_dragon_ch_2", sfx = "Inst_Gong"},
+]
+
+#[shrine_dream]
+# store a spell > take a stored spell
+#>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+[shrine_fates]
+# +2 reroll
+# +3 banish
+# +2 skip
+type = "multi_choice"
+descr = "loc_shrine_fates"
+choices = [
+    {label = "loc_shrine_fates_ch_1", gift = "shrine_fates_ch_1", sfx = "Inst_Fates"},
+    {label = "loc_shrine_fates_ch_2", gift = "shrine_fates_ch_2", sfx = "Inst_Fates"},
+    {label = "loc_shrine_fates_ch_3", gift = "shrine_fates_ch_3", sfx = "Inst_Fates"},
+]
+
+[shrine_hunting]
+# [Finish The Hunt] +10% Attack Critical Chance
+# [The Hunt Awaits] +5% chance to recharge dash on attack hit
+# [Hunter's Hurry] +50 movement speed
+type = "multi_choice"
+descr = "loc_shrine_hunting"
+choices = [
+    {label = "loc_shrine_hunting_ch_1", gift = "shrine_hunting_ch_1", sfx = "Inst_TribalDrum"},
+    {label = "loc_shrine_hunting_ch_2", gift = "shrine_hunting_ch_2", sfx = "Inst_TribalDrum"},
+    {label = "loc_shrine_hunting_ch_3", gift = "shrine_hunting_ch_3", sfx = "Inst_TribalDrum"},
+]
+
+[shrine_krom]
+#(Power of Steel)  +10% attack area
+#(Mountainous Might)  +10% spell area
+type = "multi_choice"
+descr = "loc_shrine_krom"
+choices = [
+    {label = "loc_shrine_krom_ch_1", gift = "shrine_krom_ch_1", sfx = "Inst_WarDrum"},
+    {label = "loc_shrine_krom_ch_2", gift = "shrine_krom_ch_2", sfx = "Inst_WarDrum"},
+]
+
+[shrine_music]
+#(Magpie Song)  +250 pull radius
+#(Mocking Bird Hum)  -5% enemy stun thr
+#(Raven Gwah) +Passive Experience
+type = "multi_choice"
+descr = "loc_shrine_music"
+choices = [
+    {label = "loc_shrine_music_ch_1", gift = "shrine_music_ch_1", sfx = "Inst_Harp"},
+    {label = "loc_shrine_music_ch_2", gift = "shrine_music_ch_2", sfx = "Inst_Harp"},
+    {label = "loc_shrine_music_ch_3", gift = "shrine_music_ch_3", sfx = "Inst_Harp"},
+]
+
+#[shrine_mystery]
+# gain random attack spell u dont have of type X
+# gain random defense spell u dont have of type X
+# gain random autocast spell u dont have of type X
+# gain random passive spell u dont have of type X
+#(spells given at lvl 3 | rolling for rarity | options only available if any available boons in category)
+#>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+[shrine_onidemon]
+# +% more mythic boons | -% less adept & expert boons
+# [Rude Gesture] +10% Damage Against enemies above 50% Life
+# [Ignore the Statue] +10 Evasion
+type = "multi_choice"
+descr = "loc_shrine_onidemon"
+choices = [
+    {label = "loc_shrine_onidemon_ch_1", gift = "shrine_onidemon_ch_1", sfx = "Inst_DemonLaugh"},
+    {label = "loc_shrine_onidemon_ch_2", gift = "shrine_onidemon_ch_2", sfx = "Inst_DemonLaugh"},
+    #{label = "loc_shrine_onidemon_ch_3", gift = "shrine_onidemon_ch_3"},
+]
+
+#[shrine_painting]
+# if char of type (art) > gain bonus based on char
+#>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+[shrine_shiva]
+#  +% attack speed
+#  +spells projectile count
+type = "multi_choice"
+descr = "loc_shrine_shiva"
+choices = [
+    {label = "loc_shrine_shiva_ch_1", gift = "shrine_shiva_ch_1", sfx = "Inst_Shiva"},
+    {label = "loc_shrine_shiva_ch_2", gift = "shrine_shiva_ch_2", sfx = "Inst_Shiva"},
+]
+
+[shrine_thor]
+# (Power in the Hand) +% attack crit chance
+# (Thunderous Explosion) +% spell crit chance
+type = "multi_choice"
+descr = "loc_shrine_thor"
+choices = [
+    {label = "loc_shrine_thor_ch_1", gift = "shrine_thor_ch_1", sfx = "Inst_Thunder"},
+    {label = "loc_shrine_thor_ch_2", gift = "shrine_thor_ch_2", sfx = "Inst_Thunder"},
+    {label = "loc_shrine_thor_ch_3", gift = "shrine_thor_ch_3", sfx = "Inst_Thunder"},
+]
+
+[shrine_writing]
+# [Bookworm] -5% Spell CD
+# [I don't read books] +20% Attack Damage
+type = "multi_choice"
+descr = "loc_shrine_writing"
+choices = [
+    {label = "loc_shrine_writing_ch_1", gift = "shrine_writing_ch_1", sfx = "Inst_Bookshelf"},
+    {label = "loc_shrine_writing_ch_2", gift = "shrine_writing_ch_2", sfx = "Inst_Bookshelf"},
+]
+
+[statue_swan]
+# +% Luck if Good (Have Boons of these gods) | -% Luck if Evil
+#>>>>>>>>>>>>>>>>>>>>>>>>>> if have boons of X god condition check
+type = "multi_choice"
+descr = "loc_statue_swan"
+choices = [
+    {label = "loc_statue_swan_ch_1", instant = "statue_swan_ch_1"},
+    {label = "loc_statue_swan_ch_2", instant = "statue_swan_ch_2"},
+]
+
+#[stone_memory]
+# If interacted in previous run +5% to all stats
+#>>>>>>>>>>>>>>>>>>>>>>>>>> if interacted with stone_memory in previous run check
+
+[tree_wisdom]
+# [Pride] -360 Pull Area | +10% exp gain
+# [Humility] Can't get Master or Legendary boons. All skills offered are Expert. 
+# [Disinterest] +10 Luck
+type = "multi_choice"
+descr = "loc_tree_wisdom"
+choices = [
+    {label = "loc_tree_wisdom_ch_1", gift = "tree_wisdom_ch_1"},
+    {label = "loc_tree_wisdom_ch_2", gift = "tree_wisdom_ch_2"},
+    {label = "loc_tree_wisdom_ch_3", gift = "tree_wisdom_ch_3"},
+]
+
+
+
+[tree_wither]
+# -33% xp gain | +33% spell dmg | +33% spell area
+# all skills offered are common | +111% xp gain
+# -100 luck | +2 projectile count
+# +0.05 hp reg
+type = "multi_choice"
+descr = "loc_tree_wither"
+choices = [
+    {label = "loc_tree_wither_ch_1", gift = "tree_wither_ch_1"},
+    {label = "loc_tree_wither_ch_2", gift = "tree_wither_ch_2"},
+    {label = "loc_tree_wither_ch_3", gift = "tree_wither_ch_3"},
+    {label = "loc_tree_wither_ch_4", gift = "tree_wither_ch_4"},
+]
+
+
+
+[shardfallen]
+# -50 max hp | +25% attack dmg | +25% spell dmg
+# -100% spell cooldowns | +180% spell dmg
+# -100% dmg to enemies above 50% health | +200% dmg to enemies below 50% health
+# [Reject The Darkness] +5% Heals Multiplier
+type = "multi_choice"
+descr = "loc_shardfallen"
+choices = [
+    {label = "loc_shardfallen_ch_1", gift = "shardfallen_ch_1", sfx = "Inst_SlashCrystal"},
+    {label = "loc_shardfallen_ch_2", gift = "shardfallen_ch_2", sfx = "Inst_SlashCrystal"},
+    {label = "loc_shardfallen_ch_3", gift = "shardfallen_ch_3", sfx = "Inst_SlashCrystal"},
+    {label = "loc_shardfallen_ch_4", gift = "shardfallen_ch_4", sfx = "Inst_SlashCrystal"},
+]
+
+
+
+[tome_sacred]
+# +20% More Heals
+# +% More Adept Skills
+type = "multi_choice"
+descr = "loc_tome_sacred"
+choices = [
+    {label = "loc_tome_sacred_ch_1", gift = "tome_sacred_ch_1", sfx = "Inst_HolyBook"},
+    {label = "loc_tome_sacred_ch_2", gift = "tome_sacred_ch_2", sfx = "Inst_HolyBook"},
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[mechkata]
+# +100% More Rare Item Drops
+# +10% More Epic Item Drops
+# +2% More Mythic Item Drops
+type = "multi_choice"
+descr = "loc_mechkata"
+choices = [
+    {label = "loc_mechkata_ch_1", gift = "mechkata_ch_1"},
+    {label = "loc_mechkata_ch_2", gift = "mechkata_ch_2"},
+    {label = "loc_mechkata_ch_3", gift = "mechkata_ch_3"},
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[gremlinroothouse]
+# [A Teacup of Coffee] Heals 25 life. +50% attack speed and 20% movement speed for 60 sec.
+# [Tiny Biscuits] -3% Dash Cooldown
+# [A Huge Wheel of Cheese] +15 heal and max health
+# [Politely Refuse] +5% Knockback
+type = "multi_choice"
+descr = "loc_gremlinroothouse"
+choices = [
+    {label = "loc_gremlinroothouse_ch_1", instant = "gremlinroothouse_ch_1", sfx = "Inst_DrinkCoffee"},
+    {label = "loc_gremlinroothouse_ch_2", gift = "gremlinroothouse_ch_2", sfx = "Inst_Munch"},
+    {label = "loc_gremlinroothouse_ch_3", instant = "gremlinroothouse_ch_3", sfx = "Inst_Munch"},
+    {label = "loc_gremlinroothouse_ch_4"},
+]   
+#-----------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                         #  ACT II  #
+
+
+
+                                        ### Power 1 ###
+
+
+#-----------------------------------------------------------------------------                                        
+# [blackhole]
+# [] - pulls gems towards you slowly in area
+# [] - pulls monsters towards you slowly in area
+# type = "multi_choice"
+# descr = "loc_blackhole"
+# choices = [
+#     {label = "loc_blackhole_ch_1", gift = "blackhole_ch_1"},
+#     {label = "loc_blackhole_ch_2", gift = "blackhole_ch_2"},
+# ]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[egyptian_ankh]
+# [] - free rebirth
+# [] - 2 levels
+# [] - hp reg
+type = "multi_choice"
+descr = "loc_egyptian_ankh"
+choices = [
+    {label = "loc_egyptian_ankh_ch_1", instant = "egyptian_ankh_ch_1"},
+    {label = "loc_egyptian_ankh_ch_2", instant = "egyptian_ankh_ch_2"},
+    {label = "loc_egyptian_ankh_ch_3", instant = "egyptian_ankh_ch_3"},    
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[garden_sand]
+# [] - Red Parrot – applies burning
+# [] - Green Parrot – applies poison
+# [] - Blue Parrot – applies chill
+type = "multi_choice"
+descr = "loc_garden_sand"
+choices = [
+    {label = "loc_garden_sand_ch_1", instant = "garden_sand_ch_1"},
+    {label = "loc_garden_sand_ch_2", instant = "garden_sand_ch_2"},
+    {label = "loc_garden_sand_ch_3", instant = "garden_sand_ch_3"},    
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[lamp_magic]
+# [] - [Rub the lamp] – Summons efreet to fight for you
+# [] - [Challenge the lamp] – Fight the efreet and it drops high rarity item
+# [] - [Free the efreet] –  +master offers%
+type = "multi_choice"
+descr = "loc_lamp_magic"
+choices = [
+    {label = "loc_lamp_magic_ch_1", instant = "lamp_magic_ch_1"},
+    {label = "loc_lamp_magic_ch_2", instant = "lamp_magic_ch_2"},
+    {label = "loc_lamp_magic_ch_3", gift = "lamp_magic_ch_3", use_msg = "msg_lamp_magic_ch_3"},    
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+#           [npc_cameltraveller]
+# [] - Open Special exotic Shop
+# ????????????????????????????????????????????????????????????????????????????
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+#           [npc_cassim]
+# Dead Cassim can’t remember the password and has been eternally frustrated – 
+# help him remember it so he can live in peace and he will reward you with his Unique item
+# ????????????????????????????????????????????????????????????????????????????
+#           type = "multi_choice"
+#           descr = "loc_npc_cassim"
+#           choices = [    
+#           ]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[npc_salimthewise]
+# [Wisdom of how to Mishkirash] - +DodgeChance%
+# [Wisdom of how to Djobish] - +MoreGoldDrops
+# [Wisdom of how to Shanish] - +PullArea
+type = "multi_choice"
+descr = "loc_npc_salimthewise"
+choices = [
+    {label = "loc_npc_salimthewise_ch_1", gift = "npc_salimthewise_ch_1", use_msg = "npc_salimthewise_ch_1"},
+    {label = "loc_npc_salimthewise_ch_2", gift = "npc_salimthewise_ch_2", use_msg = "npc_salimthewise_ch_2"},
+    {label = "loc_npc_salimthewise_ch_3", gift = "npc_salimthewise_ch_3", use_msg = "npc_salimthewise_ch_3"},    
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[npc_thegreatphilosopher]
+# [] -  +master offers
+# [] -  +legend offers
+type = "multi_choice"
+descr = "loc_npc_thegreatphilosopher"
+choices = [
+    {label = "loc_npc_thegreatphilosopher_ch_1", gift = "npc_thegreatphilosopher_ch_1", use_msg = "npc_thegreatphilosopher_ch_1"},
+    {label = "loc_npc_thegreatphilosopher_ch_2", gift = "npc_thegreatphilosopher_ch_2", use_msg = "npc_thegreatphilosopher_ch_2"},    
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[shrine_cobraking]
+# [] - +strike dmg
+# [] - +cast crit chance
+type = "multi_choice"
+descr = "loc_shrine_cobraking"
+choices = [
+    {label = "loc_shrine_cobraking_ch_1", gift = "shrine_cobraking_ch_1"},
+    {label = "loc_shrine_cobraking_ch_2", gift = "shrine_cobraking_ch_2"},  
+    {label = "loc_shrine_cobraking_ch_3", gift = "shrine_cobraking_ch_3"},    
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+#       [shrine_horus]
+# [] - Next run guaranteed Epic level blessing until you pick
+# [] - This run guaranteed Epic level blessing next
+# ????????????????????????????????????????????????????????????????????????????
+#       type = "multi_choice"
+#       descr = "loc_shrine_horus"
+#       choices = [
+#           {label = "loc_shrine_horus_ch_1", instant = "shrine_horus_ch_1"},
+#           {label = "loc_shrine_horus_ch_2", instant = "shrine_horus_ch_2"}, 
+#       ]
+[shrine_horus]
+# [] - gain Ms
+# [] - gain dash range
+# [] - gain dash cd
+type = "multi_choice"
+descr = "loc_shrine_horus"
+choices = [
+    {label = "loc_shrine_horus_ch_1", gift = "shrine_horus_ch_1"},
+    {label = "loc_shrine_horus_ch_2", gift = "shrine_horus_ch_2"},
+    {label = "loc_shrine_horus_ch_3", gift = "shrine_horus_ch_3"},    
+]   
+#-----------------------------------------------------------------------------
+
+
+#-----------------------------------------------------------------------------
+#           [shrine_moongod]
+# ----------------------------------------------------------------------------
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+#           [shrine_sand]
+# [] - [Time is a River] Skills that use Dur gain +300% dmg but -600% Dur
+# [] - [Time is a Waterfall]  Summons that use Dur gain +200% ms but -300% Dur
+# ????????????????????????????????????????????????????????????????????????????
+#           type = "multi_choice"
+#           descr = "loc_shrine_sand"
+#           choices = [
+#               {label = "loc_shrine_sand_ch_1", instant = "shrine_sand_ch_1"},
+#               {label = "loc_shrine_sand_ch_2", instant = "shrine_sand_ch_2"},    
+#           ]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[shrine_scarabgod]
+# [] - Gain 1 Revival – Minions have a chance to revive when slain
+# [] - Gain 1 Revival – Elites have a high chance to revive when slain
+# [] - Gain 1 Revival – The next Legendary Enemy revives when slain
+type = "multi_choice"
+descr = "loc_shrine_scarabgod"
+choices = [
+    {label = "loc_shrine_scarabgod_ch_1", instant = "shrine_scarabgod_ch_1"},
+    {label = "loc_shrine_scarabgod_ch_2", instant = "shrine_scarabgod_ch_2"},
+    {label = "loc_shrine_scarabgod_ch_3", instant = "shrine_scarabgod_ch_3"},  
+    {label = "loc_shrine_scarabgod_ch_4", gift = "shrine_scarabgod_ch_4"},   
+]
+#-----------------------------------------------------------------------------
+
+
+#-----------------------------------------------------------------------------
+[shrine_scorpion]
+# [] - 100% Paralyze on Hit
+# [] - Dmg vs Undamaged Enemies
+# [] - Bonus Status Dmg
+type = "multi_choice"
+descr = "loc_shrine_scorpion"
+choices = [
+    {label = "loc_shrine_scorpion_ch_1", gift = "shrine_scorpion_ch_1"},
+    {label = "loc_shrine_scorpion_ch_2", gift = "shrine_scorpion_ch_2"},
+    {label = "loc_shrine_scorpion_ch_3", gift = "shrine_scorpion_ch_3"},    
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[shrine_set]
+# [] - +Summons Dmg
+# [] - +Attack Dmg
+# [] - +Cast Dmg
+type = "multi_choice"
+descr = "loc_shrine_set"
+choices = [
+    {label = "loc_shrine_set_ch_1", gift = "shrine_set_ch_1"},
+    {label = "loc_shrine_set_ch_2", gift = "shrine_set_ch_2"},
+    {label = "loc_shrine_set_ch_3", gift = "shrine_set_ch_3"},  
+    {label = "loc_shrine_set_ch_4", gift = "shrine_set_ch_4"},  
+    {label = "loc_shrine_set_ch_5", gift = "shrine_set_ch_5"},  
+    {label = "loc_shrine_set_ch_6", gift = "shrine_set_ch_6"},    
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[shrine_statuestrial]
+# [] - Get dealt 200-300 deadly dmg – gain % Legend Skills
+# [] - Get dealt 200-300 deadly dmg – gain 2 levels
+# [] - Get dealt 200-300 deadly dmg – upgrade 4 random skills to next rarity
+type = "multi_choice"
+descr = "loc_shrine_statuestrial"
+choices = [
+    {label = "loc_shrine_statuestrial_ch_1", instant = "shrine_statuestrial_ch_1"},
+    {label = "loc_shrine_statuestrial_ch_2", instant = "shrine_statuestrial_ch_2"},
+    #{label = "loc_shrine_statuestrial_ch_3", instant = "shrine_statuestrial_ch_3"},    
+    {label = "loc_shrine_statuestrial_ch_4", gift = "shrine_statuestrial_ch_4"},    
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[shrine_traveller]
+# [] - gain Ms
+# [] - gain dash range
+# [] - gain dash cd
+type = "multi_choice"
+descr = "loc_shrine_traveller"
+choices = [
+    {label = "loc_shrine_traveller_ch_1", gift = "shrine_traveller_ch_1"},
+    {label = "loc_shrine_traveller_ch_2", gift = "shrine_traveller_ch_2"},
+    {label = "loc_shrine_traveller_ch_3", gift = "shrine_traveller_ch_3"},    
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[staff_sedentary]
+# [] - Attack proj cnt
+# [] - Strike proj cnt
+# [] - Cast proj cnt
+type = "multi_choice"
+descr = "loc_staff_sedentary"
+choices = [
+    {label = "loc_staff_sedentary_ch_1", gift = "staff_sedentary_ch_1"},
+    {label = "loc_staff_sedentary_ch_2", gift = "staff_sedentary_ch_2"},
+    {label = "loc_staff_sedentary_ch_3", gift = "staff_sedentary_ch_3"},    
+]
+#-----------------------------------------------------------------------------
+
+
+
+
+
+
+                                        ### Power 2 ###
+
+
+
+#-----------------------------------------------------------------------------
+[altar_ancient_sandsunken]
+# [Pay Respects]-CritChance +AttackDmg
+# [Gaze into the Past]-CastCritChance +CastDmg
+type = "multi_choice"
+descr = "loc_altar_ancient_sandsunken"
+choices = [
+    {label = "loc_altar_ancient_sandsunken_ch_1", gift = "altar_ancient_sandsunken_ch_1"},
+    {label = "loc_altar_ancient_sandsunken_ch_2", gift = "altar_ancient_sandsunken_ch_2"},  
+    {label = "loc_altar_ancient_sandsunken_ch_3", gift = "altar_ancient_sandsunken_ch_3"},    
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[altar_beautyeyes]
+# [Glamour] - Rare Items Drops Increase
+# [Beauty] - Luck Increase
+type = "multi_choice"
+descr = "loc_altar_beautyeyes"
+choices = [
+    {label = "loc_altar_beautyeyes_ch_1", gift = "altar_beautyeyes_ch_1"},
+    {label = "loc_altar_beautyeyes_ch_2", gift = "altar_beautyeyes_ch_2"},    
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[altar_sabres]
+# [] + Attack Dmg
+# [] + Attack Speed
+# [] + AttackArea
+type = "multi_choice"
+descr = "loc_altar_sabres"
+choices = [
+    {label = "loc_altar_sabres_ch_1", gift = "altar_sabres_ch_1"},
+    {label = "loc_altar_sabres_ch_2", gift = "altar_sabres_ch_2"},
+    {label = "loc_altar_sabres_ch_3", gift = "altar_sabres_ch_3"},    
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[altar_scarabwings]
+# [] Minor -dash recharge
+# [] Minor -global cd
+type = "multi_choice"
+descr = "loc_altar_scarabwings"
+choices = [
+    {label = "loc_altar_scarabwings_ch_1", gift = "altar_scarabwings_ch_1"},
+    {label = "loc_altar_scarabwings_ch_2", gift = "altar_scarabwings_ch_2"},    
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[altar_skullsunoreol]
+# [] exp gain %
+# [] expert offers
+type = "multi_choice"
+descr = "loc_altar_skullsunoreol"
+choices = [
+    {label = "loc_altar_skullsunoreol_ch_1", instant = "altar_skullsunoreol_ch_1"},
+    {label = "loc_altar_skullsunoreol_ch_2", instant = "altar_skullsunoreol_ch_2"},    
+    {label = "loc_altar_skullsunoreol_ch_3", instant = "altar_skullsunoreol_ch_3"},  
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[altar_snakescoiled]
+# [] Weaken for 30s - Gain Chance to Apply Weaken on hit
+# [] Weaken for 30s - Gain Chance to Apply Fear on hit
+type = "multi_choice"
+descr = "loc_altar_snakescoiled"
+choices = [
+    {label = "loc_altar_snakescoiled_ch_1", instant = "altar_snakescoiled_ch_1"},
+    {label = "loc_altar_snakescoiled_ch_2", instant = "altar_snakescoiled_ch_2"},
+    {label = "loc_altar_snakescoiled_ch_3", instant = "altar_snakescoiled_ch_3"},
+    {label = "loc_altar_snakescoiled_ch_4", instant = "altar_snakescoiled_ch_4"},
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[altar_sunandmoon]
+# [] +Power Dmg
+# [] +Cast Dmg
+type = "multi_choice"
+descr = "loc_altar_sunandmoon"
+choices = [
+    {label = "loc_altar_sunandmoon_ch_1", gift = "altar_sunandmoon_ch_1"},
+    {label = "loc_altar_sunandmoon_ch_2", gift = "altar_sunandmoon_ch_2"},    
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[beggar]
+# [] Give 1 Gold - Nothing
+# [] Give 100 Gold - Gain Luck %
+# [] Don't Give Anything - Lose Luck %
+type = "multi_choice"
+descr = "loc_beggar"
+choices = [
+    {label = "loc_beggar_ch_1", instant = "beggar_ch_1"},
+    {label = "loc_beggar_ch_2", instant = "beggar_ch_2"},
+    {label = "loc_beggar_ch_3", instant = "beggar_ch_3"},    
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[boat_sandsunken]
+# [Blessing of the Nile] +Pick Ups Drop%
+# [Fishing] +Adept Skills%
+# [Trade Paths] +Rare Items Drop%
+type = "multi_choice"
+descr = "loc_boat_sandsunken"
+choices = [
+    {label = "loc_boat_sandsunken_ch_1", gift = "boat_sandsunken_ch_1"},
+    {label = "loc_boat_sandsunken_ch_2", gift = "boat_sandsunken_ch_2"},
+    {label = "loc_boat_sandsunken_ch_3", gift = "boat_sandsunken_ch_3"},    
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[canopiccoffin_eaglerich1]
+# [] - Lose 40 hp - Gain Mythic Item
+# [] - Lose 20 hp - Maybe Gain Mythic Item
+# [] - Lose 5 hp - Low Chance to Gain Mythic Item
+type = "multi_choice"
+descr = "loc_canopiccoffin_eaglerich1"
+choices = [
+    {label = "loc_canopiccoffin_eaglerich1_ch_1", instant = "canopiccoffin_eaglerich1_ch_1"},
+    {label = "loc_canopiccoffin_eaglerich1_ch_2", instant = "canopiccoffin_eaglerich1_ch_2"},
+    {label = "loc_canopiccoffin_eaglerich1_ch_3", instant = "canopiccoffin_eaglerich1_ch_3"},   
+    {label = "loc_canopiccoffin_eaglerich1_ch_4", gift = "canopiccoffin_eaglerich1_ch_4"},    
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[cauldron_darkmatter]
+# [] - +Summon Dur
+# [] - +Power Area
+# [] - +Cast Dmg
+type = "multi_choice"
+descr = "loc_cauldron_darkmatter"
+choices = [
+    {label = "loc_cauldron_darkmatter_ch_1", gift = "cauldron_darkmatter_ch_1"},
+    {label = "loc_cauldron_darkmatter_ch_2", gift = "cauldron_darkmatter_ch_2"},
+    {label = "loc_cauldron_darkmatter_ch_3", gift = "cauldron_darkmatter_ch_3"},   
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[crocodile_carcass]
+# [] - Lose 1 Banish/Reroll/Skip - Gain Max Life
+# [] - Lose 1 Banish/Reroll/Skip - Gain Armor
+# [] - Lose 1 Banish/Reroll/Skip - Gain minor Attack Area
+type = "multi_choice"
+descr = "loc_crocodile_carcass"
+choices = [
+    {label = "loc_crocodile_carcass_ch_1", instant = "crocodile_carcass_ch_1"},
+    {label = "loc_crocodile_carcass_ch_2", instant = "crocodile_carcass_ch_2"},
+    {label = "loc_crocodile_carcass_ch_3", instant = "crocodile_carcass_ch_3"},   
+    {label = "loc_crocodile_carcass_ch_4", instant = "crocodile_carcass_ch_4"},   
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[darksphere_moon]
+# [] - +Strike Dmg
+# [] - +Summon Dmg
+type = "multi_choice"
+descr = "loc_darksphere_moon"
+choices = [
+    {label = "loc_darksphere_moon_ch_1", gift = "darksphere_moon_ch_1"},
+    {label = "loc_darksphere_moon_ch_2", gift = "darksphere_moon_ch_2"},
+    {label = "loc_darksphere_moon_ch_3", gift = "darksphere_moon_ch_3"},
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[enchantmentground1]
+# [] - +2000 Pull Area for 90s
+# [] - -0.2s Dash Recharge time for 90s
+type = "multi_choice"
+descr = "loc_enchantmentground1"
+choices = [
+    {label = "loc_enchantmentground1_ch_1", instant = "enchantmentground1_ch_1"},
+    {label = "loc_enchantmentground1_ch_2", instant = "enchantmentground1_ch_2"},    
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[harp_ibisofserenity]
+# [Enjoy the Melody] - +minor ms, hp and passive exp
+# [Entranced by the Melody] - Sacrifice Random Skill for triple the ms, hp and passive exp
+type = "multi_choice"
+descr = "loc_harp_ibisofserenity"
+sfx = "Inst_Harp"
+choices = [
+    {label = "loc_harp_ibisofserenity_ch_1", gift = "harp_ibisofserenity_ch_1"}, #use_msg = "harp_ibisofserenity_ch_1"},
+    {label = "loc_harp_ibisofserenity_ch_2", instant = "harp_ibisofserenity_ch_2"},    
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+# [hourglass_sand_epic]
+# [Don't Move] - Bosses lose hp during fights passively
+# [Flip Over] - You gain Regen during boss fights
+# type = "multi_choice"
+# descr = "loc_hourglass_sand_epic"
+# choices = [
+#     {label = "loc_hourglass_sand_epic_ch_1", instant = "hourglass_sand_epic_ch_1"},
+#     {label = "loc_hourglass_sand_epic_ch_2", instant = "hourglass_sand_epic_ch_2"},    
+#]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[lightsphere_sun]
+# [] - +Power Dmg
+# [] - +Cast Dmg
+type = "multi_choice"
+descr = "loc_lightsphere_sun"
+choices = [
+    {label = "loc_lightsphere_sun_ch_1", gift = "lightsphere_sun_ch_1"},
+    {label = "loc_lightsphere_sun_ch_2", gift = "lightsphere_sun_ch_2"},
+    {label = "loc_lightsphere_sun_ch_3", gift = "lightsphere_sun_ch_3"},
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[mystgate]
+# [] - -Attack Dmg, +Summons Dmg
+# [] - -Attack Dmg, +Cast Dmg
+# [] - +Attack Dmg
+type = "multi_choice"
+descr = "loc_mystgate"
+sfx = "Inst_BigDoor"
+choices = [
+    {label = "loc_mystgate_ch_1", gift = "mystgate_ch_1"},
+    {label = "loc_mystgate_ch_2", gift = "mystgate_ch_2"},
+    {label = "loc_mystgate_ch_3", gift = "mystgate_ch_3"},    
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[npc_hermit]
+# [Scavenger] - Lifeheal on Enemy Dies chance
+# [Survivalist] - +Evasion
+type = "multi_choice"
+descr = "loc_npc_hermit"
+choices = [
+    {label = "loc_npc_hermit_ch_1", gift = "npc_hermit_ch_1"},
+    {label = "loc_npc_hermit_ch_2", gift = "npc_hermit_ch_2"},    
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[npc_merchant1]
+# [] - opens normal shop
+type = "multi_choice"
+descr = "loc_npc_merchant1"
+choices = [    
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[npc_snakewhisperer]
+# [] - + summon count
+# [] - + 1 summon slot
+type = "multi_choice"
+descr = "loc_npc_snakewhisperer"
+choices = [
+    {label = "loc_npc_snakewhisperer_ch_1", gift = "npc_snakewhisperer_ch_1"},
+    {label = "loc_npc_snakewhisperer_ch_2", gift = "npc_snakewhisperer_ch_2"},    
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[npc_sphinxsmall]
+# [] - gives riddle – basic equation with close answers correct gives you alt dice
+# ????????????????????????????????????????????????????????????????????????????????????
+type = "multi_choice"
+descr = "loc_npc_sphinxsmall"
+choices = [    
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[npc_trader]
+# [] - give item – give back 1 random of same or higher rarity
+# ????????????????????????????????????????????????????????????????????????????????????
+type = "multi_choice"
+descr = "loc_npc_trader"
+choices = [
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[npc_whitewanderers]
+# [] - gain big light radius onion ring that damages enemies and shrinks over 1 minute
+type = "multi_choice"
+descr = "loc_npc_whitewanderers"
+choices = [    
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[npc_troll_sand]
+# +10 armor
+# -10 evasion (I teach how to block or how to dodge | what u learn)
+type = "multi_choice"
+descr = "loc_npc_troll_sand"
+choices = [
+    {label = "loc_npc_troll_sand_ch_1", use_msg = "msg_npc_troll_sand_ch_1", gift = "npc_troll_sand_ch_1", sfx = "Inst_TrollLaugh"},
+    {label = "loc_npc_troll_sand_ch_2", use_msg = "msg_npc_troll_sand_ch_2", gift = "npc_troll_sand_ch_2", sfx = "Inst_TrollLaugh"},
+    {label = "loc_npc_troll_sand_ch_3", use_msg = "msg_npc_troll_sand_ch_3"},
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[oasis1]
+# [] - HP Regen
+# [] - Full Heal 
+type = "multi_choice"
+descr = "loc_oasis1"
+choices = [
+    {label = "loc_oasis1_ch_1", instant = "oasis1_ch_1"},
+    {label = "loc_oasis1_ch_2", instant = "oasis1_ch_2"},    
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[potionsstand]
+# [] - Red potion – Strike random benefit (Dmg|Area|Crit|Duration)
+# [] - Blue potion – Cast random benefit (Dmg|Area|Crit|Duration)
+# [] - Yellow potion – Power random benefit (Dmg|Area|Crit|Duration)
+# [] - Purple potion – Summon random benefit (Dmg|Area|MS|Duration)
+type = "multi_choice"
+descr = "loc_potionsstand"
+choices = [
+    {label = "loc_potionsstand_ch_1", instant = "potionsstand_ch_1"},
+    {label = "loc_potionsstand_ch_2", instant = "potionsstand_ch_2"},
+    {label = "loc_potionsstand_ch_3", instant = "potionsstand_ch_3"},
+    {label = "loc_potionsstand_ch_4", instant = "potionsstand_ch_4"},    
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[sarcophagus_rich_mummy]
+# [] - 1 Legendary mummy fights for you 
+# [] - Fight 1 Mummy and it drops an item
+type = "multi_choice"
+descr = "loc_sarcophagus_rich_mummy"
+choices = [
+    {label = "loc_sarcophagus_rich_mummy_ch_1", instant = "sarcophagus_rich_mummy_ch_1"},
+    {label = "loc_sarcophagus_rich_mummy_ch_2", instant = "sarcophagus_rich_mummy_ch_2"},    
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[sarcophagus_simple_mummy]
+# [] - 7 Mummies fight for you for 1 min
+# [] - Fight 7 mummies and they might drop item
+type = "multi_choice"
+descr = "loc_sarcophagus_simple_mummy"
+choices = [
+    {label = "loc_sarcophagus_simple_mummy_ch_1", instant = "sarcophagus_simple_mummy_ch_1"},
+    {label = "loc_sarcophagus_simple_mummy_ch_2", instant = "sarcophagus_simple_mummy_ch_2"},    
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[scroll_of_wisdom]
+# [] - Gain Power dur
+# [] - Gain Power dmg
+# [] - Gain Power area
+type = "multi_choice"
+descr = "loc_scroll_of_wisdom"
+choices = [
+    {label = "loc_scroll_of_wisdom_ch_1", gift = "scroll_of_wisdom_ch_1"},
+    {label = "loc_scroll_of_wisdom_ch_2", gift = "scroll_of_wisdom_ch_2"},
+    {label = "loc_scroll_of_wisdom_ch_3", gift = "scroll_of_wisdom_ch_3"},    
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[shrine_cat]
+# [] - +ms
+# [] - +evasion
+type = "multi_choice"
+descr = "loc_shrine_cat"
+choices = [
+    {label = "loc_shrine_cat_ch_1", gift = "shrine_cat_ch_1"},
+    {label = "loc_shrine_cat_ch_2", gift = "shrine_cat_ch_2"},    
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[shrine_crocodile]
+# [] - +attack dmg
+# [] - +max hp and +armor
+type = "multi_choice"
+descr = "loc_shrine_crocodile"
+choices = [
+    {label = "loc_shrine_crocodile_ch_1", gift = "shrine_crocodile_ch_1"},
+    {label = "loc_shrine_crocodile_ch_2", gift = "shrine_crocodile_ch_2"},    
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[shrine_dragonfly]
+# [] - FLAT lifesteal on hit chance
+# [] - attack speed 
+# [] - strike dmg
+type = "multi_choice"
+descr = "loc_shrine_dragonfly"
+choices = [
+    {label = "loc_shrine_dragonfly_ch_1", gift = "shrine_dragonfly_ch_1"},
+    {label = "loc_shrine_dragonfly_ch_2", gift = "shrine_dragonfly_ch_2"},
+    {label = "loc_shrine_dragonfly_ch_3", gift = "shrine_dragonfly_ch_3"},    
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[shrine_egyptianeagle]
+# [] - Casts chance to apply burning
+# [] - Strikes chance to apply smite
+# [] - Dash chance to give Divine wings status
+type = "multi_choice"
+descr = "loc_shrine_egyptianeagle"
+choices = [
+    {label = "loc_shrine_egyptianeagle_ch_1", gift = "shrine_egyptianeagle_ch_1"},
+    {label = "loc_shrine_egyptianeagle_ch_2", gift = "shrine_egyptianeagle_ch_2"},
+    {label = "loc_shrine_egyptianeagle_ch_3", gift = "shrine_egyptianeagle_ch_3"},    
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[shrine_fish]
+# [] - +1 Reroll
+# [] - +1 Banish
+# [] - +1 Skip
+type = "multi_choice"
+descr = "loc_shrine_fish"
+choices = [
+    {label = "loc_shrine_fish_ch_1", gift = "shrine_fish_ch_1"}, #use_msg = "shrine_fish_ch_1"},
+    {label = "loc_shrine_fish_ch_2", gift = "shrine_fish_ch_2"}, #use_msg = "shrine_fish_ch_2"},
+    {label = "loc_shrine_fish_ch_3", gift = "shrine_fish_ch_3"}, #use_msg = "shrine_fish_ch_3"},    
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[shrine_halfface]
+# [] - cooldown reduction
+# [] - passive exp gain
+type = "multi_choice"
+descr = "loc_shrine_halfface"
+choices = [
+    {label = "loc_shrine_halfface_ch_1", gift = "shrine_halfface_ch_1"},
+    {label = "loc_shrine_halfface_ch_2", gift = "shrine_halfface_ch_2"},    
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[shrine_hippopotamus]
+# [] - gives minor knockback to attacks
+# [] - gives max hp
+type = "multi_choice"
+descr = "loc_shrine_hippopotamus"
+choices = [
+    {label = "loc_shrine_hippopotamus_ch_1", gift = "shrine_hippopotamus_ch_1"},
+    {label = "loc_shrine_hippopotamus_ch_2", gift = "shrine_hippopotamus_ch_2"},    
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[shrine_jackal]
+# [] - +Dash Dmg
+# [] - +Attack Dmg
+type = "multi_choice"
+descr = "loc_shrine_jackal"
+choices = [
+    {label = "loc_shrine_jackal_ch_1", gift = "shrine_jackal_ch_1"},
+    {label = "loc_shrine_jackal_ch_2", gift = "shrine_jackal_ch_2"},    
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[shrine_river]
+# [] - Gain Global Dur but Lose Area
+# [] - Gain Global Area but Lose Global Dur
+type = "multi_choice"
+descr = "loc_shrine_river"
+choices = [
+    {label = "loc_shrine_river_ch_1", gift = "shrine_river_ch_1"},
+    {label = "loc_shrine_river_ch_2", gift = "shrine_river_ch_2"},    
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[shrine_scarab]
+# [] - Gain 1 Revival – Enemies are faster for 3 minutes
+# [] - Gain 1 Revival – Enemies deal more damage for 3 minutes
+type = "multi_choice"
+descr = "loc_shrine_scarab"
+choices = [
+    {label = "loc_shrine_scarab_ch_1", instant = "shrine_scarab_ch_1"},
+    {label = "loc_shrine_scarab_ch_2", instant = "shrine_scarab_ch_2"},
+    {label = "loc_shrine_scarab_ch_3", instant = "shrine_scarab_ch_3"},
+    {label = "loc_shrine_scarab_ch_4", gift = "shrine_scarab_ch_4"},
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[shrine_snake]
+# [] - Poisons you but attacks gain chance to proc poison
+# [] - Poisons you but dash gains chance to proc poison nova
+type = "multi_choice"
+descr = "loc_shrine_snake"
+choices = [
+     {label = "loc_shrine_snake_ch_1", instant = "shrine_snake_ch_1"},
+     {label = "loc_shrine_snake_ch_2", instant = "shrine_snake_ch_2"},    
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[silk_monument]
+# [] - Cast Dur
+# [] - Less negative statuses
+type = "multi_choice"
+descr = "loc_silk_monument"
+choices = [
+    {label = "loc_silk_monument_ch_1", gift = "silk_monument_ch_1"},
+    {label = "loc_silk_monument_ch_2", gift = "silk_monument_ch_2"},  
+    {label = "loc_silk_monument_ch_3", gift = "silk_monument_ch_3"},    
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[stone_scriptures]
+# [] - +Global Damage -ms
+# [] - +Global Damage -global area
+# [] - +Global Damage -dash cd
+type = "multi_choice"
+descr = "loc_stone_scriptures"
+choices = [
+    {label = "loc_stone_scriptures_ch_1", gift = "stone_scriptures_ch_1"},
+    {label = "loc_stone_scriptures_ch_2", gift = "stone_scriptures_ch_2"},
+    {label = "loc_stone_scriptures_ch_3", gift = "stone_scriptures_ch_3"},  
+    {label = "loc_stone_scriptures_ch_4", gift = "stone_scriptures_ch_4"},   
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[tent_nomadic]
+# [] - ms
+# [] - max hp
+type = "multi_choice"
+descr = "loc_tent_nomadic"
+choices = [
+    {label = "loc_tent_nomadic_ch_1", gift = "tent_nomadic_ch_1"},
+    {label = "loc_tent_nomadic_ch_2", gift = "tent_nomadic_ch_2"},    
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+# [tomb_entrance1]
+# type = "multi_choice"
+# descr = "loc_tomb_entrance1"
+# choices = [
+#     {label = "loc_tomb_entrance1_ch_1", gift = "tomb_entrance1_ch_1"},
+#     {label = "loc_tomb_entrance1_ch_2", gift = "tomb_entrance1_ch_2"},
+#     {label = "loc_tomb_entrance1_ch_3", gift = "tomb_entrance1_ch_3"},
+# ]
+# ?????????????????????????????????????????????????????????????
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[tree_desertspirits]
+# [] - [Call the Spirits] power proj count
+# [] - [Absorb the Spirits] power dmg
+# [] - [Listen to the Spirits] power dur
+type = "multi_choice"
+descr = "loc_tree_desertspirits"
+choices = [
+    {label = "loc_tree_desertspirits_ch_1", gift = "tree_desertspirits_ch_1"},
+    {label = "loc_tree_desertspirits_ch_2", gift = "tree_desertspirits_ch_2"},
+    {label = "loc_tree_desertspirits_ch_3", gift = "tree_desertspirits_ch_3"},    
+]
+#-----------------------------------------------------------------------------
+
+#-----------------------------------------------------------------------------
+[well_turquoise]
+# [] - hp heal
+# [] - small luck boost
+type = "multi_choice"
+descr = "loc_well_turquoise"
+choices = [
+    {label = "loc_well_turquoise_ch_1", instant = "well_turquoise_ch_1"},
+    {label = "loc_well_turquoise_ch_2", gift = "well_turquoise_ch_2"},    
+]
+#-----------------------------------------------------------------------------
+
+#-----------------------------------------------------------------------------
+[wondrous_parchment]
+# [] - [Burn the Parchment] – Challenge enemy that may carry a treasure
+# [] - [Read the Parchment] - +2% Mythic Items Drop
+type = "multi_choice"
+descr = "loc_wondrous_parchment"
+choices = [
+    {label = "loc_wondrous_parchment_ch_1", gift = "wondrous_parchment_ch_1"},
+    {label = "loc_wondrous_parchment_ch_2", gift = "wondrous_parchment_ch_2"},    
+]
+#-----------------------------------------------------------------------------
+
+#-----------------------------------------------------------------------------
+[npc_kobold_sand]
+# +% more gold drops (this run) (prospector)
+type = "multi_choice"
+descr = "loc_npc_kobold_sand"
+choices = [
+    {label = "loc_npc_kobold_ch_1", use_msg = "msg_npc_kobold_ch_1", gift = "npc_kobold"},
+    {label = "loc_npc_kobold_ch_2", use_msg = "msg_npc_kobold_ch_2"},
+]
+#-----------------------------------------------------------------------------
+
+#-----------------------------------------------------------------------------
+[npc_rogue_sand]
+# -% dash cld
+# +evasion
+type = "multi_choice"
+descr = "loc_npc_rogue_sand"
+choices = [
+    {label = "loc_npc_rogue_sand_ch_1", use_msg = "msg_npc_rogue_sand_ch_1", gift = "npc_rogue_ch_1", sfx = "Inst_RogueLaugh"},
+    {label = "loc_npc_rogue_sand_ch_2", use_msg = "msg_npc_rogue_sand_ch_2", gift = "npc_rogue_ch_2", sfx = "Inst_RogueLaugh"},
+    {label = "loc_npc_rogue_sand_ch_3", use_msg = "msg_npc_rogue_sand_ch_3"},
+]
+#-----------------------------------------------------------------------------
+
+#-----------------------------------------------------------------------------
+[npc_warrior_sand]
+# +2.4% attack damage
+# +2 armor
+type = "multi_choice"
+descr = "loc_npc_warrior_sand"
+choices = [
+    {label = "loc_npc_warrior_sand_ch_1", use_msg = "msg_npc_warrior_sand_ch_1", gift = "npc_warrior_ch_1", sfx = "Inst_WarriorLaugh"},
+    {label = "loc_npc_warrior_sand_ch_2", use_msg = "msg_npc_warrior_sand_ch_2", gift = "npc_warrior_ch_2", sfx = "Inst_WarriorLaugh"},
+    {label = "loc_npc_warrior_sand_ch_3", use_msg = "msg_npc_warrior_sand_ch_3"},
+]
+#-----------------------------------------------------------------------------
+
+#-----------------------------------------------------------------------------
+[npc_wizard_sand]
+# +2% spell cooldowns
+# +% summon dmg
+type = "multi_choice"
+descr = "loc_npc_wizard_sand"
+choices = [
+    {label = "loc_npc_wizard_sand_ch_1", use_msg = "msg_npc_wizard_sand_ch_1", gift = "npc_wizard_ch_1", sfx = "Inst_WizardLaugh"},
+    {label = "loc_npc_wizard_sand_ch_2", use_msg = "msg_npc_wizard_sand_ch_2", gift = "npc_wizard_ch_2", sfx = "Inst_WizardLaugh"},
+    {label = "loc_npc_wizard_sand_ch_3", use_msg = "msg_npc_wizard_sand_ch_3"},
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+#[npc_riddleman]
+# if answer correctly gain item | if wrong next item spawn is destroyed
+#>>>>>>>>>>>>>>>>>>>>>>>>>>
+#-----------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                         #  ACT III  #
+
+
+
+                                        ### Power 1 ###
+
+
+
+#----------------------------------------------------------------------------- ⚡
+# MECHKATA MOOR
+# It’s a statue of a bear.
+# +100% More Rare Item Drops
+# +10% More Epic Item Drops
+# +2% More Mythic Item Drops
+[mechkata_moor]
+type = "multi_choice"
+descr = "loc_mechkata_moor"
+choices = [
+    {label = "loc_mechkata_moor_ch_1", gift = "mechkata_moor_ch_1"},
+    {label = "loc_mechkata_moor_ch_2", gift = "mechkata_moor_ch_2"},
+    {label = "loc_mechkata_moor_ch_3", gift = "mechkata_moor_ch_3"},
+]
+#-----------------------------------------------------------------------------
+
+
+
+#----------------------------------------------------------------------------- ⚡
+# SHARD FALLEN MOOR
+# The stone pulses with dark energy.
+# -50 max hp | +25% attack dmg | +25% spell dmg
+# -100% spell cooldowns | +180% spell dmg
+# -100% dmg to enemies above 50% health | +200% dmg to enemies below 50% health
+# [Reject The Darkness] +5% Heals Multiplier
+[shard_fallen_moor]
+type = "multi_choice"
+descr = "loc_shard_fallen_moor"
+choices = [
+    {label = "loc_shard_fallen_moor_ch_1", use_msg = "msg_shard_fallen_moor_ch_1", instant = "shard_fallen_moor_ch_1", sfx = "Inst_SlashCrystal"},
+    {label = "loc_shard_fallen_moor_ch_2", use_msg = "msg_shard_fallen_moor_ch_2", instant = "shard_fallen_moor_ch_2", sfx = "Inst_SlashCrystal"},
+    {label = "loc_shard_fallen_moor_ch_3", use_msg = "msg_shard_fallen_moor_ch_3", instant = "shard_fallen_moor_ch_3", sfx = "Inst_SlashCrystal"},
+    {label = "loc_shard_fallen_moor_ch_4", use_msg = "msg_shard_fallen_moor_ch_4", instant = "shard_fallen_moor_ch_4", sfx = "Inst_SlashCrystal"},
+    {label = "loc_shard_fallen_moor_ch_5", use_msg = "msg_shard_fallen_moor_ch_5", instant = "shard_fallen_moor_ch_5", sfx = "Inst_SlashCrystal"},
+] 
+#-----------------------------------------------------------------------------
+
+
+
+#----------------------------------------------------------------------------- ⚡
+# SHRINE WRITING MOOR
+# [Bookworm] -5% Spell CD
+# [I Don't Read Books] +20% Attack Damage
+[shrine_writing_moor]
+type = "multi_choice"
+descr = "loc_shrine_writing_moor"
+choices = [
+    {label = "loc_shrine_writing_moor_ch_1", gift = "shrine_writing_moor_ch_1", sfx = "Inst_Bookshelf"},
+    {label = "loc_shrine_writing_moor_ch_2", gift = "shrine_writing_moor_ch_2", sfx = "Inst_Bookshelf"},
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+# TOME NECRONOMICON MOOR
+# [Willpower] Get stunned for 4 sec | +% spell dur
+# [Willpower] Take 12 pure dmg | +% spell dmg
+# [Willpower] Summon 3 xpless ghosts | +10% summon dmg
+# [Willpower] Gain +10 max health
+[tome_necronomicon_moor]
+type = "multi_choice"
+descr = "loc_tome_necronomicon_moor"
+choices = [
+    {label = "loc_tome_necronomicon_moor_ch_1", instant = "tome_necronomicon_moor_ch_1", sfx = "Inst_EvilWhispers"},
+    {label = "loc_tome_necronomicon_moor_ch_2", instant = "tome_necronomicon_moor_ch_2", sfx = "Inst_EvilWhispers"},
+    {label = "loc_tome_necronomicon_moor_ch_3", instant = "tome_necronomicon_moor_ch_3", sfx = "Inst_EvilWhispers"},
+    {label = "loc_tome_necronomicon_moor_ch_4", instant = "tome_necronomicon_moor_ch_4", sfx = "Inst_EvilWhispers"},
+    {label = "loc_tome_necronomicon_moor_ch_5", use_msg = "msg_tome_necronomicon_moor_ch_5", gift = "tome_necronomicon_moor_ch_5"},
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+# SHRINE HUNTING MOOR
+# [Finish The Hunt] +10% Attack Critical Chance
+# [The Hunt Awaits] +5% chance to recharge dash on attack hit
+# [Hunter's Hurry] +50 movement speed
+# [Huntmaster] + 1 Dash Slot
+[shrine_hunting_moor]
+type = "multi_choice"
+descr = "loc_shrine_hunting_moor"
+choices = [
+    {label = "loc_shrine_hunting_moor_ch_1", gift = "shrine_hunting_moor_ch_1", use_msg = "msg_shrine_hunting_moor_ch_1", sfx = "Inst_TribalDrum"},
+    {label = "loc_shrine_hunting_moor_ch_2", gift = "shrine_hunting_moor_ch_2", use_msg = "msg_shrine_hunting_moor_ch_2", sfx = "Inst_TribalDrum"},
+    {label = "loc_shrine_hunting_moor_ch_3", gift = "shrine_hunting_moor_ch_3", use_msg = "msg_shrine_hunting_moor_ch_3", sfx = "Inst_TribalDrum"},
+    {label = "loc_shrine_hunting_moor_ch_4", gift = "shrine_hunting_moor_ch_4", use_msg = "msg_shrine_hunting_moor_ch_4", sfx = "Inst_TribalDrum"},
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+# MYSTIC GATE MOOR
+# [] - - Attack Dmg, + Summons Dmg
+# [] - - Attack Dmg, + Cast Dmg
+# [] - + Attack Dmg
+[mysticgate_moor]
+type = "multi_choice"
+descr = "loc_mystgate"
+sfx = "Inst_BigDoor"
+choices = [
+    {label = "loc_mysticgate_moor_ch_1", gift = "mysticgate_moor_ch_1", sfx = "Inst_MagnetWhoosh"},
+    {label = "loc_mysticgate_moor_ch_2", gift = "mysticgate_moor_ch_2", sfx = "Inst_MagnetWhoosh"},
+    {label = "loc_mysticgate_moor_ch_3", gift = "mysticgate_moor_ch_3", sfx = "Inst_MagnetWhoosh"},
+]
+#-----------------------------------------------------------------------------
+
+
+
+
+#-----------------------------------------------------------------------------
+[shrine_fish_moor]
+# [] - +1 Reroll
+# [] - +1 Banish
+# [] - +1 Skip
+type = "multi_choice"
+descr = "loc_shrine_fish"
+choices = [
+    {label = "loc_shrine_fish_moor_ch_1", gift = "shrine_fish_moor_ch_1", sfx = "Inst_Well"}, #use_msg = "shrine_fish_moor_ch_1"},
+    {label = "loc_shrine_fish_moor_ch_2", gift = "shrine_fish_moor_ch_2", sfx = "Inst_Well"}, #use_msg = "shrine_fish_moor_ch_2"},
+    {label = "loc_shrine_fish_moor_ch_3", gift = "shrine_fish_moor_ch_3", sfx = "Inst_Well"}, #use_msg = "shrine_fish_moor_ch_3"},    
+]
+#-----------------------------------------------------------------------------
+
+
+
+
+#-----------------------------------------------------------------------------
+# ABANDONEDCAGE
+# You find a beautiful bird caged amidst the darkly ruins. As you approach it starts to flutter helplessly and speaks out in human voice: "Please, set me free".
+# [Try to convince it to join you] - The bird might join you or might flee.
+# [Simply set it free] - Gain small movement speed bonus
+# [Leave it in its cage for now] 
+[abandonedcage]
+type = "multi_choice"
+descr = "loc_abandonedcage"
+choices = [
+    {label = "loc_abandonedcage_ch_1", use_msg = "msg_abandonedcage_ch_1", instant = "abandonedcage_ch_1"},
+    {label = "loc_abandonedcage_ch_2", use_msg = "msg_abandonedcage_ch_2", gift = "abandonedcage_ch_2"},
+    {label = "loc_abandonedcage_ch_3", use_msg = "msg_abandonedcage_ch_3", instant = "abandonedcage_ch_3"}
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+# ACORN TOTEM
+# An Acorn totem, shiny and bright, standing mighty amidst the darkness of the forest, welcomes your presence. (Display acorn buff above your head while effect is active;)
+# [Powerful Acorns] - Whenever you collect an experience shard, gain attack speed for 1 sec, ability cd 1 min, ability duration 8 sec.
+# [Golden Acorns] - Whenever you pick gold, gain movement speed for 3 sec, no cd
+# [Wise Acorns] - Whenever you gain 500 xp, heal 10% of your life
+[acorn_totem]
+type = "multi_choice"
+descr = "loc_acorn_totem"
+choices = [
+    {label = "loc_acorn_totem_ch_1", use_msg = "msg_acorn_totem_ch_1", gift = "acorn_totem_ch_1", sfx = "Inst_MagnetWhoosh" },
+    {label = "loc_acorn_totem_ch_2", use_msg = "msg_acorn_totem_ch_2", gift = "acorn_totem_ch_2", sfx = "Inst_MagnetWhoosh" },
+    {label = "loc_acorn_totem_ch_3", use_msg = "msg_acorn_totem_ch_3", gift = "acorn_totem_ch_3", sfx = "Inst_MagnetWhoosh" },
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+# AEGISOFTHELOST
+# [Call Upon the Aegis Power] - Whenever an enemy loses every 5th barrier, your next attack will bash and Gain Attack Damage
+# [Call Upon the Aegis Courage] - Whenever you dash_through an enemy, your next attack will deal damage based on your hp
+# [Call Upon the Aegis Valor] - Whenever you are slain by a boss you have a 25% chance to revive on death”
+[aegisofthelost]
+type = "multi_choice"
+descr = "loc_aegisofthelost"
+choices = [
+    {label = "loc_aegisofthelost_ch_1", use_msg = "msg_aegisofthelost_ch_1", gift = "aegisofthelost_ch_1", sfx = "Inst_Pain1"},
+    {label = "loc_aegisofthelost_ch_2", use_msg = "msg_aegisofthelost_ch_2", gift = "aegisofthelost_ch_2", sfx = "Inst_Pain2"},
+    {label = "loc_aegisofthelost_ch_3", use_msg = "msg_aegisofthelost_ch_3", gift = "aegisofthelost_ch_3", sfx = "Inst_Pain3"},
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+# As you approach, the noises around you dull and fade. The silence gives way to a mysterious yet calming feeling and you become attuned to an outworldy presence in these strange lifeforms. You let yourself sink into the calm of your sensations.
+# [Observe] - Adept Skills
+# [Listen] - Evasion
+# [Smell] - Pull Area
+# [Touch] - Spell Cooldowns
+[alienbubbles]
+type = "multi_choice"
+descr = "loc_alienbubbles"
+choices = [
+    {label = "loc_alienbubbles_ch_1", use_msg = "msg_alienbubbles_ch_1", gift = "alienbubbles_ch_1", sfx = "Inst_MagnetWhoosh"},
+    {label = "loc_alienbubbles_ch_2", use_msg = "msg_alienbubbles_ch_2", gift = "alienbubbles_ch_2", sfx = "Inst_MagnetWhoosh"},
+    {label = "loc_alienbubbles_ch_3", use_msg = "msg_alienbubbles_ch_3", gift = "alienbubbles_ch_3", sfx = "Inst_MagnetWhoosh"},
+    {label = "loc_alienbubbles_ch_4", use_msg = "msg_alienbubbles_ch_4", gift = "alienbubbles_ch_4", sfx = "Inst_MagnetWhoosh"},
+]
+#-----------------------------------------------------------------------------
+
+
+
+#----------------------------------------------------------------------------- ⚡
+# ALTAR ELDERGODS
+# The air thickens with the scent of earth and moss as you approach the dreadful altar. A weathered stone structure stands firm at the center, signifying the demand for a tribute, a sacrifice of blood to the Elder Forest Gods. Will you make a tribute to...
+# [Black Thorn] - Lose X life, Cannot Gain Life for 180 seconds - Gain Whenever you lose X life - Gain +% Attack Dmg for X sec
+# [Ravenous Maw] - Lose X life, Cannot Gain Life for 180 seconds - Gain Whenever you lose X life - Gain +% Strike Dmg for X sec
+# [Ashen Harvest] - Lose X life, Cannot Gain Life for 180 seconds - Gain Whenever you lose X life - Gain +% Cast Dmg for X sec
+# [Gloom Shaper] - Lose X life, Cannot Gain Life for 180 seconds - Gain Whenever you lose X life - Gain +% Power Dmg for X sec
+# [Hollow King] - Lose X life, Cannot Gain Life for 180 seconds - Gain Whenever you lose X life - Gain +% Summon Dmg for X sec
+# [Reject the Sacrifice] - Gain 500 xp
+[altar_eldergods]
+type = "multi_choice"
+descr = "loc_altar_eldergods"
+choices = [
+    # {label = "loc_altar_eldergods_ch_1", use_msg = "msg_altar_eldergods_ch_1", instant = "altar_eldergods_ch_1", sfx = "Inst_TrollLaugh"},
+    {label = "loc_altar_eldergods_ch_2", use_msg = "msg_altar_eldergods_ch_2", instant = "altar_eldergods_ch_2", sfx = "Inst_Thunder"},
+    {label = "loc_altar_eldergods_ch_3", use_msg = "msg_altar_eldergods_ch_3", instant = "altar_eldergods_ch_3", sfx = "Inst_Thunder"},
+    {label = "loc_altar_eldergods_ch_4", use_msg = "msg_altar_eldergods_ch_4", instant = "altar_eldergods_ch_4", sfx = "Inst_Thunder"},
+    {label = "loc_altar_eldergods_ch_5", use_msg = "msg_altar_eldergods_ch_5", instant = "altar_eldergods_ch_5", sfx = "Inst_Thunder"},
+    {label = "loc_altar_eldergods_ch_6", use_msg = "msg_altar_eldergods_ch_6", instant = "altar_eldergods_ch_6", sfx = "Inst_Thunder"},
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+# ANCESTRALMASK
+# Carved from ancient, weathered wood and inlaid with veins of shimmering light, the mask pulses of spiritual force. As you put your hands on its sides, faint murmurs of ancestors grow louder and louder in your mind, transfering to you collective experiences of the...
+# [Spirit] - whenever you collect 200 gems, reduce cast cooldowns by 100% for 5 seconds
+# [Outworldly] - whenever you collect 200 gems, teleport to a random position and stun all enemies in the area
+# [Body] - whenever you collect 200 gems, your next attack will trigger strikes twice
+# [Mind] - whenever you collect 200 gems, increase your area by 40% for 5 seconds
+[ancestralmask]
+type = "multi_choice"
+descr = "loc_ancestralmask"
+choices = [
+    {label = "loc_ancestralmask_ch_1", use_msg = "msg_ancestralmask_ch_1", gift = "ancestralmask_ch_1", sfx = "Inst_TribalDrum"},
+    {label = "loc_ancestralmask_ch_2", use_msg = "msg_ancestralmask_ch_2", gift = "ancestralmask_ch_2", sfx = "Inst_TribalDrum"},
+    {label = "loc_ancestralmask_ch_3", use_msg = "msg_ancestralmask_ch_3", gift = "ancestralmask_ch_3", sfx = "Inst_TribalDrum"},
+    {label = "loc_ancestralmask_ch_4", use_msg = "msg_ancestralmask_ch_4", gift = "ancestralmask_ch_4", sfx = "Inst_TribalDrum"}
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+# Before you rise the ancient judgemental stones, silent sentinels of the Moor, their surfaces etched with mystic runes. Cold and unmoving, they pulse with a faint, eerie glow, their eyes - carved deep into the stone - watching all who approach. As you stand in the center 
+# [Test of Vitality] - if you have above X max hp, gain X armor
+# [Test of Wisdom] - if you have more than X skills gain Strike, Cast, Power and Summon DMG increase
+# [Test of Might] - if you have above base dmg, gain Attack AoE increase
+# [Test of Swiftness] - if you have above base movement speed, gain global CD reduction
+# [Test of Endurance, but not for me] - Destroy the judgemental stones, gain 500xp and leave
+[ancientjudgementalstones]
+type = "multi_choice"
+descr = "loc_ancientjudgementalstones"
+choices = [
+    {label = "loc_ancientjudgementalstones_ch_1", use_msg = "msg_ancientjudgementalstones_ch_1", gift = "ancientjudgementalstones_ch_1", sfx = "Inst_Thunder"},
+    {label = "loc_ancientjudgementalstones_ch_2", use_msg = "msg_ancientjudgementalstones_ch_2", gift = "ancientjudgementalstones_ch_2", sfx = "Inst_Thunder"},
+    {label = "loc_ancientjudgementalstones_ch_3", use_msg = "msg_ancientjudgementalstones_ch_3", gift = "ancientjudgementalstones_ch_3", sfx = "Inst_Thunder"},
+    {label = "loc_ancientjudgementalstones_ch_4", use_msg = "msg_ancientjudgementalstones_ch_4", gift = "ancientjudgementalstones_ch_4", sfx = "Inst_Thunder"},
+    # {label = "loc_ancientjudgementalstones_ch_5", use_msg = "msg_ancientjudgementalstones_ch_5", instant = "ancientjudgementalstones_ch_5", sfx = "Inst_TrollLaugh"},
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+# APHOTICBEASTSTOTEM
+# A Bear, a Wolf and a Deer - the three primal avatars of the forest. Carved from a dark, ancient wood, the totem before you emanates an aphotic aura, the beasts’ glowing eyes casting a haunting light, watching and waiting to unleash their spirits.
+# [Invoke the spirit of the Bear] – Whenever you lose 20 hp, deal X dmg to all
+# [Invoke the spirit of the Wolf] – Whenever you dash through an enemy gain +100% attack dmg for 1 second
+# [Invoke the spirit of the Deer] – When you traverse 2000 distance, gain massive pull area for 10 seconds
+[aphoticbeaststotem]
+type = "multi_choice"
+descr = "loc_aphoticbeaststotem"
+choices = [
+    {label = "loc_aphoticbeaststotem_ch_1", use_msg = "msg_aphoticbeaststotem_ch_1", gift = "aphoticbeaststotem_ch_1", sfx = "Inst_Thunder"},
+    {label = "loc_aphoticbeaststotem_ch_2", use_msg = "msg_aphoticbeaststotem_ch_2", gift = "aphoticbeaststotem_ch_2", sfx = "Inst_Thunder"},
+    {label = "loc_aphoticbeaststotem_ch_3", use_msg = "msg_aphoticbeaststotem_ch_3", gift = "aphoticbeaststotem_ch_3", sfx = "Inst_Thunder"}
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+# ARCANUMSTONE
+# As you approach, the air thickens with magic - The Arcanumstone looms tall, its massive granit surface incrustated with ancient markings. You extend your hand towards the rune at the top and suddenly your ears catch a whirr as it cracks and in a flash of light it forms a link, connecting you to its wellspring of arcane force.
+# [Energized with Momentum] - whenever move_dist X, pow_from_attack goes to strike next strike
+# [Energized with Static] - whenever move_dist X, pow_from_attack goes to cast next cast
+# [Energized with Radiance] - whenever move_dist X, pow_from_attack goes to pow for 4 sec
+# [Energized with Inspiration] - whenever move_dist X, pow_from_attack goes to summons for 6 sec
+# [Break Away] - A chunk of damage from either your Strikes, Casts, Powers or Summons at random will transfer to your attack at a 5:1 exchange rate.
+[arcanumstone]
+type = "multi_choice"
+descr = "loc_arcanumstone"
+choices = [
+    {label = "loc_arcanumstone_ch_1", use_msg = "msg_arcanumstone_ch_1", gift = "arcanumstone_ch_1", sfx = "Inst_DarkBoost"},
+    {label = "loc_arcanumstone_ch_2", use_msg = "msg_arcanumstone_ch_2", gift = "arcanumstone_ch_2", sfx = "Inst_DarkBoost"},
+    {label = "loc_arcanumstone_ch_3", use_msg = "msg_arcanumstone_ch_3", gift = "arcanumstone_ch_3", sfx = "Inst_DarkBoost"},
+    {label = "loc_arcanumstone_ch_4", use_msg = "msg_arcanumstone_ch_4", gift = "arcanumstone_ch_4", sfx = "Inst_DarkBoost"},
+    {label = "loc_arcanumstone_ch_5", instant = "arcanumstone_ch_5", sfx = "Inst_DarkBoost"}
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+# BLACKHOLE TREE
+# 1 [Mayhem] - Lose small Pull Area and life, gain random Strike benefit (Damage, Area, CritChance, Duration)
+# 2 [Invocation] - Lose small Pull Area and life, gain random Cast benefit (Damage, Area, CritChance, Duration)
+# 3 [Influence] - Lose small Pull Area and life, gain random Power benefit (Damage, Area, CritChance, Duration)
+# 4 [Conjuration] - Lose small Pull Area and life, gain random Summon benefit (Damage, Count, MovementSpeed, Duration)
+# 5 [Reject the Sacrifice] – Gain XP
+[blackhole_tree]
+type = "multi_choice"
+descr = "loc_blackhole_tree"
+choices = [
+    {label = "loc_blackhole_tree_ch_1", instant = "blackhole_tree_ch_1", sfx = "Inst_DarkBoost"},
+    {label = "loc_blackhole_tree_ch_2", instant = "blackhole_tree_ch_2", sfx = "Inst_DarkBoost"},
+    {label = "loc_blackhole_tree_ch_3", instant = "blackhole_tree_ch_3", sfx = "Inst_DarkBoost"},
+    {label = "loc_blackhole_tree_ch_4", instant = "blackhole_tree_ch_4", sfx = "Inst_DarkBoost"},
+    {label = "loc_blackhole_tree_ch_5", instant = "blackhole_tree_ch_5", sfx = "Inst_DarkBoost"},
+]
+#-----------------------------------------------------------------------------
+
+
+
+
+#-----------------------------------------------------------------------------
+# BIONIRUNESTONE
+# This seemingly natural rock formation courses with magic. The runic inscriptions, however are meticilously placed and very deliberately carved, resembling the star paths in the night sky. You place your hand on the core inscription and gradually sense the stone’s energy passing through you, your thoughts alone guiding its flow.# [Rau] - Whenever you collect your Nth xp Shard, gain X attack speed for 5 sec.
+# [Rau] - Whenever you collect your Nth xp Shard, gain X attack speed for 5 sec.
+# [Ordt] - Whenever you level up, gain X crit chance for 10 sec.
+# [Taw] - Whenever you heal X hp, gain X pull area and X movement speed for 5 sec.
+[bionirunestone]
+type = "multi_choice"
+descr = "loc_bionirunestone"
+choices = [
+    {label = "loc_bionirunestone_ch_1", use_msg = "msg_bionirunestone_ch_1", gift = "bionirunestone_ch_1", sfx = "Inst_HolyBook"},
+    {label = "loc_bionirunestone_ch_2", use_msg = "msg_bionirunestone_ch_2", gift = "bionirunestone_ch_2", sfx = "Inst_HolyBook"},
+    {label = "loc_bionirunestone_ch_3", use_msg = "msg_bionirunestone_ch_3", gift = "bionirunestone_ch_3", sfx = "Inst_HolyBook"},
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+# CHAINEDRITUALRELIC
+# The massive slab of stone echoes with sinister whispers as the chains that bind it rattle quietly. It stands as a grim monument, a dark offering from demons, promising power to those bold enough to carve a seal into its warm surface.
+# [Pact of the Overlord] – When you take damage, lose 6% Global Damage and 6% Heals for 6 seconds. While at 20% life or lower, gain X% Strike Damage.
+# [Pact of the Warlock] – When you take damage, lose 6% Global Damage and 6% Heals for 6 seconds. While at 20% life or lower, gain X% Cast Damage.
+# [Pact of the Ritualist] – When you take damage, lose 6% Global Damage and 6% Heals for 6 seconds. While at 20% life or lower, gain X% Power Damage.
+# [Pact of the Soulbinder] – When you take damage, lose 6% Global Damage and 6% Heals for 6 seconds. While at 20% life or lower, gain X% Summon Damage.
+# [Destroy the Demonic Monument] - Gain XP and Release a blast that damages all enemies for 500 damage.
+[chainedritualrelic]
+type = "multi_choice"
+descr = "loc_chainedritualrelic"
+choices = [
+    {label = "loc_chainedritualrelic_ch_1", use_msg = "msg_chainedritualrelic_ch_1", instant = "chainedritualrelic_ch_1", sfx = "Inst_EvilWhispers"},
+    {label = "loc_chainedritualrelic_ch_2", use_msg = "msg_chainedritualrelic_ch_2", instant = "chainedritualrelic_ch_2", sfx = "Inst_EvilWhispers"},
+    {label = "loc_chainedritualrelic_ch_3", use_msg = "msg_chainedritualrelic_ch_3", instant = "chainedritualrelic_ch_3", sfx = "Inst_EvilWhispers"},
+    {label = "loc_chainedritualrelic_ch_4", use_msg = "msg_chainedritualrelic_ch_4", instant = "chainedritualrelic_ch_4", sfx = "Inst_EvilWhispers"},
+    {label = "loc_chainedritualrelic_ch_5", use_msg = "msg_chainedritualrelic_ch_5", instant = "chainedritualrelic_ch_5", sfx = "Inst_EvilWhispers"},
+
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+# CONTAINEDELDERMONUMENT
+# The air hums with dread, and faint whispers echo from the depths of the Eldritch magic being staring at you. The massive glyph-etched pillars surrounding it are its prison, sealing it away from wrecking havoc on the moor. Its voices tempt you of promises of power.
+# [Eldritch Havoc] - Every 30 seconds, if you are on at least 50% Life, take X lethal dmg and increase your Attack Dmg by X
+# [Eldritch Arcanum] - Every 30 seconds ,if you are on at least 50% Life, take X lethal dmg and increase your Attack Dmg by X
+# [Eldritch Dominion] - Every 30 seconds, if you are on at least 50% Life, take X lethal dmg and increase your Attack Dmg by X
+# [Eldritch Manifestations] - Every 30 seconds, if you are on at least 50% Life, take X lethal dmg and increase your Summon Dmg by X
+# [Destroy the Eldritch Being] - Take X Lethal Dmg, Destroy the monument and gain 3 Levels
+# [Release it] - Release the Eldritch creature from its prison. 
+# [Don't interact with it yet] – Nothing. (The shrine is still accessible)
+[containedeldermonument]
+type = "multi_choice"
+descr = "loc_containedeldermonument"
+choices = [
+    {label = "loc_containedeldermonument_ch_1", use_msg = "msg_containedeldermonument_ch_1", gift = "containedeldermonument_ch_1", sfx = "Inst_Thunder"},
+    {label = "loc_containedeldermonument_ch_2", use_msg = "msg_containedeldermonument_ch_2", gift = "containedeldermonument_ch_2", sfx = "Inst_Thunder"},
+    {label = "loc_containedeldermonument_ch_3", use_msg = "msg_containedeldermonument_ch_3", gift = "containedeldermonument_ch_3", sfx = "Inst_Thunder"},
+    {label = "loc_containedeldermonument_ch_4", use_msg = "msg_containedeldermonument_ch_4", gift = "containedeldermonument_ch_4", sfx = "Inst_Thunder"},
+    {label = "loc_containedeldermonument_ch_5", use_msg = "msg_containedeldermonument_ch_5", instant = "containedeldermonument_ch_5", sfx = "Inst_Thunder"},
+    # {label = "loc_containedeldermonument_ch_6", use_msg = "msg_containedeldermonument_ch_6", instant = "containedeldermonument_ch_6", sfx = "Inst_TrollLaugh"},
+    # {label = "loc_containedeldermonument_ch_7", use_msg = "msg_containedeldermonument_ch_7", instant = "containedeldermonument_ch_7", sfx = "Inst_TrollLaugh"},
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+# CRYPTICMIRROR
+# As you look into the mirror, what you see staring back at you is more than your reflection… its a vision of your motivation, of your values, of your inner self…
+# [Inner Peace] - Whenever you Gain a Level, Heal All around you and yourself.
+# [Inner Turmoil] - Whenever you Gain a Level, Deal Damage to all around you and yourself.
+# [Inner Balance] - Whenever you Gain a Level, Gain X XP and Upgrade all Enemies in sight.
+[crypticmirror]
+type = "multi_choice"
+descr = "loc_crypticmirror"
+choices = [
+    {label = "loc_crypticmirror_ch_1", use_msg = "msg_crypticmirror_ch_1", gift = "crypticmirror_ch_1"},
+    {label = "loc_crypticmirror_ch_2", use_msg = "msg_crypticmirror_ch_2", gift = "crypticmirror_ch_2"},
+    {label = "loc_crypticmirror_ch_3", use_msg = "msg_crypticmirror_ch_3", gift = "crypticmirror_ch_3"}
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+# CRYPTICMOORALTAR
+# The flickering lights of candles invite you as you approach the lonely altar. It is a sacred place where travellers would gain respite and say their prayers. As you kneel to honor the knightly traditions you realize there’s something much more to this monument than meets the eye.
+# [Blessing of Protection - Ank] - whenever you get hit, gain status that reduces incoming damage based on armor for X sec, CD 20 sec
+# [Blessing of Protection - Viy] - whenever you get hit, gain status that reduces incoming damage based on max hp for X sec, CD 20 sec
+# [Blessing of Protection - Zotd] - whenever you get hit, gain status that reduces incoming damage based on attack speed for X sec, CD 20 sec
+# [Blessing of Protection - Razst] - whenever you get hit, gain status that reduces incoming damage based on attack damage for X sec, CD 20 sec”
+[crypticmooraltar]
+type = "multi_choice"
+descr = "loc_crypticmooraltar"
+choices = [
+    {label = "loc_crypticmooraltar_ch_1", use_msg = "msg_crypticmooraltar_ch_1", gift = "crypticmooraltar_ch_1", sfx = "Inst_SnuffFire"},
+    {label = "loc_crypticmooraltar_ch_2", use_msg = "msg_crypticmooraltar_ch_2", gift = "crypticmooraltar_ch_2", sfx = "Inst_SnuffFire"},
+    {label = "loc_crypticmooraltar_ch_3", use_msg = "msg_crypticmooraltar_ch_3", gift = "crypticmooraltar_ch_3", sfx = "Inst_SnuffFire"},
+    {label = "loc_crypticmooraltar_ch_4", use_msg = "msg_crypticmooraltar_ch_4", gift = "crypticmooraltar_ch_4", sfx = "Inst_SnuffFire"}
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+# EERIENEST
+# A huge nest of twisted vines and branches and what appears to be 3 roc eggs at the center of it. Will you...
+# [Take the Red Egg] - After 1 minute, your egg will hatch.
+# [Take the Green Egg] - After 1 minute, your egg will hatch.
+# [Take the Yellow Egg] - After 1 minute, your egg will hatch.
+# [Take them All] - Every 2 minutes, there is a 40% chance one of the 3 eggs hatches until all 3 of them hatch.
+# [Make a Nice Omlette] - Heal 10 + % Life and Gain a minor dash recharge CD buff for 1 minute.
+# [Leave them be] - 500 XP
+[eerienest]
+type = "multi_choice"
+descr = "loc_eerienest"
+choices = [
+    {label = "loc_eerienest_ch_1", use_msg = "msg_eerienest_ch_1", gift = "eerienest_ch_1"},
+    {label = "loc_eerienest_ch_2", use_msg = "msg_eerienest_ch_2", gift = "eerienest_ch_2"},
+    {label = "loc_eerienest_ch_3", use_msg = "msg_eerienest_ch_3", gift = "eerienest_ch_3"},
+    #{label = "loc_eerienest_ch_4", use_msg = "msg_eerienest_ch_4", gift = "eerienest_ch_4"},
+    #{label = "loc_eerienest_ch_5", use_msg = "msg_eerienest_ch_5", instant = "eerienest_ch_5"},
+    {label = "loc_eerienest_ch_6", use_msg = "msg_eerienest_ch_6", instant = "eerienest_ch_6"}
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+# GHASTLYDARKTREE
+# As you come closer the fiery tree pulls you in harder and inflicts your body with a burning sensation. Very soon you realize you’re a reach away from giving it the blood it craves in return for a fraction of its occult powers. Powers of...
+# [The Beyond] - Lose X life, Dash Recharge Time CD and Range
+# [The Nether] - Lose X life, Cast and Pow Crit
+# [The Chaos] - Lose X life, Gain Strike and Att Crit
+# [Pull Away and Resist] -  Gain EXP
+[ghastlydarktree]
+type = "multi_choice"
+descr = "loc_ghastlydarktree"
+choices = [
+    {label = "loc_ghastlydarktree_ch_1", use_msg = "msg_ghastlydarktree_ch_1", instant = "ghastlydarktree_ch_1", sfx = "Inst_SnuffFire"},
+    {label = "loc_ghastlydarktree_ch_2", use_msg = "msg_ghastlydarktree_ch_2", instant = "ghastlydarktree_ch_2", sfx = "Inst_SnuffFire"},
+    {label = "loc_ghastlydarktree_ch_3", use_msg = "msg_ghastlydarktree_ch_3", instant = "ghastlydarktree_ch_3", sfx = "Inst_SnuffFire"},
+    {label = "loc_ghastlydarktree_ch_4", use_msg = "msg_ghastlydarktree_ch_4", instant = "ghastlydarktree_ch_4", sfx = "Inst_SnuffFire"}
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+# You stumble upon an incredibly bizarre sight… a small house with a chimney and windows and everything… but it looks lika a glove? And it is a glove! Your curiosity gets the best of you and you knock on the door. With a creaking sound it opens, and an even more bizarre sight unfolds, as you peek inside, and see a mouse, a rabbit, a fox, a wolf and a bear, sharing what seems to be a much larger space on the inside than what’s on the outside. The creatures greet you excitedly, inviting you to join their hub and tell you of their stories. You accept their offer and as you take your next step you miracilously pass through the tiny door. As if time wasn’t passing inside, you spent a great time with them... but whose stories will you take to heart the most?
+# [Story of the Mouse] - when you evade, gain temp all dmg
+# [Story of the Rabbit] - when you dash away last second, gain temp all dmg
+# [Story of the Fox] - when you gain 200 gems, gain temp all dmg
+# [Story of the Wolf] - when you crit, gain temp all dmg
+# [Story of the Bear] - when you heal life, gain temp all dmg
+[giantgrandpasglove]
+type = "multi_choice"
+descr = "loc_giantgrandpasglove"
+choices = [
+    {label = "loc_giantgrandpasglove_ch_1", use_msg = "msg_giantgrandpasglove_ch_1", gift = "giantgrandpasglove_ch_1"},
+    {label = "loc_giantgrandpasglove_ch_2", use_msg = "msg_giantgrandpasglove_ch_2", gift = "giantgrandpasglove_ch_2"},
+    {label = "loc_giantgrandpasglove_ch_3", use_msg = "msg_giantgrandpasglove_ch_3", gift = "giantgrandpasglove_ch_3"},
+    {label = "loc_giantgrandpasglove_ch_4", use_msg = "msg_giantgrandpasglove_ch_4", gift = "giantgrandpasglove_ch_4"},
+    {label = "loc_giantgrandpasglove_ch_5", use_msg = "msg_giantgrandpasglove_ch_5", gift = "giantgrandpasglove_ch_5"},
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+# GLOOMYSACREDFOUNTAIN
+# A a gloomy magical fountain has been enchanted by a treacherous being
+# 1 [Drink the Cursed Waters] - lose X lethal life, gain revival. If you can’t survive the Life Loss you won’t revive.
+# [Attempt to Disenchant It Before Drinking] – Chance (based on X) of gaining X Life Regen Blessing from Purified Waters. On Failiure will Drink from Cursed Waters!
+# [Dip your Weapon in the Cursed Waters] – Whenever you hit an enemy deal X extra damage. Then the enemy gains X non stacking life regen.
+# 4 [Pray a Blessing onto the Fountain] - Heal Life and gain minor health regen
+# 5 [Destroy the Fountain] – Gain XP
+
+[gloomysacredfountain]
+type = "multi_choice"
+descr = "loc_gloomysacredfountain"
+choices = [
+    {label = "loc_gloomysacredfountain_ch_1", use_msg = "msg_gloomysacredfountain_ch_1", instant = "gloomysacredfountain_ch_1", sfx = "Inst_Well"},
+    #{label = "loc_gloomysacredfountain_ch_2", use_msg = "msg_gloomysacredfountain_ch_2", instant = "gloomysacredfountain_ch_2", sfx = "Inst_TrollLaugh"},
+    #{label = "loc_gloomysacredfountain_ch_3", use_msg = "msg_gloomysacredfountain_ch_3", gift = "gloomysacredfountain_ch_3", sfx = "Inst_TrollLaugh"},
+    {label = "loc_gloomysacredfountain_ch_5", use_msg = "msg_gloomysacredfountain_ch_5", instant = "gloomysacredfountain_ch_5", sfx = "Inst_Well"},
+    {label = "loc_gloomysacredfountain_ch_4", use_msg = "msg_gloomysacredfountain_ch_4", instant = "gloomysacredfountain_ch_4", sfx = "Inst_Well"},
+
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+# GRAPE ELDERTREE
+# An intense, fruity aroma of grapes drew you in to discover a giant grape tree. Its ripe, midnight-blue clusters hanging from the branches of a colossal trunk soaked in magical fragrance. Only one of these clusters could feed you for a day and at this moment you would love nothing more than to enjoy some fresh fruit respite and fall into… 
+# [Greater Impulse] - Every Nth attack, gain X% evasion for X seconds
+# [Greater Excitement] - Every Nth attack, gain X% dmg boost for X seconds
+# [Greater Mirth] – Every Nth attack, heal X life
+[grape_eldertree]
+type = "multi_choice"
+descr = "loc_grape_eldertree"
+choices = [
+    {label = "loc_grape_eldertree_ch_1", use_msg = "msg_grape_eldertree_ch_1", gift = "grape_eldertree_ch_1", sfx = "Inst_Thunder"},
+    {label = "loc_grape_eldertree_ch_2", use_msg = "msg_grape_eldertree_ch_2", gift = "grape_eldertree_ch_2", sfx = "Inst_Thunder"},
+    {label = "loc_grape_eldertree_ch_3", use_msg = "msg_grape_eldertree_ch_3", gift = "grape_eldertree_ch_3", sfx = "Inst_Thunder"},
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+# GRAPE WINEBOTTLE
+# A vivid scent of fine wine reaches you, guiding your gaze to a strikingly large bottle atop a stone altar. Massive grape clusters embrace the bottle like a scene captured in a still life painting, seemingly purposefully decorated to grab the attention. You indulge yourself with the fine wine and fall into…
+# [Impulse] - Every Nth attack, gain X% evasion for X seconds
+# [Excitement] - Every Nth attack, gain X% dmg boost for X seconds
+# [Mirth] – Every Nth attack, heal X life
+[grape_winebottle]
+type = "multi_choice"
+descr = "loc_grape_winebottle"
+choices = [
+    {label = "loc_grape_winebottle_ch_1", use_msg = "msg_grape_winebottle_ch_1", gift = "grape_winebottle_ch_1", sfx = "Inst_DrinkCoffee"},
+    {label = "loc_grape_winebottle_ch_2", use_msg = "msg_grape_winebottle_ch_2", gift = "grape_winebottle_ch_2", sfx = "Inst_DrinkCoffee"},
+    {label = "loc_grape_winebottle_ch_3", use_msg = "msg_grape_winebottle_ch_3", gift = "grape_winebottle_ch_3", sfx = "Inst_DrinkCoffee"},
+]
+#-----------------------------------------------------------------------------
+
+
+
+#----------------------------------------------------------------------------- 🔻⚡
+# KELDSTONE
+# A mighty Keldstone rises tall before you, a monolithic relic of an ancient civilization. Its surface is etched with Glyphs - magical symbols of prepared enchantments to aid wandering travelers on their journeys. You stop to think for a moment and then place your hand on the Glyph of...
+# [Cleansing] - Every 10 seconds, remove all negative statuses from yourself.
+# [Protection] - Every 20 seconds, gain X armor for 10 seconds.
+# [Renewal] - Every 30 seconds, heal X life.
+# [Expulsion] - Every 40 seconds, kill all non-elite enemies in an area of 300 around you.
+[keldstone]
+type = "multi_choice"
+descr = "loc_keldstone"
+choices = [
+    {label = "loc_keldstone_ch_1", use_msg = "msg_keldstone_ch_1", gift = "keldstone_ch_1", sfx = "Inst_HolyBook"},
+    {label = "loc_keldstone_ch_2", use_msg = "msg_keldstone_ch_2", gift = "keldstone_ch_2", sfx = "Inst_HolyBook"},
+    {label = "loc_keldstone_ch_3", use_msg = "msg_keldstone_ch_3", gift = "keldstone_ch_3", sfx = "Inst_HolyBook"},
+    {label = "loc_keldstone_ch_4", use_msg = "msg_keldstone_ch_4", gift = "keldstone_ch_4", sfx = "Inst_HolyBook"}
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+# MAGICALFOODCARPET
+# MADE INTO AN INSTANT ENTIRELY
+# As you step closer to what seems to be an empty blanket on the grass, you hear a gentle tinkle, and in a flash of light, a feast, rich and luscious, appears before your eyes. Who made this hex? And more importantly, what should you do?
+# [Sit and Enjoy Every Bite] - What could go wrong? Not every feast manifesting itself into existence is cursed. (Chance to: Get Healed / Get Poisoned / Get Blessed)
+# [Attempt to Dispel the Hex] - Uncover what’s really going on (Chance to: Gain XP, Find an Item in the food’s place, or a Unique NOTE)
+# [Ignore the Temptation] - Gain XP
+# [magicalfoodcarpet]
+# type = "multi_choice"
+# descr = "loc_magicalfoodcarpet"
+# choices = [
+#    {label = "loc_magicalfoodcarpet_ch_1", use_msg = "msg_magicalfoodcarpet_ch_1", instant = "magicalfoodcarpet_ch_1", sfx = "Inst_TrollLaugh"},
+#    {label = "loc_magicalfoodcarpet_ch_2", use_msg = "msg_magicalfoodcarpet_ch_2", instant = "magicalfoodcarpet_ch_2", sfx = "Inst_TrollLaugh"},
+#    {label = "loc_magicalfoodcarpet_ch_3", use_msg = "msg_magicalfoodcarpet_ch_3", instant = "magicalfoodcarpet_ch_3", sfx = "Inst_TrollLaugh"},
+# ]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+# MOONSIGN
+# You step onto the Moonsign, the hex activates and lunar light surges through you, reflecting your cosmic bond to your future self.
+# [Lunar Path Force] - Gain Strike Dmg per Strike Slot
+# [Lunar Path Energy] - Gain Cast Dmg per Cast Slot
+# [Lunar Path Halo] - Gain Power Dmg per Power Slot
+# [Lunar Path Penumbra] - Gain Summon Dmg per Summon Slot
+[moonsign]
+type = "multi_choice"
+descr = "loc_moonsign"
+choices = [
+    {label = "loc_moonsign_ch_1", use_msg = "msg_moonsign_ch_1", gift = "moonsign_ch_1", sfx = "Inst_HolyBook"},
+    {label = "loc_moonsign_ch_2", use_msg = "msg_moonsign_ch_2", gift = "moonsign_ch_2", sfx = "Inst_HolyBook"},
+    {label = "loc_moonsign_ch_3", use_msg = "msg_moonsign_ch_3", gift = "moonsign_ch_3", sfx = "Inst_HolyBook"},
+    {label = "loc_moonsign_ch_4", use_msg = "msg_moonsign_ch_4", gift = "moonsign_ch_4", sfx = "Inst_HolyBook"},
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+# The Mouse Enclave - a bastion of survivors amidst the Dark Moor. As you approach the encampment you are welcomed by the brave mice who have heard stories of your travels and are eagerly expecting you. To them you are a great ally so they wish to bestow upon you whatever help they may. Will you accept:
+# [Their Weaponry] - A High Rarity Item
+# [Their Intelligence] - More Rare Map Locations
+# [Their Resources] - More Pick Up Drops and Higher Chance of finding magic items
+# [Their Fellowship] - For every Mouse location that you have visited or visit from now on, gain X global DMG
+[mouseenclave_encampment]
+type = "multi_choice"
+descr = "loc_mouseenclave_encampment"
+choices = [
+    {label = "loc_mouseenclave_encampment_ch_1", use_msg = "msg_mouseenclave_encampment_ch_1", instant = "mouseenclave_encampment_ch_1"},
+    {label = "loc_mouseenclave_encampment_ch_2", use_msg = "msg_mouseenclave_encampment_ch_2", gift = "mouseenclave_encampment_ch_2"},
+    {label = "loc_mouseenclave_encampment_ch_3", use_msg = "msg_mouseenclave_encampment_ch_3", gift = "mouseenclave_encampment_ch_3"},
+    {label = "loc_mouseenclave_encampment_ch_4", use_msg = "msg_mouseenclave_encampment_ch_4", gift = "mouseenclave_encampment_ch_4"},
+
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+# MOUSEENCLAVE SHELTER
+# A sole member of the Mouse Enclave has made shelter as a brief respite on his exploration mission. The mouse welcomes your unexpected presence - he sees a good ally in you as there’s not many friends around the Darkmoor. As you are about to part ways he extends to you a gesture of aid in the name of the Mouse Enclave. Will you accept:
+# 1 [Supplies Share] - Random item, Small heal and a bit of gold
+# 2 [Mouse Resourcefulness] - Rare Item Drops % increase
+# 3 [Secrets of the Moor] - Pickups Increase
+# 4 [Tips and Tricks] - XP
+# 5 [Path to Fellowship] - Higher chance of finding The Mouse Enclave Location                                       🔻
+[mouseenclave_shelter]
+type = "multi_choice"
+descr = "loc_mouseenclave_shelter"
+choices = [
+    {label = "loc_mouseenclave_shelter_ch_1", use_msg = "msg_mouseenclave_shelter_ch_1", instant = "mouseenclave_shelter_ch_1"},
+    {label = "loc_mouseenclave_shelter_ch_2", use_msg = "msg_mouseenclave_shelter_ch_2", gift = "mouseenclave_shelter_ch_2"},
+    {label = "loc_mouseenclave_shelter_ch_3", use_msg = "msg_mouseenclave_shelter_ch_3", gift = "mouseenclave_shelter_ch_3"},
+    {label = "loc_mouseenclave_shelter_ch_4", use_msg = "msg_mouseenclave_shelter_ch_4", instant = "mouseenclave_shelter_ch_4"},
+    {label = "loc_mouseenclave_shelter_ch_5", use_msg = "msg_mouseenclave_shelter_ch_5", gift = "mouseenclave_shelter_ch_5"},
+]
+#-----------------------------------------------------------------------------
+
+
+
+#----------------------------------------------------------------------------- ⚡
+# MYSTERIOUS CAULDRON
+# 1. [Drink] - Chance for:
+#   1. Blessing - Pull Area Increase, or
+#   2. Heal, or
+#   3. Lose Life, or
+#   4. Curse - Pull Area Decrease
+#   5. Blessing - Power / Cast area increase
+#   6. Experience
+# 2. [Kick it over] - Attack Dmg increase
+# 3. [Leave it be] - + XP
+[mysteriouscauldron]
+type = "multi_choice"
+descr = "loc_mysteriouscauldron"
+choices = [
+    {label = "loc_mysteriouscauldron_ch_1", instant = "mysteriouscauldron_ch_1"},
+    {label = "loc_mysteriouscauldron_ch_2", instant = "mysteriouscauldron_ch_2"},
+    {label = "loc_mysteriouscauldron_ch_3", instant = "mysteriouscauldron_ch_3"},
+]
+#-----------------------------------------------------------------------------
+
+
+#-----------------------------------------------------------------------------
+# MYSTERIOUSLYABANDONEDLAB
+# The damaged glass probes, the messy counter, the pieces of paper scattered everywhere, the brass instruments… The lab of a scientist who has been studying Darkmoor. There is so much to explore here and the mystery of the man or creature that has created and abandoned this place peaks your curioisity. But there is not enough time to get the the bottom of this and all you need to do is decide how to make use of your finding.
+# [Take a Basic Essence Elixir] - Whenever you take damage from minions, increase your power against that enemy by X for Y sec, CD X sec. 
+# [Take a Special Essence Elixir] - Whenever you take damage from elites, increase your power against that enemy by X for Y sec, CD X sec
+# [Take an Extraordinary Essence Elixir] - Whenever you take damage from bosses, increase your power against that enemy by X for Y sec, CD X sec
+# [Mix it All Up] - Cannot regenerate any life for 5 minutes. Whenever you take damage, increase your global power by X for Y sec, CD X sec.
+[mysteriouslyabandonedlab]
+type = "multi_choice"
+descr = "loc_mysteriouslyabandonedlab"
+choices = [
+    {label = "loc_mysteriouslyabandonedlab_ch_1", gift = "mysteriouslyabandonedlab_ch_1", sfx = "Inst_Thunder"},
+    {label = "loc_mysteriouslyabandonedlab_ch_2", gift = "mysteriouslyabandonedlab_ch_2", sfx = "Inst_Thunder"},
+    {label = "loc_mysteriouslyabandonedlab_ch_3", gift = "mysteriouslyabandonedlab_ch_3", sfx = "Inst_Thunder"},
+    {label = "loc_mysteriouslyabandonedlab_ch_4", instant = "mysteriouslyabandonedlab_ch_4", sfx = "Inst_Thunder"},
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+# MYSTERIOUSLYABANDONEDPROBE
+# You stumble across what seems to be some sort of glass probe that has been abandoned. There’s a torn page tucked inbetween the brass frame. Upon reading it you understand that the samples are imbued like some form of antidote against the creatures of this Moor and you wonder who might be responsible for collecting them… brushing away the distraction, you focus on whether you should make use of what you found.
+# [Basic Essence] - deal more dmg to minions, but cannot heal for the next 1 minute
+# [Special Essence] - deal more dmg to elites, but cannot heal for the next 1 minute
+# [Extraordinary Essence] - deal more dmg to bosses, but cannot heal for the next 1 minute
+# [Refrain from using Essence] - Gain XP
+[mysteriouslyabandonedprobe]
+type = "multi_choice"
+descr = "loc_mysteriouslyabandonedprobe"
+choices = [
+    {label = "loc_mysteriouslyabandonedprobe_ch_1", instant = "mysteriouslyabandonedprobe_ch_1", sfx = "Inst_DrinkCoffee"},
+    {label = "loc_mysteriouslyabandonedprobe_ch_2", instant = "mysteriouslyabandonedprobe_ch_2", sfx = "Inst_DrinkCoffee"},
+    {label = "loc_mysteriouslyabandonedprobe_ch_3", instant = "mysteriouslyabandonedprobe_ch_3", sfx = "Inst_DrinkCoffee"},
+    {label = "loc_mysteriouslyabandonedprobe_ch_4", instant = "mysteriouslyabandonedprobe_ch_4", sfx = "Inst_DrinkCoffee"},
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+# NPC SNAIL MOOR
+# You pause at the extraordinary sight before you - a giant snail slogging slowly through the Moor. His eyes turn towards you with deliberate curiosity. As you stand still he examines you from head to toes and says in a deep but gentle voice: “Mmmmm, yeeesss… I caaan teeach youuu the waaay of the Snaaail you knooow... the waaay of theee…”
+# [Solitude] - Passive Experience Gain, lose small ms
+# [Speed] - -40 movement speed, lose small ms
+# [Shell] - +Armor, lose small ms
+# [Slug] - gb slow aura, lose small ms
+# [Politely refuse being taught anything by the Snail] - Nothing                                                   🔻
+[npc_snail_moor]
+type = "multi_choice"
+descr = "loc_npc_snail_moor"
+choices = [
+    {label = "loc_npc_snail_moor_ch_1", instant = "npc_snail_moor_ch_1"},
+    {label = "loc_npc_snail_moor_ch_2", instant = "npc_snail_moor_ch_2"},
+    {label = "loc_npc_snail_moor_ch_3", instant = "npc_snail_moor_ch_3"},
+    {label = "loc_npc_snail_moor_ch_4", instant = "npc_snail_moor_ch_4"},
+    {label = "loc_npc_snail_moor_ch_5", instant = "npc_snail_moor_ch_5"}
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+# WANDERINGELDERTREEFOLK
+# The Treefolk’s eyes glow up and his branches rustle as you approach. “Yes, it is you, whispers through the Moor’s trees about your quest has reached me… I would love nothing more than to help you smash, whack, crush and burn these foul creatures that have corrupted these lands”. Upon a waive of his hand the Ent’s ancient magic surges through you…
+# [Smash] – Dmg vs Undamaged Enemies
+# [Whack] - On 50th Enemy Slain, gain dmg for X sec
+# [Crush] - Whenever you break armor,  gain dmg for X sec
+# [Burn] - Whenever enemy dies from status, gain dmg for X sec
+[npc_wanderingeldertreefolk]
+type = "multi_choice"
+descr = "loc_npc_wanderingeldertreefolk"
+choices = [
+    {label = "loc_npc_wanderingeldertreefolk_ch_1", use_msg = "msg_npc_wanderingeldertreefolk_ch_1", gift = "npc_wanderingeldertreefolk_ch_1"},
+    {label = "loc_npc_wanderingeldertreefolk_ch_2", use_msg = "msg_npc_wanderingeldertreefolk_ch_2", gift = "npc_wanderingeldertreefolk_ch_2"},
+    {label = "loc_npc_wanderingeldertreefolk_ch_3", use_msg = "msg_npc_wanderingeldertreefolk_ch_3", gift = "npc_wanderingeldertreefolk_ch_3"},
+    {label = "loc_npc_wanderingeldertreefolk_ch_4", use_msg = "msg_npc_wanderingeldertreefolk_ch_4", gift = "npc_wanderingeldertreefolk_ch_4"},
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+# OLD LANTERNTREE
+# Drawn by the glimmering light hanging from the tree you know in your heart there is something more to it than just a lamp… it pulls to you as if Its desperately trying to convince you to touch it… trusting your inner instincts you push your hand through the light and let its power flow through your body.
+# [Courage] - Whenever you get hit, chance to gain attack dmg for X seconds
+# [Hope] - Whenever you get hit, chance to increase Luck for X seconds
+# [Aura] - Whenever you get hit, chance to increase global AoE for X seconds
+# [Peace] - Whenever you get hit, chance to restore X life
+[old_lanterntree]
+type = "multi_choice"
+descr = "loc_old_lanterntree"
+choices = [
+    {label = "loc_old_lanterntree_ch_1", use_msg = "msg_old_lanterntree_ch_1", gift = "old_lanterntree_ch_1", sfx = "Inst_SnuffFire"},
+    {label = "loc_old_lanterntree_ch_2", use_msg = "msg_old_lanterntree_ch_2", gift = "old_lanterntree_ch_2", sfx = "Inst_SnuffFire"},
+    {label = "loc_old_lanterntree_ch_3", use_msg = "msg_old_lanterntree_ch_3", gift = "old_lanterntree_ch_3", sfx = "Inst_SnuffFire"},
+    {label = "loc_old_lanterntree_ch_4", use_msg = "msg_old_lanterntree_ch_4", gift = "old_lanterntree_ch_4", sfx = "Inst_SnuffFire"},
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+# OVERGROWNAPHOTICBASIN
+# You sense that you can channel the cryptic powers of these waters in this basin if only you were to drink from it.
+# [Spiritual Bond] - Every 30s, become stunned for 2 sec then spawn links that heal you
+# [Belligerent Bond] - Every 30s, become stunned for 2 sec, then spawn links that damage 
+# [Chaos Bond] - Every 30s, become stunned for 2 sec, then spawn links that steal movement and attack speed
+# [Do not drink] - Gain XP
+[overgrownaphoticbasin]
+type = "multi_choice"
+descr = "loc_overgrownaphoticbasin"
+choices = [
+    {label = "loc_overgrownaphoticbasin_ch_1", use_msg = "msg_overgrownaphoticbasin_ch_1", instant = "overgrownaphoticbasin_ch_1", sfx = "Inst_Well"},
+    {label = "loc_overgrownaphoticbasin_ch_2", use_msg = "msg_overgrownaphoticbasin_ch_2", instant = "overgrownaphoticbasin_ch_2", sfx = "Inst_Well"},
+    {label = "loc_overgrownaphoticbasin_ch_3", use_msg = "msg_overgrownaphoticbasin_ch_3", instant = "overgrownaphoticbasin_ch_3", sfx = "Inst_Well"},
+    {label = "loc_overgrownaphoticbasin_ch_4", use_msg = "msg_overgrownaphoticbasin_ch_4", instant = "overgrownaphoticbasin_ch_4", sfx = "Inst_Well"},
+    {label = "loc_overgrownaphoticbasin_ch_5", use_msg = "msg_overgrownaphoticbasin_ch_5", instant = "overgrownaphoticbasin_ch_5"},
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+# OVERGROWNDARKGATE
+# The creatures in the dark gate look at you with pleading eyes; They promise to fetch stuff for you from the shadows if you wouldn’t destroy their home..
+# [Find me Consumables] - Pick Up drops
+# [Find me Magic] - Adept Skills
+# [Find me Items] - Rare Items Drop
+# [I Am a Friend] - Tell them you are their friend and wouldn’t have destroyed their home. There’s no need for repayment, however, they insist on giving you an elixir they found that will give you Life Regenaration and Increased Exp Gain for 1 minute.
+[overgrowndarkgate]
+type = "multi_choice"
+descr = "loc_overgrowndarkgate"
+choices = [
+    {label = "loc_overgrowndarkgate_ch_1", use_msg = "msg_overgrowndarkgate_ch_1", gift = "overgrowndarkgate_ch_1", sfx = "Inst_EvilWhispers"},
+    {label = "loc_overgrowndarkgate_ch_2", use_msg = "msg_overgrowndarkgate_ch_2", gift = "overgrowndarkgate_ch_2", sfx = "Inst_EvilWhispers"},
+    {label = "loc_overgrowndarkgate_ch_3", use_msg = "msg_overgrowndarkgate_ch_3", gift = "overgrowndarkgate_ch_3", sfx = "Inst_EvilWhispers"},
+    {label = "loc_overgrowndarkgate_ch_4", use_msg = "msg_overgrowndarkgate_ch_4", instant = "overgrowndarkgate_ch_4", sfx = "Inst_EvilWhispers"}
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+# OVERGROWNKNIGHTGRAVE
+# The virtues of the fallen hero who has dared enter Death’s Realm inspire you. He has been encased for eternity, his soul roaming the realm but his armor preserved to time. You think to yourself, of your successes, of your shortcomings. You feel you are in need of more...
+# [Bravery] - Max Life
+# [Toughness] - Armor
+# [Determination] - Attack Speed
+# [Strength] - Attack Damage
+# [Agility] - Movement Speed
+# [Wisdom] -  Experience Gain
+# [Faith] – Luck
+[overgrownknightgrave]
+type = "multi_choice"
+descr = "loc_overgrownknightgrave"
+choices = [
+    {label = "loc_overgrownknightgrave_ch_1", use_msg = "msg_overgrownknightgrave_ch_1", gift = "overgrownknightgrave_ch_1", sfx = "Inst_ForgeDef"},
+    {label = "loc_overgrownknightgrave_ch_2", use_msg = "msg_overgrownknightgrave_ch_2", gift = "overgrownknightgrave_ch_2", sfx = "Inst_ForgeDef"},
+    {label = "loc_overgrownknightgrave_ch_3", use_msg = "msg_overgrownknightgrave_ch_3", gift = "overgrownknightgrave_ch_3", sfx = "Inst_ForgeDef"},
+    {label = "loc_overgrownknightgrave_ch_4", use_msg = "msg_overgrownknightgrave_ch_4", gift = "overgrownknightgrave_ch_4", sfx = "Inst_ForgeDef"},
+    {label = "loc_overgrownknightgrave_ch_5", use_msg = "msg_overgrownknightgrave_ch_5", gift = "overgrownknightgrave_ch_5", sfx = "Inst_ForgeDef"},
+    {label = "loc_overgrownknightgrave_ch_6", use_msg = "msg_overgrownknightgrave_ch_6", gift = "overgrownknightgrave_ch_6", sfx = "Inst_ForgeDef"},
+    {label = "loc_overgrownknightgrave_ch_7", use_msg = "msg_overgrownknightgrave_ch_7", gift = "overgrownknightgrave_ch_7", sfx = "Inst_ForgeDef"}
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+# RITUALSTONES
+# The stones you approach are illuminated by the light of a primeval enchantment, its runes glittering, set to be unsealed by a worthy adventurer.
+# [Seal of An] - Whenever you heal X life, damage all enemies around you 
+# [Seal of Er] - Whenever you heal X life, gain XP
+# [Seal of If] - Whenever you heal X life, gain movement speed for X seconds
+[ritualstones]
+type = "multi_choice"
+descr = "loc_ritualstones"
+choices = [
+    {label = "loc_ritualstones_ch_1", use_msg = "msg_ritualstones_ch_1", gift = "ritualstones_ch_1", sfx = "Inst_MagnetWhoosh"},
+    {label = "loc_ritualstones_ch_2", use_msg = "msg_ritualstones_ch_2", gift = "ritualstones_ch_2", sfx = "Inst_MagnetWhoosh"},
+    {label = "loc_ritualstones_ch_3", use_msg = "msg_ritualstones_ch_3", gift = "ritualstones_ch_3", sfx = "Inst_MagnetWhoosh"},
+    #{label = "loc_ritualstones_ch_4", use_msg = "msg_ritualstones_ch_4", gift = "ritualstones_ch_4", sfx = "Inst_TrollLaugh"},
+    #{label = "loc_ritualstones_ch_5", use_msg = "msg_ritualstones_ch_5", gift = "ritualstones_ch_5", sfx = "Inst_TrollLaugh"},
+    #{label = "loc_ritualstones_ch_6", use_msg = "msg_ritualstones_ch_6", gift = "ritualstones_ch_6", sfx = "Inst_TrollLaugh"}
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+# SHRINE PENANTKNIGHT
+# The lonely statue of a valiant knight saying his prayers. You sense an odd force, a misty aura surrounding the statue as you approach. Your fingers brush against the stone and suddenly a foreign presence floods into your mind. The spirit knows of you, your struggles and your mission. He extends his blessings and calls for your solemn oath to the knightly code.
+# [Oath to Chivalry] - Whenever you gain Level, 100% of dmg to strike dmg for 10 seconds
+# [Oath to Magic] - Whenever you gain Level, 100% of dmg to cast dmg for 10 seconds
+# [Oath to Valor] - Whenever you gain Level, 100% of dmg to area dmg for 10 seconds
+# [Oath to Brotherhood] - Whenever you gain Level, 100% of dmg to summon dmg for 10 seconds
+# [Pledge no Oath] - Gain EXP
+[shrine_penantknight]
+type = "multi_choice"
+descr = "loc_shrine_penantknight"
+choices = [
+    {label = "loc_shrine_penantknight_ch_1", use_msg = "msg_shrine_penantknight_ch_1", gift = "shrine_penantknight_ch_1", sfx = "Inst_ForgeAtt"},
+    {label = "loc_shrine_penantknight_ch_2", use_msg = "msg_shrine_penantknight_ch_2", gift = "shrine_penantknight_ch_2", sfx = "Inst_ForgeAtt"},
+    {label = "loc_shrine_penantknight_ch_3", use_msg = "msg_shrine_penantknight_ch_3", gift = "shrine_penantknight_ch_3", sfx = "Inst_ForgeAtt"},
+    {label = "loc_shrine_penantknight_ch_4", use_msg = "msg_shrine_penantknight_ch_4", gift = "shrine_penantknight_ch_4", sfx = "Inst_ForgeAtt"},
+    {label = "loc_shrine_penantknight_ch_5", use_msg = "msg_shrine_penantknight_ch_5", instant = "shrine_penantknight_ch_5", sfx = "Inst_ForgeAtt"},
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+# SKULLCARVEDTREE
+# The gnarled woodcarved skull in this ancient tree stands still before you, its branches twisted and weathered by time. Its eerie, blood red glowing eyes following your every movement. It does not speak yet you know it wants you to reach for the object protected in the hollow of its stump and thus sealing with it a pact of…
+# [Greed] - Lose Area - On every 10th gold pile pick up, gain Area for X sec
+# [Rage] - Lose Attack Dmg -   On every 50th enemy slain, gain Attack Damage for X sec
+# [Recklessness] -  Lose Max HP - on every 40hp lost, gain lifesteal for X sec
+# [Reject the Pact] – Gain XP
+[skullcarvedtree]
+type = "multi_choice"
+descr = "loc_skullcarvedtree"
+choices = [
+    {label = "loc_skullcarvedtree_ch_1", instant = "skullcarvedtree_ch_1", sfx = "Inst_EvilWhispers"},
+    {label = "loc_skullcarvedtree_ch_2", instant = "skullcarvedtree_ch_2", sfx = "Inst_EvilWhispers"},
+    {label = "loc_skullcarvedtree_ch_3", instant = "skullcarvedtree_ch_3", sfx = "Inst_EvilWhispers"},
+    {label = "loc_skullcarvedtree_ch_4", instant = "skullcarvedtree_ch_4", sfx = "Inst_EvilWhispers"},
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+# STATUE CRYPTICSWORDSMAN
+# Rising tall amidst the moor - the monument and grave of a legendary Knight of old, now veiled  in darkness. Drawn closer by its alluring presence, your fingers brush the dark stone, and suddenly, his memories and will surge through your mind.
+# [Pledge Allegiance] - Increase God Limit by 1 god_limit
+# [Pledge Righteousness] - Gain Aura that emits global_dps
+# [Pledge Wrath] - dmg_vs Bosses increased by a large amount
+# [Pledge Nothing and Pull Away] - gain 2 Levels and Remove all Curses.
+[statue_crypticswordsman]
+type = "multi_choice"
+descr = "loc_statue_crypticswordsman"
+choices = [
+    {label = "loc_statue_crypticswordsman_ch_1", use_msg = "msg_statue_crypticswordsman_ch_1", gift = "statue_crypticswordsman_ch_1", sfx = "Inst_Thunder"},
+    {label = "loc_statue_crypticswordsman_ch_2", use_msg = "msg_statue_crypticswordsman_ch_2", gift = "statue_crypticswordsman_ch_2", sfx = "Inst_Thunder"},
+    {label = "loc_statue_crypticswordsman_ch_3", use_msg = "msg_statue_crypticswordsman_ch_3", gift = "statue_crypticswordsman_ch_3", sfx = "Inst_Thunder"},
+    {label = "loc_statue_crypticswordsman_ch_4", use_msg = "msg_statue_crypticswordsman_ch_4", instant = "statue_crypticswordsman_ch_4", sfx = "Inst_Thunder"},
+]
+#-----------------------------------------------------------------------------
+
+
+
+#----------------------------------------------------------------------------- 🔻⚡
+# STRANGETINYCOTTAGE
+# The Leprechaun: "Hey you found my cottage! Yeah this where I live. You don't have much time and I wish to help you on your journey again. What are you most in need of?"
+# [Tea] - heal + boost attack and movemenet speed for X sec
+# [Meal] - heal + regen for X sec
+# [Leprechaun Enchantment] – on every gold pickup – gain massive dmg vs undamaged enemies for X sec
+# [Wisdom] – on every 10 heal points – gain 25% more xp for X sec
+# [Treasure] – flat GOLD, EXP and Random Item Rare or above
+[strangetinycottage]
+type = "multi_choice"
+descr = "loc_strangetinycottage"
+choices = [
+    {label = "loc_strangetinycottage_ch_1", instant = "strangetinycottage_ch_1", sfx = "Inst_DrinkCoffee"},
+    {label = "loc_strangetinycottage_ch_2", instant = "strangetinycottage_ch_2", sfx = "Inst_Munch"},
+    {label = "loc_strangetinycottage_ch_3", use_msg = "msg_strangetinycottage_ch_3", gift = "strangetinycottage_ch_3", sfx = "Inst_HolyBook"},
+    {label = "loc_strangetinycottage_ch_4", use_msg = "msg_strangetinycottage_ch_4", gift = "strangetinycottage_ch_4", sfx = "Inst_HolyBook"},
+    {label = "loc_strangetinycottage_ch_5", instant = "strangetinycottage_ch_5", sfx = "Inst_GoldDrop"},
+]
+#-----------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

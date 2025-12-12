@@ -1,0 +1,3 @@
+n/a;#time(h);time(m);treasure1;val1;#%;treasure2;val2;#%;treasure3;val3;#%;treasure4;val4;#%;treasure5;val5;#%;treasure6;val6;#%;treasure7;val7;#%;treasure8;val8;#%;#t;eol
+;0h ;0;Tr_AnyEarly;100;14.29%;Tr_AnyEarly;100;14.29%;Tr_AnyEarly;100;14.29%;Tr_AnyEarly;100;14.29%;Tr_AnyEarly;100;14.29%;Tr_AnyEarly;100;14.29%;Tr_AnyEarly;100;14.29%;Tr_AnyEarly;100;14.29%;700;0
+;0h 50m;50;Tr_Any;12;10.43%;Tr_AnyAttack;18;15.65%;Tr_AnyDash;14;12.17%;Tr_AnyStrike;16;13.91%;Tr_AnyCast;16;13.91%;Tr_AnyPower;16;13.91%;Tr_AnySummon;14;12.17%;Tr_AnyStatus;9;7.83%;115;0

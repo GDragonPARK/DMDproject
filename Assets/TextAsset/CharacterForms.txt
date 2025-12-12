@@ -1,0 +1,5 @@
+n/a;code;Weapon;Dash;portrait;entity;shadow;sfx
+;Bear;Dru_Bear_Claw;Dru_Dash_Bear;Entities/Characters/_Shared/Bear_Spr_Portrait;Entities/Characters/Druid/Bear/Bear_Fab;Entities/Characters/Druid/Bear/Bear_Fab_Shadow;Form_Bear_Appear
+;Panther;Dru_Panther_Claw;Dru_Dash_Panther;Entities/Characters/_Shared/Panther_Spr_Portrait;Entities/Characters/Druid/Panther/Panther_Fab;Entities/Characters/Druid/Panther/Panther_Fab_Shadow;Form_Panther_Appear
+;Jackalope;Dru_Jackalope_Claw;Dru_Dash_Jackalope;Entities/Characters/_Shared/Jackalope_Spr_Portrait;Entities/Characters/Druid/Jackalope/Jackalope_Fab;Entities/Characters/Druid/Jackalope/Jackalope_Fab_Shadow;
+;Eagle;Dru_Eagle_Claw;Dru_Dash_Eagle;Entities/Characters/_Shared/Eagle_Spr_Portrait;Entities/Characters/Druid/Eagle/Eagle_Fab;Entities/Characters/Druid/Eagle/Eagle_Fab_Shadow;Form_Eagle_Appear

@@ -1,0 +1,5173 @@
+
+
+
+
+                    # ••••••••••••••••••••• ACT I ••••••••••••••••••••• #
+
+
+
+                                        ### Power 1 ###
+
+
+
+
+
+
+
+                                        ### Power 2 ###
+
+
+#-----------------------------------------------------------------------------
+[npc_witch]
+type = "composite"
+list = ["npc_witch_1", "npc_witch_2"]
+[npc_witch_1]
+type = "gain_gift"
+code = "npc_witch_1"
+level = 1
+chance = 0.5
+use_msg = "msg_npc_witch_1"
+[npc_witch_2]
+type = "gain_gift"
+code = "npc_witch_2"
+level = 1
+chance = 0.5
+use_msg = "msg_npc_witch_2"
+#>>>>>>>>>>>>>>>>>>>>>>>>>> check chances
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[shrine_penance_ch_1]
+type = "composite"
+list = ["shrine_penance_ch_1_1", "shrine_penance_ch_1_2"]
+[shrine_penance_ch_1_1]
+type = "gain_gift"
+code = "shrine_penance_ch_1_1"
+level = 1
+[shrine_penance_ch_1_2]
+type = "gain_gift"
+code = "shrine_penance_ch_1_2"
+level = 1
+duration = 60
+#-----------------------------------------------------------------------------
+#-----------------------------------------------------------------------------
+[shrine_penance_ch_2]
+type = "composite"
+list = ["shrine_penance_ch_2_1", "shrine_penance_ch_2_2"]
+[shrine_penance_ch_2_1]
+type = "gain_levels"
+num_levels = 3
+[shrine_penance_ch_2_2]
+type = "gain_gift"
+code = "shrine_penance_ch_2_2"
+level = 1
+duration = 60
+#-----------------------------------------------------------------------------
+#-----------------------------------------------------------------------------
+[shrine_penance_ch_3]
+type = "basic"
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[fountain_crying_ch_1]
+type = "gain_gift"
+code = "fountain_crying_ch_1"
+level = 1
+[fountain_crying_ch_2]
+type = "gain_gift"
+code = "fountain_crying_ch_2"
+level = 1
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[fountain_revival_ch_1]
+type = "gain_gift"
+code = "fountain_revival_ch_1"
+level = 1
+[fountain_revival_ch_2]
+type = "gain_gift"
+code = "fountain_revival_ch_2"
+level = 1
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[statue_jadellama_ch_1]
+type = "monsters"
+monsters = [
+    { code = "Ooze", count = 6 }
+]
+#----------------------------------------------------------------------------- 
+#-----------------------------------------------------------------------------
+[statue_jadellama_ch_2]
+type = "gain_gift"
+code = "statue_jadellama_ch_2"
+level = 1
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[altar_sacrifice_ch_1]
+type = "composite"
+list = ["altar_sacrifice_ch_1_1", "altar_sacrifice_ch_1_2"]
+#-----------------------------------------------------------------------------
+[altar_sacrifice_ch_1_1]
+type = "lose_life"
+flat = 0
+percent = 0.3
+can_kill = false
+#-----------------------------------------------------------------------------
+[altar_sacrifice_ch_1_2]
+type = "gain_gift"
+code = "altar_sacrifice_ch_1"
+level = 1
+#-----------------------------------------------------------------------------
+#-----------------------------------------------------------------------------
+
+
+#-----------------------------------------------------------------------------
+#-----------------------------------------------------------------------------
+[altar_sacrifice_ch_2]
+type = "composite"
+list = ["altar_sacrifice_ch_2_1", "altar_sacrifice_ch_2_2"]
+#-----------------------------------------------------------------------------
+[altar_sacrifice_ch_2_1]
+type = "heal"
+flat = 0
+percent = 1
+#-----------------------------------------------------------------------------
+[altar_sacrifice_ch_2_2]
+type = "gain_gift"
+code = "altar_sacrifice_ch_2"
+level = 1
+#-----------------------------------------------------------------------------
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+#-----------------------------------------------------------------------------
+[clovergarden_ch_1]
+type = "select_random"
+sfx = "Inst_LeavesRustle"
+list = [
+    {instant = "clovergarden_ch_1_1", weight = 0.5},
+    {instant = "clovergarden_ch_1_2", weight = 0.5}
+]
+#-----------------------------------------------------------------------------
+[clovergarden_ch_1_1]
+type = "lose_gold"
+amount = 30
+#-----------------------------------------------------------------------------
+[clovergarden_ch_1_2]
+type = "item_drop"
+count_weights = { 1 = 1 }
+class_weights = { Tr_Any = 100, Tr_AnyAttack = 100, Tr_AnyDash = 100, Tr_AnyStrike = 100, Tr_AnyCast = 100, Tr_AnyPower = 100, Tr_AnySummon = 100, Tr_AnyStatus = 100}
+rarity_weights = [
+    { min = 0, rar = { brok = 95, comm = 5, rare = 0, epic = 0, myth = 0 }},
+    { min = 3, rar = { brok = 75, comm = 25, rare = 0, epic = 0, myth = 0 }},
+    { min = 6, rar = { brok = 37, comm = 60, rare = 3, epic = 0, myth = 0 }},
+    { min = 9, rar = { brok = 15, comm = 68, rare = 6, epic = 1, myth = 0 }},
+    { min = 12, rar = { brok = 7, comm = 80, rare = 10, epic = 2, myth = 1 }},
+    { min = 15, rar = { brok = 0, comm = 72, rare = 14, epic = 3, myth = 1 }},
+    { min = 18, rar = { brok = 0, comm = 77, rare = 18, epic = 4, myth = 1 }}
+]
+#-----------------------------------------------------------------------------
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[clovergarden_ch_2]
+type = "gain_gold"
+sfx = "Inst_LeavesRustle"
+amount = 400
+#>>>>>>>>>>>>>>>>>>>>>>>>>> missing boots type for item_drop
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+#-----------------------------------------------------------------------------
+[tree_fruit_ch_1]
+type = "composite"
+list = ["tree_fruit_ch_1_1", "tree_fruit_ch_1_2"]
+#-----------------------------------------------------------------------------
+# Gain 2 lvls | lose 20 life
+[tree_fruit_ch_1_1]
+type = "lose_life"
+flat = 100
+percent = 0
+can_kill = false
+#-----------------------------------------------------------------------------
+[tree_fruit_ch_1_2]
+type = "gain_levels"
+num_levels = 5
+#-----------------------------------------------------------------------------
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[shrine_suffering_ch_2]
+type = "lose_life"
+flat = 10
+percent = 0
+can_kill = false
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[shrine_autumn_ch_4]
+type = "heal"
+flat = 15
+percent = 0.1
+can_kill = false
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[fountain_sacred]
+# heals X+X% life
+type = "heal"
+sfx = "Inst_Well"
+flat = 0
+percent = 1
+is_well = true
+use_msg = "msg_fountain_sacred"
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+#-----------------------------------------------------------------------------
+[npc_gamblegoblin]
+type = "select_random"
+list = [
+    {instant = "npc_gamblegoblin_1", weight = 0.1},
+    {instant = "npc_gamblegoblin_2", weight = 0.9}
+]
+#-----------------------------------------------------------------------------
+# 10% to gain 100 gold | 90% chance to lose 10 gold
+[npc_gamblegoblin_1]
+type = "gain_gold"
+amount = 333
+use_msg = "msg_npc_gamblegoblin_1"
+#-----------------------------------------------------------------------------
+[npc_gamblegoblin_2]
+type = "lose_gold"
+amount = 33
+use_msg = "msg_npc_gamblegoblin_2"
+#-----------------------------------------------------------------------------
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+#-----------------------------------------------------------------------------
+[tome_necronomicon_ch_1]
+type = "composite"
+list = ["tome_necronomicon_ch_1_1", "tome_necronomicon_ch_1_2"]
+#-----------------------------------------------------------------------------
+# Get stunned for 4 sec | +% spell dur
+[tome_necronomicon_ch_1_1]
+type = "status"
+code = "tome_necronomicon_stunned"
+use_msg = "msg_tome_necronomicon_ch_1_1"
+#-----------------------------------------------------------------------------
+[tome_necronomicon_ch_1_2]
+type = "gain_gift"
+code = "tome_necronomicon_ch_1"
+level = 1
+#-----------------------------------------------------------------------------
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[tome_necronomicon_ch_2]
+type = "composite"
+list = ["tome_necronomicon_ch_2_1", "tome_necronomicon_ch_2_2"]
+#-----------------------------------------------------------------------------
+# Take 12 pure dmg that can't kill | +% Cast dmg
+[tome_necronomicon_ch_2_1]
+type = "lose_life"
+flat = 12
+percent = 0
+can_kill = false
+use_msg = "msg_tome_necronomicon_ch_2_1"
+#-----------------------------------------------------------------------------
+[tome_necronomicon_ch_2_2]
+type = "gain_gift"
+code = "tome_necronomicon_ch_2"
+level = 1
+#-----------------------------------------------------------------------------
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[tome_necronomicon_ch_3]
+type = "composite"
+list = ["tome_necronomicon_ch_3_1", "tome_necronomicon_ch_3_2"]
+#-----------------------------------------------------------------------------
+# Summon 3 ghosts | +10% summon dmg
+[tome_necronomicon_ch_3_1]
+type = "monsters"
+use_msg = "msg_tome_necronomicon_ch_3_1"
+monsters = [
+    { code = "Ghost", count = 3 }
+]
+#-----------------------------------------------------------------------------
+[tome_necronomicon_ch_3_2]
+type = "gain_gift"
+code = "tome_necronomicon_ch_3"
+level = 1
+#-----------------------------------------------------------------------------
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+#-----------------------------------------------------------------------------
+[statue_swan_ch_1]
+type = "select_random"
+list = [
+    {instant = "statue_swan_ch_1_1", weight = 0.5},
+    {instant = "statue_swan_ch_1_2", weight = 0.5}
+]
+#-----------------------------------------------------------------------------
+# +% Luck if Good (Have Boons of these gods) | -% Luck if Evil
+#>>>>>>>>>>>>>>>>>>>>>>>>>> if have boons of X god condition check
+[statue_swan_ch_1_1]
+type = "gain_gift"
+code = "statue_swan_1"
+level = 1
+use_msg = "msg_statue_swan_1"
+#-----------------------------------------------------------------------------
+[statue_swan_ch_1_2]
+type = "gain_gift"
+code = "statue_swan_2"
+level = 1
+use_msg = "msg_statue_swan_2"
+#-----------------------------------------------------------------------------
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[statue_swan_ch_2]
+type = "lose_life"
+flat = 3
+percent = 0
+can_kill = false
+#-----------------------------------------------------------------------------
+
+
+#-----------------------------------------------------------------------------
+[gremlinroothouse_ch_1]
+type = "composite"
+list = ["gremlinroothouse_ch_1_1", "gremlinroothouse_ch_1_2"]
+#-----------------------------------------------------------------------------
+[gremlinroothouse_ch_1_1]
+type = "heal"
+flat = 25
+#-----------------------------------------------------------------------------
+[gremlinroothouse_ch_1_2]
+type = "gain_gift"
+code = "gremlinroothouse_ch_1"
+level = 1
+duration = 60
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[gremlinroothouse_ch_3]
+type = "composite"
+list = ["gremlinroothouse_ch_3_1", "gremlinroothouse_ch_3_2"]
+#-----------------------------------------------------------------------------
+[gremlinroothouse_ch_3_1]
+type = "heal"
+flat = 15
+#-----------------------------------------------------------------------------
+[gremlinroothouse_ch_3_2]
+type = "gain_gift"
+code = "gremlinroothouse_ch_3"
+level = 1
+#-----------------------------------------------------------------------------
+
+
+
+[bookshelf_act1]
+# drops lore items
+type = "unique_drop"
+chance = 1
+uniques_gen.count_weights = { 1 = 1 }
+uniques_gen.uniques = [
+     "VampireDiary1",
+     "VampireDiary2",
+     "VampireDiary3",
+     "VampireDiary4",
+     "VampireDiary5",
+     "FoodContract",
+     "ShrinesOfMusic",
+     "NecromancerDiary1",
+     "NecromancerDiary2",
+     "NecromancerDiary3",
+     "NecromancerDiary4",
+     "NecromancerDiary5",
+     "NecromancerDiary6",
+     "NecromancerDiary7",
+     "LustyOrc1",
+     "LustyOrc2",
+     "LustyOrc3"
+]
+use_msg = "msg_bookshelf_woodensimple"
+
+
+
+
+
+
+
+
+
+                                        ### Power 3 ###
+
+
+#-----------------------------------------------------------------------------
+#-----------------------------------------------------------------------------
+[bonfire_sand1]
+type = "composite"
+sfx = "Inst_SnuffFire"
+list = ["bonfire_sand1_1", "bonfire_sand1_2"]
+#-----------------------------------------------------------------------------
+[bonfire_sand1_1]
+# +4 max health
+type = "gain_gift"
+code = "bonfire"
+level = 1
+use_msg = "msg_bonfire"
+#-----------------------------------------------------------------------------
+# +4 heal
+[bonfire_sand1_2]
+type = "heal"
+flat = 5
+percent = 0.05
+#-----------------------------------------------------------------------------
+#-----------------------------------------------------------------------------
+
+
+#-----------------------------------------------------------------------------
+#-----------------------------------------------------------------------------
+[bonfire]
+type = "composite"
+sfx = "Inst_SnuffFire"
+list = ["bonfire_1", "bonfire_2"]
+#-----------------------------------------------------------------------------
+[bonfire_1]
+# +3 max health
+type = "gain_gift"
+code = "bonfire"
+level = 1
+use_msg = "msg_bonfire"
+#-----------------------------------------------------------------------------
+# +3 heal
+[bonfire_2]
+type = "heal"
+flat = 5
+percent = 0.05
+#-----------------------------------------------------------------------------
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+#-----------------------------------------------------------------------------
+[alms]
+type = "composite"
+sfx = "Inst_StrikeMatch"
+list = ["alms_1", "alms_2"]
+#-----------------------------------------------------------------------------
+# lose 1 gold > +0.5% luck
+[alms_1]
+type = "lose_gold"
+amount = 1
+#-----------------------------------------------------------------------------
+[alms_2]
+type = "gain_gift"
+code = "alms"
+level = 1
+use_msg = "msg_alms"
+#-----------------------------------------------------------------------------
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[chest]
+# % chance for item/gold/pickup | % chance to be trapped (firebolt)
+# we need to make rarity_weights scale with minutes (to lock off epic n myth drops before X min)
+type = "item_drop"
+sfx = "Inst_ChestOpen"
+chance = 1
+count_weights = { 1 = 1 }
+class_weights = { Tr_Any = 100, Tr_AnyAttack = 100, Tr_AnyDash = 100, Tr_AnyStrike = 100, Tr_AnyCast = 100, Tr_AnyPower = 100, Tr_AnySummon = 100, Tr_AnyStatus = 100}
+rarity_weights = [
+    { min = 0, rar = { brok = 0, comm = 100, rare = 0, epic = 0, myth = 0 }},
+    { min = 3, rar = { brok = 0, comm = 97, rare = 3, epic = 0, myth = 0 }},
+    { min = 6, rar = { brok = 0, comm = 94, rare = 6, epic = 0, myth = 0 }},
+    { min = 9, rar = { brok = 0, comm = 90, rare = 9, epic = 1, myth = 0 }},
+    { min = 12, rar = { brok = 0, comm = 87, rare = 12, epic = 1, myth = 0 }},
+    { min = 15, rar = { brok = 0, comm = 82, rare = 15, epic = 2, myth = 1 }},
+    { min = 18, rar = { brok = 0, comm = 79, rare = 18, epic = 2, myth = 1 }}
+]
+use_msg = "msg_chest"
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[cloverfield]
+# 1% luck
+type = "gain_gift"
+sfx = "Inst_LeavesRustle"
+code = "cloverfield"
+level = 1
+use_msg = "msg_cloverfield"
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+# [sign_direction]
+# marks a location on map / points visually towards an object
+# use_msg = "msg_sign_direction"
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+#-----------------------------------------------------------------------------
+[fallenhero]
+type = "composite"
+sfx = "Inst_Shovel"
+list = ["fallenhero_1", "fallenhero_2"]
+#-----------------------------------------------------------------------------
+[fallenhero_1]
+# % chance for item/gold/pickup | % chance to become cursed (-5% luck)
+# needs to have chance for item vs gold vs pickup vs nothing & separate % chance for curse
+type = "item_drop"
+chance = 0.33
+count_weights = { 1 = 1 }
+class_weights = { Tr_Any = 100, Tr_AnyAttack = 100, Tr_AnyDash = 100, Tr_AnyStrike = 100, Tr_AnyCast = 100, Tr_AnyPower = 100, Tr_AnySummon = 100, Tr_AnyStatus = 100}
+rarity_weights = [
+    { min = 0, rar = { brok = 95, comm = 5, rare = 0, epic = 0, myth = 0 }},
+    { min = 3, rar = { brok = 75, comm = 25, rare = 0, epic = 0, myth = 0 }},
+    { min = 6, rar = { brok = 37, comm = 60, rare = 3, epic = 0, myth = 0 }},
+    { min = 9, rar = { brok = 15, comm = 68, rare = 6, epic = 1, myth = 0 }},
+    { min = 12, rar = { brok = 7, comm = 80, rare = 10, epic = 2, myth = 1 }},
+    { min = 15, rar = { brok = 0, comm = 72, rare = 14, epic = 3, myth = 1 }},
+    { min = 18, rar = { brok = 0, comm = 77, rare = 18, epic = 4, myth = 1 }}
+]
+use_msg = "msg_fallenhero_1_1"
+#-----------------------------------------------------------------------------
+# curse
+[fallenhero_2]
+type = "gain_gift"
+chance = 0.3
+duration = 60
+code = "fallenhero"
+level = 1
+use_msg = "msg_fallenhero_1_2"
+#-----------------------------------------------------------------------------
+
+
+#-----------------------------------------------------------------------------
+#-----------------------------------------------------------------------------
+[grave]
+type = "composite"
+sfx = "Inst_Shovel"
+list = ["grave_1", "grave_2"]
+#-----------------------------------------------------------------------------
+[grave_1]
+# % chance for item/gold/pickup | % chance to become cursed (-5% luck)
+type = "item_drop"
+chance = 0.33
+count_weights = { 1 = 1 }
+class_weights = { Tr_Any = 100, Tr_AnyAttack = 100, Tr_AnyDash = 100, Tr_AnyStrike = 100, Tr_AnyCast = 100, Tr_AnyPower = 100, Tr_AnySummon = 100, Tr_AnyStatus = 100}
+rarity_weights = [
+    { min = 0, rar = { brok = 95, comm = 5, rare = 0, epic = 0, myth = 0 }},
+    { min = 3, rar = { brok = 75, comm = 25, rare = 0, epic = 0, myth = 0 }},
+    { min = 6, rar = { brok = 37, comm = 60, rare = 3, epic = 0, myth = 0 }},
+    { min = 9, rar = { brok = 15, comm = 68, rare = 6, epic = 1, myth = 0 }},
+    { min = 12, rar = { brok = 7, comm = 80, rare = 10, epic = 2, myth = 1 }},
+    { min = 15, rar = { brok = 0, comm = 72, rare = 14, epic = 3, myth = 1 }},
+    { min = 18, rar = { brok = 0, comm = 77, rare = 18, epic = 4, myth = 1 }}
+    ]
+use_msg = "msg_grave_1_1"
+#-----------------------------------------------------------------------------
+# curse
+[grave_2]
+type = "gain_gift"
+chance = 0.33
+duration = 60
+code = "grave"
+level = 1
+use_msg = "msg_grave_2"
+#-----------------------------------------------------------------------------
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[mineralspring]
+# +2 xp gain per sec | +0.1 hp reg per sec for 30 sec
+type = "gain_gift"
+sfx = "Inst_Well"
+code = "mineralspring"
+duration = 30
+level = 1
+use_msg = "msg_mineralspring"
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[obelisk_greed]
+# gain X gold for each windmill youve gathered this run
+type = "windmill"
+sfx = "Inst_GoldDrop"
+gold = [ 25, 50, 75, 100, 125, 150, 175, 200, 225, 250, 275, 300 ]
+use_msg = "msg_obelisk_greed"
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+#[obelisk_mystery]
+# gain random spell u dont have (rolling for its rarity | always lvl 1) for 45 sec.
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[obelisk_sanctuary]
+# invulnerability 10 sec. / blocks the next attack you would receive (stacks with divine shield)
+type = "status"
+sfx = "Inst_FireStart"
+code = "obelisk_sanctuary"
+use_msg = "msg_obelisk_sanctuary"
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[orb_seeking]
+# +1% more pickup spawns
+type = "gain_gift"
+sfx = "Inst_DarkBoost"
+code = "orb_seeking"
+level = 1
+use_msg = "msg_orb_seeking"
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[shrine_tracking]
+# % chance every 10s to see map object on map
+type = "gain_gift"
+sfx = "Inst_Shimmer"
+code = "shrine_tracking"
+level = 1
+use_msg = "msg_shrine_tracking"
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+#[sign_message]
+# says stuff
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[stone_collecting]
+# pulls all gems
+# ???? do it like this or no
+type = "status"
+sfx = "Inst_MagnetWhoosh"
+code = "stone_collecting"
+use_msg = "msg_stone_collecting"
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[stone_experience]
+# +60% xp gain for 30 sec (1.7% * 1200/30)
+type = "gain_gift"
+sfx = "Inst_HolyBuff"
+code = "stone_experience"
+level = 1
+duration = 30
+use_msg = "msg_stone_experience"
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[stone_power]
+# +100% all dmg for 30 sec (1.2% * 1200/30)
+type = "gain_gift"
+sfx = "Inst_DarkWhoosh"
+code = "stone_power"
+level = 1
+duration = 30
+use_msg = "msg_stone_power"
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[stone_stamina]
+# no attack penalty for 30 sec
+type = "gain_gift"
+sfx = "Inst_Drum"
+code = "stone_stamina"
+level = 1
+duration = 30
+use_msg = "msg_stone_stamina"
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[totem_hare]
+# +1 dash charge for 30 sec
+type = "gain_gift"
+code = "totem_hare"
+level = 1
+duration = 30
+use_msg = "msg_totem_hare"
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[well]
+# heals X+X% life
+type = "heal"
+sfx = "Inst_Well"
+flat = 10
+percent = 0.2
+is_well = true
+use_msg = "msg_well"
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[altar_devotion]
+# pray > +% more heals
+type = "gain_gift"
+code = "altar_devotion"
+level = 1
+use_msg = "msg_altar_devotion"
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[braziermedievaldark]
+#
+type = "gain_gift"
+sfx = "Inst_SnuffFire"
+code = "braziermedievaldark"
+level = 1
+use_msg = "msg_braziermedievaldark"
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[brazierelegantstone]
+#
+type = "gain_gift"
+sfx = "Inst_SnuffFire"
+code = "brazierelegantstone"
+level = 1
+use_msg = "msg_brazierelegantstone"
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[brazierelegantsand]
+#
+type = "gain_gift"
+sfx = "Inst_SnuffFire"
+code = "brazierelegantsand"
+level = 1
+use_msg = "msg_brazierelegantsand"
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[wartotem]
+# +5% Attack Damage
+type = "gain_gift"
+sfx = "Inst_WarDrum"
+code = "wartotem"
+level = 1
+use_msg = "msg_wartotem"
+#-----------------------------------------------------------------------------
+
+
+#-----------------------------------------------------------------------------
+[chest_ancientmarble]
+# drops item
+type = "item_drop"
+sfx = "Inst_ChestOpen"
+chance = 1
+count_weights = { 1 = 1 }
+class_weights = { Tr_Any = 100, Tr_AnyAttack = 100, Tr_AnyDash = 100, Tr_AnyStrike = 100, Tr_AnyCast = 100, Tr_AnyPower = 100, Tr_AnySummon = 100, Tr_AnyStatus = 100}
+rarity_weights = [
+    { min = 0, rar = { brok = 0, comm = 100, rare = 0, epic = 0, myth = 0 }},
+    { min = 3, rar = { brok = 0, comm = 97, rare = 3, epic = 0, myth = 0 }},
+    { min = 6, rar = { brok = 0, comm = 94, rare = 6, epic = 0, myth = 0 }},
+    { min = 9, rar = { brok = 0, comm = 90, rare = 9, epic = 1, myth = 0 }},
+    { min = 12, rar = { brok = 0, comm = 87, rare = 12, epic = 1, myth = 0 }},
+    { min = 15, rar = { brok = 0, comm = 82, rare = 15, epic = 2, myth = 1 }},
+    { min = 18, rar = { brok = 0, comm = 79, rare = 18, epic = 2, myth = 1 }}
+]
+use_msg = "msg_chest_ancientmarble"
+#-----------------------------------------------------------------------------
+
+
+
+
+#-----------------------------------------------------------------------------
+[shrine_monster_ch_1]
+type = "composite"
+list = ["shrine_monster_ch_1_1", "shrine_monster_ch_1_2"]
+#-----------------------------------------------------------------------------
+[shrine_monster_ch_1_1]
+type = "select_random"
+list = [
+    {instant = "shrine_monster_ch_1_1_1", weight = 1},
+    {instant = "shrine_monster_ch_1_1_2", weight = 1},
+    {instant = "shrine_monster_ch_1_1_3", weight = 1},
+    {instant = "shrine_monster_ch_1_1_4", weight = 1},
+    {instant = "shrine_monster_ch_1_1_5", weight = 1},
+    {instant = "shrine_monster_ch_1_1_6", weight = 1}
+]
+#-----------------------------------------------------------------------------
+[shrine_monster_ch_1_2]
+type = "item_drop"
+count_weights = { 1 = 1 }
+class_weights = { Tr_Any = 100, Tr_AnyAttack = 100, Tr_AnyDash = 100, Tr_AnyStrike = 100, Tr_AnyCast = 100, Tr_AnyPower = 100, Tr_AnySummon = 100, Tr_AnyStatus = 100}
+rarity_weights = [
+    { min = 0, rar = { brok = 90, comm = 10, rare = 0, epic = 0, myth = 0 }},
+    { min = 3, rar = { brok = 60, comm = 40, rare = 0, epic = 0, myth = 0 }},
+    { min = 6, rar = { brok = 25, comm = 70, rare = 5, epic = 0, myth = 0 }},
+    { min = 9, rar = { brok = 5, comm = 84, rare = 10, epic = 1, myth = 0 }},
+    { min = 12, rar = { brok = 0, comm = 47, rare = 35, epic = 7, myth = 1 }},
+    { min = 15, rar = { brok = 0, comm = 0, rare = 60, epic = 35, myth = 5 }},
+    { min = 18, rar = { brok = 0, comm = 0, rare = 30, epic = 55, myth = 15 }}
+]
+#-----------------------------------------------------------------------------
+[shrine_monster_ch_1_1_1]
+type = "monsters"
+monsters = [
+    { code = "Archer", count = 11 },
+    { code = "ArcherE", count = 1 }
+]
+#-----------------------------------------------------------------------------
+[shrine_monster_ch_1_1_2]
+type = "monsters"
+monsters = [
+    { code = "Shielder", count = 11 },
+    { code = "ShielderE", count = 1 }
+]
+#-----------------------------------------------------------------------------
+[shrine_monster_ch_1_1_3]
+type = "monsters"
+monsters = [
+    { code = "Ooze", count = 11 },
+    { code = "Ooze", count = 1 }
+]
+#-----------------------------------------------------------------------------
+[shrine_monster_ch_1_1_4]
+type = "monsters"
+monsters = [
+    { code = "Skeleton", count = 11 },
+    { code = "BlackKnightE", count = 1 }
+]
+#-----------------------------------------------------------------------------
+[shrine_monster_ch_1_1_5]
+type = "monsters"
+monsters = [
+    { code = "Skeleton", count = 11 },
+    { code = "SummonerE", count = 1 }
+]
+#-----------------------------------------------------------------------------
+[shrine_monster_ch_1_1_6]
+type = "monsters"
+monsters = [
+    { code = "Ghost", count = 11 }
+]
+#-----------------------------------------------------------------------------
+#-----------------------------------------------------------------------------
+
+
+#-----------------------------------------------------------------------------
+[shrine_monster_ch_1_elite]
+# spawns monsters that have higher drop rates
+type = "monsters"
+monsters = [
+    { code = "Ooze", count = 6 }
+]
+#-----------------------------------------------------------------------------
+
+
+
+
+#----------------------------------------------------------------------------- FIX CHANCES 
+#----------------------------------------------------------------------------- 
+[coffin_stonescripted1]
+type = "select_random"
+list = [
+    {instant = "coffin_stonescripted1_1", weight = 0.33},
+    {instant = "coffin_stonescripted1_2", weight = 0.33},
+    {instant = "coffin_stonescripted1_3", weight = 0.33},
+]
+# |A Lucky Find| - drops random item
+[coffin_stonescripted1_1]
+type = "item_drop"
+sfx = "Inst_StoneSlide"
+use_msg = "msg_coffin_stonescripted1_1"
+chance = 0.33
+count_weights = { 1 = 1 }
+class_weights = { Tr_Any = 100, Tr_AnyAttack = 100, Tr_AnyDash = 100, Tr_AnyStrike = 100, Tr_AnyCast = 100, Tr_AnyPower = 100, Tr_AnySummon = 100, Tr_AnyStatus = 100}
+rarity_weights = [
+    { min = 0, rar = { brok = 95, comm = 5, rare = 0, epic = 0, myth = 0 }},
+    { min = 3, rar = { brok = 75, comm = 25, rare = 0, epic = 0, myth = 0 }},
+    { min = 6, rar = { brok = 37, comm = 60, rare = 3, epic = 0, myth = 0 }},
+    { min = 9, rar = { brok = 15, comm = 68, rare = 6, epic = 1, myth = 0 }},
+    { min = 12, rar = { brok = 7, comm = 80, rare = 10, epic = 2, myth = 1 }},
+    { min = 15, rar = { brok = 0, comm = 72, rare = 14, epic = 3, myth = 1 }},
+    { min = 18, rar = { brok = 0, comm = 77, rare = 18, epic = 4, myth = 1 }}
+]
+#-----------------------------------------------------------------------------
+# |Nothing| - nothing
+[coffin_stonescripted1_2]
+type = "basic" 
+use_msg = "msg_coffin_stonescripted1_2"
+#-----------------------------------------------------------------------------
+# |Graverobber!| - Become Cursed
+[coffin_stonescripted1_3]
+type = "gain_gift"
+duration = 30
+code = "coffin_stonescripted1"
+level = 1
+use_msg = "msg_coffin_stonescripted1_3"
+#----------------------------------------------------------------------------- 
+
+
+
+
+#----------------------------------------------------------------------------- FIX CHANCES 
+[bookshelf_woodensimple]
+# drops item
+type = "unique_drop"
+chance = 1
+sfx = "Inst_Bookshelf"
+uniques_gen.count_weights = { 1 = 1 }
+uniques_gen.uniques = [
+     "VampireDiary1",
+     "VampireDiary2",
+     "VampireDiary3",
+     "VampireDiary4",
+     "VampireDiary5",
+     "FoodContract",
+     "ShrinesOfMusic",
+     "NecromancerDiary1",
+     "NecromancerDiary2",
+     "NecromancerDiary3",
+     "NecromancerDiary4",
+     "NecromancerDiary5",
+     "NecromancerDiary6",
+     "NecromancerDiary7",
+     "LustyOrc1",
+     "LustyOrc2",
+     "LustyOrc3"
+]
+use_msg = "msg_bookshelf_woodensimple"
+#----------------------------------------------------------------------------- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    # ••••••••••••••••••••• ACT II ••••••••••••••••••••• #
+
+
+
+                                        ### Power 1 ###
+
+
+
+#-----------------------------------------------------------------------------
+[egyptian_ankh_ch_1]
+type = "composite"
+list = ["egyptian_ankh_ch_1_1","egyptian_ankh_ch_1_2"] 
+#
+# Gain 1 Rebirth & heal full
+[egyptian_ankh_ch_1_1]
+type = "gain_gift"
+code = "egyptian_ankh_ch_1"
+#use_msg = "msg_egyptian_ankh_ch_1"
+[egyptian_ankh_ch_1_2]
+type = "heal"
+percent = 1
+#-----------------------------------------------------------------------------
+# Gain 2 Levels
+[egyptian_ankh_ch_2]
+type = "gain_levels"
+num_levels = 4
+#use_msg = "msg_egyptian_ankh_ch_2"
+#-----------------------------------------------------------------------------
+# hpreg
+[egyptian_ankh_ch_3] 
+type = "gain_gift"
+code = "egyptian_ankh_ch_3"
+#
+#use_msg = "msg_egyptian_ankh_ch_3"
+#-----------------------------------------------------------------------------
+#-----------------------------------------------------------------------------  
+
+
+
+#----------------------------------------------------------------------------- 
+#----------------------------------------------------------------------------- PAPAGALI OPRAI SE CHETI KVOT PISHE
+# 
+[garden_sand_ch_1]
+type = "gain_boon"
+code = "ParrotRed"
+rarity = "adep"
+use_msg = "msg_garden_sand_ch_1"
+#-----------------------------------------------------------------------------
+# 
+[garden_sand_ch_2]
+type = "gain_boon"
+code = "ParrotGreen"
+rarity = "adep"
+use_msg = "msg_garden_sand_ch_2"
+#
+# 
+[garden_sand_ch_3]
+type = "gain_boon"
+code = "ParrotBlue"
+rarity = "adep"
+use_msg = "msg_garden_sand_ch_3"
+#-----------------------------------------------------------------------------
+#----------------------------------------------------------------------------- 
+
+
+
+#----------------------------------------------------------------------------- 
+#----------------------------------------------------------------------------- ?????????????????????????????????? HOW TO SUMMON PAL?
+# [] - [Rub the lamp] – Summons efreet to fight for you
+[lamp_magic_ch_1]
+type = "gain_boon"
+code = "BlackLampGenie"
+rarity = "expe"
+use_msg = "msg_lamp_magic_ch_1"
+#-----------------------------------------------------------------------------
+# [] - [Challenge the lamp] – Fight the efreet and it drops high rarity item
+[lamp_magic_ch_2]
+type = "monsters"
+use_msg = "msg_lamp_magic_ch_2"
+monsters = [
+    { code = "BlackLampGenie", count = 1 }
+]
+#
+#-----------------------------------------------------------------------------
+#----------------------------------------------------------------------------- 
+
+
+
+#----------------------------------------------------------------------------- 
+# [] - Open Special exotic Shop
+# ????????????????????????????????????????????????????????????????????????????
+# [npc_cameltraveller]
+#----------------------------------------------------------------------------- 
+
+
+
+#----------------------------------------------------------------------------- 
+# Dead Cassim can’t remember the password and has been eternally frustrated – 
+# help him remember it so he can live in peace and he will reward you with his Unique item
+# ????????????????????????????????????????????????????????????????????????????
+# [npc_cassim]
+#----------------------------------------------------------------------------- 
+
+
+
+#----------------------------------------------------------------------------- 
+# [] - Next run guaranteed Epic level blessing until you pick
+# [] - This run guaranteed Epic level blessing next
+# ????????????????????????????????????????????????????????????????????????????
+#-----------------------------------------------------------------------------
+# [] - gain Ms
+[shrine_horus_ch_1]
+type = "gain_gift"
+code = "shrine_horus_ch_1"
+#-----------------------------------------------------------------------------
+# [] - gain dash range
+[shrine_horus_ch_2]
+type = "gain_gift"
+code = "shrine_horus_ch_2"
+#-----------------------------------------------------------------------------
+# [] - gain dash cd
+[shrine_horus_ch_3]
+type = "gain_gift"
+code = "shrine_horus_ch_3"
+#----------------------------------------------------------------------------- 
+
+
+
+#----------------------------------------------------------------------------- 
+#---------------------------------------------------------------------------------------NO EFFECT YET-------------------------------
+# [shrine_moongod]
+#----------------------------------------------------------------------------- 
+
+
+
+#-----------------------------------------------------------------------------  ?????????????????????????????????? HOW TO DEFINE THESE?
+# [] - [Time is a River] Skills that use Dur gain +300% dmg but -600% Dur
+# [shrine_sand_ch_1]
+# [] - [Time is a Waterfall]  Summons that use Dur gain +200% ms but -300% Dur
+# [shrine_sand_ch_2]
+#----------------------------------------------------------------------------- 
+
+
+
+#-----------------------------------------------------------------------------  MINIONS CHANCE TO REVIVE#?????????#?????????
+# [] - Gain 1 Revival – Minions have a chance to revive when slain 
+[shrine_scarabgod_ch_1]
+type = "gain_gift"
+code = "shrine_scarabgod_ch_1"
+#
+# [] - Gain 1 Revival – Elites have a high chance to revive when slain   ELITE CHANCE TO REVIVE#?????????#?????????
+[shrine_scarabgod_ch_2]
+type = "gain_gift"
+code = "shrine_scarabgod_ch_2"
+#
+# [] - Gain 1 Revival – The next Legendary Enemy revives when slain BOSSES CHANCE TO REVIVE#?????????#?????????
+[shrine_scarabgod_ch_3]
+type = "gain_gift"
+code = "shrine_scarabgod_ch_3"
+#----------------------------------------------------------------------------- 
+
+
+
+#-----------------------------------------------------------------------------  ????????????????? HOW TO MAKE RANDOM DMG?
+#-----------------------------------------------------------------------------
+#
+[shrine_statuestrial_ch_1]
+type = "composite"
+list = ["shrine_statuestrial_ch_1_1", "shrine_statuestrial_ch_1_2"]
+#use_msg = "msg_shrine_statuestrial_ch_1"
+#
+# [] - Get dealt 200-300 deadly dmg – gain % Legend Skills
+[shrine_statuestrial_ch_1_1]
+type = "lose_life"
+flat = 300
+can_kill = true
+#
+[shrine_statuestrial_ch_1_2]
+type = "gain_gift"
+code = "shrine_statuestrial_ch_1"
+#-----------------------------------------------------------------------------
+[shrine_statuestrial_ch_2]
+type = "composite"
+list = ["shrine_statuestrial_ch_2_1", "shrine_statuestrial_ch_2_2"]
+#use_msg = "msg_shrine_statuestrial_ch_2"
+#
+# [] - Get dealt 200-300 deadly dmg – gain 2 levels 
+[shrine_statuestrial_ch_2_1]
+type = "lose_life"
+flat = 300
+can_kill = true
+#
+[shrine_statuestrial_ch_2_2]
+type = "gain_levels"
+num_levels = 7
+#-----------------------------------------------------------------------------
+[shrine_statuestrial_ch_3]
+type = "composite"
+list = ["shrine_statuestrial_ch_3_1", "shrine_statuestrial_ch_3_2"]
+#use_msg = "msg_shrine_statuestrial_ch_3"
+#
+# [] - Get dealt 200-300 deadly dmg – upgrade 4 random skills to next rarity ?????????????????????? UPGADE RARITY OF BOONS?
+[shrine_statuestrial_ch_3_1]
+type = "lose_life"
+flat = 300
+can_kill = true
+#
+[shrine_statuestrial_ch_3_2]
+type = "basic"
+# UPGRADE 4 RANDOM SKILLS TO NEXT RARITY
+#-----------------------------------------------------------------------------
+#----------------------------------------------------------------------------- 
+
+
+
+
+
+
+
+
+
+
+
+                                            ### Power 2 ###
+
+
+
+#-----------------------------------------------------------------------------
+#-----------------------------------------------------------------------------
+[altar_skullsunoreol_ch_1]
+type = "composite"
+list = ["altar_skullsunoreol_ch_1_1", "altar_skullsunoreol_ch_1_2"]
+# [] Take Damage - Expert Offers
+[altar_skullsunoreol_ch_1_1]
+type = "lose_life" 
+flat = 20
+can_kill = false
+[altar_skullsunoreol_ch_1_2]
+type = "gain_gift"
+code = "altar_skullsunoreol_ch_1"
+#-----------------------------------------------------------------------------
+[altar_skullsunoreol_ch_2]
+type = "composite"
+list = ["altar_skullsunoreol_ch_2_1", "altar_skullsunoreol_ch_2_2"]
+
+# [] Take Damage - Exp Gain % 
+[altar_skullsunoreol_ch_2_1]
+type = "lose_life" 
+flat = 20
+can_kill = false
+
+[altar_skullsunoreol_ch_2_2]
+type = "gain_gift"
+code = "altar_skullsunoreol_ch_2"
+#-----------------------------------------------------------------------------
+[altar_skullsunoreol_ch_3]
+type = "heal"
+flat = 35
+#-----------------------------------------------------------------------------
+#-----------------------------------------------------------------------------
+
+
+
+
+
+
+#----------------------------------------------------------------------------- 
+# [Crippling Poison] Weaken for 30s - Gain Chance to Apply Weaken on hit  
+[altar_snakescoiled_ch_1]
+type = "composite"
+list = ["altar_snakescoiled_ch_1_1", "altar_snakescoiled_ch_1_2"]
+
+[altar_snakescoiled_ch_1_1]
+type = "status"
+code = "pweakened"
+duration = 30
+
+[altar_snakescoiled_ch_1_2]
+type = "gain_gift"
+code = "altar_snakescoiled_ch_1"
+#-----------------------------------------------------------------------------
+# [Paranoia Poison] Weaken for 30s - Gain Chance to Apply Fear on hit   
+[altar_snakescoiled_ch_2]
+type = "composite"
+list = ["altar_snakescoiled_ch_2_1", "altar_snakescoiled_ch_2_2"]
+
+[altar_snakescoiled_ch_2_1]
+type = "status"
+code = "pweakened"
+duration = 30
+
+[altar_snakescoiled_ch_2_2]
+type = "gain_gift"
+code = "altar_snakescoiled_ch_2"
+#-----------------------------------------------------------------------------
+# [Anti Venom] Weaken for 30s - Gain Reduced Negative Statuses Duration
+[altar_snakescoiled_ch_3]
+type = "composite"
+list = ["altar_snakescoiled_ch_3_1", "altar_snakescoiled_ch_3_2"]
+
+[altar_snakescoiled_ch_3_1]
+type = "status"
+code = "pweakened"
+duration = 30
+
+[altar_snakescoiled_ch_3_2]
+type = "gain_gift"
+code = "altar_snakescoiled_ch_3"
+#----------------------------------------------------------------------------- 
+[altar_snakescoiled_ch_4]
+type = "gain_gift"
+code = "altar_snakescoiled_ch_4"
+duration = 7
+#----------------------------------------------------------------------------- 
+
+
+
+#----------------------------------------------------------------------------- 
+#-----------------------------------------------------------------------------
+# [] Give 1 Gold - Nothing
+[beggar_ch_1]
+type = "lose_gold"
+amount = 1
+use_msg = "msg_beggar_ch_1"
+#-----------------------------------------------------------------------------
+# [] Give 100 Gold - Gain Luck %
+[beggar_ch_2]
+type = "composite"
+list = ["beggar_ch_2_1", "beggar_ch_2_2"]
+
+[beggar_ch_2_1]
+type = "lose_gold"
+amount = 100
+
+[beggar_ch_2_2]
+type = "gain_gift"
+code = "beggar_ch_2"
+use_msg = "msg_beggar_ch_2"
+#-----------------------------------------------------------------------------
+# [] Don't Give Anything - Lose Luck %
+[beggar_ch_3]
+type = "gain_gift"
+code = "beggar_ch_3"
+use_msg = "msg_beggar_ch_3"
+#----------------------------------------------------------------------------- 
+#----------------------------------------------------------------------------- 
+
+
+
+
+#----------------------------------------------------------------------------- 
+#-----------------------------------------------------------------------------
+# [] - Lose 40 hp - Gain Mythic Item most of the time
+[canopiccoffin_eaglerich1_ch_1]
+type = "composite"
+list = ["canopiccoffin_eaglerich1_ch_1_1", "canopiccoffin_eaglerich1_ch_1_2"]
+#use_msg = "msg_canopiccoffin_eaglerich1_ch_1"
+
+[canopiccoffin_eaglerich1_ch_1_1]
+type = "lose_life"
+flat = 100
+can_kill = true
+#
+[canopiccoffin_eaglerich1_ch_1_2]
+type = "item_drop"
+chance = 100
+count_weights = { 1 = 1 }
+class_weights = { Tr_Any = 100, Tr_AnyAttack = 100, Tr_AnyDash = 100, Tr_AnyStrike = 100, Tr_AnyCast = 100, Tr_AnyPower = 100, Tr_AnySummon = 100, Tr_AnyStatus = 100}
+rarity_weights = [
+    { min = 0, rar = { brok = 0, comm = 0, rare = 0, epic = 0, myth = 100 }},
+    { min = 3, rar = { brok = 0, comm = 0, rare = 0, epic = 0, myth = 100 }},
+    { min = 6, rar = { brok = 0, comm = 0, rare = 0, epic = 0, myth = 100 }},
+    { min = 9, rar = { brok = 0, comm = 0, rare = 0, epic = 0, myth = 100 }},
+    { min = 12, rar = { brok = 0, comm = 0, rare = 0, epic = 0, myth = 100 }},
+    { min = 15, rar = { brok = 0, comm = 0, rare = 0, epic = 0, myth = 100 }},
+    { min = 18, rar = { brok = 0, comm = 0, rare = 0, epic = 0, myth = 100 }}
+]
+#
+#-----------------------------------------------------------------------------
+# [] - Lose 20 hp - Get Medium Item most of the time
+[canopiccoffin_eaglerich1_ch_2]
+type = "composite"
+list = ["canopiccoffin_eaglerich1_ch_2_1", "canopiccoffin_eaglerich1_ch_2_2"]
+#use_msg = "msg_canopiccoffin_eaglerich1_ch_2"
+
+[canopiccoffin_eaglerich1_ch_2_1]
+type = "lose_life"
+flat = 30
+can_kill = false
+#
+[canopiccoffin_eaglerich1_ch_2_2]
+type = "item_drop"
+chance = 100
+count_weights = { 1 = 1 }
+class_weights = { Tr_Any = 100, Tr_AnyAttack = 100, Tr_AnyDash = 100, Tr_AnyStrike = 100, Tr_AnyCast = 100, Tr_AnyPower = 100, Tr_AnySummon = 100, Tr_AnyStatus = 100}
+rarity_weights = [
+    { min = 0, rar = { brok = 0, comm = 0, rare = 0, epic = 100, myth = 0 }},
+    { min = 3, rar = { brok = 0, comm = 0, rare = 0, epic = 100, myth = 0 }},
+    { min = 6, rar = { brok = 0, comm = 0, rare = 0, epic = 100, myth = 0 }},
+    { min = 9, rar = { brok = 0, comm = 0, rare = 0, epic = 100, myth = 0 }},
+    { min = 12, rar = { brok = 0, comm = 0, rare = 0, epic = 100, myth = 0 }},
+    { min = 15, rar = { brok = 0, comm = 0, rare = 0, epic = 100, myth = 0 }},
+    { min = 18, rar = { brok = 0, comm = 0, rare = 0, epic = 100, myth = 0 }}
+]
+#-----------------------------------------------------------------------------
+# [] - Lose 5 hp - Get Garbage Item most of the time
+[canopiccoffin_eaglerich1_ch_3]
+type = "composite"
+list = ["canopiccoffin_eaglerich1_ch_3_1", "canopiccoffin_eaglerich1_ch_3_2"]
+#use_msg = "msg_canopiccoffin_eaglerich1_ch_3"
+
+[canopiccoffin_eaglerich1_ch_3_1]
+type = "lose_life"
+flat = 5
+can_kill = false
+#
+[canopiccoffin_eaglerich1_ch_3_2]
+type = "item_drop"
+chance = 100
+count_weights = { 1 = 1 }
+class_weights = { Tr_Any = 100, Tr_AnyAttack = 100, Tr_AnyDash = 100, Tr_AnyStrike = 100, Tr_AnyCast = 100, Tr_AnyPower = 100, Tr_AnySummon = 100, Tr_AnyStatus = 100}
+rarity_weights = [
+    { min = 0, rar = { brok = 0, comm = 0, rare = 100, epic = 0, myth = 0 }},
+    { min = 3, rar = { brok = 0, comm = 0, rare = 100, epic = 0, myth = 0 }},
+    { min = 6, rar = { brok = 0, comm = 0, rare = 100, epic = 0, myth = 0 }},
+    { min = 9, rar = { brok = 0, comm = 0, rare = 100, epic = 0, myth = 0 }},
+    { min = 12, rar = { brok = 0, comm = 0, rare = 100, epic = 0, myth = 0 }},
+    { min = 15, rar = { brok = 0, comm = 0, rare = 100, epic = 0, myth = 0 }},
+    { min = 18, rar = { brok = 0, comm = 0, rare = 100, epic = 0, myth = 0 }}
+]
+#
+#-----------------------------------------------------------------------------
+#----------------------------------------------------------------------------- 
+
+
+
+#----------------------------------------------------------------------------- 
+# [] - Drops Higher Rarity Item and Medium Curses you for 1 minute
+[coffin_stonerelic1]
+type = "composite"
+list = ["coffin_stonerelic1_1", "coffin_stonerelic1_2"]
+use_msg = "msg_coffin_stonerelic1"
+
+[coffin_stonerelic1_1]
+type = "gain_gift"
+code = "coffin_stonerelic1"
+
+[coffin_stonerelic1_2]
+type = "item_drop"
+chance = 100
+count_weights = { 1 = 1 }
+class_weights = { Tr_Any = 100, Tr_AnyAttack = 100, Tr_AnyDash = 100, Tr_AnyStrike = 100, Tr_AnyCast = 100, Tr_AnyPower = 100, Tr_AnySummon = 100, Tr_AnyStatus = 100}
+rarity_weights = [
+    { min = 0, rar = { brok = 0, comm = 0, rare = 80, epic = 15, myth = 5 }},
+    { min = 3, rar = { brok = 0, comm = 0, rare = 70, epic = 20, myth = 10 }},
+    { min = 6, rar = { brok = 0, comm = 0, rare = 50, epic = 30, myth = 20 }},
+    { min = 9, rar = { brok = 0, comm = 0, rare = 30, epic = 40, myth = 30 }},
+    { min = 12, rar = { brok = 0, comm = 0, rare = 20, epic = 40, myth = 40 }},
+    { min = 15, rar = { brok = 0, comm = 0, rare = 0, epic = 50, myth = 50 }},
+    { min = 18, rar = { brok = 0, comm = 0, rare = 0, epic = 40, myth = 60 }}
+]
+#----------------------------------------------------------------------------- 
+
+
+
+#----------------------------------------------------------------------------- 
+#-----------------------------------------------------------------------------
+# [] - Lose 1 Banish/Reroll/Skip - Gain Max Life
+[crocodile_carcass_ch_1]
+type = "composite"
+list = ["crocodile_carcass_ch_1_1", "crocodile_carcass_ch_1_2"]
+#use_msg = "msg_crocodile_carcass_ch_1"
+[crocodile_carcass_ch_1_1]
+type = "select_random"
+list = [
+    {instant = "crocodile_carcass_ch_1_1_1", weight = 0.33},
+    {instant = "crocodile_carcass_ch_1_1_2", weight = 0.33},
+    {instant = "crocodile_carcass_ch_1_1_3", weight = 0.33},
+   
+]
+#
+[crocodile_carcass_ch_1_1_1]
+type = "gain_gift"
+code = "crocodile_carcass_ch_0_1"
+[crocodile_carcass_ch_1_1_2]
+type = "gain_gift"
+code = "crocodile_carcass_ch_0_2"
+[crocodile_carcass_ch_1_1_3]
+type = "gain_gift"
+code = "crocodile_carcass_ch_0_3"
+
+#                            ???????????????????????????????????????? HOW TO LOSE BANISH/REROLL/SKIP ?????????
+[crocodile_carcass_ch_1_2]
+type = "gain_gift"
+code = "crocodile_carcass_ch_1"
+#
+
+
+#-----------------------------------------------------------------------------
+# [] - Lose 1 Banish/Reroll/Skip - Gain Armor
+[crocodile_carcass_ch_2]
+type = "composite"
+list = ["crocodile_carcass_ch_2_1", "crocodile_carcass_ch_2_2"]
+#use_msg = "msg_crocodile_carcass_ch_2"
+#
+[crocodile_carcass_ch_2_1]
+type = "select_random"
+list = [
+    {instant = "crocodile_carcass_ch_2_1_1", weight = 0.33},
+    {instant = "crocodile_carcass_ch_2_1_2", weight = 0.33},
+    {instant = "crocodile_carcass_ch_2_1_3", weight = 0.33},
+]
+#                            ???????????????????????????????????????? HOW TO LOSE BANISH/REROLL/SKIP ?????????
+[crocodile_carcass_ch_2_1_1]
+type = "gain_gift"
+code = "crocodile_carcass_ch_0_1"
+[crocodile_carcass_ch_2_1_2]
+type = "gain_gift"
+code = "crocodile_carcass_ch_0_2"
+[crocodile_carcass_ch_2_1_3]
+type = "gain_gift"
+code = "crocodile_carcass_ch_0_3"
+#
+[crocodile_carcass_ch_2_2]
+type = "gain_gift"
+code = "crocodile_carcass_ch_2"
+#
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+# [] - Lose 1 Banish/Reroll/Skip - Gain minor Attack Area
+[crocodile_carcass_ch_3]
+type = "composite"
+list = ["crocodile_carcass_ch_3_1", "crocodile_carcass_ch_3_2"]
+#use_msg = "msg_crocodile_carcass_ch_3"
+[crocodile_carcass_ch_3_1]
+type = "select_random"
+list = [
+    {instant = "crocodile_carcass_ch_3_1_1", weight = 0.33},
+    {instant = "crocodile_carcass_ch_3_1_2", weight = 0.33},
+    {instant = "crocodile_carcass_ch_3_1_3", weight = 0.33},
+]
+#
+[crocodile_carcass_ch_3_1_1]
+type = "gain_gift"
+code = "crocodile_carcass_ch_0_1"
+[crocodile_carcass_ch_3_1_2]
+type = "gain_gift"
+code = "crocodile_carcass_ch_0_2"
+[crocodile_carcass_ch_3_1_3]
+type = "gain_gift"
+code = "crocodile_carcass_ch_0_3"
+#                            ???????????????????????????????????????? HOW TO LOSE BANISH/REROLL/SKIP ?????????
+[crocodile_carcass_ch_3_2]
+type = "gain_gift"
+code = "crocodile_carcass_ch_3"
+#
+#-----------------------------------------------------------------------------
+
+
+
+#----------------------------------------------------------------------------- 
+
+#                            ???????????????????????????????????????? HOW TO LOSE BANISH/REROLL/SKIP ?????????
+[crocodile_carcass_ch_4]
+type = "gain_levels"
+num_levels = 1
+#-----------------------------------------------------------------------------
+#----------------------------------------------------------------------------- 
+
+
+
+#----------------------------------------------------------------------------- 
+#
+[enchantmentground1_ch_1]
+type = "gain_gift"
+code = "enchantmentground1_ch_1"
+duration = 90
+#
+[enchantmentground1_ch_2]
+type = "gain_gift"
+code = "enchantmentground1_ch_2"
+duration = 90
+#----------------------------------------------------------------------------- 
+
+
+
+#----------------------------------------------------------------------------- 
+[harp_ibisofserenity_ch_2]
+type = "composite"
+list = ["harp_ibisofserenity_ch_2_1", "harp_ibisofserenity_ch_2_2"]
+#use_msg = "msg_harp_ibisofserenity_ch_2"
+#
+# [Entranced by the Melody] - Sacrifice Random Blessing for triple the ms, hp and passive exp
+[harp_ibisofserenity_ch_2_1]
+type = "basic"
+#                            HOW TO SAC BLESSING?????????????????????????????????????????????????????
+[harp_ibisofserenity_ch_2_2]
+type = "gain_gift"
+code = "harp_ibisofserenity_ch_2"
+#
+
+#----------------------------------------------------------------------------- 
+
+
+ 
+#-----------------------------------------------------------------------------  # ????????????????????????????????????????????????????????
+# [Don't Move] - Bosses lose hp during fights passively
+# [hourglass_sand_epic_ch_1]
+# type = "basic"
+# [Flip Over] - You gain Regen during boss fights
+# [hourglass_sand_epic_ch_2]
+# type = "basic"
+#----------------------------------------------------------------------------- 
+
+
+
+
+#----------------------------------------------------------------------------- 
+# [] - opens normal shop ????????????????????????????????????????????????????
+# [npc_merchant1]
+# type = "basic"
+#----------------------------------------------------------------------------- 
+
+
+
+#----------------------------------------------------------------------------- 
+# [] - + 1 summon slot
+# [npc_snakewhisperer_ch_1]
+# type = "basic"
+# ????????????????????????????????????????????????????????????????????????????????????
+# [npc_snakewhisperer_ch_2]
+# type = "basic"
+#----------------------------------------------------------------------------- 
+
+
+
+#----------------------------------------------------------------------------- 
+# [] - gives riddle – basic equation with close answers correct gives you alt dice
+# [npc_sphinxsmall_ch_1]
+# ????????????????????????????????????????????????????????????????????????????????????
+# [npc_sphinxsmall]
+#----------------------------------------------------------------------------- 
+
+
+
+#----------------------------------------------------------------------------- 
+# [] - give item – give back 1 random of same or higher rarity
+# ????????????????????????????????????????????????????????????????????????????????????
+# [npc_trader]
+#----------------------------------------------------------------------------- 
+
+
+
+#----------------------------------------------------------------------------- 
+# [] - gain big light radius onion ring that damages enemies and shrinks over 1 minute
+# ????????????????????????????????????????????????????????????????????????????????????
+# [npc_whitewanderers]
+#----------------------------------------------------------------------------- 
+
+
+
+#----------------------------------------------------------------------------- 
+# [] - HP Regen
+[oasis1_ch_1]
+type = "gain_gift"
+code = "oasis1_ch_1"
+#use_msg = "msg_oasis1_ch_1"
+duration = 60
+#
+# [] - Full Heal 
+[oasis1_ch_2]
+type = "heal"
+percent = 1
+is_well = true
+#use_msg = "msg_oasis1_ch_2"
+#----------------------------------------------------------------------------- 
+
+
+
+#-----------------------------------------------------------------------------
+# [] - Red potion – Strike random benefit (Dmg|Area|Crit|Duration)
+#
+[potionsstand_ch_1]
+type = "select_random"
+list = [
+    {instant = "potionsstand_ch_1_1", weight = 0.25, use_msg = "msg_potionsstand_ch_1_1"},
+    {instant = "potionsstand_ch_1_2", weight = 0.25, use_msg = "msg_potionsstand_ch_1_2"},
+    {instant = "potionsstand_ch_1_3", weight = 0.25, use_msg = "msg_potionsstand_ch_1_3"},
+    {instant = "potionsstand_ch_1_4", weight = 0.25, use_msg = "msg_potionsstand_ch_1_4"},
+]
+# [] - Red potion – Strike Damage
+[potionsstand_ch_1_1]
+type = "gain_gift"
+code = "potionsstand_ch_1_1"
+#
+# [] - Red potion – Strike Area
+[potionsstand_ch_1_2]
+type = "gain_gift"
+code = "potionsstand_ch_1_2"
+#
+# [] - Red potion – Strike Crit
+[potionsstand_ch_1_3]
+type = "gain_gift"
+code = "potionsstand_ch_1_3"
+#
+# [] - Red potion – Strike Duration
+[potionsstand_ch_1_4]
+type = "gain_gift"
+code = "potionsstand_ch_1_4"
+#
+#-----------------------------------------------------------------------------
+# [] - Blue potion – Cast random benefit (Dmg|Area|Crit|Duration)
+#
+[potionsstand_ch_2]
+type = "select_random"
+list = [
+    {instant = "potionsstand_ch_2_1", weight = 0.25, use_msg = "msg_potionsstand_ch_2_1"},
+    {instant = "potionsstand_ch_2_2", weight = 0.25, use_msg = "msg_potionsstand_ch_2_2"},
+    {instant = "potionsstand_ch_2_3", weight = 0.25, use_msg = "msg_potionsstand_ch_2_3"},
+    {instant = "potionsstand_ch_2_4", weight = 0.25, use_msg = "msg_potionsstand_ch_2_4"},
+]
+# [] - Blue potion – Cast Damage
+[potionsstand_ch_2_1]
+type = "gain_gift"
+code = "potionsstand_ch_2_1"
+#
+# [] - Blue potion – Cast Area
+[potionsstand_ch_2_2]
+type = "gain_gift"
+code = "potionsstand_ch_2_2"
+#
+# [] - Blue potion – Cast Crit
+[potionsstand_ch_2_3]
+type = "gain_gift"
+code = "potionsstand_ch_2_3"
+#
+# [] - Blue potion – Cast Duration
+[potionsstand_ch_2_4]
+type = "gain_gift"
+code = "potionsstand_ch_2_4"
+#
+#-----------------------------------------------------------------------------
+# [] - Yellow potion – Power random benefit (Dmg|Area|Crit|Duration)
+#
+[potionsstand_ch_3]
+type = "select_random"
+list = [
+    {instant = "potionsstand_ch_3_1", weight = 0.25, use_msg = "msg_potionsstand_ch_3_1"},
+    {instant = "potionsstand_ch_3_2", weight = 0.25, use_msg = "msg_potionsstand_ch_3_2"},
+    {instant = "potionsstand_ch_3_3", weight = 0.25, use_msg = "msg_potionsstand_ch_3_3"},
+    {instant = "potionsstand_ch_3_4", weight = 0.25, use_msg = "msg_potionsstand_ch_3_4"},
+]
+# [] - Yellow potion – Power Damage
+[potionsstand_ch_3_1]
+type = "gain_gift"
+code = "potionsstand_ch_3_1"
+#
+# [] - Yellow potion – Power Area
+[potionsstand_ch_3_2]
+type = "gain_gift"
+code = "potionsstand_ch_3_2"
+#
+# [] - Yellow potion – Power Crit
+[potionsstand_ch_3_3]
+type = "gain_gift"
+code = "potionsstand_ch_3_3"
+#
+# [] - Yellow potion – Power Duration
+[potionsstand_ch_3_4]
+type = "gain_gift"
+code = "potionsstand_ch_3_4"
+#
+#-----------------------------------------------------------------------------
+# [] - Purple potion – Summon random benefit (Dmg|Area|MS|Duration)
+#
+[potionsstand_ch_4]
+type = "select_random"
+list = [
+    {instant = "potionsstand_ch_4_1", weight = 0.25, use_msg = "msg_potionsstand_ch_4_2"},
+    {instant = "potionsstand_ch_4_2", weight = 0.25, use_msg = "msg_potionsstand_ch_4_3"},
+    {instant = "potionsstand_ch_4_3", weight = 0.25, use_msg = "msg_potionsstand_ch_4_4"},
+    {instant = "potionsstand_ch_4_4", weight = 0.25, use_msg = "msg_potionsstand_ch_4_4"},
+]
+# [] - Purple potion – Summon Damage
+[potionsstand_ch_4_1]
+type = "gain_gift"
+code = "potionsstand_ch_4_1"
+#
+# [] - Purple potion – Summon Area
+[potionsstand_ch_4_2]
+type = "gain_gift"
+code = "potionsstand_ch_4_2"
+#
+# [] - Purple potion – Summon MS
+[potionsstand_ch_4_3]
+type = "gain_gift"
+code = "potionsstand_ch_4_3"
+#
+# [] - Purple potion – Summon Duration
+[potionsstand_ch_4_4]
+type = "gain_gift"
+code = "potionsstand_ch_4_4"
+#
+#----------------------------------------------------------------------------- 
+
+
+
+#----------------------------------------------------------------------------- 
+# [] - 1 Legendary mummy fights for you 
+[sarcophagus_rich_mummy_ch_1]
+type = "gain_boon"
+code = "Azhual"
+rarity = "mast"
+use_msg = "msg_sarcophagus_rich_mummy_ch_1"
+# [] - Fight 1 Mummy and it drops an item - 20% Rare, 50% Epic, 30% Mythic pls
+[sarcophagus_rich_mummy_ch_2]
+type = "monsters"
+use_msg = "msg_sarcophagus_rich_mummy_ch_2"
+monsters = [
+    { code = "Azhual", count = 1 }
+]
+#use_msg = "msg_sarcophagus_rich_mummy_ch_2"
+#----------------------------------------------------------------------------- 
+
+
+
+#----------------------------------------------------------------------------- 
+# [] - 7 Mummies fight for you for 1 min
+[sarcophagus_simple_mummy_ch_1]
+type = "gain_boon"
+code = "AzhualMinion"
+rarity = "adep"
+duration = 180
+use_msg = "msg_sarcophagus_simple_mummy_ch_1"
+# [] - Fight 7 mummies and they might drop item
+[sarcophagus_simple_mummy_ch_2]
+type = "monsters"
+use_msg = "msg_sarcophagus_simple_mummy_ch_2"
+monsters = [
+    { code = "AzhualMinion", count = 7 }
+]
+#use_msg = "msg_sarcophagus_simple_mummy_ch_2"
+#----------------------------------------------------------------------------- 
+
+
+
+#----------------------------------------------------------------------------- ?????????????????????? ENEMIES FASTER HOW??????
+#-----------------------------------------------------------------------------
+# [] - Gain 1 Revival – Enemies are faster for 3 minutes
+[shrine_scarab_ch_1]
+type = "composite"
+list = ["shrine_scarab_ch_1_1", "shrine_scarab_ch_1_2"]
+#use_msg = "msg_shrine_scarab_1"
+#
+[shrine_scarab_ch_1_1]
+type = "gain_gift"
+code = "shrine_scarab_ch_1_1"
+duration = 120
+#
+[shrine_scarab_ch_1_2]
+type = "gain_gift"
+code = "shrine_scarab_ch_1_2"
+#
+#-----------------------------------------------------------------------------
+# [] - Gain 1 Revival – Enemies deal more damage for 3 minutes
+[shrine_scarab_ch_2]
+type = "composite"
+list = ["shrine_scarab_ch_2_1", "shrine_scarab_ch_2_2"]
+#use_msg = "msg_shrine_scarab_2"
+#
+[shrine_scarab_ch_2_1]
+type = "gain_gift"
+code = "shrine_scarab_ch_2_1"
+duration = 120
+[shrine_scarab_ch_2_2]
+type = "gain_gift"
+code = "shrine_scarab_ch_2_2"
+#
+#-----------------------------------------------------------------------------
+#----------------------------------------------------------------------------- 
+# comment
+[shrine_scarab_ch_3]
+type = "composite"
+list = ["shrine_scarab_ch_3_1", "shrine_scarab_ch_3_2"]
+#use_msg = "msg_shrine_scarab_3"
+#
+[shrine_scarab_ch_3_1]
+type = "gain_gift"
+code = "shrine_scarab_ch_3_1"
+duration = 120
+[shrine_scarab_ch_3_2]
+type = "gain_gift"
+code = "shrine_scarab_ch_3_2"
+#
+#-----------------------------------------------------------------------------
+#----------------------------------------------------------------------------- 
+
+
+
+#----------------------------------------------------------------------------- 
+# [] - Poisons you but attacks gain chance to proc poison #?????????????? How to Do Poison player? TEMP
+[shrine_snake_ch_1]
+type = "composite"
+list = ["shrine_snake_ch_1_1", "shrine_snake_ch_1_2"]
+[shrine_snake_ch_1_1]
+type = "status"
+code = "ppoisoned"
+[shrine_snake_ch_1_2]
+type = "gain_gift"
+code = "shrine_snake_ch_1"
+# [] - Poisons you but dash gains chance to proc poison nova #?????????????? How to Do Poison player? TEMP 
+[shrine_snake_ch_2]
+type = "composite"
+list = ["shrine_snake_ch_2_1", "shrine_snake_ch_2_2"]
+[shrine_snake_ch_2_1]
+type = "status"
+code = "ppoisoned"
+[shrine_snake_ch_2_2]
+type = "gain_gift"
+code = "shrine_snake_ch_2"
+#----------------------------------------------------------------------------- 
+
+
+
+#----------------------------------------------------------------------------- 
+# [] - Less negative statuses
+# ?????????????????????????????????????????????????????????????
+# [silk_monument_ch_2]
+#----------------------------------------------------------------------------- 
+
+
+
+#----------------------------------------------------------------------------- 
+# [tomb_entrance1]
+# ?????????????????????????????????????????????????????????????
+#----------------------------------------------------------------------------- 
+
+
+
+#-----------------------------------------------------------------------------  
+# [] - hp heal
+[well_turquoise_ch_1]
+type = "heal"
+flat = 33
+is_well = true
+#use_msg = "msg_well_turquoise_ch_1"
+#----------------------------------------------------------------------------- 
+
+
+
+#----------------------------------------------------------------------------- 
+# [] - [Burn the Parchment] – Challenge enemy that may carry a treasure
+# [wondrous_parchment_ch_1]
+# type = "monsters"
+# monsters = [
+#     { code = "EfreetFireE", count = 1 }
+# ]
+#----------------------------------------------------------------------------- 
+
+
+#-----------------------------------------------------------------------------
+[bookshelf_act2]
+# drops lore items
+type = "unique_drop"
+chance = 1
+uniques_gen.count_weights = { 1 = 1 }
+uniques_gen.uniques = [
+     "QueenNote",
+     "BaronDecree",
+     "LoreLand1",
+     "LoreLand2",
+     "LoreLand3",
+     "LoreLand4",
+     "LoreLand5",
+     "LoreLand6",
+     "LustyOrc4",
+     "LustyOrc5",
+]
+use_msg = "msg_bookshelf_woodensimple"
+
+
+
+                                        ### Power 3 ###
+
+
+
+#----------------------------------------------------------------------------- 
+# |Ripe and Juicy| - 4 hp heal
+[basket_fruit1]
+type = "heal"
+flat = 5
+percent = 0.05
+sfx = "Inst_Munch"
+use_msg = "msg_basket_fruit1"
+#----------------------------------------------------------------------------- 
+
+
+
+#----------------------------------------------------------------------------- 
+# || - bonus evasion for 30s
+[bowl_turquoiseliquid]
+type = "gain_gift"
+code = "bowl_turquoiseliquid"
+duration = 30
+sfx = "Inst_Well"
+use_msg = "msg_bowl_turquoiseliquid"
+#----------------------------------------------------------------------------- 
+
+#----------------------------------------------------------------------------- 
+# || - minor global dmg for 30s
+[brazierhanging1]
+type = "gain_gift"
+code = "brazierhanging1"
+duration = 30
+sfx = "Inst_SnuffFire"
+use_msg = "msg_brazierhanging1"
+#----------------------------------------------------------------------------- 
+
+#----------------------------------------------------------------------------- HAS TO BE AMULET 
+# || - drops random amulet – higher unique chance
+[bustwithnecklaces]
+type = "item_drop"
+chance = 100
+count_weights = { 1 = 1 }
+class_weights = { Tr_Any = 100, Tr_AnyAttack = 100, Tr_AnyDash = 100, Tr_AnyStrike = 100, Tr_AnyCast = 100, Tr_AnyPower = 100, Tr_AnySummon = 100, Tr_AnyStatus = 100}
+rarity_weights = [
+    { min = 0, rar = { brok = 0, comm = 0, rare = 0, epic = 0, myth = 100 }},
+    { min = 3, rar = { brok = 0, comm = 25, rare = 0, epic = 0, myth = 100 }},
+    { min = 6, rar = { brok = 0, comm = 25, rare = 0, epic = 0, myth = 100 }},
+    { min = 9, rar = { brok = 0, comm = 25, rare = 0, epic = 0, myth = 100 }},
+    { min = 12, rar = { brok = 0, comm = 25, rare = 0, epic = 0, myth = 100 }},
+    { min = 15, rar = { brok = 0, comm = 25, rare = 0, epic = 0, myth = 100 }},
+    { min = 18, rar = { brok = 0, comm = 25, rare = 0, epic = 0, myth = 100 }}
+]
+use_msg = "msg_bustwithnecklaces"
+#----------------------------------------------------------------------------- 
+
+
+
+#----------------------------------------------------------------------------- 
+# || - hp reg for 10 seconds and dizzy screen status
+[cacti1]
+type = "gain_gift"
+code = "cacti1"
+duration = 20
+sfx = "Inst_Cactus"
+use_msg = "msg_cacti1"
+#----------------------------------------------------------------------------- 
+
+
+
+#----------------------------------------------------------------------------- FIX CHANCES 
+# |A Lucky Find| - drops random item
+[coffin_stonescripted2]
+type = "select_random"
+sfx = "Inst_StoneSlide"
+list = [
+    {instant = "coffin_stonescripted2_1", weight = 0.10},
+    {instant = "coffin_stonescripted2_2", weight = 0.60},
+    {instant = "coffin_stonescripted2_3", weight = 0.30},
+]
+#
+[coffin_stonescripted2_1]
+type = "item_drop"
+count_weights = { 1 = 1 }
+class_weights = { Tr_Any = 100, Tr_AnyAttack = 100, Tr_AnyDash = 100, Tr_AnyStrike = 100, Tr_AnyCast = 100, Tr_AnyPower = 100, Tr_AnySummon = 100, Tr_AnyStatus = 100}
+rarity_weights = [
+    { min = 0, rar = { brok = 0, comm = 0, rare = 0, epic = 0, myth = 100 }},
+    { min = 3, rar = { brok = 0, comm = 0, rare = 0, epic = 0, myth = 100 }},
+    { min = 6, rar = { brok = 0, comm = 0, rare = 0, epic = 0, myth = 100 }},
+    { min = 9, rar = { brok = 0, comm = 0, rare = 0, epic = 0, myth = 100 }},
+    { min = 12, rar = { brok = 0, comm = 0, rare = 0, epic = 0, myth = 100 }},
+    { min = 15, rar = { brok = 0, comm = 0, rare = 0, epic = 0, myth = 100 }},
+    { min = 18, rar = { brok = 0, comm = 0, rare = 0, epic = 0, myth = 100 }}
+]
+use_msg = "msg_grave_1_1"
+#
+# |Nothing| - nothing
+[coffin_stonescripted2_2]
+type = "basic" 
+use_msg = "msg_coffin_stonescripted3_2"
+#
+# |Graverobber!| - Become Cursed
+[coffin_stonescripted2_3]
+type = "gain_gift"
+duration = 30
+code = "coffin_stonescripted2"
+level = 1
+use_msg = "msg_coffin_stonescripted2_3"
+#
+#----------------------------------------------------------------------------- 
+
+
+
+#----------------------------------------------------------------------------- FIX CHANCES 
+# |A Lucky Find| - drops random item
+[coffin_stonescripted3]
+type = "select_random"
+sfx = "Inst_StoneSlide"
+list = [
+    {instant = "coffin_stonescripted3_1", weight = 0.10},
+    {instant = "coffin_stonescripted3_2", weight = 0.60},
+    {instant = "coffin_stonescripted3_3", weight = 0.30},
+]
+#
+[coffin_stonescripted3_1]
+type = "item_drop"
+count_weights = { 1 = 1 }
+class_weights = { Tr_Any = 100, Tr_AnyAttack = 100, Tr_AnyDash = 100, Tr_AnyStrike = 100, Tr_AnyCast = 100, Tr_AnyPower = 100, Tr_AnySummon = 100, Tr_AnyStatus = 100}
+rarity_weights = [
+    { min = 0, rar = { brok = 0, comm = 0, rare = 0, epic = 0, myth = 100 }},
+    { min = 3, rar = { brok = 0, comm = 0, rare = 0, epic = 0, myth = 100 }},
+    { min = 6, rar = { brok = 0, comm = 0, rare = 0, epic = 0, myth = 100 }},
+    { min = 9, rar = { brok = 0, comm = 0, rare = 0, epic = 0, myth = 100 }},
+    { min = 12, rar = { brok = 0, comm = 0, rare = 0, epic = 0, myth = 100 }},
+    { min = 15, rar = { brok = 0, comm = 0, rare = 0, epic = 0, myth = 100 }},
+    { min = 18, rar = { brok = 0, comm = 0, rare = 0, epic = 0, myth = 100 }}
+]
+use_msg = "msg_coffin_stonescripted3_1"
+#
+# |Nothing| - nothing
+[coffin_stonescripted3_2]
+type = "basic" 
+use_msg = "msg_coffin_stonescripted3_2"
+#
+# |Graverobber!| - Become Cursed
+[coffin_stonescripted3_3]
+type = "gain_gift"
+duration = 30
+code = "coffin_stonescripted3"
+level = 1
+use_msg = "msg_coffin_stonescripted3_3"
+#
+#----------------------------------------------------------------------------- 
+
+
+
+#----------------------------------------------------------------------------- HAS TO BE RELIC 
+# || - Drops random relic – has higher unique chance
+[handswithorb]
+type = "item_drop"
+#specific_subtype = "reli"
+chance = 100
+count_weights = { 1 = 1 }
+class_weights = { Tr_Any = 100, Tr_AnyAttack = 100, Tr_AnyDash = 100, Tr_AnyStrike = 100, Tr_AnyCast = 100, Tr_AnyPower = 100, Tr_AnySummon = 100, Tr_AnyStatus = 100}
+rarity_weights = [
+    { min = 0, rar = { brok = 0, comm = 0, rare = 0, epic = 0, myth = 100 }},
+    { min = 3, rar = { brok = 0, comm = 25, rare = 0, epic = 0, myth = 100 }},
+    { min = 6, rar = { brok = 0, comm = 25, rare = 0, epic = 0, myth = 100 }},
+    { min = 9, rar = { brok = 0, comm = 25, rare = 0, epic = 0, myth = 100 }},
+    { min = 12, rar = { brok = 0, comm = 25, rare = 0, epic = 0, myth = 100 }},
+    { min = 15, rar = { brok = 0, comm = 25, rare = 0, epic = 0, myth = 100 }},
+    { min = 18, rar = { brok = 0, comm = 25, rare = 0, epic = 0, myth = 100 }}
+]
+use_msg = "msg_handswithorb"
+#----------------------------------------------------------------------------- 
+
+
+
+#----------------------------------------------------------------------------- HAS TO BE RING 
+# || - Drops random ring – has higher unique chance
+[handwithrings]
+type = "item_drop"
+#specific_subtype = "ring"
+chance = 100
+count_weights = { 1 = 1 }
+class_weights = { Tr_Any = 100, Tr_AnyAttack = 100, Tr_AnyDash = 100, Tr_AnyStrike = 100, Tr_AnyCast = 100, Tr_AnyPower = 100, Tr_AnySummon = 100, Tr_AnyStatus = 100}
+rarity_weights = [
+    { min = 0, rar = { brok = 0, comm = 0, rare = 0, epic = 0, myth = 100 }},
+    { min = 3, rar = { brok = 0, comm = 25, rare = 0, epic = 0, myth = 100 }},
+    { min = 6, rar = { brok = 0, comm = 25, rare = 0, epic = 0, myth = 100 }},
+    { min = 9, rar = { brok = 0, comm = 25, rare = 0, epic = 0, myth = 100 }},
+    { min = 12, rar = { brok = 0, comm = 25, rare = 0, epic = 0, myth = 100 }},
+    { min = 15, rar = { brok = 0, comm = 25, rare = 0, epic = 0, myth = 100 }},
+    { min = 18, rar = { brok = 0, comm = 25, rare = 0, epic = 0, myth = 100 }}
+]
+use_msg = "msg_handwithrings"
+#----------------------------------------------------------------------------- 
+
+
+
+#----------------------------------------------------------------------------- HAS TO BE WEAPON 
+# || - Drops random weapon chance of unique
+[weaponsstand_sand1]
+type = "item_drop"
+#specific_subtype = "weap"
+chance = 100
+count_weights = { 1 = 1 }
+class_weights = { Tr_Any = 100, Tr_AnyAttack = 100, Tr_AnyDash = 100, Tr_AnyStrike = 100, Tr_AnyCast = 100, Tr_AnyPower = 100, Tr_AnySummon = 100, Tr_AnyStatus = 100}
+rarity_weights = [
+    { min = 0, rar = { brok = 95, comm = 5, rare = 0, epic = 0, myth = 0 }},
+    { min = 3, rar = { brok = 75, comm = 25, rare = 0, epic = 0, myth = 0 }},
+    { min = 6, rar = { brok = 37, comm = 60, rare = 3, epic = 0, myth = 0 }},
+    { min = 9, rar = { brok = 15, comm = 68, rare = 6, epic = 1, myth = 0 }},
+    { min = 12, rar = { brok = 7, comm = 80, rare = 10, epic = 2, myth = 1 }},
+    { min = 15, rar = { brok = 0, comm = 72, rare = 14, epic = 3, myth = 1 }},
+    { min = 18, rar = { brok = 0, comm = 77, rare = 18, epic = 4, myth = 1 }}
+]
+use_msg = "msg_weaponsstand_sand1"
+#----------------------------------------------------------------------------- 
+
+
+
+
+#----------------------------------------------------------------------------- 
+#-----------------------------------------------------------------------------
+# |Seal of Precision| - Gain Attack Dmg
+[magicseal1]
+type = "gain_gift"
+code = "magicseal1"
+sfx = "Inst_Seal"
+use_msg = "msg_magicseal1"
+#-----------------------------------------------------------------------------
+# |Seal of Swiftness| - Gain Dash Dmg
+[magicseal2]
+type = "gain_gift"
+code = "magicseal2"
+sfx = "Inst_Seal"
+use_msg = "msg_magicseal2"
+#-----------------------------------------------------------------------------
+# |Seal of Triumph| - Gain Strike Dmg
+[magicseal3]
+type = "gain_gift"
+code = "magicseal3"
+sfx = "Inst_Seal"
+use_msg = "msg_magicseal3"
+#-----------------------------------------------------------------------------
+# |Seal of Mystery| - Gain Cast Dmg
+[magicseal4]
+type = "gain_gift"
+code = "magicseal4"
+sfx = "Inst_Seal"
+use_msg = "msg_magicseal4"
+#-----------------------------------------------------------------------------
+# |Seal of Wisdom| - Gain Power Dmg
+[magicseal5]
+type = "gain_gift"
+code = "magicseal5"
+sfx = "Inst_Seal"
+use_msg = "msg_magicseal5"
+#-----------------------------------------------------------------------------
+# |Seal of Domination| - Gain Summon Dmg
+[magicseal6]
+type = "gain_gift"
+code = "magicseal6"
+sfx = "Inst_Seal"
+use_msg = "msg_magicseal6"
+#-----------------------------------------------------------------------------
+# |Seal of Affliction| - Gain Status Dmg
+[magicseal7]
+type = "gain_gift"
+code = "magicseal7"
+sfx = "Inst_Seal"
+use_msg = "msg_magicseal7"
+#-----------------------------------------------------------------------------
+#----------------------------------------------------------------------------- 
+
+#----------------------------------------------------------------------------- 
+# |A Lucky Find| - drops random item
+[well_sand_abandoned1]
+type = "select_random"
+list = [
+    {instant = "well_sand_abandoned1_1", weight = 0.1},
+    {instant = "well_sand_abandoned1_2", weight = 0.35},
+    {instant = "well_sand_abandoned1_3", weight = 0.55}
+]
+#
+[well_sand_abandoned1_1]
+type = "item_drop"
+chance = 0.33
+count_weights = { 1 = 1 }
+class_weights = { Tr_Any = 100, Tr_AnyAttack = 100, Tr_AnyDash = 100, Tr_AnyStrike = 100, Tr_AnyCast = 100, Tr_AnyPower = 100, Tr_AnySummon = 100, Tr_AnyStatus = 100}
+rarity_weights = [
+    { min = 0, rar = { brok = 95, comm = 5, rare = 0, epic = 0, myth = 0 }},
+    { min = 3, rar = { brok = 75, comm = 25, rare = 0, epic = 0, myth = 0 }},
+    { min = 6, rar = { brok = 37, comm = 60, rare = 3, epic = 0, myth = 0 }},
+    { min = 9, rar = { brok = 15, comm = 68, rare = 6, epic = 1, myth = 0 }},
+    { min = 12, rar = { brok = 7, comm = 80, rare = 10, epic = 2, myth = 1 }},
+    { min = 15, rar = { brok = 0, comm = 72, rare = 14, epic = 3, myth = 1 }},
+    { min = 18, rar = { brok = 0, comm = 77, rare = 18, epic = 4, myth = 1 }}
+]
+use_msg = "msg_well_sand_abandoned1_1"
+#
+# |Nothing| - nothing
+[well_sand_abandoned1_2]
+type = "basic" 
+use_msg = "msg_well_sand_abandoned1_2"
+#
+# |You Find Some Water Left| - Heal 5 Hp
+[well_sand_abandoned1_3]
+type = "heal"
+flat = 10
+percent = 0.1
+is_well = true
+sfx = "Inst_Well"
+use_msg = "msg_well_sand_abandoned1_3"
+#
+#----------------------------------------------------------------------------- 
+
+
+
+#----------------------------------------------------------------------------- 
+# || - Heals 8 hp
+[well_sand_lively]
+type = "heal"
+flat = 10
+percent = 0.05
+is_well = true
+sfx = "Inst_Well"
+use_msg = "msg_well_sand_lively"
+#----------------------------------------------------------------------------- 
+
+
+
+
+#-----------------------------------------------------------------------------
+[stone_jumper_sand]
+# +1 dash charge for 30 sec
+type = "gain_gift"
+code = "totem_hare"
+level = 1
+duration = 30
+use_msg = "msg_stone_jumper_sand"
+#-----------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+                                        # NON-ENCOUNTERS
+                                        
+#-----------------------------------------------------------------------------
+# The heal used by pick ups.
+[pi_heal]
+type = "heal"
+flat = 5
+percent = 0.05
+#-----------------------------------------------------------------------------
+# The heal used by pick ups.
+[pi_heal1]
+type = "heal"
+flat = 5
+percent = 0.05
+#-----------------------------------------------------------------------------
+# The heal used by pick ups.
+[pi_heal2]
+type = "heal"
+flat = 10
+percent = 0.05
+#-----------------------------------------------------------------------------
+
+
+#-----------------------------------------------------------------------------
+# The heal used by pick ups.
+[pi_healfull]
+type = "heal"
+flat = 10
+percent = 0.4
+#-----------------------------------------------------------------------------
+
+
+#-----------------------------------------------------------------------------
+# The heal used by pick ups.
+[pi_healhalf]
+type = "heal"
+flat = 5
+percent = 0.2
+#-----------------------------------------------------------------------------
+
+
+#-----------------------------------------------------------------------------
+# The heal used by shrines.
+[sh_heal]
+type = "heal"
+flat = 0
+percent = 1
+#-----------------------------------------------------------------------------
+
+
+#-----------------------------------------------------------------------------
+[sh_stamina]
+type = "status"
+code = "ss_stamina"
+#-----------------------------------------------------------------------------
+
+
+#-----------------------------------------------------------------------------
+[sh_invulnerable]
+type = "status"
+code = "ss_invulnerable"
+#-----------------------------------------------------------------------------
+
+
+#-----------------------------------------------------------------------------
+[sh_xp]
+type = "status"
+code = "ss_xp"
+#-----------------------------------------------------------------------------
+
+
+#-----------------------------------------------------------------------------
+[sh_collector]
+type = "status"
+code = "ss_collect"
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+[sh_explosion]
+type = "explosion"
+prefab = "Entities/Boons/Inferno/Inferno_Fab"
+rad = 30
+pow = 666
+#-----------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    # ••••••••••••••••••••• ACT III ••••••••••••••••••••• #
+
+
+
+                                        ### Power 1 ###
+
+
+
+
+#----------------------------------------------------------------------------- ⚡
+# SEAL OF MYSTERY
+# Gain Random from:
+# 1. Attack Dmg
+# 2. Dash Dmg
+# 3. Strike Dmg
+# 4. Cast Dmg
+# 5. Power Dmg
+# 6. Summon Dmg
+# 7. Status Dmg 
+#--------------------------
+[magicseal_moor]
+type = "select_random"
+sfx = "Inst_Seal"
+list = [
+    {instant = "magicseal_moor_1", weight = 1},
+    {instant = "magicseal_moor_2", weight = 1},
+    {instant = "magicseal_moor_3", weight = 1},
+    {instant = "magicseal_moor_4", weight = 1},
+    {instant = "magicseal_moor_5", weight = 1},
+    {instant = "magicseal_moor_6", weight = 1},
+    {instant = "magicseal_moor_7", weight = 1}
+]
+#--------------------------
+# 1. Attack Dmg
+[magicseal_moor_1]
+type = "gain_gift"
+code = "magicseal_moor_1"
+sfx = "Inst_HolyBook"
+use_msg = "msg_magicseal_moor_1"
+#--------------------------
+# 2. Dash Dmg
+[magicseal_moor_2]
+type = "gain_gift"
+code = "magicseal_moor_2"
+sfx = "Inst_HolyBook"
+use_msg = "msg_magicseal_moor_2"
+#--------------------------
+# 3. Strike Dmg
+[magicseal_moor_3]
+type = "gain_gift"
+code = "magicseal_moor_3"
+sfx = "Inst_HolyBook"
+use_msg = "msg_magicseal_moor_3"
+#--------------------------
+# 4. Cast Dmg
+[magicseal_moor_4]
+type = "gain_gift"
+code = "magicseal_moor_4"
+sfx = "Inst_HolyBook"
+use_msg = "msg_magicseal_moor_4"
+#--------------------------
+# 5. Power Dmg
+[magicseal_moor_5]
+type = "gain_gift"
+code = "magicseal_moor_5"
+sfx = "Inst_HolyBook"
+use_msg = "msg_magicseal_moor_5"
+#--------------------------
+# 6. Summon Dmg
+[magicseal_moor_6]
+type = "gain_gift"
+code = "magicseal_moor_6"
+sfx = "Inst_HolyBook"
+use_msg = "msg_magicseal_moor_6"
+#--------------------------
+# 7. Status Dmg
+[magicseal_moor_7]
+type = "gain_gift"
+code = "magicseal_moor_7"
+sfx = "Inst_HolyBook"
+use_msg = "msg_magicseal_moor_7"
+#--------------------------
+#----------------------------------------------------------------------------- 
+
+
+
+#----------------------------------------------------------------------------- ⚡
+# ALTAR DEVOTION MOOR
+# +% more heals
+[altar_devotion_moor]
+type = "gain_gift"
+code = "altar_devotion_moor"
+level = 1
+sfx = "Inst_HolyBook"
+use_msg = "msg_altar_devotion_moor"
+#----------------------------------------------------------------------------- 
+
+
+
+#----------------------------------------------------------------------------- ⚡
+[bookshelf_woodensimple_moor]
+# drops lore items
+type = "unique_drop"
+chance = 1
+uniques_gen.count_weights = { 1 = 1 }
+uniques_gen.uniques = [
+     "TheBaronsLetters1",
+     "TheBaronsLetters2",
+     "TheBaronsLetters3",
+     "RoyalDecree",
+     "LustyOrc6",
+     "LustyOrc7",
+     "LustyOrc8",
+]
+use_msg = "msg_bookshelf_woodensimple"
+#----------------------------------------------------------------------------- 
+
+#----------------------------------------------------------------------------- 🔻⚡
+[chest_woodsimple_moor_01]
+# drops item
+type = "item_drop"
+sfx = "Inst_ChestOpen"
+chance = 1
+count_weights = { 1 = 1 }
+class_weights = { Tr_Any = 100, Tr_AnyAttack = 100, Tr_AnyDash = 100, Tr_AnyStrike = 100, Tr_AnyCast = 100, Tr_AnyPower = 100, Tr_AnySummon = 100, Tr_AnyStatus = 100}
+rarity_weights = [
+    { min = 0, rar = { brok = 0, comm = 100, rare = 0, epic = 0, myth = 0 }},
+    { min = 3, rar = { brok = 0, comm = 97, rare = 3, epic = 0, myth = 0 }},
+    { min = 6, rar = { brok = 0, comm = 94, rare = 6, epic = 0, myth = 0 }},
+    { min = 9, rar = { brok = 0, comm = 90, rare = 9, epic = 1, myth = 0 }},
+    { min = 12, rar = { brok = 0, comm = 87, rare = 12, epic = 1, myth = 0 }},
+    { min = 15, rar = { brok = 0, comm = 82, rare = 15, epic = 2, myth = 1 }},
+    { min = 18, rar = { brok = 0, comm = 79, rare = 18, epic = 2, myth = 1 }}
+]
+use_msg = "msg_chest_woodsimple_moor_01"
+#----------------------------------------------------------------------------- 
+
+#----------------------------------------------------------------------------- 🔻⚡
+[chest_woodsimple_moor_02]
+# drops item
+type = "item_drop"
+sfx = "Inst_ChestOpen"
+chance = 1
+count_weights = { 1 = 1 }
+class_weights = { Tr_Any = 100, Tr_AnyAttack = 100, Tr_AnyDash = 100, Tr_AnyStrike = 100, Tr_AnyCast = 100, Tr_AnyPower = 100, Tr_AnySummon = 100, Tr_AnyStatus = 100}
+rarity_weights = [
+    { min = 0, rar = { brok = 0, comm = 100, rare = 0, epic = 0, myth = 0 }},
+    { min = 3, rar = { brok = 0, comm = 97, rare = 3, epic = 0, myth = 0 }},
+    { min = 6, rar = { brok = 0, comm = 94, rare = 6, epic = 0, myth = 0 }},
+    { min = 9, rar = { brok = 0, comm = 90, rare = 9, epic = 1, myth = 0 }},
+    { min = 12, rar = { brok = 0, comm = 87, rare = 12, epic = 1, myth = 0 }},
+    { min = 15, rar = { brok = 0, comm = 82, rare = 15, epic = 2, myth = 1 }},
+    { min = 18, rar = { brok = 0, comm = 79, rare = 18, epic = 2, myth = 1 }}
+]
+use_msg = "msg_chest_woodsimple_moor_02"
+#----------------------------------------------------------------------------- 
+
+
+
+#----------------------------------------------------------------------------- 🔻⚡
+[chest_woodsimple_moor_03]
+# drops item
+type = "item_drop"
+sfx = "Inst_ChestOpen"
+chance = 1
+count_weights = { 1 = 1 }
+class_weights = { Tr_Any = 100, Tr_AnyAttack = 100, Tr_AnyDash = 100, Tr_AnyStrike = 100, Tr_AnyCast = 100, Tr_AnyPower = 100, Tr_AnySummon = 100, Tr_AnyStatus = 100}
+rarity_weights = [
+    { min = 0, rar = { brok = 0, comm = 100, rare = 0, epic = 0, myth = 0 }},
+    { min = 3, rar = { brok = 0, comm = 97, rare = 3, epic = 0, myth = 0 }},
+    { min = 6, rar = { brok = 0, comm = 94, rare = 6, epic = 0, myth = 0 }},
+    { min = 9, rar = { brok = 0, comm = 90, rare = 9, epic = 1, myth = 0 }},
+    { min = 12, rar = { brok = 0, comm = 87, rare = 12, epic = 1, myth = 0 }},
+    { min = 15, rar = { brok = 0, comm = 82, rare = 15, epic = 2, myth = 1 }},
+    { min = 18, rar = { brok = 0, comm = 79, rare = 18, epic = 2, myth = 1 }}
+]
+use_msg = "msg_chest_woodsimple_moor_03"
+#----------------------------------------------------------------------------- 
+
+
+
+#----------------------------------------------------------------------------- ⚡
+#-----------------------------------------------------------------------------
+[coffin_stonescripted_moor] 
+type = "select_random"
+list = [
+    {instant = "coffin_stonescripted_moor_1", weight = 1},
+    {instant = "coffin_stonescripted_moor_2", weight = 1},
+    {instant = "coffin_stonescripted_moor_3", weight = 1},
+]
+#-----------------------------------------------------------------------------
+[coffin_stonescripted_moor_1]
+# |A Lucky Find| - drops random item
+type = "item_drop"
+sfx = "Inst_StoneSlide"
+use_msg = "msg_coffin_stonescripted_moor_1"
+chance = 1
+count_weights = { 1 = 1 }
+class_weights = { Tr_Any = 100, Tr_AnyAttack = 100, Tr_AnyDash = 100, Tr_AnyStrike = 100, Tr_AnyCast = 100, Tr_AnyPower = 100, Tr_AnySummon = 100, Tr_AnyStatus = 100}
+rarity_weights = [
+    { min = 0, rar = { brok = 95, comm = 5, rare = 0, epic = 0, myth = 0 }},
+    { min = 3, rar = { brok = 75, comm = 25, rare = 0, epic = 0, myth = 0 }},
+    { min = 6, rar = { brok = 37, comm = 60, rare = 3, epic = 0, myth = 0 }},
+    { min = 9, rar = { brok = 15, comm = 68, rare = 6, epic = 1, myth = 0 }},
+    { min = 12, rar = { brok = 7, comm = 80, rare = 10, epic = 2, myth = 1 }},
+    { min = 15, rar = { brok = 0, comm = 72, rare = 14, epic = 3, myth = 1 }},
+    { min = 18, rar = { brok = 0, comm = 77, rare = 18, epic = 4, myth = 1 }}
+]
+#----------------------------------------------------------------------------- 
+# |Nothing| - nothing
+[coffin_stonescripted_moor_2]
+type = "basic" 
+use_msg = "msg_coffin_stonescripted_moor_2"
+#-----------------------------------------------------------------------------
+# |Graverobber!| - Become Cursed
+[coffin_stonescripted_moor_3]
+type = "gain_gift"
+duration = 30
+code = "coffin_stonescripted_moor_3"
+level = 1
+use_msg = "msg_coffin_stonescripted_moor_3"
+#----------------------------------------------------------------------------- 
+
+
+
+#----------------------------------------------------------------------------- ⚡
+[fountain_sacred_moor]
+# heals X+X% life
+type = "heal"
+sfx = "Inst_Well"
+flat = 0
+percent = 1
+is_well = true
+use_msg = "msg_fountain_sacred_moor"
+#-----------------------------------------------------------------------------
+
+
+
+
+#----------------------------------------------------------------------------- ⚡
+[orb_seeking_moor]
+# +1% more pickup spawns
+type = "gain_gift"
+sfx = "Inst_DarkBoost"
+code = "orb_seeking_moor"
+level = 1
+use_msg = "msg_orb_seeking_moor"
+#-----------------------------------------------------------------------------
+
+
+
+#----------------------------------------------------------------------------- ⚡
+# STONE COLLECTING MOOR
+# Pulls All Gems
+[stone_collecting_moor]
+type = "status"
+sfx = "Inst_MagnetWhoosh"
+code = "stone_collecting"
+use_msg = "msg_stone_collecting"
+#-----------------------------------------------------------------------------
+
+
+
+#----------------------------------------------------------------------------- 🔻⚡
+# STONE EXPERIENCE MOOR
+# +60% xp gain for 30 sec (1.7% * 1200/30)
+[stone_experience_moor]
+type = "gain_gift"
+code = "stone_experience_moor"
+level = 1
+duration = 30
+sfx = "Inst_Well"
+use_msg = "msg_stone_experience_moor"
+#----------------------------------------------------------------------------- 
+
+
+
+#----------------------------------------------------------------------------- 🔻⚡
+# STONE POWER MOOR
+# +100% all dmg for 30 sec (1.2% * 1200/30)
+[stone_power_moor]
+type = "gain_gift"
+sfx = "Inst_DarkWhoosh"
+code = "stone_power_moor"
+level = 1
+duration = 30
+use_msg = "msg_stone_power_moor"
+#----------------------------------------------------------------------------- 
+
+
+#----------------------------------------------------------------------------- ⚡
+# STONE STAMINA MOOR
+# No attack penalty for 30 sec
+[stone_stamina_moor]
+type = "gain_gift"
+sfx = "Inst_Drum"
+code = "stone_stamina_moor"
+level = 1
+duration = 30
+use_msg = "msg_stone_stamina_moor"
+#-----------------------------------------------------------------------------
+
+
+
+#----------------------------------------------------------------------------- ⚡
+# TOTEM HARE MOOR
+# +1 dash charge for 30 sec
+
+[totem_hare_moor]
+type = "composite"
+list = ["totem_hare_moor_1", "totem_hare_moor_2"]
+sfx = "Inst_Well"
+[totem_hare_moor_1]
+type = "gain_gift"
+code = "totem_hare_moor"
+level = 1
+duration = 30
+use_msg = "msg_totem_hare_moor"
+[totem_hare_moor_2]
+type = "unique_drop"
+chance = 1
+uniques_gen.count_weights = { 1 = 1 }
+uniques_gen.uniques = [
+     "JadeRabbit",
+]
+
+
+#-----------------------------------------------------------------------------
+
+
+
+#----------------------------------------------------------------------------- ⚡
+# ARGENTBASIN
+# Heal 5 + 2% life instantly and gain X Dmg vs Undead for 60 sec.
+#--------------------------
+[argentbasin]
+type = "composite"
+list = ["argentbasin_1", "argentbasin_2"]
+sfx = "Inst_Well"
+use_msg = "msg_argentbasin"
+#--------------------------
+# Heal 5 + 20% Life
+[argentbasin_1]
+type = "heal"
+flat = 5
+percent = 0.15
+is_well = true
+#--------------------------
+# Gain X Dmg vs Undead for 60 sec.                                          🔻                                                                      
+[argentbasin_2]
+type = "gain_gift"
+code = "argentbasin_2"
+#--------------------------
+#----------------------------------------------------------------------------- 
+
+
+
+#----------------------------------------------------------------------------- ⚡
+# DARKWOODBONFIRE
+# Increased Dash Distance, Movement Speed and Evasion for 30 seconds
+[darkwoodbonfire]
+type = "gain_gift"
+code = "darkwoodbonfire"
+duration = 30
+sfx = "Inst_FireStart"
+use_msg = "msg_darkwoodbonfire"
+#----------------------------------------------------------------------------- 
+
+
+
+#----------------------------------------------------------------------------- ⚡ 🔻
+# DARKWOODLANTERN_01
+# Light Radius Increase, Slight Pull Area Increase, Small EXP Bonus
+#--------------------------
+[darkwoodlantern_01]
+type = "composite"
+list = ["darkwoodlantern_01_1", "darkwoodlantern_01_2", "darkwoodlantern_01_3"]
+use_msg = "msg_darkwoodlantern_01"
+sfx = "Inst_SnuffFire"
+#--------------------------
+# Light Radius Increase                                                 🔻
+[darkwoodlantern_01_1]
+type = "basic"
+# LIGHT RADIUS INCREASE
+#--------------------------
+# Slight Pull Area Increase
+[darkwoodlantern_01_2]
+type = "gain_gift"
+code = "darkwoodlantern_01_2"
+#--------------------------
+# Small EXP Bonus                                                       🔻
+[darkwoodlantern_01_3]
+type = "gain_xp"
+amount = 120
+vfx = "Entities/VFX/Experience_Instant/Experience_Instant_Fab"
+#--------------------------
+#-----------------------------------------------------------------------------
+
+
+
+#----------------------------------------------------------------------------- ⚡
+# DARKWOODLOG (like overgrownstump)
+# Chance for 
+# 1. Item
+# 2. Gold
+# 3. Book
+# 4. Experience
+#--------------------------
+[darkwoodlog]
+type = "select_random"
+list = [
+    {instant = "darkwoodlog_1", weight = 0.25},
+    {instant = "darkwoodlog_2", weight = 0.25},
+    {instant = "darkwoodlog_3", weight = 0.25},
+    {instant = "darkwoodlog_4", weight = 0.25}
+]
+#--------------------------
+# 1. Item
+[darkwoodlog_1]
+type = "item_drop"
+sfx = "Inst_Cactus"
+chance = 1
+count_weights = { 1 = 1 }
+class_weights = { Tr_Any = 100, Tr_AnyAttack = 100, Tr_AnyDash = 100, Tr_AnyStrike = 100, Tr_AnyCast = 100, Tr_AnyPower = 100, Tr_AnySummon = 100, Tr_AnyStatus = 100}
+rarity_weights = [
+    { min = 0, rar = { brok = 0, comm = 100, rare = 0, epic = 0, myth = 0 }},
+    { min = 3, rar = { brok = 0, comm = 97, rare = 3, epic = 0, myth = 0 }},
+    { min = 6, rar = { brok = 0, comm = 94, rare = 6, epic = 0, myth = 0 }},
+    { min = 9, rar = { brok = 0, comm = 90, rare = 9, epic = 1, myth = 0 }},
+    { min = 12, rar = { brok = 0, comm = 87, rare = 12, epic = 1, myth = 0 }},
+    { min = 15, rar = { brok = 0, comm = 82, rare = 15, epic = 2, myth = 1 }},
+    { min = 18, rar = { brok = 0, comm = 79, rare = 18, epic = 2, myth = 1 }}
+]
+use_msg = "msg_darkwoodlog_1"
+#--------------------------
+# 2. Gold                                                                             🔻
+[darkwoodlog_2] 
+type = "gain_gold"
+sfx = "Inst_GoldDrop"
+amount = 200
+use_msg = "msg_darkwoodlog_2"
+#in_position = player ????????????????
+#--------------------------
+# 3. Book Drop
+[darkwoodlog_3]
+type = "unique_drop"
+chance = 1
+uniques_gen.count_weights = { 1 = 1 }
+uniques_gen.uniques = [
+     "VampireDiary1",
+     "VampireDiary2",
+     "VampireDiary3",
+     "VampireDiary4",
+     "VampireDiary5",
+     "FoodContract",
+     "ShrinesOfMusic",
+     "NecromancerDiary1",
+     "NecromancerDiary2",
+     "NecromancerDiary3",
+     "NecromancerDiary4",
+     "NecromancerDiary5",
+     "NecromancerDiary6",
+     "NecromancerDiary7",
+     "LustyOrc1",
+     "LustyOrc2",
+     "LustyOrc3"
+]
+use_msg = "msg_darkwoodlog_3"
+#--------------------------
+# 4. Experience
+[darkwoodlog_4] 
+type = "gain_xp"
+amount = 120
+vfx = "Entities/VFX/Experience_Instant/Experience_Instant_Fab"
+use_msg = "msg_darkwoodlog_4"
+#--------------------------
+#----------------------------------------------------------------------------- 
+
+
+
+#----------------------------------------------------------------------------- ⚡
+# FLORA BLOODTHISTLE
+# Lose non-lethal life, gain minor att dmg
+#--------------------------
+[flora_bloodthistle]
+type = "composite"
+list = ["flora_bloodthistle_1", "flora_bloodthistle_2"]
+sfx = "Inst_LeavesRustle"
+use_msg = "msg_flora_bloodthistle"
+#--------------------------
+# Lose Non-Lethal Life
+[flora_bloodthistle_1]
+type = "lose_life"
+flat = 4
+percent = 0.1
+can_kill = false
+#--------------------------
+# Gain Minor Attack Dmg
+[flora_bloodthistle_2]
+type = "gain_gift"
+code = "flora_bloodthistle_2"
+#----------------------------------------------------------------------------- 
+
+
+
+#----------------------------------------------------------------------------- 🔻⚡
+# FLORA FAERIEBLOSSOM
+# Gives 1 Reroll 
+[flora_faerieblossom]
+type = "gain_gift"
+code = "flora_faerieblossom"
+duration = 30
+sfx = "Inst_LeavesRustle"
+use_msg = "msg_flora_faerieblossom"
+#----------------------------------------------------------------------------- 
+
+
+
+#----------------------------------------------------------------------------- 🔻⚡
+# FLORA HONEYSACK
+# Gives small Rare item drops % increase
+[flora_honeysack]
+type = "gain_gift"
+code = "flora_honeysack"
+duration = 30
+sfx = "Inst_LeavesRustle"
+use_msg = "msg_flora_honeysack"
+#----------------------------------------------------------------------------- 
+
+
+
+#----------------------------------------------------------------------------- 🔻⚡
+# FLORA KNIGHTSWILDBLOOM
+# Gives dmg vs undead  dmg_vs
+[flora_knightswildbloom]
+type = "gain_gift"
+code = "flora_knightswildbloom"
+duration = 30
+sfx = "Inst_LeavesRustle"
+use_msg = "msg_flora_knightswildbloom"
+#----------------------------------------------------------------------------- 
+
+
+
+#----------------------------------------------------------------------------- 🔻⚡
+# FLORA MORNINCUP
+# Gives Less Negative Status dur
+[flora_mornincup]
+type = "gain_gift"
+code = "flora_mornincup"
+duration = 30
+sfx = "Inst_LeavesRustle"
+use_msg = "msg_flora_mornincup"
+#----------------------------------------------------------------------------- 
+
+
+
+#----------------------------------------------------------------------------- 🔻⚡
+# FLORA PEACEFLUFF
+# Gives minor hp regen
+[flora_peacefluff]
+type = "gain_gift"
+code = "flora_peacefluff"
+sfx = "Inst_LeavesRustle"
+use_msg = "msg_flora_peacefluff"
+#----------------------------------------------------------------------------- 
+
+
+
+#----------------------------------------------------------------------------- 🔻⚡
+# FLORA SPARKLEWEED
+# Gives Chain Lightning on lvl up
+[flora_sparkleweed]
+type = "gain_gift"
+code = "flora_sparkleweed"
+duration = 30
+sfx = "Inst_LeavesRustle"
+use_msg = "msg_flora_sparkleweed"
+#----------------------------------------------------------------------------- 
+
+
+
+#----------------------------------------------------------------------------- 🔻⚡
+# FLORA SUNPETAL
+# Gives Heal on lvl Up
+[flora_sunpetal]
+type = "gain_gift"
+code = "flora_sunpetal"
+duration = 30
+sfx = "Inst_LeavesRustle"
+use_msg = "msg_flora_sunpetal"
+#----------------------------------------------------------------------------- 
+
+
+
+#----------------------------------------------------------------------------- ⚡
+# Attack Damage %
+[insigniaincrustation_01]
+type = "gain_gift"
+code = "insigniaincrustation_01"
+sfx = "Inst_SnuffFire"
+use_msg = "msg_insigniaincrustation_01"
+#----------------------------------------------------------------------------- 
+
+
+
+#----------------------------------------------------------------------------- ⚡
+# Dash Damage %
+[insigniaincrustation_02]
+type = "gain_gift"
+code = "insigniaincrustation_02"
+sfx = "Inst_SnuffFire"
+use_msg = "msg_insigniaincrustation_02"
+#----------------------------------------------------------------------------- 
+
+
+
+#----------------------------------------------------------------------------- ⚡
+# Strike Damage %
+[insigniaincrustation_03]
+type = "gain_gift"
+code = "insigniaincrustation_03"
+sfx = "Inst_SnuffFire"
+use_msg = "msg_insigniaincrustation_03"
+#----------------------------------------------------------------------------- 
+
+
+
+#----------------------------------------------------------------------------- ⚡
+# Cast Damage %
+[insigniaincrustation_04]
+type = "gain_gift"
+code = "insigniaincrustation_04"
+sfx = "Inst_SnuffFire"
+use_msg = "msg_insigniaincrustation_04"
+#----------------------------------------------------------------------------- 
+
+
+
+#----------------------------------------------------------------------------- ⚡
+# Power Damage %
+[insigniaincrustation_05]
+type = "gain_gift"
+code = "insigniaincrustation_05"
+sfx = "Inst_SnuffFire"
+use_msg = "msg_insigniaincrustation_05"
+#----------------------------------------------------------------------------- 
+
+
+
+#----------------------------------------------------------------------------- ⚡
+# Summon Damage %
+[insigniaincrustation_06]
+type = "gain_gift"
+code = "insigniaincrustation_06"
+sfx = "Inst_SnuffFire"
+use_msg = "msg_insigniaincrustation_06"
+#----------------------------------------------------------------------------- 
+
+
+
+#----------------------------------------------------------------------------- 🔻⚡
+# Gain big area pull increase for 40 sec and a bit of exp
+[lamp_spiritual]
+type = "composite"
+use_msg = "msg_lamp_spiritual"
+list = ["lamp_spiritual_1", "lamp_spiritual_2"]
+[lamp_spiritual_1]
+type = "gain_gift"
+code = "lamp_spiritual_1"
+duration = 40
+sfx = "Inst_SnuffFire"
+[lamp_spiritual_2]
+type = "gain_xp"
+amount = 120
+vfx = "Entities/VFX/Experience_Instant/Experience_Instant_Fab"
+#----------------------------------------------------------------------------- 
+
+
+
+#----------------------------------------------------------------------------- ⚡
+# Luck Chance increase
+[magicalpumpkins]
+type = "gain_gift"
+code = "magicalpumpkins"
+duration = 40
+sfx = "Inst_LeavesRustle"
+use_msg = "msg_magicalpumpkins"
+#----------------------------------------------------------------------------- 
+
+
+
+#----------------------------------------------------------------------------- ⚡
+# MOSSY GRAVE
+# Equal chances for:
+# 1. Item
+# 2. Curse (list:____)
+# 3. Blessing (list:____)
+# 4. Gold
+# 5. Reroll / Banish / Alteration
+#-----------------------------------------------------------------------------
+[mossygrave]
+type = "select_random"
+list = [
+    {instant = "mossygrave_1", weight = 1},
+    {instant = "mossygrave_2", weight = 1},
+    {instant = "mossygrave_3", weight = 1},
+    {instant = "mossygrave_4", weight = 1},
+    {instant = "mossygrave_5", weight = 1}
+] 
+# Item
+#--------------------------
+[mossygrave_1]
+type = "item_drop"
+sfx = "Inst_Shovel"
+chance = 1
+count_weights = { 1 = 1 }
+class_weights = { Tr_Any = 100, Tr_AnyAttack = 100, Tr_AnyDash = 100, Tr_AnyStrike = 100, Tr_AnyCast = 100, Tr_AnyPower = 100, Tr_AnySummon = 100, Tr_AnyStatus = 100}
+rarity_weights = [
+    { min = 0, rar = { brok = 0, comm = 100, rare = 0, epic = 0, myth = 0 }},
+    { min = 3, rar = { brok = 0, comm = 97, rare = 3, epic = 0, myth = 0 }},
+    { min = 6, rar = { brok = 0, comm = 94, rare = 6, epic = 0, myth = 0 }},
+    { min = 9, rar = { brok = 0, comm = 90, rare = 9, epic = 1, myth = 0 }},
+    { min = 12, rar = { brok = 0, comm = 87, rare = 12, epic = 1, myth = 0 }},
+    { min = 15, rar = { brok = 0, comm = 82, rare = 15, epic = 2, myth = 1 }},
+    { min = 18, rar = { brok = 0, comm = 79, rare = 18, epic = 2, myth = 1 }}
+]
+use_msg = "msg_mossygrave_1"
+#-----------------------------------------------------------------------------
+# Curses (list: Lose Armor, Lose Luck) 
+[mossygrave_2]
+type = "select_random"
+list = [
+    {instant = "mossygrave_2_1", weight = 0.25},
+    {instant = "mossygrave_2_2", weight = 0.25}
+]
+#--------------------------
+#-Lose Armor
+[mossygrave_2_1]
+type = "gain_gift"
+code = "mossygrave_2_1"
+sfx = "Inst_Shovel"
+use_msg = "msg_mossygrave_2_1"
+#--------------------------
+#-Lose Luck
+[mossygrave_2_2]
+type = "gain_gift"
+code = "mossygrave_2_2"
+sfx = "Inst_Shovel"
+use_msg = "msg_mossygrave_2_2"
+#--------------------------
+#----------------------------------------------------------------------------- 
+# Blessings (list: Gain Armor, Gain Luck) 
+#--------------------------
+[mossygrave_3]
+type = "select_random"
+list = [
+    {instant = "mossygrave_3_1", weight = 0.25},
+    {instant = "mossygrave_3_2", weight = 0.25}
+]
+#--------------------------
+#-Gain Armor
+[mossygrave_3_1]
+type = "gain_gift"
+code = "mossygrave_3_1"
+sfx = "Inst_Shovel"
+use_msg = "msg_mossygrave_3_1"
+#--------------------------
+#-Gain Luck
+[mossygrave_3_2]
+type = "gain_gift"
+code = "mossygrave_3_2"
+sfx = "Inst_Shovel"
+use_msg = "msg_mossygrave_3_2"
+#--------------------------
+#-----------------------------------------------------------------------------
+# 4 - Gold                                              SHOULD BE DROP GOLD!!!!!                  🔻
+[mossygrave_4] 
+type = "gain_gold"
+sfx = "Inst_Shovel"
+amount = 300
+use_msg = "msg_mossygrave_4"
+#in_position = player ????????????????
+#-----------------------------------------------------------------------------
+# 5 - Banish, Reroll or Skip
+[mossygrave_5]
+type = "select_random"
+list = [
+    {instant = "mossygrave_5_1", weight = 1},
+    {instant = "mossygrave_5_2", weight = 1},
+    {instant = "mossygrave_5_3", weight = 1}
+]
+#--------------------------
+# Banish
+[mossygrave_5_1]
+type = "gain_gift"
+code = "mossygrave_5_1"
+sfx = "Inst_Shovel"
+use_msg = "msg_mossygrave_5_1"
+#--------------------------
+# Reroll
+[mossygrave_5_2]
+type = "gain_gift"
+code = "mossygrave_5_2"
+sfx = "Inst_Shovel"
+use_msg = "msg_mossygrave_5_2"
+# Skip
+[mossygrave_5_3]
+type = "gain_gift"
+code = "mossygrave_5_3"
+sfx = "Inst_Shovel"
+use_msg = "msg_mossygrave_5_3"
+#--------------------------
+#-----------------------------------------------------------------------------
+
+#----------------------------------------------------------------------------- 
+
+
+
+#----------------------------------------------------------------------------- 🔻⚡
+# Gain flat EXP Gain for every Nth, stacking and growing
+[mouseenclave_watchpost]
+type = "gain_gift"
+code = "mouseenclave_watchpost"
+duration = 30
+use_msg = "msg_mouseenclave_watchpost"
+#----------------------------------------------------------------------------- 
+
+
+
+#----------------------------------------------------------------------------- ⚡
+# MYSTERIOUS CAULDRON
+# 1. [Drink] - Chance for:
+#   1. Blessing - Pull Area Increase, or
+#   2. Heal, or
+#   3. Lose Life, or
+#   4. Curse - Pull Area Decrease
+#   5. Blessing - Power / Cast area increase
+#   6. Experience
+# 2. [Kick it over] - Attack Dmg increase
+# 3. [Leave it be] - + XP
+#-----------------------------------------------------------------------------
+# Drink - Random Choice from:
+#   1. Blessing - Pull Area Increase, or
+#   2. Heal, or
+#   3. Lose Life, or
+#   4. Curse - Pull Area Decrease
+#   5. Blessing - Power / Cast area increase
+#   6. Experience                                             
+[mysteriouscauldron_ch_1]
+type = "select_random"
+list = [
+    {instant = "mysteriouscauldron_ch_1_1", weight = 1},
+    {instant = "mysteriouscauldron_ch_1_2", weight = 1},
+    {instant = "mysteriouscauldron_ch_1_3", weight = 1},
+    {instant = "mysteriouscauldron_ch_1_4", weight = 1},
+    {instant = "mysteriouscauldron_ch_1_5", weight = 1},
+    {instant = "mysteriouscauldron_ch_1_6", weight = 1},
+]
+#--------------------------
+# Pull Area Increase
+[mysteriouscauldron_ch_1_1]
+type = "gain_gift"
+code = "mysteriouscauldron_ch_1_1"
+sfx = "Inst_EvilWhispers"
+use_msg = "msg_mysteriouscauldron_ch_1_1"
+#--------------------------
+# Heal
+[mysteriouscauldron_ch_1_2]
+type = "heal"
+flat = 5
+percent = 0.35
+is_well = true
+sfx = "Inst_EvilWhispers"
+use_msg = "msg_mysteriouscauldron_ch_1_2"
+#--------------------------
+[mysteriouscauldron_ch_1_3]
+# Lose Life
+type = "lose_life"
+flat = 5
+percent = 0.15
+can_kill = false
+use_msg = "msg_mysteriouscauldron_ch_1_3"
+#--------------------------
+# Curse - Lose Pull Area
+[mysteriouscauldron_ch_1_4]
+type = "gain_gift"
+code = "mysteriouscauldron_ch_1_4"
+sfx = "Inst_EvilWhispers"
+use_msg = "msg_mysteriouscauldron_ch_1_4"
+#--------------------------
+# Blessing - Cast and Power buff
+[mysteriouscauldron_ch_1_5]
+type = "gain_gift"
+code = "mysteriouscauldron_ch_1_5"
+sfx = "Inst_EvilWhispers"
+use_msg = "msg_mysteriouscauldron_ch_1_5"
+#--------------------------
+# Experience
+[mysteriouscauldron_ch_1_6]                                                          
+type = "gain_xp"
+amount = 200
+vfx = "Entities/VFX/Experience_Instant/Experience_Instant_Fab"                                                                  
+use_msg = "msg_mysteriouscauldron_ch_1_6"
+#--------------------------    
+#----------------------------------------------------------------------------- 
+# Attack Damage %
+[mysteriouscauldron_ch_2]
+type = "gain_gift"
+code = "mysteriouscauldron_ch_2"
+sfx = "Inst_EvilWhispers"
+#----------------------------------------------------------------------------- 
+# Exp %
+[mysteriouscauldron_ch_3]
+type = "gain_xp"
+amount = 200
+vfx = "Entities/VFX/Experience_Instant/Experience_Instant_Fab"                                                                  
+#-----------------------------------------------------------------------------
+
+
+
+
+#----------------------------------------------------------------------------- ⚡
+# MYSTERIOUSLYABANDONEDLAB                                    
+[mysteriouslyabandonedlab_ch_4]
+type = "select_random"
+list = [
+    {instant = "mysteriouslyabandonedlab_ch_4_1", weight = 1},
+    {instant = "mysteriouslyabandonedlab_ch_4_2", weight = 1},
+]
+#--------------------------
+[mysteriouslyabandonedlab_ch_4_1]
+type = "gain_gift"
+code = "mysteriouslyabandonedlab_ch_4_1"
+#--------------------------
+[mysteriouslyabandonedlab_ch_4_2]
+type = "gain_gift"
+code = "mysteriouslyabandonedlab_ch_4_2"
+duration = 80
+#--------------------------
+
+
+
+
+#----------------------------------------------------------------------------- 🔻⚡
+# OVERGROWNSTUMP (like darkwoodlog)
+# Chance for 
+# 1. Item
+# 2. Gold
+# 3. Book
+# 4. Experience
+#--------------------------
+[overgrownstump]
+type = "select_random"
+list = [
+    {instant = "overgrownstump_1", weight = 0.25},
+    {instant = "overgrownstump_2", weight = 0.25},
+    {instant = "overgrownstump_3", weight = 0.25},
+    {instant = "overgrownstump_4", weight = 0.25}
+]
+#--------------------------
+# 1. Item
+[overgrownstump_1]
+type = "item_drop"
+sfx = "Inst_Cactus"
+chance = 1
+count_weights = { 1 = 1 }
+class_weights = { Tr_Any = 100, Tr_AnyAttack = 100, Tr_AnyDash = 100, Tr_AnyStrike = 100, Tr_AnyCast = 100, Tr_AnyPower = 100, Tr_AnySummon = 100, Tr_AnyStatus = 100}
+rarity_weights = [
+    { min = 0, rar = { brok = 0, comm = 100, rare = 0, epic = 0, myth = 0 }},
+    { min = 3, rar = { brok = 0, comm = 97, rare = 3, epic = 0, myth = 0 }},
+    { min = 6, rar = { brok = 0, comm = 94, rare = 6, epic = 0, myth = 0 }},
+    { min = 9, rar = { brok = 0, comm = 90, rare = 9, epic = 1, myth = 0 }},
+    { min = 12, rar = { brok = 0, comm = 87, rare = 12, epic = 1, myth = 0 }},
+    { min = 15, rar = { brok = 0, comm = 82, rare = 15, epic = 2, myth = 1 }},
+    { min = 18, rar = { brok = 0, comm = 79, rare = 18, epic = 2, myth = 1 }}
+]
+use_msg = "msg_overgrownstump_1"
+#--------------------------
+# 2. Gold                       SHOULD BE DROP GOLD                                    🔻
+[overgrownstump_2] 
+type = "gain_gold"
+sfx = "Inst_Cactus"
+amount = 160
+use_msg = "msg_overgrownstump_2"
+#in_position = player ????????????????
+#--------------------------
+# 3. Book Drop
+[overgrownstump_3]
+type = "unique_drop"
+chance = 1
+uniques_gen.count_weights = { 1 = 1 }
+uniques_gen.uniques = [
+     "VampireDiary1",
+     "VampireDiary2",
+     "VampireDiary3",
+     "VampireDiary4",
+     "VampireDiary5",
+     "FoodContract",
+     "ShrinesOfMusic",
+     "NecromancerDiary1",
+     "NecromancerDiary2",
+     "NecromancerDiary3",
+     "NecromancerDiary4",
+     "NecromancerDiary5",
+     "NecromancerDiary6",
+     "NecromancerDiary7",
+     "LustyOrc1",
+     "LustyOrc2",
+     "LustyOrc3"
+]
+use_msg = "msg_overgrownstump_3"
+#--------------------------
+# 4. Experience
+[overgrownstump_4] 
+type = "gain_xp"
+amount = 100
+vfx = "Entities/VFX/Experience_Instant/Experience_Instant_Fab"
+use_msg = "msg_overgrownstump_4"
+#--------------------------
+#----------------------------------------------------------------------------- 
+
+
+
+#----------------------------------------------------------------------------- ⚡
+# Shady Well
+# Chance for:
+# 1. Curse (list: Lose Area, Lose Evasion, Lose Max HP, Lose Luck) 
+# 2. Blessing (list: Gain Area, Gain Evasion, Gain Max HP, Gain Luck) 
+# 3. Heal Flat + %
+[shadywell]
+type = "select_random"
+list = [
+    {instant = "shadywell_1", weight = 1},
+    {instant = "shadywell_2", weight = 2},
+    {instant = "shadywell_3", weight = 2}
+]
+#----------------------------------------------------------------------------- 
+# Curses (list: Lose Area, Lose Evasion, Lose Max HP, Lose Luck) 
+[shadywell_1]
+type = "select_random"
+list = [
+    {instant = "shadywell_1_1", weight = 0.25},
+    {instant = "shadywell_1_2", weight = 0.25},
+    {instant = "shadywell_1_3", weight = 0.25},
+    {instant = "shadywell_1_4", weight = 0.25}
+]
+#--------------------------
+#-Lose Area
+[shadywell_1_1]
+type = "gain_gift"
+code = "shadywell_1_1"
+sfx = "Inst_Well"
+use_msg = "msg_shadywell_1_1"
+#--------------------------
+#-Lose Evasion
+[shadywell_1_2]
+type = "gain_gift"
+code = "shadywell_1_2"
+sfx = "Inst_Well"
+use_msg = "msg_shadywell_1_2"
+#--------------------------
+#-Lose Max HP
+[shadywell_1_3]
+type = "gain_gift"
+code = "shadywell_1_3"
+sfx = "Inst_Well"
+use_msg = "msg_shadywell_1_3"
+#--------------------------
+#-Lose Luck
+[shadywell_1_4]
+type = "gain_gift"
+code = "shadywell_1_4"
+sfx = "Inst_Well"
+use_msg = "msg_shadywell_1_4"
+#--------------------------
+#----------------------------------------------------------------------------- 
+# Blessings (list: Gain Area, Gain Evasion, Gain Max HP, Gain Luck) 
+[shadywell_2]
+type = "select_random"
+list = [
+    {instant = "shadywell_2_1", weight = 0.25},
+    {instant = "shadywell_2_2", weight = 0.25},
+    {instant = "shadywell_2_3", weight = 0.25},
+    {instant = "shadywell_2_4", weight = 0.25}
+]
+#--------------------------
+#-Gain Area
+[shadywell_2_1]
+type = "gain_gift"
+code = "shadywell_2_1"
+sfx = "Inst_Well"
+use_msg = "msg_shadywell_2_1"
+#--------------------------
+#-Gain Evasion
+[shadywell_2_2]
+type = "gain_gift"
+code = "shadywell_2_2"
+sfx = "Inst_Well"
+use_msg = "msg_shadywell_2_2"
+#--------------------------
+#-Gain Max HP
+[shadywell_2_3]
+type = "gain_gift"
+code = "shadywell_2_3"
+sfx = "Inst_Well"
+use_msg = "msg_shadywell_2_3"
+#--------------------------
+#-Gain Luck
+[shadywell_2_4]
+type = "gain_gift"
+code = "shadywell_2_4"
+sfx = "Inst_Well"
+use_msg = "msg_shadywell_2_4"
+#--------------------------
+#----------------------------------------------------------------------------- 
+# Heal Flat + %
+[shadywell_3]
+type = "heal"
+flat = 10
+percent = 0.25
+is_well = true
+sfx = "Inst_Well"
+use_msg = "msg_shadywell_3"
+#----------------------------------------------------------------------------- 
+#----------------------------------------------------------------------------- 
+
+
+
+
+#----------------------------------------------------------------------------- 🔻⚡
+# MUSHROOM KINGSPORE
+# gives attack dmg for every mushroom you have picked up - dmg_perstack (can only show up if you have more than 5 stacks)
+[mushroom_kingspore]
+type = "gain_gift"
+code = "mushroom_kingspore"
+sfx = "Inst_Munch"
+use_msg = "msg_mushroom_kingspore"
+#----------------------------------------------------------------------------- 
+
+
+
+#----------------------------------------------------------------------------- 🔻⚡
+# FLORA BLACKLEAF
+# gives attack speed for every flower you have picked up - dmg_perstack?? (can only show up if you have more than 5 stacks)
+[flora_blackleaf]
+type = "gain_gift"
+code = "flora_blackleaf"
+sfx = "Inst_LeavesRustle"
+use_msg = "msg_flora_blackleaf"
+#----------------------------------------------------------------------------- 
+
+
+
+
+
+#-----------------------------------------------------------------------------
+# ALTAR ELDERGODS
+#-----------------------------------------------------------------------------
+# [Black Thorn] - Lose X life, Cannot Gain Life for 180 seconds - Gain Whenever you lose X life - Gain +% Attack Dmg for X sec
+[altar_eldergods_ch_1]
+type = "composite"
+list = ["altar_eldergods_ch_1_1", "altar_eldergods_ch_1_2", "altar_eldergods_ch_1_3"]
+#--------------------------
+# Lose Life
+[altar_eldergods_ch_1_1]
+type = "lose_life"
+flat = 0
+percent = 0.33
+can_kill = false
+#--------------------------
+# Cannot Gain Life for 180 sec
+[altar_eldergods_ch_1_2]
+type = "gain_gift"
+code = "altar_eldergods_ch_1_2"
+duration = 180
+#--------------------------
+# Gain Blessing
+[altar_eldergods_ch_1_3]
+type = "gain_gift"
+code = "altar_eldergods_ch_1_3"
+#--------------------------
+#----------------------------------------------------------------------------
+# [Ravenous Maw] - Lose X life, Cannot Gain Life for 180 seconds - Gain Whenever you lose X life - Gain +% Strike Dmg for X sec
+[altar_eldergods_ch_2]
+type = "composite"
+list = ["altar_eldergods_ch_2_1", "altar_eldergods_ch_2_2", "altar_eldergods_ch_2_3"]
+#--------------------------
+# Lose Life
+[altar_eldergods_ch_2_1]
+type = "lose_life"
+percent = 0.33
+can_kill = false
+#--------------------------
+# Cannot Gain Life for 180 sec
+[altar_eldergods_ch_2_2]
+type = "gain_gift"
+code = "altar_eldergods_ch_2_2"
+duration = 180
+#--------------------------
+# Gain Blessing
+[altar_eldergods_ch_2_3]
+type = "gain_gift"
+code = "altar_eldergods_ch_2_3"
+#--------------------------
+#-----------------------------------------------------------------------------
+# [Ashen Harvest] - Lose X life, Cannot Gain Life for 180 seconds - Gain Whenever you lose X life - Gain +% Cast Dmg for X sec
+[altar_eldergods_ch_3]
+type = "composite"
+list = ["altar_eldergods_ch_3_1", "altar_eldergods_ch_3_2", "altar_eldergods_ch_3_3"]
+#--------------------------
+# Lose Life
+[altar_eldergods_ch_3_1]
+type = "lose_life"
+percent = 0.33
+can_kill = false
+#--------------------------
+# Cannot Gain Life for 180 sec
+[altar_eldergods_ch_3_2]
+type = "gain_gift"
+code = "altar_eldergods_ch_3_2"
+duration = 180
+#--------------------------
+# Gain Blessing
+[altar_eldergods_ch_3_3]
+type = "gain_gift"
+code = "altar_eldergods_ch_3_3"
+#--------------------------
+#-----------------------------------------------------------------------------
+# [Gloom Shaper] - Lose X life, Cannot Gain Life for 180 seconds - Gain Whenever you lose X life - Gain +% Power Dmg for X sec
+[altar_eldergods_ch_4]
+type = "composite"
+list = ["altar_eldergods_ch_4_1", "altar_eldergods_ch_4_2", "altar_eldergods_ch_4_3"]
+#--------------------------
+# Lose Life
+[altar_eldergods_ch_4_1]
+type = "lose_life"
+percent = 0.33
+can_kill = false
+#--------------------------
+# Cannot Gain Life for 180 sec
+[altar_eldergods_ch_4_2]
+type = "gain_gift"
+code = "altar_eldergods_ch_4_2"
+duration = 180
+#--------------------------
+# Gain Blessing
+[altar_eldergods_ch_4_3]
+type = "gain_gift"
+code = "altar_eldergods_ch_4_3"
+#--------------------------
+#-----------------------------------------------------------------------------
+# [Hollow King] - Lose X life, Cannot Gain Life for 180 seconds - Gain Whenever you lose X life - Gain +% Summon Dmg for X sec
+[altar_eldergods_ch_5]
+type = "composite"
+list = ["altar_eldergods_ch_5_1", "altar_eldergods_ch_5_2", "altar_eldergods_ch_5_3"]
+#--------------------------
+# Lose Life
+[altar_eldergods_ch_5_1]
+type = "lose_life"
+percent = 0.33
+can_kill = false
+#--------------------------
+# Cannot Gain Life for 180 sec
+[altar_eldergods_ch_5_2]
+type = "gain_gift"
+code = "altar_eldergods_ch_5_2"
+duration = 180
+#--------------------------
+# Gain Blessing
+[altar_eldergods_ch_5_3]
+type = "gain_gift"
+code = "altar_eldergods_ch_5_3"
+#--------------------------
+#-----------------------------------------------------------------------------
+# [Reject the Sacrifice] – Gain 500 xp
+[altar_eldergods_ch_6]
+type = "gain_xp"
+amount = 2000
+vfx = "Entities/VFX/Experience_Instant/Experience_Instant_Fab"
+#-----------------------------------------------------------------------------
+
+
+
+
+#-----------------------------------------------------------------------------
+# GHASTLYDARKTREE
+# Requires a sacrifice induces visions of
+# [The Beyond] - Lose X life, dash recharge time cd and range
+# [The Arcane] - Lose X life, cast and pow crit
+# [The Chaos] - Lose X life, strike and att crit
+# [Refuse] -  EXP
+#-----------------------------------------------------------------------------
+# [The Beyond] - Lose X life, Gain Dash Recharge Time CD and Range
+[ghastlydarktree_ch_1]
+type = "composite"
+list = ["ghastlydarktree_ch_1_1", "ghastlydarktree_ch_1_2"]
+#--------------------------
+# Lose Life
+[ghastlydarktree_ch_1_1]
+type = "lose_life"
+flat = 0
+percent = 0.3
+can_kill = false
+#--------------------------
+# Gain Dash Recharge Time CD and Range
+[ghastlydarktree_ch_1_2]
+type = "gain_gift"
+code = "ghastlydarktree_ch_1_2"
+#--------------------------
+#-----------------------------------------------------------------------------
+# [The Arcane] - Lose X life, Cast and Pow Crit
+[ghastlydarktree_ch_2]
+type = "composite"
+list = ["ghastlydarktree_ch_2_1", "ghastlydarktree_ch_2_2"]
+#--------------------------
+# Lose Life
+[ghastlydarktree_ch_2_1]
+type = "lose_life"
+flat = 0
+percent = 0.3
+can_kill = false
+#--------------------------
+# Gain Cast and Pow Crit
+[ghastlydarktree_ch_2_2]
+type = "gain_gift"
+code = "ghastlydarktree_ch_2_2"
+#--------------------------
+#-----------------------------------------------------------------------------
+# [The Chaos] - Lose X life, Strike and Attack Crit
+[ghastlydarktree_ch_3]
+type = "composite"
+list = ["ghastlydarktree_ch_3_1", "ghastlydarktree_ch_3_2"]
+#--------------------------
+# Lose Life
+[ghastlydarktree_ch_3_1]
+type = "lose_life"
+flat = 0
+percent = 0.3
+can_kill = false
+#--------------------------
+# Strike and Attack Crit
+[ghastlydarktree_ch_3_2]
+type = "gain_gift"
+code = "ghastlydarktree_ch_3_2"
+#--------------------------
+#-----------------------------------------------------------------------------
+# [Reject the Sacrifice] – Gain 500 xp
+[ghastlydarktree_ch_4]
+type = "gain_xp"
+amount = 400
+vfx = "Entities/VFX/Experience_Instant/Experience_Instant_Fab"
+#-----------------------------------------------------------------------------
+
+
+
+
+#-----------------------------------------------------------------------------
+# GLOOMYSACREDFOUNTAIN
+# A a gloomy magical fountain has been enchanted by a treacherous being
+# [Drink the Cursed Waters] - lose X lethal life, gain revival. If you can’t survive the Life Loss you won’t revive.
+# [Attempt to Disenchant It Before Drinking] – Chance (based on X) of gaining X Life Regen Blessing from Purified Waters. On Failiure will Drink from Cursed Waters!
+# [Dip your Weapon in the Cursed Waters] – Whenever you hit an enemy deal X extra damage. Then the enemy gains X non stacking life regen.
+# [Destroy the Fountain] – Gain XP
+#-----------------------------------------------------------------------------
+#-----------------------------------------------------------------------------
+# [Drink the Cursed Waters] - Lose X life, Gain 1 Revival
+[gloomysacredfountain_ch_1]
+type = "composite"
+list = ["gloomysacredfountain_ch_1_1", "gloomysacredfountain_ch_1_2"]
+#--------------------------
+# Lose X Life
+[gloomysacredfountain_ch_1_1]
+type = "lose_life"
+flat = 100
+can_kill = true
+#--------------------------
+# Gain 1 Revival
+[gloomysacredfountain_ch_1_2]
+type = "gain_gift"
+code = "gloomysacredfountain_ch_1_2"
+#--------------------------
+#-----------------------------------------------------------------------------
+# [Drink the Cursed Waters] - lose X lethal life, gain revival. If you can’t survive the Life Loss you won’t revive.
+[gloomysacredfountain_ch_2]
+type = "basic"
+#-----------------------------------------------------------------------------
+# [Pray a Blessing onto the Fountain] - heal yourself and gain minor hp regen
+[gloomysacredfountain_ch_5]
+type = "composite"
+list = ["gloomysacredfountain_ch_5_1", "gloomysacredfountain_ch_5_2"]
+[gloomysacredfountain_ch_5_1]
+type = "heal"
+flat = 30
+[gloomysacredfountain_ch_5_2]
+type = "gain_gift"
+code = "gloomysacredfountain_ch_5_2"
+#--------------------------
+# [Destroy the Fountain] – Gain XP
+[gloomysacredfountain_ch_4]
+type = "gain_xp"
+amount = 600
+vfx = "Entities/VFX/Experience_Instant/Experience_Instant_Fab"
+#-----------------------------------------------------------------------------
+
+
+#-----------------------------------------------------------------------------
+# OVERGROWNDARKGATE
+# [I Am a Friend] - Tell them you are their friend and wouldn’t have destroyed their home. There’s no need for repayment, however, they insist on giving you an elixir they found that will give you Life Regenaration and Increased Exp Gain for 1 minute.
+[overgrowndarkgate_ch_4]
+type = "gain_gift"
+code = "overgrowndarkgate_ch_4"
+duration = 60
+#-----------------------------------------------------------------------------
+
+
+
+# MOUSEENCLAVE_ENCAMPMENT
+# 1 [Supplies Share] - Random item, Small heal and a bit of gold
+[mouseenclave_encampment_ch_1]
+type = "item_drop"
+count_weights = { 1 = 1 }
+class_weights = { Tr_Any = 100, Tr_AnyAttack = 100, Tr_AnyDash = 100, Tr_AnyStrike = 100, Tr_AnyCast = 100, Tr_AnyPower = 100, Tr_AnySummon = 100, Tr_AnyStatus = 100}
+rarity_weights = [
+    { min = 0, rar = { brok = 0, comm = 0, rare = 0, epic = 1, myth = 5 }},
+    { min = 3, rar = { brok = 0, comm = 0, rare = 0, epic = 1, myth = 5 }},
+    { min = 6, rar = { brok = 0, comm = 0, rare = 0, epic = 1, myth = 5 }},
+    { min = 9, rar = { brok = 0, comm = 0, rare = 0, epic = 1, myth = 5 }},
+    { min = 12, rar = { brok = 0, comm = 0, rare = 0, epic = 1, myth = 5 }},
+    { min = 15, rar = { brok = 0, comm = 0, rare = 0, epic = 1, myth = 5 }},
+    { min = 18, rar = { brok = 0, comm = 0, rare = 0, epic = 1, myth = 5 }},
+]
+#-----------------------------------------------------------------------------
+# MOUSEENCLAVE SHELTER
+# A mouse has made an encampment here
+# 4 [Tips and Tricks] - XP
+#--------------------------
+[mouseenclave_shelter_ch_1]
+type = "composite"
+list = ["mouseenclave_shelter_ch_1_1", "mouseenclave_shelter_ch_1_2", "mouseenclave_shelter_ch_1_3"]
+#--------------------------
+# 1 [Supplies Share] - Random item, Small heal and a bit of gold
+[mouseenclave_shelter_ch_1_1]
+type = "item_drop"
+count_weights = { 1 = 1 }
+class_weights = { Tr_Any = 100, Tr_AnyAttack = 100, Tr_AnyDash = 100, Tr_AnyStrike = 100, Tr_AnyCast = 100, Tr_AnyPower = 100, Tr_AnySummon = 100, Tr_AnyStatus = 100}
+rarity_weights = [
+    { min = 0, rar = { brok = 95, comm = 5, rare = 0, epic = 0, myth = 0 }},
+    { min = 3, rar = { brok = 75, comm = 25, rare = 0, epic = 0, myth = 0 }},
+    { min = 6, rar = { brok = 37, comm = 60, rare = 3, epic = 0, myth = 0 }},
+    { min = 9, rar = { brok = 15, comm = 68, rare = 6, epic = 1, myth = 0 }},
+    { min = 12, rar = { brok = 7, comm = 80, rare = 10, epic = 2, myth = 1 }},
+    { min = 15, rar = { brok = 0, comm = 72, rare = 14, epic = 3, myth = 1 }},
+    { min = 18, rar = { brok = 0, comm = 77, rare = 18, epic = 4, myth = 1 }}
+]
+#--------------------------
+[mouseenclave_shelter_ch_1_2]
+type = "heal"
+flat = 35
+percent = 0.0
+#--------------------------
+[mouseenclave_shelter_ch_1_3]
+type = "gain_gold"
+amount = 600
+#--------------------------
+[mouseenclave_shelter_ch_4]
+type = "gain_xp"
+amount = 300
+vfx = "Entities/VFX/Experience_Instant/Experience_Instant_Fab"
+#-----------------------------------------------------------------------------
+#-----------------------------------------------------------------------------
+
+
+
+
+#-----------------------------------------------------------------------------
+# [] - Lose small Pull Area and life, gain random Strike benefit (Damage, Area, CritChance, Duration)
+[blackhole_tree_ch_1]
+type = "composite"
+list = ["blackhole_tree_ch_1_1", "blackhole_tree_ch_1_2", "blackhole_tree_ch_1_3"]
+#--------------------------
+# Lose X Life
+[blackhole_tree_ch_1_1]
+type = "lose_life"
+flat = 10
+can_kill = false
+#--------------------------
+[blackhole_tree_ch_1_2]
+type = "select_random"
+list = [
+    {instant = "blackhole_tree_ch_1_2_1", weight = 0.25, use_msg = "msg_blackhole_tree_ch_1_2_1"},
+    {instant = "blackhole_tree_ch_1_2_2", weight = 0.25, use_msg = "msg_blackhole_tree_ch_1_2_2"},
+    {instant = "blackhole_tree_ch_1_2_3", weight = 0.25, use_msg = "msg_blackhole_tree_ch_1_2_3"},
+    {instant = "blackhole_tree_ch_1_2_4", weight = 0.25, use_msg = "msg_blackhole_tree_ch_1_2_4"},
+]
+# [] - Strike Damage
+[blackhole_tree_ch_1_2_1]
+type = "gain_gift"
+code = "blackhole_tree_ch_1_2_1"
+use_msg = "msg_blackhole_tree_ch_1_2_1"
+# [] - Strike Area
+[blackhole_tree_ch_1_2_2]
+type = "gain_gift"
+code = "blackhole_tree_ch_1_2_2"
+use_msg = "msg_blackhole_tree_ch_1_2_2"
+# [] - Strike Crit
+[blackhole_tree_ch_1_2_3]
+type = "gain_gift"
+code = "blackhole_tree_ch_1_2_3"
+use_msg = "msg_blackhole_tree_ch_1_2_3"
+# [] - Strike Duration
+[blackhole_tree_ch_1_2_4]
+type = "gain_gift"
+code = "blackhole_tree_ch_1_2_4"
+use_msg = "msg_blackhole_tree_ch_1_2_4"
+#--------------------------
+# [] - Lose Pull Area
+[blackhole_tree_ch_1_3]
+type = "gain_gift"
+code = "blackhole_tree_ch_0"
+#--------------------------
+#-----------------------------------------------------------------------------
+# [] - Lose small Pull Area and life, gain random Cast benefit (Damage, Area, CritChance, Duration)
+[blackhole_tree_ch_2]
+type = "composite"
+list = ["blackhole_tree_ch_2_1", "blackhole_tree_ch_2_2", "blackhole_tree_ch_2_3"]
+#--------------------------
+# Lose X Life
+[blackhole_tree_ch_2_1]
+type = "lose_life"
+flat = 5
+percent = 0.2
+can_kill = false
+#--------------------------
+[blackhole_tree_ch_2_2]
+type = "select_random"
+list = [
+    {instant = "blackhole_tree_ch_2_2_1", weight = 0.25, use_msg = "msg_blackhole_tree_ch_2_2_1"},
+    {instant = "blackhole_tree_ch_2_2_2", weight = 0.25, use_msg = "msg_blackhole_tree_ch_2_2_2"},
+    {instant = "blackhole_tree_ch_2_2_3", weight = 0.25, use_msg = "msg_blackhole_tree_ch_2_2_3"},
+    {instant = "blackhole_tree_ch_2_2_4", weight = 0.25, use_msg = "msg_blackhole_tree_ch_2_2_4"},
+]
+#--------------------------
+# [] - Cast Damage
+[blackhole_tree_ch_2_2_1]
+type = "gain_gift"
+code = "blackhole_tree_ch_2_2_1"
+use_msg = "msg_blackhole_tree_ch_2_2_1"
+#--------------------------
+# [] - Cast Area
+[blackhole_tree_ch_2_2_2]
+type = "gain_gift"
+code = "blackhole_tree_ch_2_2_2"
+use_msg = "msg_blackhole_tree_ch_2_2_2"
+#--------------------------
+# [] - Cast Crit
+[blackhole_tree_ch_2_2_3]
+type = "gain_gift"
+code = "blackhole_tree_ch_2_2_3"
+use_msg = "msg_blackhole_tree_ch_2_2_3"
+#--------------------------
+# [] - Cast Duration
+[blackhole_tree_ch_2_2_4]
+type = "gain_gift"
+code = "blackhole_tree_ch_2_2_4"
+use_msg = "msg_blackhole_tree_ch_2_2_4"
+#--------------------------
+#--------------------------
+# [] - Lose Pull Area
+[blackhole_tree_ch_2_3]
+type = "gain_gift"
+code = "blackhole_tree_ch_0"
+#--------------------------
+#----------------------------------------------------------------------------- 
+# [] - Lose small Pull Area and life, gain random Power benefit (Damage, Area, CritChance, Duration)
+[blackhole_tree_ch_3]
+type = "composite"
+list = ["blackhole_tree_ch_3_1", "blackhole_tree_ch_3_2", "blackhole_tree_ch_3_3"]
+#--------------------------
+# Lose X Life
+[blackhole_tree_ch_3_1]
+type = "lose_life"
+flat = 5
+percent = 0.2
+can_kill = false
+#--------------------------
+[blackhole_tree_ch_3_2]
+type = "select_random"
+list = [
+    {instant = "blackhole_tree_ch_3_2_1", weight = 0.25, use_msg = "msg_blackhole_tree_ch_3_2_1"},
+    {instant = "blackhole_tree_ch_3_2_2", weight = 0.25, use_msg = "msg_blackhole_tree_ch_3_2_2"},
+    {instant = "blackhole_tree_ch_3_2_3", weight = 0.25, use_msg = "msg_blackhole_tree_ch_3_2_3"},
+    {instant = "blackhole_tree_ch_3_2_4", weight = 0.25, use_msg = "msg_blackhole_tree_ch_3_2_4"},
+]
+#--------------------------
+# [] - Power Damage
+[blackhole_tree_ch_3_2_1]
+type = "gain_gift"
+code = "blackhole_tree_ch_3_2_1"
+use_msg = "msg_blackhole_tree_ch_3_2_1"
+#--------------------------
+# [] - Power Area
+[blackhole_tree_ch_3_2_2]
+type = "gain_gift"
+code = "blackhole_tree_ch_3_2_2"
+use_msg = "msg_blackhole_tree_ch_3_2_2"
+#--------------------------
+# [] - Power Crit
+[blackhole_tree_ch_3_2_3]
+type = "gain_gift"
+code = "blackhole_tree_ch_3_2_3"
+use_msg = "msg_blackhole_tree_ch_3_2_3"
+#--------------------------
+# [] - Power Duration
+[blackhole_tree_ch_3_2_4]
+type = "gain_gift"
+code = "blackhole_tree_ch_3_2_4"
+use_msg = "msg_blackhole_tree_ch_3_2_4"
+#--------------------------
+#--------------------------
+# [] - Lose Pull Area
+[blackhole_tree_ch_3_3]
+type = "gain_gift"
+code = "blackhole_tree_ch_0"
+#--------------------------
+#-----------------------------------------------------------------------------
+# [] - Lose small Pull Area and life, gain random Summon benefit (Damage, Area, MovementSpeed, Duration)
+[blackhole_tree_ch_4]
+type = "composite"
+list = ["blackhole_tree_ch_4_1", "blackhole_tree_ch_4_2", "blackhole_tree_ch_4_3"]
+#--------------------------
+# Lose X Life
+[blackhole_tree_ch_4_1]
+type = "lose_life"
+flat = 5
+percent = 0.2
+can_kill = false
+#--------------------------
+[blackhole_tree_ch_4_2]
+type = "select_random"
+list = [
+    {instant = "blackhole_tree_ch_4_2_1", weight = 0.25, use_msg = "msg_blackhole_tree_ch_4_2_1"},
+    {instant = "blackhole_tree_ch_4_2_2", weight = 0.25, use_msg = "msg_blackhole_tree_ch_4_2_2"},
+    {instant = "blackhole_tree_ch_4_2_3", weight = 0.25, use_msg = "msg_blackhole_tree_ch_4_2_3"},
+    {instant = "blackhole_tree_ch_4_2_4", weight = 0.25, use_msg = "msg_blackhole_tree_ch_4_2_4"},
+]
+#--------------------------
+# [] - Summon Damage
+[blackhole_tree_ch_4_2_1]
+type = "gain_gift"
+code = "blackhole_tree_ch_4_2_1"
+use_msg = "msg_blackhole_tree_ch_4_2_1"
+#--------------------------
+# [] - Summon Count
+[blackhole_tree_ch_4_2_2]
+type = "gain_gift"
+code = "blackhole_tree_ch_4_2_2"
+use_msg = "msg_blackhole_tree_ch_4_2_2"
+#--------------------------
+# [] - Summon MovementSpeed
+[blackhole_tree_ch_4_2_3]
+type = "gain_gift"
+code = "blackhole_tree_ch_4_2_3"
+use_msg = "msg_blackhole_tree_ch_4_2_3"
+#--------------------------
+# [] - Summon Duration
+[blackhole_tree_ch_4_2_4]
+type = "gain_gift"
+code = "blackhole_tree_ch_4_2_4"
+use_msg = "msg_blackhole_tree_ch_4_2_4"
+#--------------------------
+#--------------------------
+# [] - Lose Pull Area
+[blackhole_tree_ch_4_3]
+type = "gain_gift"
+code = "blackhole_tree_ch_0"
+#--------------------------
+#-----------------------------------------------------------------------------
+[blackhole_tree_ch_5]
+type = "gain_xp"
+amount = 100
+vfx = "Entities/VFX/Experience_Instant/Experience_Instant_Fab"
+use_msg = "msg_blackhole_tree_ch_5"
+#-----------------------------------------------------------------------------
+
+
+
+
+
+#-----------------------------------------------------------------------------
+# ARCANUM STOME
+# Transfer POW from Strike/Cast/Power/Summon to Attack
+#--------------------------
+[arcanumstone_ch_5]
+type = "select_random"
+list = [
+    {instant = "arcanumstone_ch_5_1", weight = 1},
+    {instant = "arcanumstone_ch_5_2", weight = 1},
+    {instant = "arcanumstone_ch_5_3", weight = 1},
+    {instant = "arcanumstone_ch_5_4", weight = 1},
+]
+# [] - Strike to POW
+[arcanumstone_ch_5_1]
+type = "gain_gift"
+code = "arcanumstone_ch_5_1"
+use_msg = "msg_arcanumstone_ch_5_1"
+# [] - Cast to POW
+[arcanumstone_ch_5_2]
+type = "gain_gift"
+code = "arcanumstone_ch_5_2"
+use_msg = "msg_arcanumstone_ch_5_2"
+# [] - Power to POW
+[arcanumstone_ch_5_3]
+type = "gain_gift"
+code = "arcanumstone_ch_5_3"
+use_msg = "msg_arcanumstone_ch_5_3"
+# [] - Summon to POW
+[arcanumstone_ch_5_4]
+type = "gain_gift"
+code = "arcanumstone_ch_5_4"
+use_msg = "msg_arcanumstone_ch_5_4"
+#-----------------------------------------------------------------------------
+
+
+
+
+
+
+
+#-----------------------------------------------------------------------------
+[shard_fallen_moor_ch_1]
+type = "composite"
+list = ["shard_fallen_moor_ch_1_1", "shard_fallen_moor_ch_1_2"]
+#--------------------------
+[shard_fallen_moor_ch_1_1]
+type = "gain_gift"
+code = "shard_fallen_moor_ch_1_1"
+#--------------------------
+[shard_fallen_moor_ch_1_2]
+type = "gain_gift"
+code = "shard_fallen_moor_ch_1_2"
+#--------------------------
+[shard_fallen_moor_ch_2]
+type = "composite"
+list = ["shard_fallen_moor_ch_2_1", "shard_fallen_moor_ch_2_2"]
+#--------------------------
+[shard_fallen_moor_ch_2_1]
+type = "gain_gift"
+code = "shard_fallen_moor_ch_2_1"
+#--------------------------
+[shard_fallen_moor_ch_2_2]
+type = "gain_gift"
+code = "shard_fallen_moor_ch_2_2"
+#--------------------------
+[shard_fallen_moor_ch_3]
+type = "composite"
+list = ["shard_fallen_moor_ch_3_1", "shard_fallen_moor_ch_3_2"]
+#--------------------------
+[shard_fallen_moor_ch_3_1]
+type = "gain_gift"
+code = "shard_fallen_moor_ch_3_1"
+#--------------------------
+[shard_fallen_moor_ch_3_2]
+type = "gain_gift"
+code = "shard_fallen_moor_ch_3_2"
+#--------------------------
+[shard_fallen_moor_ch_4]
+type = "composite"
+list = ["shard_fallen_moor_ch_4_1", "shard_fallen_moor_ch_4_2"]
+#--------------------------
+[shard_fallen_moor_ch_4_1]
+type = "gain_gift"
+code = "shard_fallen_moor_ch_4_1"
+#--------------------------
+[shard_fallen_moor_ch_4_2]
+type = "gain_gift"
+code = "shard_fallen_moor_ch_4_2"
+duration = 10
+#--------------------------
+[shard_fallen_moor_ch_5]
+type = "gain_gift"
+code = "shard_fallen_moor_ch_5"
+#--------------------------
+
+
+
+
+
+
+#-----------------------------------------------------------------------------
+# TOME NECRONOMICON MOOR
+# [Willpower] Get stunned for 4 sec | +% spell dur
+# [Willpower] Take 12 pure dmg | +% spell dmg
+# [Willpower] Summon 3 xpless ghosts | +10% summon dmg
+#-----------------------------------------------------------------------------
+# Get stunned for 4 sec | +% spell dur
+[tome_necronomicon_moor_ch_1]
+type = "composite"
+list = ["tome_necronomicon_moor_ch_1_1", "tome_necronomicon_moor_ch_1_2"]
+use_msg = "msg_tome_necronomicon_moor_ch_1"
+#--------------------------
+[tome_necronomicon_moor_ch_1_1]
+type = "status"
+code = "tome_necronomicon_stunned"
+#--------------------------
+[tome_necronomicon_moor_ch_1_2]
+type = "gain_gift"
+code = "tome_necronomicon_moor_ch_1_2"
+level = 1
+#--------------------------
+#-----------------------------------------------------------------------------
+# Take 12 pure dmg that can't kill | +% Cast dmg
+[tome_necronomicon_moor_ch_2]
+type = "composite"
+list = ["tome_necronomicon_moor_ch_2_1", "tome_necronomicon_moor_ch_2_2"]
+use_msg = "msg_tome_necronomicon_moor_ch_2"
+#--------------------------
+[tome_necronomicon_moor_ch_2_1]
+type = "lose_life"
+flat = 12
+percent = 0
+can_kill = false
+#--------------------------
+[tome_necronomicon_moor_ch_2_2]
+type = "gain_gift"
+code = "tome_necronomicon_moor_ch_2_2"
+level = 1
+#--------------------------
+#-----------------------------------------------------------------------------
+# Summon 3 ghosts | +10% summon dmg
+[tome_necronomicon_moor_ch_3]
+type = "composite"
+list = ["tome_necronomicon_moor_ch_3_1", "tome_necronomicon_moor_ch_3_2"]
+use_msg = "msg_tome_necronomicon_moor_ch_3"
+#--------------------------
+[tome_necronomicon_moor_ch_3_1]
+type = "monsters"
+monsters = [
+    { code = "Ghost", count = 3 }
+]
+#--------------------------
+[tome_necronomicon_moor_ch_3_2]
+type = "gain_gift"
+code = "tome_necronomicon_moor_ch_3_2"
+level = 1
+#--------------------------
+#-----------------------------------------------------------------------------
+# Charms summons | +% summon attack speed
+[tome_necronomicon_moor_ch_4]
+type = "composite"
+list = ["tome_necronomicon_moor_ch_4_1", "tome_necronomicon_moor_ch_4_2"]
+#--------------------------
+[tome_necronomicon_moor_ch_4_1]
+type = "gain_gift"
+code = "tome_necronomicon_moor_ch_4_1"
+level = 1
+duration = 10
+#--------------------------
+[tome_necronomicon_moor_ch_4_2]
+type = "gain_gift"
+code = "tome_necronomicon_moor_ch_4_2"
+level = 1
+#--------------------------
+#-----------------------------------------------------------------------------
+
+
+
+
+#-----------------------------------------------------------------------------   🔻⚡
+# ANCIENTJUDGEMENTALSTONES
+# Before you rise the ancient judgemental stones, silent sentinels of the Moor, their surfaces etched with mystic runes. Cold and unmoving, they pulse with a faint, eerie glow, their eyes - carved deep into the stone - watching all who approach. As you stand in the center 
+# [Test of Endurance, but not for me] - Destroy the judgemental stones, gain 500xp and leave
+[ancientjudgementalstones_ch_5]
+type = "gain_xp"
+amount = 1800
+vfx = "Entities/VFX/Experience_Instant/Experience_Instant_Fab"
+#-----------------------------------------------------------------------------
+
+
+
+
+
+#-----------------------------------------------------------------------------
+# ABANDONEDCAGE
+# You find a beautiful bird caged amidst the darkly ruins. As you approach it starts to flutter helplessly and speaks out in human voice: "Please, set me free".
+# [Try to convince it to join you] - The bird might join you or might flee.
+# [Simply set it free] - Gain small movement speed bonus
+# [Leave it in its cage for now] 
+#--------------------------
+# [Try to convince it to join you] - The bird might join you or might flee. 🔻⚡
+[abandonedcage_ch_1]
+type = "select_random"
+list = [
+    {instant = "abandonedcage_ch_1_1", weight = 0.5},
+    {instant = "abandonedcage_ch_1_2", weight = 0.5},
+]
+[abandonedcage_ch_1_1]
+type = "gain_boon"
+code = "abandonedcage_Parrot"
+rarity = "mast"
+[abandonedcage_ch_1_2]
+type = "basic"
+#--------------------------
+# [Leave it in its cage for now]   🔻⚡
+[abandonedcage_ch_3]
+type = "basic"
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+# STRANGETINYCOTTAGE
+#--------------------------
+# [Tea] - heal + boost attack and movemenet speed for X sec   🔻⚡
+[strangetinycottage_ch_1]
+type = "composite"
+list = ["strangetinycottage_ch_1_1", "strangetinycottage_ch_1_2"]
+use_msg = "msg_strangetinycottage_ch_1"
+#--------------------------
+[strangetinycottage_ch_1_1]
+type = "heal"
+flat = 25
+#--------------------------
+[strangetinycottage_ch_1_2]
+type = "gain_gift"
+code = "strangetinycottage_ch_1_2"
+duration = 60
+#--------------------------
+[strangetinycottage_ch_2]
+type = "composite"
+list = ["strangetinycottage_ch_2_1", "strangetinycottage_ch_2_2"]
+use_msg = "msg_strangetinycottage_ch_2"
+#--------------------------
+# [Meal] - heal + regen for X sec 
+[strangetinycottage_ch_2_1]
+type = "heal"
+flat = 30
+#--------------------------
+[strangetinycottage_ch_2_2]
+type = "gain_gift"
+code = "strangetinycottage_ch_2_2"
+duration = 60
+#--------------------------
+#--------------------------
+# [Treasure] – flat GOLD, EXP and Random Item Rare or above   🔻⚡
+[strangetinycottage_ch_5]
+type = "composite"
+list = ["strangetinycottage_ch_5_1", "strangetinycottage_ch_5_2", "strangetinycottage_ch_5_3"]
+use_msg = "msg_strangetinycottage_ch_5"
+#--------------------------
+[strangetinycottage_ch_5_1]
+type = "gain_xp"
+amount = 100
+vfx = "Entities/VFX/Experience_Instant/Experience_Instant_Fab"
+[strangetinycottage_ch_5_2]
+type = "gain_gold"
+sfx = "Inst_GoldDrop"
+amount = 200
+vfx = "Entities/VFX/Experience_Instant/Experience_Instant_Fab"
+[strangetinycottage_ch_5_3]
+type = "item_drop"
+chance = 1
+count_weights = { 1 = 1 }
+class_weights = { Tr_Any = 100, Tr_AnyAttack = 100, Tr_AnyDash = 100, Tr_AnyStrike = 100, Tr_AnyCast = 100, Tr_AnyPower = 100, Tr_AnySummon = 100, Tr_AnyStatus = 100}
+rarity_weights = [
+    { min = 0, rar = { rare = 1, epic = 0.1, myth = 0.1 }},
+    { min = 3, rar = { rare = 1, epic = 0.1, myth = 0.1 }},
+    { min = 6, rar = { rare = 1, epic = 1, myth = 0.1 }},
+    { min = 9, rar = { rare = 1, epic = 1, myth = 0.5 }},
+    { min = 12, rar = { rare = 1, epic = 1, myth = 1 }},
+    { min = 15, rar = { rare = 0, epic = 1, myth = 1 }},
+    { min = 18, rar = { rare = 0, epic = 1, myth = 1 }}
+]
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+# CONTAINEDELDERMONUMENT
+# The air hums with dread, and faint whispers echo from the depths of the Eldritch magic being staring at you. The massive glyph-etched pillars surrounding it are its prison, sealing it away from wrecking havoc on the moor. Its voices tempt you of promises of power.
+# [Destroy the Eldritch Being] - Take X Lethal Dmg, Destroy the monument and gain 3 Levels
+# [Release it] - Release the Eldritch creature from its prison. 
+# [Don't interact with it yet] – Nothing. (The shrine is still accessible)
+#--------------------------
+# [Destroy the Eldritch Being] - Take X Lethal Dmg, Destroy the monument and gain 3 Levels   🔻⚡
+[containedeldermonument_ch_5]
+type = "composite"
+list = ["containedeldermonument_ch_5_1", "containedeldermonument_ch_5_2"]
+#--------------------------
+[containedeldermonument_ch_5_1]
+type = "lose_life"
+flat = 100
+percent = 0
+can_kill = false
+#--------------------------
+[containedeldermonument_ch_5_2]
+type = "gain_levels"
+num_levels = 5
+#--------------------------
+# [Release it] - Release the Eldritch creature from its prison.    🔻⚡
+[containedeldermonument_ch_6]
+type = "basic"
+#--------------------------
+# [Don't interact with it yet] – Nothing. (The shrine is still accessible)   🔻⚡
+[containedeldermonument_ch_7]
+type = "basic"
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+# STATUE CRYPTICSWORDSMAN
+# Rising tall amidst the moor - the monument and grave of a legendary Knight of old, now veiled  in darkness. Drawn closer by its alluring presence, your fingers brush the dark stone, and suddenly, his memories and will surge through your mind.
+# [Pledge Allegiance] - Increase God Limit by 1 god_limit
+# [Pledge Righteousness] - Gain Aura that emits global_dps
+# [Pledge Wrath] - dmg_vs Bosses increased by a large amount
+# [Pledge Nothing and Pull Away] - gain 2 Levels and Remove all Curses.
+#--------------------------
+[statue_crypticswordsman_ch_4]
+type = "composite"
+list = ["statue_crypticswordsman_ch_4_1", "statue_crypticswordsman_ch_4_2"]
+#--------------------------
+[statue_crypticswordsman_ch_4_1]
+type = "gain_levels"
+num_levels = 2
+#--------------------------
+[statue_crypticswordsman_ch_4_2]
+type = "basic"
+#--------------------------
+#-----------------------------------------------------------------------------
+
+
+
+
+#-----------------------------------------------------------------------------
+# [Greed] - Lose Area - On every 10th gold pile pick up, gain Area for X sec
+[skullcarvedtree_ch_1]
+type = "composite"
+use_msg = "msg_skullcarvedtree_ch_1"
+list = ["skullcarvedtree_ch_1_1", "skullcarvedtree_ch_1_2"]
+#--------------------------
+# Lose Area
+[skullcarvedtree_ch_1_1]
+type = "gain_gift"
+code = "skullcarvedtree_ch_1_1"
+#--------------------------
+[skullcarvedtree_ch_1_2]
+type = "gain_gift"
+code = "skullcarvedtree_ch_1_2"
+#--------------------------
+#-----------------------------------------------------------------------------
+# [Rage] - Lose Attack Dmg - On every 50th enemy slain, gain Attack Damage for X sec
+[skullcarvedtree_ch_2]
+type = "composite"
+use_msg = "msg_skullcarvedtree_ch_2"
+list = ["skullcarvedtree_ch_2_1", "skullcarvedtree_ch_2_2"]
+#--------------------------
+# Lose Area
+[skullcarvedtree_ch_2_1]
+type = "gain_gift"
+code = "skullcarvedtree_ch_2_1"
+#--------------------------
+[skullcarvedtree_ch_2_2]
+type = "gain_gift"
+code = "skullcarvedtree_ch_2_2"
+#--------------------------
+#-----------------------------------------------------------------------------
+# [Recklessness] -  Lose Max HP - on every 40hp lost, gain lifesteal for X sec
+[skullcarvedtree_ch_3]
+type = "composite"
+use_msg = "msg_skullcarvedtree_ch_3"
+list = ["skullcarvedtree_ch_3_1", "skullcarvedtree_ch_3_2"]
+#--------------------------
+# Lose Area
+[skullcarvedtree_ch_3_1]
+type = "gain_gift"
+code = "skullcarvedtree_ch_3_1"
+#--------------------------
+[skullcarvedtree_ch_3_2]
+type = "gain_gift"
+code = "skullcarvedtree_ch_3_2"
+#--------------------------
+#-----------------------------------------------------------------------------
+# [Reject the Pact] – Gain XP
+#--------------------------
+[skullcarvedtree_ch_4]
+type = "gain_xp"
+amount = 100
+use_msg = "msg_skullcarvedtree_ch_4"
+vfx = "Entities/VFX/Experience_Instant/Experience_Instant_Fab"
+#-----------------------------------------------------------------------------
+
+
+
+
+#-----------------------------------------------------------------------------
+# SHRINE PENANTKNIGHT
+# Small EXP Bonus       
+# [Pledge no Oath] - Gain EXP  🔻
+[shrine_penantknight_ch_5]
+type = "gain_xp"
+amount = 100
+vfx = "Entities/VFX/Experience_Instant/Experience_Instant_Fab"
+#-----------------------------------------------------------------------------
+
+
+#-----------------------------------------------------------------------------
+# NPC SNAIL MOOR
+# You pause at the extraordinary sight before you - a giant snail slogging slowly through the Moor. His eyes turn towards you with deliberate curiosity. As you stand still he examines you from head to toes and says in a deep but gentle voice: “Mmmmm, yeeesss… I caaan teeach youuu the waaay of the Snaaail you knooow... the waaay of theee…”
+#-----------------------------------------------------------------------------
+# [Solitude] - Passive Experience Gain, lose small ms     
+[npc_snail_moor_ch_1]
+type = "composite"
+list = ["npc_snail_moor_ch_1_1", "npc_snail_moor_ch_1_2"]  
+use_msg = "msg_npc_snail_moor_ch_1"
+#--------------------------  
+# Gain Passive EXP                               
+["npc_snail_moor_ch_1_1"]
+type = "gain_gift"
+code = "npc_snail_moor_ch_1_1"
+#--------------------------
+# Lose Movement Speed    
+["npc_snail_moor_ch_1_2"]
+type = "gain_gift"
+code = "npc_snail_moor_ch_0"
+#--------------------------
+#-----------------------------------------------------------------------------
+# [Speed] - -40 movement speed, lose small ms    
+[npc_snail_moor_ch_2]
+type = "composite"
+list = ["npc_snail_moor_ch_2_1", "npc_snail_moor_ch_2_2"]  
+use_msg = "msg_npc_snail_moor_ch_2"
+#--------------------------  
+# - 40 Movement Speed                   
+["npc_snail_moor_ch_2_1"]
+type = "gain_gift"
+code = "npc_snail_moor_ch_2_1"
+#--------------------------
+# Lose Movement Speed    
+["npc_snail_moor_ch_2_2"]
+type = "gain_gift"
+code = "npc_snail_moor_ch_0"
+#--------------------------
+#-----------------------------------------------------------------------------
+#-----------------------------------------------------------------------------
+# [Shell] - +Armor, lose small ms    
+[npc_snail_moor_ch_3]
+type = "composite"
+list = ["npc_snail_moor_ch_3_1", "npc_snail_moor_ch_3_2"]    
+use_msg = "msg_npc_snail_moor_ch_3"
+#--------------------------  
+# Gain Armor                               
+["npc_snail_moor_ch_3_1"]
+type = "gain_gift"
+code = "npc_snail_moor_ch_3_1"
+#--------------------------
+# Lose Movement Speed    
+["npc_snail_moor_ch_3_2"]
+type = "gain_gift"
+code = "npc_snail_moor_ch_0"
+#--------------------------
+#-----------------------------------------------------------------------------
+# [Slug] - Gain Slow Aura, Lose small movement speed
+[npc_snail_moor_ch_4]
+type = "composite"
+list = ["npc_snail_moor_ch_4_1", "npc_snail_moor_ch_4_2"]
+use_msg = "msg_npc_snail_moor_ch_4"
+#--------------------------  
+# Gain Slow Aura                              
+["npc_snail_moor_ch_4_1"]
+type = "gain_gift"
+code = "npc_snail_moor_ch_4_1"
+#--------------------------
+# Lose Movement Speed    
+["npc_snail_moor_ch_4_2"]
+type = "gain_gift"
+code = "npc_snail_moor_ch_0"
+#--------------------------
+#-----------------------------------------------------------------------------
+# [Politely refuse being taught anything by the Snail] - Nothing                                                   🔻
+[npc_snail_moor_ch_5]
+type = "basic"
+use_msg = "msg_npc_snail_moor_ch_5"
+#-----------------------------------------------------------------------------
+
+
+
+
+#-----------------------------------------------------------------------------                                           🔻
+# MYSTERIOUSLYABANDONEDPROBE
+# You stumble across what seems to be some sort of glass probe that has been abandoned. There’s a torn page tucked inbetween the brass frame. Upon reading it you understand that the samples are imbued like some form of antidote against the creatures of this Moor and you wonder who might be responsible for collecting them… brushing away the distraction, you focus on whether you should make use of what you found.
+# [Refrain from using Essence] - Gain XP 
+#-----------------------------------------------------------------------------
+[mysteriouslyabandonedprobe_ch_1]
+type = "composite"
+list = ["mysteriouslyabandonedprobe_ch_1_1", "mysteriouslyabandonedprobe_ch_1_2"]
+use_msg = "msg_mysteriouslyabandonedprobe_ch_1"
+#--------------------------
+# More Dmg to Minions 
+[mysteriouslyabandonedprobe_ch_1_1]
+type = "gain_gift"
+code = "mysteriouslyabandonedprobe_ch_1"
+#--------------------------
+# Cannot Heal for X seconds
+[mysteriouslyabandonedprobe_ch_1_2]
+type = "gain_gift"
+code = "mysteriouslyabandonedprobe_ch_0"
+duration = 30
+#-----------------------------------------------------------------------------
+[mysteriouslyabandonedprobe_ch_2]
+type = "composite"
+list = ["mysteriouslyabandonedprobe_ch_2_1", "mysteriouslyabandonedprobe_ch_2_2"]
+use_msg = "msg_mysteriouslyabandonedprobe_ch_2"
+#--------------------------
+# More Dmg to Elites 
+[mysteriouslyabandonedprobe_ch_2_1]
+type = "gain_gift"
+code = "mysteriouslyabandonedprobe_ch_2"
+#--------------------------
+# Cannot Heal for X seconds
+[mysteriouslyabandonedprobe_ch_2_2]
+type = "gain_gift"
+code = "mysteriouslyabandonedprobe_ch_0"
+duration = 30
+#-----------------------------------------------------------------------------
+[mysteriouslyabandonedprobe_ch_3]
+type = "composite"
+list = ["mysteriouslyabandonedprobe_ch_3_1", "mysteriouslyabandonedprobe_ch_3_2"]
+use_msg = "msg_mysteriouslyabandonedprobe_ch_3"
+#--------------------------
+# More Dmg to Bosses 
+[mysteriouslyabandonedprobe_ch_3_1]
+type = "gain_gift"
+code = "mysteriouslyabandonedprobe_ch_3"
+#--------------------------
+# Cannot Heal for X seconds
+[mysteriouslyabandonedprobe_ch_3_2]
+type = "gain_gift"
+code = "mysteriouslyabandonedprobe_ch_0"
+duration = 30
+#-----------------------------------------------------------------------------
+[mysteriouslyabandonedprobe_ch_4]
+type = "gain_xp"
+amount = 100
+vfx = "Entities/VFX/Experience_Instant/Experience_Instant_Fab"
+#-----------------------------------------------------------------------------
+
+
+
+
+#-----------------------------------------------------------------------------
+# OVERGROWNAPHOTICBASIN
+#--------------------------
+[overgrownaphoticbasin_ch_1]
+type = "composite"
+list = ["overgrownaphoticbasin_ch_1_1", "overgrownaphoticbasin_ch_1_2"]
+use_msg = "msg_overgrownaphoticbasin_ch_1"
+[overgrownaphoticbasin_ch_1_1]
+type = "gain_gift"
+code = "overgrownaphoticbasin_0"
+[overgrownaphoticbasin_ch_1_2]
+type = "gain_gift"
+code = "overgrownaphoticbasin_1"
+#--------------------------
+[overgrownaphoticbasin_ch_2]
+type = "composite"
+list = ["overgrownaphoticbasin_ch_2_1", "overgrownaphoticbasin_ch_2_2"]
+use_msg = "msg_overgrownaphoticbasin_ch_1"
+[overgrownaphoticbasin_ch_2_1]
+type = "gain_gift"
+code = "overgrownaphoticbasin_0"
+[overgrownaphoticbasin_ch_2_2]
+type = "gain_gift"
+code = "overgrownaphoticbasin_2"
+#--------------------------
+[overgrownaphoticbasin_ch_3]
+type = "composite"
+list = ["overgrownaphoticbasin_ch_3_1", "overgrownaphoticbasin_ch_3_2"]
+use_msg = "msg_overgrownaphoticbasin_ch_1"
+[overgrownaphoticbasin_ch_3_1]
+type = "gain_gift"
+code = "overgrownaphoticbasin_0"
+[overgrownaphoticbasin_ch_3_2]
+type = "gain_gift"
+code = "overgrownaphoticbasin_3"
+#--------------------------
+[overgrownaphoticbasin_ch_4]
+type = "composite"
+list = ["overgrownaphoticbasin_ch_4_1", "overgrownaphoticbasin_ch_4_2"]
+use_msg = "msg_overgrownaphoticbasin_ch_1"
+[overgrownaphoticbasin_ch_4_1]
+type = "gain_gift"
+code = "overgrownaphoticbasin_0"
+[overgrownaphoticbasin_ch_4_2]
+type = "gain_gift"
+code = "overgrownaphoticbasin_4"
+#--------------------------
+# [Do not drink] - Gain XP
+[overgrownaphoticbasin_ch_5]
+type = "gain_xp"
+amount = 100
+vfx = "Entities/VFX/Experience_Instant/Experience_Instant_Fab"
+use_msg = "msg_overgrownaphoticbasin_ch_5"
+#-----------------------------------------------------------------------------
+
+
+#-----------------------------------------------------------------------------
+# MAGICALFOODCARPET
+# As you step closer to what seems to be an empty blanket on the grass, you hear a gentle tinkle, and in a flash of light, a feast, rich and luscious, appears before your eyes. Who made this hex? And more importantly, what should you do?
+# [Sit and Enjoy Every Bite] - What could go wrong? Not every feast manifesting itself into existence is cursed. (Chance to: Get Healed / Get Poisoned / Get Blessed)
+# [Attempt to Dispel the Hex] - Uncover what’s really going on (Chance to: Gain XP, Find an Item in the food’s place, or a Unique NOTE)
+# [Ignore the Temptation] - Gain XP
+#--------------------------
+# [magicalfoodcarpet_ch_1]
+# type = "basic"
+#--------------------------
+# [magicalfoodcarpet_ch_2]
+# type = "basic"
+#--------------------------
+# [magicalfoodcarpet_ch_3]
+# type = "basic"
+#-----------------------------------------------------------------------------
+# MAGICALFOODCARPET
+
+# 1. GOOD OUTCOMES 
+#   01. Heal Life
+#   02. Gain Luck for Dur
+#   03. Gain Pull Area for Dur
+#   04. Gain Attack Damage for Dur
+#   05. Gain Strike Damage for Dur
+#   06. Gain Cast Damage for Dur
+#   07. Gain Power Damage for Dur
+#   08. Gain Summon Damage for Dur
+#   09. Gain Armor for Dur
+#   10. Gain Movement Speed for Dur
+
+# 1. GOOD OUTCOMES
+#   01. Lose Life
+#   02. Lose Luck for Dur
+#   03. Lose Pull Area for Dur
+#   04. Lose Attack Damage for Dur
+#   05. Lose Strike Damage for Dur
+#   06. Lose Cast Damage for Dur
+#   07. Lose Power Damage for Dur
+#   08. Lose Summon Damage for Dur
+#   09. Lose Armor for Dur
+#   10. Lose Movement Speed for Dur
+#-----------------------------------------------------------------------------
+[magicalfoodcarpet]
+type = "select_random"
+list = [
+    {instant = "magicalfoodcarpet_1", weight = 1},
+    {instant = "magicalfoodcarpet_2", weight = 0.6},
+]
+#-----------------------------------------------------------------------------
+# Good Stuff
+[magicalfoodcarpet_1]
+type = "select_random"
+sfx = "Inst_Munch"
+list = [
+    {instant = "magicalfoodcarpet_1_01", weight = 2},
+    {instant = "magicalfoodcarpet_1_02", weight = 1},
+    {instant = "magicalfoodcarpet_1_03", weight = 1},
+    {instant = "magicalfoodcarpet_1_04", weight = 1},
+    {instant = "magicalfoodcarpet_1_05", weight = 1},
+    {instant = "magicalfoodcarpet_1_06", weight = 1},
+    {instant = "magicalfoodcarpet_1_07", weight = 1},
+    {instant = "magicalfoodcarpet_1_08", weight = 1},
+    {instant = "magicalfoodcarpet_1_09", weight = 1},
+    {instant = "magicalfoodcarpet_1_10", weight = 1},
+]
+#--------------------------
+# Heal
+[magicalfoodcarpet_1_01]
+type = "heal"
+flat = 15
+is_well = true
+use_msg = "msg_magicalfoodcarpet_1_01"
+#--------------------------
+# Gain Luck
+[magicalfoodcarpet_1_02]
+type = "gain_gift"
+code = "magicalfoodcarpet_1_02"
+use_msg = "msg_magicalfoodcarpet_1_02"
+duration = 60
+#--------------------------
+# Gain Pull Area
+[magicalfoodcarpet_1_03]
+type = "gain_gift"
+code = "magicalfoodcarpet_1_03"
+use_msg = "msg_magicalfoodcarpet_1_03"
+duration = 60
+#--------------------------
+# Gain Attack Damage
+[magicalfoodcarpet_1_04]
+type = "gain_gift"
+code = "magicalfoodcarpet_1_04"
+use_msg = "msg_magicalfoodcarpet_1_04"
+duration = 60
+#--------------------------
+# Gain Strike Damage
+[magicalfoodcarpet_1_05]
+type = "gain_gift"
+code = "magicalfoodcarpet_1_05"
+use_msg = "msg_magicalfoodcarpet_1_05"
+duration = 60
+#--------------------------
+# Gain Cast Damage
+[magicalfoodcarpet_1_06]
+type = "gain_gift"
+code = "magicalfoodcarpet_1_06"
+use_msg = "msg_magicalfoodcarpet_1_06"
+duration = 60
+#--------------------------
+# Gain Power Damage
+[magicalfoodcarpet_1_07]
+type = "gain_gift"
+code = "magicalfoodcarpet_1_07"
+use_msg = "msg_magicalfoodcarpet_1_07"
+duration = 60
+#--------------------------
+# Gain Summon Damage
+[magicalfoodcarpet_1_08]
+type = "gain_gift"
+code = "magicalfoodcarpet_1_08"
+use_msg = "msg_magicalfoodcarpet_1_08"
+duration = 60
+#--------------------------
+# Gain Armor
+[magicalfoodcarpet_1_09]
+type = "gain_gift"
+code = "magicalfoodcarpet_1_09"
+use_msg = "msg_magicalfoodcarpet_1_09"
+duration = 60
+#--------------------------
+# Gain Movement Speed
+[magicalfoodcarpet_1_10]
+type = "gain_gift"
+code = "magicalfoodcarpet_1_10"
+use_msg = "msg_magicalfoodcarpet_1_10"
+duration = 60
+#--------------------------
+#-----------------------------------------------------------------------------
+# Bad Stuff
+[magicalfoodcarpet_2]
+type = "select_random"
+sfx = "Inst_Munch"
+list = [
+    {instant = "magicalfoodcarpet_2_01", weight = 2},
+    {instant = "magicalfoodcarpet_2_02", weight = 1},
+    {instant = "magicalfoodcarpet_2_03", weight = 1},
+    {instant = "magicalfoodcarpet_2_04", weight = 1},
+    {instant = "magicalfoodcarpet_2_05", weight = 1},
+    {instant = "magicalfoodcarpet_2_06", weight = 1},
+    {instant = "magicalfoodcarpet_2_07", weight = 1},
+    {instant = "magicalfoodcarpet_2_08", weight = 1},
+    {instant = "magicalfoodcarpet_2_09", weight = 1},
+    {instant = "magicalfoodcarpet_2_10", weight = 1},
+]
+#--------------------------
+# Lose Life
+[magicalfoodcarpet_2_01]
+type = "heal"
+flat = 15
+is_well = true
+use_msg = "msg_magicalfoodcarpet_2_01"
+#--------------------------
+# Lose Luck
+[magicalfoodcarpet_2_02]
+type = "gain_gift"
+code = "magicalfoodcarpet_2_02"
+use_msg = "msg_magicalfoodcarpet_2_02"
+duration = 30
+#--------------------------
+# Lose Pull Area
+[magicalfoodcarpet_2_03]
+type = "gain_gift"
+code = "magicalfoodcarpet_2_03"
+use_msg = "msg_magicalfoodcarpet_2_03"
+duration = 30
+#--------------------------
+# Lose Attack Damage
+[magicalfoodcarpet_2_04]
+type = "gain_gift"
+code = "magicalfoodcarpet_2_04"
+use_msg = "msg_magicalfoodcarpet_2_04"
+duration = 30
+#--------------------------
+# Lose Strike Damage
+[magicalfoodcarpet_2_05]
+type = "gain_gift"
+code = "magicalfoodcarpet_2_05"
+use_msg = "msg_magicalfoodcarpet_2_05"
+duration = 30
+#--------------------------
+# Lose Cast Damage
+[magicalfoodcarpet_2_06]
+type = "gain_gift"
+code = "magicalfoodcarpet_2_06"
+use_msg = "msg_magicalfoodcarpet_2_06"
+duration = 30
+#--------------------------
+# Lose Power Damage
+[magicalfoodcarpet_2_07]
+type = "gain_gift"
+code = "magicalfoodcarpet_2_07"
+use_msg = "msg_magicalfoodcarpet_2_07"
+duration = 30
+#--------------------------
+# Lose Summon Damage
+[magicalfoodcarpet_2_08]
+type = "gain_gift"
+code = "magicalfoodcarpet_2_08"
+use_msg = "msg_magicalfoodcarpet_2_08"
+duration = 30
+#--------------------------
+# Lose Armor
+[magicalfoodcarpet_2_09]
+type = "gain_gift"
+code = "magicalfoodcarpet_2_09"
+use_msg = "msg_magicalfoodcarpet_2_09"
+duration = 30
+#--------------------------
+# Lose Movement Speed
+[magicalfoodcarpet_2_10]
+type = "gain_gift"
+code = "magicalfoodcarpet_2_10"
+use_msg = "msg_magicalfoodcarpet_2_10"
+duration = 30
+#-----------------------------------------------------------------------------
+
+
+
+
+#-----------------------------------------------------------------------------
+# EERIENEST
+# A huge nest of twisted vines and branches and what appears to be 3 roc eggs at the center of it. Will you...
+# 1 [Take the Red Egg] - After 1 minute, your egg will hatch.
+# 2 [Take the Green Egg] - After 1 minute, your egg will hatch.
+# 3 [Take the Yellow Egg] - After 1 minute, your egg will hatch.
+# 4 [Take them All] - Every 2 minutes, there is a 40% chance one of the 3 eggs hatches until all 3 of them hatch.
+# 5 [Make a Nice Omlette] - Heal 10 + % Life and Gain a minor dash recharge CD buff for 1 minute.
+# 6 [Leave them be] - 500 XP
+[eerienest_ch_5]
+type = "composite"
+list = ["eerienest_ch_5_1", "eerienest_ch_5_2"]
+#--------------------------
+[eerienest_ch_5_1]
+type = "heal"
+flat = 0
+percent = 30
+#--------------------------
+[eerienest_ch_5_2]
+type = "gain_gift"
+code = "eerienest_ch_5_2"
+#--------------------------
+[eerienest_ch_6]
+type = "gain_xp"
+amount = 300
+vfx = "Entities/VFX/Experience_Instant/Experience_Instant_Fab"
+#-----------------------------------------------------------------------------
+
+
+
+#-----------------------------------------------------------------------------
+# CHAINEDRITUALRELIC
+# [Destroy the Demonic Monument] - Gain XP and Release a blast that damages all enemies for 500 damage.
+[chainedritualrelic_ch_1]
+type = "composite"
+list = ["chainedritualrelic_ch_0", "chainedritualrelic_ch_1_1"]
+#--------------------------
+[chainedritualrelic_ch_1_1]
+type = "gain_gift"
+code = "chainedritualrelic_ch_1"
+#--------------------------
+[chainedritualrelic_ch_2]
+type = "composite"
+list = ["chainedritualrelic_ch_0", "chainedritualrelic_ch_2_1"]
+#--------------------------
+[chainedritualrelic_ch_2_1]
+type = "gain_gift"
+code = "chainedritualrelic_ch_2"
+#--------------------------
+[chainedritualrelic_ch_3]
+type = "composite"
+list = ["chainedritualrelic_ch_0", "chainedritualrelic_ch_3_1"]
+#--------------------------
+[chainedritualrelic_ch_3_1]
+type = "gain_gift"
+code = "chainedritualrelic_ch_3"
+#--------------------------
+[chainedritualrelic_ch_4]
+type = "composite"
+list = ["chainedritualrelic_ch_0", "chainedritualrelic_ch_4_1"]
+#--------------------------
+[chainedritualrelic_ch_4_1]
+type = "gain_gift"
+code = "chainedritualrelic_ch_4"
+#--------------------------
+[chainedritualrelic_ch_0]
+type = "gain_gift"
+code = "chainedritualrelic_ch_0"
+#--------------------------
+[chainedritualrelic_ch_5]
+type = "composite"
+list = ["chainedritualrelic_ch_5_1", "chainedritualrelic_ch_5_2"]
+#--------------------------
+[chainedritualrelic_ch_5_1]
+type = "gain_xp"
+amount = 300
+vfx = "Entities/VFX/Experience_Instant/Experience_Instant_Fab"
+#--------------------------
+[chainedritualrelic_ch_5_2]
+type = "gain_gift"
+code = "chainedritualrelic_ch_5"
+#-----------------------------------------------------------------------------
+
+
+#-----------------------------------------------------------------------------
+# Attack Damage %
+[mushroom_astravella]
+type = "gain_gift"
+code = "mushroom_astravella"
+sfx = "Inst_Munch"
+use_msg = "msg_mushroom_astravella"
+#----------------------------------------------------------------------------- 
+#-----------------------------------------------------------------------------
+# Attack Damage %
+[mushroom_ghostcap]
+type = "gain_gift"
+code = "mushroom_ghostcap"
+sfx = "Inst_Munch"
+use_msg = "msg_mushroom_ghostcap"
+#----------------------------------------------------------------------------- 
+#-----------------------------------------------------------------------------
+# Attack Damage %
+[mushroom_honeychanterelles]
+type = "gain_gift"
+code = "mushroom_honeychanterelles"
+sfx = "Inst_Munch"
+use_msg = "msg_mushroom_honeychanterelles"
+#----------------------------------------------------------------------------- 
+#-----------------------------------------------------------------------------
+# Attack Damage %
+[mushroom_ordinarypeachshroom]
+type = "gain_gift"
+code = "mushroom_ordinarypeachshroom"
+sfx = "Inst_Munch"
+use_msg = "msg_mushroom_ordinarypeachshroom"
+#----------------------------------------------------------------------------- 
+#-----------------------------------------------------------------------------
+# Attack Damage %
+[mushroom_pinklyam]
+type = "gain_gift"
+code = "mushroom_pinklyam"
+sfx = "Inst_Munch"
+use_msg = "msg_mushroom_pinklyam"
+#----------------------------------------------------------------------------- 
+#-----------------------------------------------------------------------------
+# Attack Damage %
+[mushroom_snakeshroom]
+type = "gain_gift"
+code = "mushroom_snakeshroom"
+sfx = "Inst_Munch"
+use_msg = "msg_mushroom_snakeshroom"
+#----------------------------------------------------------------------------- 
+#-----------------------------------------------------------------------------
+# Attack Damage %
+[mushroom_webthreadmorel]
+type = "gain_gift"
+code = "mushroom_webthreadmorel"
+sfx = "Inst_Munch"
+use_msg = "msg_mushroom_webthreadmorel"
+#----------------------------------------------------------------------------- 

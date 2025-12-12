@@ -1,0 +1,856 @@
+# ------------------------
+# Shared
+# ------------------------
+
+# an enemy that stands still and does nothing
+[ai_none]
+inert = true
+type = "a_none"
+
+# an enemy that moves towards the player
+[ai_approach]
+type = "a_approach"
+
+[ai_wander]
+type = "c_selector"
+children = [
+    # continously wander
+    { type = "a_wander", distance = { min = 2.2, max = 2.8 }, timeout = 0.6, orbit = true },
+]
+
+# used by Skeletons, Ooze, BlackKnights, Ghosts, Phantoms, etc...
+[ai_melee]
+type = "a_melee"
+code_slot = "slash"
+
+# used by Stone Soldiers, etc...
+[ai_melee_inert]
+inert = true
+type = "a_melee"
+code_slot = "slash"
+
+# used for varying attack animations
+[ai_melee2]
+type = "c_sequence"
+children = [
+    { type = "a_melee", code_slot = "slash_1"},
+    { type = "a_melee", code_slot = "slash_2"},
+]
+
+[ai_missile]
+type = "a_missile"
+code_slot = "missile"
+
+# used by Skeletons, Ooze, BlackKnights, Ghosts, Phantoms, etc...
+[ai_cast]
+type = "a_insect_cast"
+code_slot = "cast"
+
+# point cast, but the caster tries to get in range of spell
+[ai_cast_near]
+type = "a_insect_cast"
+code_slot = "cast"
+approach_target = true
+
+# ------------------------
+# ACT I 
+# ------------------------
+
+[ai_shielder]
+type = "c_random"
+children = [
+    { weight = 1, type = "a_dash_fancy", code_slot = "dash_s", timeout = 1.0 },
+    { weight = 1, type = "a_dash_fancy", code_slot = "dash_l", timeout = 1.0 },
+]
+
+[ai_guardian]
+type = "c_random"
+children = [
+    { weight = 1, type = "a_dash_fancy", code_slot = "dash", timeout = 1.0 },
+]
+
+[ai_wraith]
+type = "c_random"
+children = [
+    { weight = 1, type = "a_dash_fancy", code_slot = "dash", timeout = 1.0 },
+    { weight = 1, type = "?_repeat_guard", max_repeats = 1, reset_timer = 3.4, child = { type = "a_insect_move", code_slot = "move", approach_cone = 45.0, batch = 5, move_distance = { min = 0.8, max = 1.6 } } },
+]
+
+[ai_WraithBloodE]
+type = "c_random"
+children = [
+    { weight = 1, type = "a_dash_fancy", code_slot = "dash", timeout = 1.0 },
+    { weight = 5, type = "?_repeat_guard", max_repeats = 1, reset_timer = 3.4, child = { type = "a_insect_move", code_slot = "move", approach_cone = 45.0, batch = 5, move_distance = { min = 0.8, max = 1.6 } } },
+]
+
+[ai_forestspirit]
+type = "c_selector"
+children = [
+    # continously wander until attach cools down and it has a proper target
+    { type = "a_wander", distance = { min = 2.2, max = 2.8 }, timeout = 0.6, orbit = true },
+    { type = "a_attach", code_slot = "attach" },
+]
+
+[ai_summoner]
+type = "c_selector"
+children = [
+    { type = "c_sequence", children = [
+        { type = "?_in_range", range = 2.0 },
+        { type = "a_melee", code_slot = "slash", timeout = 2.2 }] },
+    { type = "a_summon", code_slot = "summ" }
+]
+
+[ai_gargoyle]
+type = "c_random"
+children = [
+    { weight = 1, type = "a_melee", code_slot = "slash", timeout = 2.4 },
+    { weight = 1, type = "a_dash_fancy", code_slot = "dash", timeout = 2.2 },
+]
+
+[ai_gargoyle_boss_1]
+type = "c_random"
+children = [
+    { weight = 1, type = "a_melee", code_slot = "slash_1", timeout = 2.4 },
+    { weight = 1, type = "a_melee", code_slot = "slash_2", timeout = 2.4 },
+    { weight = 1, type = "a_dash_fancy", code_slot = "dash", timeout = 2.2 },
+]
+
+[ai_gargoyle_boss_2]
+type = "c_random"
+children = [
+    { weight = 1, type = "a_melee", code_slot = "slash", timeout = 2.4 },
+    { weight = 1, type = "a_dash_fancy", code_slot = "dash", timeout = 2.2 },
+]
+
+[ai_necromancer]
+type = "c_selector"
+children = [
+    { type = "a_teleport_encl", code_slot = "teleport", timeout = 6 },
+    { type = "c_random", children = [
+        { weight = 1, type = "a_boss_summon", code_slot = "summ1", timeout = 4.0 },
+        { weight = 10, type = "a_boss_summon", code_slot = "summ2", timeout = 4.0 },
+        { weight = 100, type = "a_boss_summon", code_slot = "summ3", timeout = 4.0 },
+        { weight = 1000, type = "a_boss_summon", code_slot = "summ4", timeout = 4.0 },
+        { weight = 100, type = "a_missile", code_slot = "missile", timeout = 4.0 },
+    ] }
+]
+
+[ai_melee_teleport]
+type = "c_random"
+children = [
+    { weight = 1, type = "a_melee", code_slot = "slash", timeout = 2.0 },
+    { weight = 1, type = "a_teleport_rand", code_slot = "tele", timeout = 0.1, stay_enclosure = true },
+]
+
+[ai_vampire_lord]
+type = "c_selector"
+children = [
+    { type = "a_teleport_encl", code_slot = "teleport", timeout = 6 },
+    { type = "c_random", children = [
+        { weight = 1, type = "a_melee", code_slot = "slash", timeout = 2.4 },
+        { weight = 1, type = "a_melee", code_slot = "slashc", timeout = 2.4 },
+        { weight = 1, type = "a_dash_fancy", code_slot = "dash", timeout = 1.4 },
+        { weight = 1, type = "a_boss_summon", code_slot = "summ", timeout = 3.0 },
+        { weight = 1, type = "a_missile", code_slot = "missile", timeout = 3.0 },
+        { weight = 1, type = "a_missile", code_slot = "nova", timeout = 3.0 }
+    ] }
+]
+
+[ai_lady]
+inert = true
+#Selector--------------------------------------Distance?
+type = "c_selector"
+children = [
+    { type = "a_teleport_encl", code_slot = "teleport", timeout = 6 },
+    #Sequence A
+    { type = "c_sequence", children = [
+        #Random----------------------------------Close Distance options-------------------------------------------Enter Close Combat
+        { type = "c_random", children = [
+            #Jump (30%)---------------------------------Reflex Check!
+            { weight = 1, type = "a_jump_near", code_slot = "jumpstomp", timeout = 0.01 },
+            #Random (20%)----------------------------------------Poke no Dash
+            { weight = 7, type = "c_random", children = [
+                # dashslash1
+                { weight = 1, type = "a_melee", code_slot = "slash1", timeout = 0.1 },
+                # dashslash2
+                { weight = 2, type = "a_melee", code_slot = "slash2", timeout = 0.1 },
+                # dashslash3
+                { weight = 3, type = "a_melee", code_slot = "slash3", timeout = 0.1 },
+            ] },
+            #Random (20%)----------------------------------------Poke
+            { weight = 5, type = "c_random", children = [
+                # dashslash1
+                { weight = 1, type = "c_sequence", children = [
+                    { type = "a_dash_fancy", code_slot = "dashdance1", timeout = 0.01 },
+                    { type = "a_melee", code_slot = "slash1", timeout = 0.1 },
+                ] },
+                # dashslash2
+                { weight = 2, type = "c_sequence", children = [
+                    { type = "a_dash_fancy", code_slot = "dashdance2", timeout = 0.01 },
+                    { type = "a_melee", code_slot = "slash2", timeout = 0.1 },
+                ] },
+                # dashslash3
+                { weight = 333, type = "c_sequence", children = [
+                    { type = "a_dash_fancy", code_slot = "dashdance3", timeout = 0.01 },
+                    { type = "c_selector", children = [
+                        { type = "a_dash_fancy", code_slot = "dashdance3", timeout = 0.01 },
+                        { type = "a_melee", code_slot = "slash3", timeout = 0.1 },
+                    ] },
+                    { type = "c_selector", children = [
+                        { type = "a_dash_fancy", code_slot = "dashdance3", timeout = 0.01 },
+                        { type = "a_melee", code_slot = "slash3", timeout = 0.1 },
+                    ] },
+                ] },
+                #Shoot (30%)---------------------------------Reflex Check!
+                { weight = 4, type = "c_selector", children = [
+                    { type = "c_sequence", children = [
+                        { type = "?_hp_below", percent = 0.7 },
+                        { type = "a_missile", code_slot = "shoot2", timeout = 0.01 },
+                    ] },
+                    { type = "a_missile", code_slot = "shoot1", timeout = 0.01 },
+                ] }, 
+            ] },
+            #Sequence (40%)--------------------------------------Composure Check!
+            { weight = 4, type = "c_sequence", children = [
+                # dashslash2
+                { type = "c_sequence", children = [
+                    { type = "a_dash_fancy", code_slot = "dashdance2", timeout = 0.01 },
+                    { type = "a_melee", code_slot = "slash2", timeout = 0.1 },
+                ] },
+                # dashslash1
+                { type = "c_sequence", children = [
+                    { type = "a_dash_fancy", code_slot = "dashdance1", timeout = 0.01 },
+                    { type = "a_melee", code_slot = "slash1", timeout = 0.1 },
+                ] },
+                # dashslash3
+                { type = "c_sequence", children = [
+                    { type = "a_dash_fancy", code_slot = "dashdance3", timeout = 0.01 },
+                    { type = "a_melee", code_slot = "slash3", timeout = 0.1 },    
+                ] },
+            ] },
+            #Sequence (30%)--------------------------------------Composure Test!
+            { weight = 3, type = "c_sequence", children = [
+                # mk_dashdance1
+                { type = "c_sequence", children = [
+                    { type = "a_dash_fancy", code_slot = "dashdance4", timeout = 0.01 },
+                    { type = "a_melee", code_slot = "slash4", timeout = 0.1 },
+                ] },
+                # mk_dashdance2
+                { type = "a_melee", code_slot = "slash5", timeout = 0.01 },
+                # mk_stab1
+                { type = "a_melee", code_slot = "slash6", timeout = 0.01 },
+                # mk_stab2
+                { type = "a_melee", code_slot = "slash7", timeout = 0.01 },
+                { type = "c_random", children = [
+                # dashslash1
+                    { weight = 1, type = "c_sequence", children = [
+                        { type = "a_dash_fancy", code_slot = "dashdance1", timeout = 0.01 },
+                        { type = "a_melee", code_slot = "slash1", timeout = 0.1 },
+                    ] },
+                    # dashslash2
+                    { weight = 1, type = "c_sequence", children = [
+                        { type = "a_dash_fancy", code_slot = "dashdance2", timeout = 0.01 },
+                        { type = "a_melee", code_slot = "slash2", timeout = 0.1 },
+                    ] },
+                    # dashslash3
+                    { weight = 1, type = "c_sequence", children = [
+                        { type = "a_dash_fancy", code_slot = "dashdance3", timeout = 0.01 },
+                        { type = "a_melee", code_slot = "slash3", timeout = 0.1 },
+                    ] },
+                ] },
+            ] },
+            #Sequence (10%)--------------------------------------Composure Ultimate Test!
+            { weight = 2, type = "c_sequence", children = [
+                # mk_dashdance1
+                { type = "c_sequence", children = [
+                    { type = "a_dash_fancy", code_slot = "dashdance4", timeout = 0.01 },
+                    { type = "a_melee", code_slot = "slash4", timeout = 0.01 },
+                ] },
+                # slash5
+                { type = "a_melee", code_slot = "slash5", timeout = 0.01 },
+                # slash6
+                { type = "a_melee", code_slot = "slash6", timeout = 0.01 },
+                #Shoot (30%)---------------------------------Reflex Check!
+                { type = "c_selector", children = [
+                    { type = "c_sequence", children = [
+                        { type = "?_hp_below", percent = 0.7 },
+                        { type = "a_missile", code_slot = "shoot2", timeout = 0.01 },
+                    ] },
+                    { type = "a_missile", code_slot = "shoot1", timeout = 0.01 },
+                ] },                
+            ] },
+            #Sequence (10%)-----------------------------Reflex and Composure Test!
+            { weight = 4, type = "c_sequence", children = [
+                #Jump x 2
+                { type = "a_jump_near", code_slot = "jumpstomp", timeout = 0.01 },
+                { type = "c_selector", children = [
+                    { type = "a_dash_fancy", code_slot = "dashdance3", timeout = 0.01 },
+                    { type = "a_melee", code_slot = "slash3", timeout = 0.1 },
+                ] },
+                { type = "a_missile", code_slot = "shoot1", timeout = 0.1},
+                { type = "a_jump_near", code_slot = "jumpstomp", timeout = 0.01 },
+                #Stab
+                { type = "c_sequence", children = [
+                    { type = "a_dash_fancy", code_slot = "dashstab1", timeout = 0.01 },
+                    { type = "a_melee", code_slot = "stab1", timeout = 0.1 },
+                ] },
+            ] },
+        ] },
+        #Sequence------------------------------------------------------------------------------------------------Exit Close Combat
+        { type = "c_sequence", children = [
+            #Escape (10%)
+            { type = "a_dash_rand", code_slot = "dashrandom", timeout = 0.01 },
+            { type = "c_selector", children = [
+                #SelfBuff (CD ~20sec)
+                { type = "a_cast", code_slot = "buffself", timeout = 0.01 }, 
+                { type = "c_sequence", children = [
+                    #nova1 x 5
+                    { type = "a_missile", code_slot = "nova0" },
+                    { type = "a_missile", code_slot = "nova1" },
+                    { type = "a_missile", code_slot = "nova2" },
+                    { type = "c_selector", children = [
+                        { type = "c_sequence", children = [
+                            { type = "?_hp_below", percent = 0.7 },
+                            { type = "a_missile", code_slot = "shoot1" },
+                            { type = "a_missile", code_slot = "shoot2" },
+                        ] },
+                        { type = "c_sequence", children = [
+                            { type = "a_missile", code_slot = "nova1" },
+                            { type = "a_missile", code_slot = "nova2" },
+                        ] },
+                    ] },
+                    { type = "c_sequence", children = [
+                        { type = "?_hp_below", percent = 0.7 },
+                        { type = "a_dash_fancy", code_slot = "dashstab1", timeout = 0.01 },
+                        { type = "a_melee", code_slot = "stab1", timeout = 0.1 },
+                    ] },
+                ] },
+            ] },
+        ] },
+    ] },
+    #Random A -----------------------------------Long Distance options-----------------------------------------------------------------
+    { type = "c_random", children = [
+        #HopBackIn----------------------------------ReEngage
+        { weight = 10, type = "c_sequence", children = [
+            { type = "a_dash_fancy", code_slot = "dashdance3", timeout = 0.01 },
+            { type = "c_selector", children = [
+                { type = "a_melee", code_slot = "slash3", timeout = 0.1 },
+                { type = "a_dash_fancy", code_slot = "dashdance3", timeout = 0.01 },
+            ] },
+            { type = "c_selector", children = [
+                { type = "a_melee", code_slot = "slash3", timeout = 0.1 },
+                { type = "a_dash_fancy", code_slot = "dashdance3", timeout = 0.01 },
+            ] },
+        ] },
+        #Shoot (30%)---------------------------------Reflex Check!
+        { weight = 3, type = "a_missile", code_slot = "shoot1", timeout = 0.01},
+        #Stab (30%)---------------------------------Reflex Test!
+        { weight = 6, type = "c_sequence", children = [
+            { type = "a_dash_fancy", code_slot = "dashstab1", timeout = 0.01 },
+            { type = "a_melee", code_slot = "stab1", timeout = 0.1 },
+        ] },
+        #nova1 (10%)---------------------------Positioning Check!
+        { weight = 1, type = "a_missile", code_slot = "nova0", timeout = 0.01 },
+        #Sequence (10%)-----------------------------Positioning Ultimate Test!
+        { weight = 10, type = "c_sequence", children = [
+            #nova1 x 3
+            { type = "a_missile", code_slot = "nova0" },
+            { type = "a_missile", code_slot = "nova2" },
+            { type = "a_missile", code_slot = "nova1" },
+            { type = "c_sequence", children = [
+                { type = "?_hp_below", percent = 0.7 },
+                { type = "a_dash_fancy", code_slot = "dashstab1", timeout = 0.01 },
+                { type = "a_melee", code_slot = "stab1", timeout = 0.1 },
+            ] },
+        ] },
+        #Sequence
+        { weight = 1, type = "c_sequence", children = [
+            #Escape
+            { type = "a_dash_rand", code_slot = "dashrandom", timeout = 0.01 },
+            #SelfBuff (CD ~20sec)
+            { type = "a_cast", code_slot = "buffself", timeout = 0.01 },
+        ] },
+    ] },
+]
+
+[ai_sorceror]
+type = "c_random"
+children = [
+    { weight = 1, type = "a_missile", code_slot = "missile", timeout = 3.0 },
+    { weight = 1, type = "a_missile", code_slot = "nova", timeout = 3.0 },
+    { weight = 1, type = "a_summon", code_slot = "summ", timeout = 3.0 },
+]
+
+# ------------------------
+# ACT II 
+# ------------------------
+
+[ai_cat]
+type = "c_random"
+children = [
+    { weight = 1, type = "a_jump_rand", code_slot = "jump", min_rng_perc = 0.6, timeout = 1.1, stay_enclosure = true },
+    { weight = 1, type = "a_laser", code_slot = "laser", timeout = 1.1 },
+]
+
+[ai_jack]
+type = "c_selector"
+children = [
+    { type = "a_jump_near", code_slot = "jump" },
+    { type = "a_melee", code_slot = "slash_1", timeout = 0.6 },
+    { type = "a_melee", code_slot = "slash_2", timeout = 1.6 },
+]
+
+[ai_jack_2]
+type = "c_selector"
+children = [
+    { type = "c_random", children = [
+        { weight = 1, type = "a_jump_near", code_slot = "jump_1", timeout = 0.1 },
+        { weight = 1, type = "a_jump_near", code_slot = "jump_2", timeout = 0.1 },
+    ] },
+    { type = "a_melee", code_slot = "slash", timeout = 0.6 },
+]
+
+[ai_insect]
+type = "c_random"
+children = [
+    { weight = 1000, type = "?_repeat_guard", max_repeats = 3, reset_timer = 2.0, child = { type = "a_insect_move", code_slot = "move", approach_cone = 45.0, move_distance = { min = 1.8, max = 3.5 } } },
+    { weight = 100, type = "a_insect_cast", code_slot = "cast", timeout = 0.6 },
+    { weight = 1, type = "a_missile", code_slot = "shockwave", timeout = 0.6 },
+]
+
+[ai_thorns]
+type = "c_random"
+children = [
+    { weight = 1, type = "a_missile", code_slot = "shockwave1", timeout = 0.6 },
+    { weight = 1, type = "a_missile", code_slot = "shockwave2", timeout = 0.6 },
+    { weight = 1, type = "a_missile", code_slot = "missile", timeout = 0.6 },
+    { weight = 1000, type = "?_repeat_guard", max_repeats = 3, reset_timer = 2.0, child = { type = "a_insect_move", code_slot = "move", approach_cone = 45.0, move_distance = { min = 1.8, max = 3.5 } } },
+    { weight = 1, type = "a_teleport_encl", code_slot = "teleport", timeout = 0.6 },
+]
+
+[ai_thornsblood]
+type = "c_random"
+children = [
+    { weight = 1, type = "a_missile", code_slot = "wall", timeout = 0.6 },
+    { weight = 1, type = "a_missile", code_slot = "missile", timeout = 0.6 },
+    { weight = 1000, type = "?_repeat_guard", max_repeats = 3, reset_timer = 2.0, child = { type = "a_insect_move", code_slot = "move", approach_cone = 45.0, move_distance = { min = 1.8, max = 3.5 } } },
+    { weight = 1, type = "a_teleport_encl", code_slot = "teleport", timeout = 0.6 },
+]
+
+[ai_thornsbloodold]
+type = "c_random"
+children = [
+    { weight = 1, type = "a_laser", code_slot = "laser", timeout = 0.6 },
+    { weight = 1, type = "a_missile", code_slot = "wall", timeout = 0.6 },
+    { weight = 1, type = "a_missile", code_slot = "missile", timeout = 0.6 },
+    { weight = 1000, type = "?_repeat_guard", max_repeats = 3, reset_timer = 2.0, child = { type = "a_insect_move", code_slot = "move", approach_cone = 45.0, move_distance = { min = 1.8, max = 3.5 } } },
+    { weight = 1, type = "a_teleport_encl", code_slot = "teleport", timeout = 0.6 },
+]
+
+[ai_treant]
+inert = true
+type = "c_random"
+children = [
+    { weight = 3, type = "a_melee", code_slot = "slash", timeout = 0.1 },
+    { weight = 3, type = "a_missile", code_slot = "missile", timeout = 0.4 },
+    { weight = 1, type = "a_insect_cast", code_slot = "cast", timeout = 0.4 },
+    { weight = 3, type = "a_teleport_encl", code_slot = "teleport", timeout = 0.6 },
+]
+
+[ai_scarecrowtreant]
+inert = true
+type = "c_random"
+children = [
+    { weight = 3, type = "a_melee", code_slot = "slash", timeout = 0.1 },
+    { weight = 3, type = "a_missile", code_slot = "missile", timeout = 0.4 },
+    { weight = 3, type = "a_teleport_encl", code_slot = "teleport", timeout = 0.6 },
+]
+
+[ai_scarecrow]
+inert = true
+type = "c_selector"
+children = [
+    { type = "a_teleport_encl", code_slot = "teleport", timeout = 0.6 },
+    { type = "c_random", children = [
+        #MoveIn----------------------------------------------------applyPressure
+        { weight = 10, type = "c_sequence", children = [
+            { type = "a_dash_fancy", code_slot = "dash", timeout = 0.1 },
+            { type = "c_selector", children = [
+                { type = "a_melee", code_slot = "stab1", timeout = 0.1 },
+                { type = "a_insect_cast", code_slot = "cast", timeout = 0.1 },
+                { type = "a_dash_fancy", code_slot = "dash", timeout = 0.1 },
+            ] },
+            { type = "c_selector", children = [
+                { type = "a_melee", code_slot = "stab1", timeout = 0.1 },
+                { type = "a_insect_cast", code_slot = "cast", timeout = 0.1 },
+                { type = "a_dash_fancy", code_slot = "dash", timeout = 0.1 },
+            ] },
+            { type = "a_dash_rand", code_slot = "dashrandom", timeout = 0.01 },
+            { type = "c_selector", children = [
+                { type = "a_missile", code_slot = "wall", timeout = 0.1 },
+                { type = "a_missile", code_slot = "missile1", timeout = 0.1 },
+                { type = "c_sequence", children = [
+                    { type = "?_hp_below", percent = 0.5 },
+                    { type = "a_missile", code_slot = "summ2", timeout = 0.1 },
+                ] },
+                { type = "a_melee", code_slot = "stab1", timeout = 0.1 },
+                { type = "a_insect_cast", code_slot = "cast", timeout = 0.1 },
+            ] },
+        ] },
+        { weight = 5, type = "c_sequence", children = [
+            { type = "a_dash_rand", code_slot = "dashrandom", timeout = 0.01 },
+            { type = "c_selector", children = [
+                { type = "a_missile", code_slot = "summ1", timeout = 0.1 },
+                { type = "c_sequence", children = [
+                    { type = "?_hp_below", percent = 0.5 },
+                    { type = "a_missile", code_slot = "summ2", timeout = 0.1 },
+                ] },
+                { type = "c_sequence", children = [
+                    { type = "?_hp_below", percent = 0.5 },
+                    { type = "a_missile", code_slot = "missile2", timeout = 0.1 },
+                ] },
+                { type = "a_missile", code_slot = "missile1", timeout = 0.1 },
+                { type = "a_dash_rand", code_slot = "dashrandom", timeout = 0.01 },
+            ] },
+            { type = "c_selector", children = [
+                { type = "a_missile", code_slot = "summ1", timeout = 0.1 },
+                { type = "c_sequence", children = [
+                    { type = "?_hp_below", percent = 0.5 },
+                    { type = "a_missile", code_slot = "summ2", timeout = 0.1 },
+                ] },
+                { type = "c_sequence", children = [
+                    { type = "?_hp_below", percent = 0.5 },
+                    { type = "a_missile", code_slot = "missile2", timeout = 0.1 },
+                ] },
+                { type = "a_missile", code_slot = "missile1", timeout = 0.1 },
+            ] },
+        ] },
+        #Mele Combo
+        { weight = 10, type = "c_sequence", children = [
+            { type = "a_melee", code_slot = "stab1", timeout = 0.1 },
+            { type = "a_dash_fancy", code_slot = "dash", timeout = 0.1 },
+            { type = "a_dash_rand", code_slot = "dashrandom", timeout = 0.01 },
+            { type = "c_selector", children = [
+                { type = "a_missile", code_slot = "wall", timeout = 0.1 },
+                { type = "a_missile", code_slot = "missile1", timeout = 0.1 },
+                { type = "c_sequence", children = [
+                    { type = "?_hp_below", percent = 0.5 },
+                    { type = "a_missile", code_slot = "summ2", timeout = 0.1 },
+                ] },
+                { type = "a_melee", code_slot = "stab1", timeout = 0.1 },
+                { type = "a_insect_cast", code_slot = "cast", timeout = 0.1 },
+            ] },
+            { type = "c_selector", children = [
+                { type = "a_missile", code_slot = "missile1", timeout = 0.1 },
+                { type = "c_sequence", children = [
+                    { type = "?_hp_below", percent = 0.5 },
+                    { type = "a_missile", code_slot = "missile2", timeout = 0.1 },
+                ] },
+                { type = "a_dash_rand", code_slot = "dashrandom", timeout = 0.01 },
+            ] },
+            { type = "c_selector", children = [
+                { type = "a_missile", code_slot = "summ1", timeout = 0.1 },
+                { weight = 5, type = "c_sequence", children = [
+                    { type = "?_hp_below", percent = 0.5 },
+                    { type = "a_missile", code_slot = "summ2", timeout = 0.1 },
+                ] },
+            ] },
+        ] },
+        #{ weight = 0, type = "a_melee", code_slot = "slash", timeout = 0.6 },
+        { weight = 5, type = "a_missile", code_slot = "missile1", timeout = 0.4 },
+        { weight = 5, type = "c_sequence", children = [
+            { type = "?_hp_below", percent = 0.5 },
+            { type = "a_missile", code_slot = "missile2", timeout = 0.1 },
+        ] },
+        { weight = 5, type = "a_missile", code_slot = "bombs", timeout = 0.4 },
+        { weight = 0, type = "a_missile", code_slot = "shockwave", timeout = 0.1 },
+        { weight = 5, type = "a_missile", code_slot = "wall", timeout = 0.1 },
+        { weight = 5, type = "a_missile", code_slot = "summ1", timeout = 1.0 },
+        { weight = 5, type = "c_sequence", children = [
+            { type = "?_hp_below", percent = 0.5 },
+            { type = "a_missile", code_slot = "summ2", timeout = 0.1 },
+        ] },
+        { weight = 5, type = "a_insect_cast", code_slot = "cast", timeout = 0.1 },
+        #{ weight = 5, type = "a_melee", code_slot = "stab1", timeout = 0.1 },
+#        { weight = 5, type = "a_missile", code_slot = "summ1", timeout = 1.0 },
+#        { weight = 5, type = "a_missile", code_slot = "summ2", timeout = 1.0 },
+    ] },
+]
+
+[ai_golem]
+type = "a_approach"
+stop_distance = 1.0
+maintain_distance = true
+from_attack_pos = true
+
+[ai_bomber]
+type = "a_throw_bomber"
+code_slot = "bombs"
+fail_on_cd = false
+
+[ai_curser]
+type = "c_selector"
+children = [
+    { type = "a_curse", code_slot = "curse" },
+    { type = "a_missile", code_slot = "missile" },
+]
+
+[ai_faerie]
+type = "c_selector"
+children = [
+    { type = "a_curse", code_slot = "curse" },
+    { type = "a_missile", code_slot = "missile" },
+    { weight = 1000, type = "?_repeat_guard", max_repeats = 9, reset_timer = 4.0, child = { type = "a_insect_move", code_slot = "move", approach_cone = 25.0, move_distance = { min = 0.4, max = 1.4 } } },
+]
+
+[ai_faerie_curse]
+type = "c_random"
+children = [
+    { weight = 5, type = "a_curse", code_slot = "curse1" },
+    { weight = 5, type = "a_curse", code_slot = "curse2" },
+    { weight = 5, type = "a_curse", code_slot = "curse3" },
+    { weight = 5, type = "a_curse", code_slot = "curse4" },
+    { weight = 5, type = "a_curse", code_slot = "curse5" },
+    { weight = 5, type = "a_curse", code_slot = "curse6" },
+    { weight = 10, type = "a_missile", code_slot = "missile" },
+    { weight = 20, type = "?_repeat_guard", max_repeats = 9, reset_timer = 4.0, child = { type = "a_insect_move", code_slot = "move", approach_cone = 25.0, move_distance = { min = 0.4, max = 1.4 } } },
+]
+
+[ai_faerielaser]
+type = "c_selector"
+children = [
+    { type = "a_laser", code_slot = "laser" },
+    { type = "a_missile", code_slot = "missile" },
+    { weight = 1000, type = "?_repeat_guard", max_repeats = 9, reset_timer = 4.0, child = { type = "a_insect_move", code_slot = "move", approach_cone = 25.0, move_distance = { min = 0.4, max = 1.4 } } },
+]
+
+[ai_mummy]
+type = "c_selector"
+children = [
+    { type = "a_teleport_encl", code_slot = "teleport", timeout = 6 },
+    { type = "c_sequence", children = [
+        { type = "?_hp_below", percent = 0.4 },
+        { type = "a_cast", code_slot = "flies" },
+    ] },
+    { type = "c_random", children = [
+        { weight = 0.4, type = "a_curse", code_slot = "curse", timeout = 3.2 },
+        { weight = 0.2, type = "a_boss_summon", code_slot = "summ", timeout = 2.0 },
+        { weight = 0.6, type = "a_player_summon", code_slot = "cloud", timeout = 2.0 },
+        { weight = 0.4, type = "c_sequence", children = [
+            { type = "?_hp_below", percent = 0.7 },
+            { type = "a_scream", code_slot = "scream", timeout = 2.0 },
+        ] }
+    ] }
+]
+
+[ai_acolyte]
+type = "c_selector"
+children = [
+    { type = "a_teleport_encl", code_slot = "teleport", timeout = 6 },
+    { type = "c_selector", children = [
+        { type = "a_heal_queen", code_slot = "heal", queen_code = "InsectQueenB", timeout = 4.2 },
+        { type = "a_wander", distance = { min = 2, max = 6 }, timeout = 5.6 }
+    ] }
+]
+
+[ai_insectqueen]
+type = "c_selector"
+children = [
+    { type = "a_teleport_encl", code_slot = "teleport", timeout = 6 },
+    { type = "c_random", children = [
+        { weight = 3, type = "a_insect_move", code_slot = "move", approach_cone = 45.0, move_distance = { min = 1.8, max = 3.5 } },
+        { weight = 0.7, type = "a_missile", code_slot = "missile", timeout = 1.6 },
+        { weight = 0.7, type = "a_missile", code_slot = "shockwave", timeout = 1.6 },
+        { weight = 1, type = "a_laser", code_slot = "laser", timeout = 1.6 },
+        { weight = 1, type = "a_insect_cast", code_slot = "cast", timeout = 1.6 },
+    ] }
+]
+
+[ai_djinn]
+type = "c_selector"
+children = [
+    { type = "a_teleport_encl", code_slot = "teleport", timeout = 6 },
+    { type = "c_random", children = [
+        { weight = 1, type = "a_melee", code_slot = "slash", timeout = 1.8 },
+        { weight = 0.7, type = "a_cast", code_slot = "scimtars", timeout = 1.8 },
+        { weight = 0.9, type = "a_cast", code_slot = "shower", timeout = 1.8 },
+        { weight = 0.5, type = "a_missile", code_slot = "inferno", timeout = 2.4 },
+        { weight = 1, type = "a_throw", code_slot = "bombs", timeout = 1.4 },
+        { weight = 0.8, type = "a_missile", code_slot = "shockwave", timeout = 1.2 },
+        { weight = 1, type = "a_teleport_rand", code_slot = "teleport", timeout = 6, stay_enclosure = true }
+    ] }
+]
+
+[ai_fungus]
+type = "c_sequence"
+children = [
+    { type = "a_charge_move", code_slot = "charge" },
+    { type = "a_death", code_slot = "explode" },
+]
+
+[ai_spiderqueen]
+type = "c_selector"
+children = [
+    { type = "a_teleport_encl", code_slot = "teleport", timeout = 6 },
+    { type = "c_random", children = [
+        { weight = 1, type = "a_melee", code_slot = "slash", timeout = 2.4 },
+    ] }
+]
+
+[ai_frogking]
+# totally ignore steering in the Ai (prevents moving between abilities)
+# 
+inert = true
+type = "c_selector"
+children = [
+    { type = "a_teleport_encl", code_slot = "teleport", timeout = 6 },
+    # will try any spell before moving to jump towards player
+    { type = "c_random", children = [
+        { weight = 10, type = "a_melee", code_slot = "stomp", timeout = 0.01 },
+        { weight = 5, type = "a_missile", code_slot = "inferno", timeout = 0.01 },
+        # Tongue should be followed by melee, inferno or jump.
+        { weight = 5, type = "c_sequence", children = [
+            { type = "a_missile", code_slot = "tongue", timeout = 0.01 },
+            { type = "c_selector", children = [
+                { type = "a_melee", code_slot = "stomp", timeout = 0.01 },
+                { type = "a_missile", code_slot = "inferno", timeout = 0.01 },
+                { type = "a_jump_near", code_slot = "jump", timeout = 0.01, ignore_too_far = false },
+            ] },
+        ] },
+        { weight = 5, type = "a_boss_summon", code_slot = "summon", timeout = 1.0 },
+    ] },
+    # will jump towards player, even if its out of max range
+    { type = "a_jump_near", code_slot = "jump", timeout = 0.01, ignore_too_far = false },
+]
+
+# ------------------------
+# SUMMONS
+# ------------------------
+
+[ai_caracal]
+type = "c_selector"
+children = [
+    { type = "a_dash_fancy", code_slot = "dash", timeout = 0.1 },
+    { type = "a_melee", code_slot = "slash_1", timeout = 0.3 },
+    { type = "a_melee", code_slot = "slash_2", timeout = 0.3 },
+]
+
+# [ai_wolf]
+# type = "selector"
+# children = [
+#     { type = "sequence", children = [
+#         { type = "a_target_player" },
+#         { type = "?_in_range", range = 6 },
+#         { type = "a_pos_around", range = 4 }
+#     ] }
+# ]
+
+# ------------------------
+# CHARACTER CLONES
+# ------------------------
+
+[ai_clone_knight]
+type = "c_random"
+children = [
+    { weight = 1, type = "a_dash_fancy", code_slot = "dash", timeout = 1.0 },
+    { weight = 3, type = "a_melee", code_slot = "slash_1", timeout = 0.3 },
+    { weight = 3, type = "a_melee", code_slot = "slash_2", timeout = 0.3 },
+    { weight = 3, type = "a_melee", code_slot = "slash_3", timeout = 0.3 },
+]
+
+[ai_clone_sorceress]
+type = "c_random"
+children = [
+    { weight = 1, type = "a_dash_fancy", code_slot = "dash", timeout = 1.0 },
+    { weight = 3, type = "a_missile", code_slot = "missile_1", timeout = 0.3 },
+]
+
+[ai_clone_assassin]
+type = "c_random"
+children = [
+    { weight = 1, type = "a_dash_fancy", code_slot = "dash", timeout = 1.0 },
+    { weight = 3, type = "a_melee", code_slot = "slash_1", timeout = 0.3 },
+    { weight = 3, type = "a_melee", code_slot = "slash_2", timeout = 0.3 },
+]
+
+[ai_clone_barbarian]
+type = "c_random"
+children = [
+    { weight = 1, type = "a_dash_fancy", code_slot = "dash", timeout = 1.0 },
+    { weight = 3, type = "a_melee", code_slot = "slash_1", timeout = 0.3 },
+    { weight = 3, type = "a_melee", code_slot = "slash_2", timeout = 0.3 },
+    { weight = 3, type = "a_melee", code_slot = "slash_3", timeout = 0.3 },
+]
+
+[ai_clone_warrior]
+type = "c_random"
+children = [
+    { weight = 1, type = "a_dash_fancy", code_slot = "dash", timeout = 1.0 },
+    { weight = 3, type = "a_melee", code_slot = "slash_1", timeout = 0.3 },
+    { weight = 3, type = "a_melee", code_slot = "slash_2", timeout = 0.3 },
+]
+
+[ai_clone_ranger]
+type = "c_random"
+children = [
+    { weight = 1, type = "a_dash_fancy", code_slot = "dash", timeout = 1.0 },
+    { weight = 3, type = "a_missile", code_slot = "missile_1", timeout = 0.3 },
+    { weight = 3, type = "a_missile", code_slot = "missile_2", timeout = 0.3 },
+    { weight = 3, type = "a_missile", code_slot = "missile_3", timeout = 0.3 },
+]
+
+[ai_clone_druid]
+type = "c_random"
+children = [
+    { weight = 1, type = "a_dash_fancy", code_slot = "dash", timeout = 1.0 },
+    { weight = 3, type = "a_melee", code_slot = "slash_1", timeout = 0.3 },
+    { weight = 3, type = "a_melee", code_slot = "slash_2", timeout = 0.3 },
+    { weight = 3, type = "a_melee", code_slot = "slash_3", timeout = 0.3 },
+    { weight = 3, type = "a_melee", code_slot = "slash_4", timeout = 0.3 },
+]
+
+[ai_clone_necromancer]
+type = "c_random"
+children = [
+    { weight = 1, type = "a_dash_fancy", code_slot = "dash", timeout = 1.0 },
+    { weight = 3, type = "a_melee", code_slot = "slash_1", timeout = 0.3 },
+    { weight = 3, type = "a_melee", code_slot = "slash_2", timeout = 0.3 },
+    { weight = 3, type = "a_melee", code_slot = "slash_3", timeout = 0.3 },
+    { weight = 3, type = "a_melee", code_slot = "slash_4", timeout = 0.3 },
+]
+
+[ai_clone_shaman]
+type = "c_random"
+children = [
+    { weight = 1, type = "a_dash_fancy", code_slot = "dash", timeout = 1.0 },
+    { weight = 3, type = "a_melee", code_slot = "slash_1", timeout = 0.3 },
+    { weight = 3, type = "a_melee", code_slot = "slash_2", timeout = 0.3 },
+    { weight = 3, type = "a_melee", code_slot = "slash_3", timeout = 0.3 },
+]
+
+[ai_clone_bard]
+type = "c_random"
+children = [
+    { weight = 1, type = "a_dash_fancy", code_slot = "dash", timeout = 1.0 },
+    { weight = 3, type = "a_melee", code_slot = "slash_1", timeout = 0.3 },
+    { weight = 3, type = "a_melee", code_slot = "slash_2", timeout = 0.3 },
+    { weight = 3, type = "a_melee", code_slot = "slash_3", timeout = 0.3 },
+]
+
+[ai_clone_warlock]
+type = "c_random"
+children = [
+    { weight = 1, type = "a_dash_fancy", code_slot = "dash", timeout = 1.0 },
+    { weight = 3, type = "a_melee", code_slot = "slash_1", timeout = 0.3 },
+    { weight = 3, type = "a_melee", code_slot = "slash_2", timeout = 0.3 },
+]
+
+# [ai_wolf]
+# type = "selector"
+# children = [
+#     { type = "sequence", children = [
+#         { type = "a_target_player" },
+#         { type = "?_in_range", range = 6 },
+#         { type = "a_pos_around", range = 4 }
+#     ] }
+# ]
